@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ "$1" = "off" ] && bluetoothctl power off && exit
+
+bluetoothctl power on
+bluetoothctl connect E4:90:FD:EF:FE:09
