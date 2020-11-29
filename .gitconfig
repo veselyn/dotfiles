@@ -1,3 +1,5 @@
 [user]
 	email = v3s1ez@gmail.com
 	name = Veselin Ivanov
+[pull]
+	rebase = false

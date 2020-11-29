@@ -1,7 +1,0 @@
-{
-  "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "coc.preferences.formatOnTypeFiletypes": ["*"],
-  "coc.preferences.formatOnInsertLeave": true,
-  "prettier.tabWidth": 4
-}
