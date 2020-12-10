@@ -1,4 +1,4 @@
-export PATH=$PATH
+export PATH=$HOME/scripts:$PATH
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
