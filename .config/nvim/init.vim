@@ -27,6 +27,9 @@ set mouse=a
 set clipboard=unnamed
 set splitbelow
 set splitright
+set ignorecase
+set smartcase
+set incsearch
 set expandtab
 set shiftwidth=2
 set tabstop=2
