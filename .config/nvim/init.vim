@@ -8,6 +8,7 @@ source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/ultisnips.vim
+source ~/.config/nvim/plugins/airline.vim
 
 set hidden
 set backup
