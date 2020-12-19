@@ -11,7 +11,7 @@ local on_attach = function(client)
   vim.api.nvim_set_keymap('n', 'gW', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>', {noremap = true, silent = true})
   vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true, silent = true})
 
-  vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.diagnostic.rename()<CR>', {noremap = true, silent = true})
+  vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true})
   vim.api.nvim_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true, silent = true})
   vim.api.nvim_set_keymap('n', '<leader>g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', {noremap = true, silent = true})
   vim.api.nvim_set_keymap('n', '<leader>g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true})
@@ -110,11 +110,11 @@ lsp.vimls.setup({
   on_attach = on_attach
 })
 
-lsp.tsserver.setup({
+lsp.jsonls.setup({
   on_attach = on_attach
 })
 
-lsp.jsonls.setup({
+lsp.tsserver.setup({
   on_attach = on_attach
 })
 
@@ -123,6 +123,10 @@ lsp.cssls.setup({
 })
 
 lsp.html.setup({
+  on_attach = on_attach
+})
+
+lsp.pyls.setup({
   on_attach = on_attach
 })
 
