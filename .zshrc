@@ -1,4 +1,5 @@
 export PATH=$HOME/scripts:$PATH
+export PATH=/usr/local/opt/llvm/bin:$PATH
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 

@@ -137,3 +137,7 @@ lsp.jdtls.setup({
 lsp.rust_analyzer.setup({
   on_attach = on_attach
 })
+
+lsp.clangd.setup({
+  on_attach = on_attach
+})
