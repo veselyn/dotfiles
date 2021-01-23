@@ -28,7 +28,7 @@ local on_attach = function(client)
 end
 
 lsp.diagnosticls.setup({
-  filetypes = {'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'json', 'html', 'css', 'sass', 'scss', 'markdown'},
+  filetypes = {'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'},
   init_options = {
     linters = {
       eslint = {
@@ -103,7 +103,7 @@ lsp.diagnosticls.setup({
   on_attach = on_attach
 })
 
-local servers = {'sumneko_lua', 'vimls', 'jsonls', 'tsserver', 'cssls', 'html', 'pyls', 'jdtls', 'rust_analyzer', 'clangd'}
+local servers = {'sumneko_lua', 'vimls', 'tsserver', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls', 'rust_analyzer', 'clangd'}
 for _, server in ipairs(servers) do
   lsp[server].setup({
     on_attach = on_attach
