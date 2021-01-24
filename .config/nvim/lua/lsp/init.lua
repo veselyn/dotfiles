@@ -109,11 +109,10 @@ lsp.diagnosticls.setup({
             typescript = 'prettier',
             typescriptreact = 'prettier',
             json = 'prettier',
-            html = 'prettier',
             css = 'prettier',
             sass = 'prettier',
             scss = 'prettier',
-            markdown = 'prettier'
+            html = 'prettier'
         }
     },
     on_attach = on_attach
