@@ -142,7 +142,7 @@ lsp.sumneko_lua.setup({
 })
 
 local servers = {
-    'vimls', 'tsserver', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls',
+    'vimls', 'bashls', 'tsserver', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls',
     'rust_analyzer', 'clangd'
 }
 for _, server in ipairs(servers) do lsp[server].setup({on_attach = on_attach}) end
