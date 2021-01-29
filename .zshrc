@@ -3,7 +3,7 @@ export PATH=/usr/local/opt/llvm/bin:$PATH
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
-alias vim='nvim'
+alias v='nvim'
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
