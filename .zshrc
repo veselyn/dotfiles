@@ -1,6 +1,6 @@
 export PATH=$HOME/scripts:$PATH
-export WORKSPACE=$HOME/workspace
 export GRADLE_HOME=$HOME/.gradle
+export WORKSPACE=$HOME/workspace
 export JDTLS=$HOME/.local/share/nvim/jdt-language-server
 export JDTLS_CONFIG=$JDTLS/config_mac
 export JAR=$JDTLS/plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar
