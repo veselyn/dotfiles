@@ -9,8 +9,6 @@ export EDITOR='nvim'
 
 alias v='nvim'
 
-bindkey -v
-
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
@@ -28,6 +26,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 kitty + complete setup zsh | source /dev/stdin
 
 source $ZSH/oh-my-zsh.sh
+bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
