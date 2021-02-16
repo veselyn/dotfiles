@@ -1,6 +1,6 @@
 source ~/.config/nvim/plugins.vim
 
-colorscheme base16-onedark
+colorscheme base16-gruvbox-dark-hard
 let base16colorspace=256
 set termguicolors
 
