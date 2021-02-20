@@ -10,7 +10,8 @@ source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/ultisnips.vim
 source ~/.config/nvim/plugins/airline.vim
 
-let g:python3_host_prog = '~/.local/share/nvim/venv/bin/python'
+let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
+let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
 
 set hidden
 set backup
