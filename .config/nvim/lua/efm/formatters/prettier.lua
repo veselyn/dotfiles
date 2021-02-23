@@ -1,1 +1,1 @@
-return {formatCommand = 'prettier'}
+return {formatCommand = 'prettier', formatStdin = true}
