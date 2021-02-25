@@ -1,1 +1,4 @@
-return {formatCommand = 'prettier', formatStdin = true}
+return {
+    formatCommand = 'prettier --stdin-filepath ${INPUT}',
+    formatStdin = true
+}
