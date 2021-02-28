@@ -66,15 +66,9 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local linters = {
-    eslint_d = require('efm/linters/eslint_d'),
-    markdownlint = require('efm/linters/markdownlint')
-}
+local linters = require('efm/linters')
 
-local formatters = {
-    luaFormat = require('efm/formatters/lua-format'),
-    prettier = require('efm/formatters/prettier')
-}
+local formatters = require('efm/formatters')
 
 lsp.efm.setup({
     filetypes = {
