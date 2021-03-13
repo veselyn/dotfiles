@@ -2,7 +2,7 @@ source ~/.config/nvim/plugins.vim
 
 let mapleader = ' '
 
-colorscheme base16-nord
+colorscheme base16-default-dark
 let base16colorspace=256
 set termguicolors
 
