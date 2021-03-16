@@ -58,13 +58,14 @@ local formatters = require('efm/formatters')
 
 lsp.efm.setup({
     filetypes = {
-        'lua', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact',
-        'json', 'css', 'sass', 'scss', 'html', 'markdown'
+        'lua', 'sh', 'javascript', 'javascriptreact', 'typescript',
+        'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'
     },
     init_options = {documentFormatting = true},
     settings = {
         languages = {
             lua = {formatters.luaFormat},
+            sh = {linters.shellcheck, formatters.shfmt},
             javascript = {linters.eslint_d, formatters.prettier},
             javascriptreact = {linters.eslint_d, formatters.prettier},
             typescript = {linters.eslint_d, formatters.prettier},
