@@ -8,7 +8,7 @@ export PATH=/usr/local/opt/llvm/bin:$PATH
 export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
-alias v='nvim'
+source ~/.zsh/aliases
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
