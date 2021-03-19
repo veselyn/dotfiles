@@ -9,6 +9,7 @@ export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
 source ~/.zsh/aliases
+source ~/.zsh/functions
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
