@@ -108,7 +108,7 @@ lsp.sumneko_lua.setup({
 
 local servers = {
     'vimls', 'bashls', 'tsserver', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls',
-    'rust_analyzer', 'clangd'
+    'rust_analyzer', 'clangd', 'solargraph'
 }
 for _, server in ipairs(servers) do
     lsp[server].setup({capabilities = capabilities, on_attach = on_attach})
