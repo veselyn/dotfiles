@@ -13,7 +13,6 @@ source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/telescope.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/tagbar.vim
-source ~/.config/nvim/plugins/airline.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
