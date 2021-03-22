@@ -16,6 +16,7 @@ source ~/.config/nvim/plugins/tagbar.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
+let g:ruby_host_prog = '~/.local/share/nvim/ruby/bin/neovim-ruby-host'
 
 set hidden
 set backup
