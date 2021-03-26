@@ -28,7 +28,6 @@ set directory=~/.local/share/nvim/swap//
 set undodir=~/.local/share/nvim/undo//
 set shortmess+=I
 set updatetime=100
-set noshowmode
 set number
 set relativenumber
 set mouse=a
