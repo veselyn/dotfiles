@@ -41,4 +41,7 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+let g:indent_blankline_char = '│'
+let g:indentLine_char = '│'
+
 nnoremap \ <cmd>nohlsearch<CR>
