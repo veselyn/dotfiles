@@ -8,6 +8,8 @@
 	required = true
 [init]
 	defaultBranch = master
+[core]
+	editor = nvim
 [diff]
 	tool = nvimdiff
 [merge]
