@@ -8,3 +8,7 @@
 	required = true
 [init]
 	defaultBranch = master
+[diff]
+	tool = nvimdiff
+[merge]
+	tool = nvimdiff
