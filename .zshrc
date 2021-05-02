@@ -29,8 +29,8 @@ kitty + complete setup zsh | source /dev/stdin
 source $ZSH/oh-my-zsh.sh
 bindkey -v
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf.zsh
 
-. /usr/local/opt/asdf/asdf.sh
+source /usr/local/opt/asdf/asdf.sh
 
-. ~/.asdf/plugins/java/set-java-home.zsh
+source ~/.asdf/plugins/java/set-java-home.zsh
