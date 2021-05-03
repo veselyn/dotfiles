@@ -42,5 +42,6 @@ set tabstop=2
 
 let g:indent_blankline_char = '│'
 let g:indentLine_char = '│'
+highlight clear SignColumn
 
 nnoremap \ <cmd>nohlsearch<CR>
