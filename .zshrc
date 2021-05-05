@@ -27,7 +27,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 kitty + complete setup zsh | source /dev/stdin
 
 source $ZSH/oh-my-zsh.sh
-bindkey -v
 
 source ~/.fzf.zsh
 
