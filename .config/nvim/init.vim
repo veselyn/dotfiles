@@ -36,11 +36,14 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+nnoremap <leader>n <cmd>Explore<CR>
+nnoremap <leader>sn <cmd>Sexplore<CR>
+nnoremap <leader>vn <cmd>Vexplore<CR>
+
 let g:indent_blankline_char = '│'
 let g:indentLine_char = '│'
 highlight clear SignColumn
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
 
 nnoremap \ <cmd>nohlsearch<CR>
