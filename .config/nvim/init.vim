@@ -41,5 +41,6 @@ let g:indentLine_char = '│'
 highlight clear SignColumn
 
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 
 nnoremap \ <cmd>nohlsearch<CR>
