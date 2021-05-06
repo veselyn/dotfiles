@@ -2,6 +2,8 @@ source ~/.config/nvim/plugins.vim
 
 let mapleader = ' '
 
+set termguicolors
+
 source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/saga.vim
 source ~/.config/nvim/plugins/completion.vim
