@@ -3,3 +3,6 @@ font:
     family: Menlo
     style: Regular
   size: 11.0
+
+mouse:
+  hide_when_typing: true
