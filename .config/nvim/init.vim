@@ -43,8 +43,8 @@ nnoremap <leader>sn <cmd>Sexplore<CR>
 nnoremap <leader>tn <cmd>Texplore<CR>
 nnoremap <leader>vn <cmd>Vexplore<CR>
 
-let g:indent_blankline_char = '│'
-let g:indentLine_char = '│'
+let g:indent_blankline_char = '|'
+let g:indentLine_char = '|'
 highlight clear SignColumn
 
 nnoremap \ <cmd>nohlsearch<CR>
