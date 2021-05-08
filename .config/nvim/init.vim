@@ -6,6 +6,7 @@ source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/netrw.vim
+source ~/.config/nvim/plugins/indent-blankline.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
@@ -35,7 +36,6 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 
-let g:indent_blankline_char = '|'
 let g:indentLine_char = '|'
 highlight clear SignColumn
 
