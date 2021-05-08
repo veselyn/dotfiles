@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/popup.nvim'
