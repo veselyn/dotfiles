@@ -8,6 +8,7 @@ source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/netrw.vim
 source ~/.config/nvim/plugins/indent-blankline.vim
 source ~/.config/nvim/plugins/indentline.vim
+source ~/.config/nvim/plugins/highlights.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
@@ -36,7 +37,5 @@ set incsearch
 set expandtab
 set shiftwidth=2
 set tabstop=2
-
-highlight clear SignColumn
 
 nnoremap \ <cmd>nohlsearch<CR>
