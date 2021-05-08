@@ -5,6 +5,7 @@ let mapleader = ' '
 source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/treesitter.vim
+source ~/.config/nvim/plugins/netrw.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
@@ -33,13 +34,6 @@ set incsearch
 set expandtab
 set shiftwidth=2
 set tabstop=2
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-nnoremap <leader>n <cmd>Explore<CR>
-nnoremap <leader>sn <cmd>Sexplore<CR>
-nnoremap <leader>tn <cmd>Texplore<CR>
-nnoremap <leader>vn <cmd>Vexplore<CR>
 
 let g:indent_blankline_char = '|'
 let g:indentLine_char = '|'
