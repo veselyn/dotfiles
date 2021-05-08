@@ -5,7 +5,6 @@ let mapleader = ' '
 source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/treesitter.vim
-source ~/.config/nvim/plugins/telescope.vim
 
 let g:python_host_prog = '~/.local/share/nvim/python/bin/python'
 let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
