@@ -73,7 +73,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local linters = require('efm/linters')
-
 local formatters = require('efm/formatters')
 
 lsp.efm.setup({
@@ -130,6 +129,7 @@ local servers = {
     'vimls', 'bashls', 'tsserver', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls',
     'rust_analyzer', 'clangd', 'solargraph'
 }
+
 for _, server in ipairs(servers) do
     lsp[server].setup({capabilities = capabilities, on_attach = on_attach})
 end
