@@ -72,6 +72,12 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+local handlers = {
+    ["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics,
+        {signs = true, virtual_text = false})
+}
+
 local linters = require('efm/linters')
 local formatters = require('efm/formatters')
 
@@ -97,6 +103,7 @@ lsp.efm.setup({
             markdown = {linters.markdownlint}
         }
     },
+    handlers = handlers,
     capabilities = capabilities,
     on_attach = on_attach
 })
@@ -121,11 +128,13 @@ lsp.sumneko_lua.setup({
             }
         }
     },
+    handlers = handlers,
     capabilities = capabilities,
     on_attach = on_attach
 })
 
 lsp.tsserver.setup({
+    handlers = handlers,
     capabilities = capabilities,
     on_attach = function(client, bufnr)
         client.resolved_capabilities.document_formatting = false
@@ -139,5 +148,9 @@ local servers = {
 }
 
 for _, server in ipairs(servers) do
-    lsp[server].setup({capabilities = capabilities, on_attach = on_attach})
+    lsp[server].setup({
+        handlers = handlers,
+        capabilities = capabilities,
+        on_attach = on_attach
+    })
 end
