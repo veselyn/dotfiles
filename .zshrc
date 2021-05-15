@@ -18,7 +18,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git tmux fzf z asdf docker docker-compose)
 
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
     autoload -Uz compinit
     compinit
 fi
