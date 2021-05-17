@@ -1,5 +1,5 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 mcd() {
-  mkdir -p "$1" && cd "$1" || return
+	mkdir -p "$1" && cd "$1" || return
 }
