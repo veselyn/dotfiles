@@ -143,7 +143,7 @@ lsp.tsserver.setup({
 })
 
 local servers = {
-    'vimls', 'bashls', 'jsonls', 'cssls', 'html', 'pyls', 'jdtls',
+    'vimls', 'bashls', 'jsonls', 'cssls', 'html', 'pyright', 'jdtls',
     'rust_analyzer', 'clangd', 'solargraph'
 }
 
