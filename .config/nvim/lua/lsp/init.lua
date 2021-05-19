@@ -1,4 +1,4 @@
-local lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
 
 local on_attach = function(client, bufnr)
     local function buf_set_keymap(...)
@@ -81,7 +81,7 @@ local handlers = {
 local linters = require('efm/linters')
 local formatters = require('efm/formatters')
 
-lsp.efm.setup({
+lspconfig.efm.setup({
     filetypes = {
         'lua', 'sh', 'javascript', 'javascriptreact', 'typescript',
         'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'
@@ -114,7 +114,7 @@ local lua_language_server_binary = lua_language_server ..
                                        '/bin/macOS/lua-language-server'
 local lua_language_server_main = lua_language_server .. '/main.lua'
 
-lsp.sumneko_lua.setup({
+lspconfig.sumneko_lua.setup({
     cmd = {lua_language_server_binary, '-E', lua_language_server_main},
     settings = {
         Lua = {
@@ -133,7 +133,7 @@ lsp.sumneko_lua.setup({
     on_attach = on_attach
 })
 
-lsp.tsserver.setup({
+lspconfig.tsserver.setup({
     handlers = handlers,
     capabilities = capabilities,
     on_attach = function(client, bufnr)
@@ -148,7 +148,7 @@ local servers = {
 }
 
 for _, server in ipairs(servers) do
-    lsp[server].setup({
+    lspconfig[server].setup({
         handlers = handlers,
         capabilities = capabilities,
         on_attach = on_attach
