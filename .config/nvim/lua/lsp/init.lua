@@ -141,10 +141,7 @@ local configs = {
     }
 }
 
-local servers = {
-    'vimls', 'bashls', 'jsonls', 'cssls', 'html', 'pyright', 'jdtls',
-    'rust_analyzer', 'clangd', 'solargraph'
-}
+local servers = lspinstall.installed_servers()
 
 for _, server in ipairs(servers) do
     lspconfig[server].setup({
