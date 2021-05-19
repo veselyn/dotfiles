@@ -1,7 +1,7 @@
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
-export EDITOR='nvim'
+export EDITOR="nvim"
 
 source ~/.zsh/aliases
 source ~/.zsh/functions
@@ -12,7 +12,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git tmux fzf z asdf docker docker-compose)
 
 if type brew &>/dev/null; then
-    FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+    FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
     autoload -Uz compinit
     compinit
 fi
