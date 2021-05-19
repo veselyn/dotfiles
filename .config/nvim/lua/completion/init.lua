@@ -2,6 +2,7 @@ local compe = require('compe')
 
 compe.setup({
     enabled = true,
+    autocomplete = false,
     source = {
         path = true,
         buffer = true,
