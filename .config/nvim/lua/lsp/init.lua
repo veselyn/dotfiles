@@ -57,19 +57,6 @@ local on_attach = function(client, bufnr)
         vim.api.nvim_command(
             'autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()')
     end
-
-    if client.resolved_capabilities.document_highlight then
-        vim.api.nvim_exec([[
-            hi link LspReferenceRead Visual
-            hi link LspReferenceText Visual
-            hi link LspReferenceWrite Visual
-            augroup lsp_document_highlight
-                autocmd! * <buffer>
-                autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-                autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-            augroup END
-        ]], false)
-    end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
