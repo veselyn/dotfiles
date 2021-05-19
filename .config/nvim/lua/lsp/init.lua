@@ -93,10 +93,7 @@ local configs = {
                 html = {formatters.prettier},
                 markdown = {linters.markdownlint}
             }
-        },
-        handlers = handlers,
-        capabilities = capabilities,
-        on_attach = on_attach
+        }
     },
     lua = {
         settings = {
@@ -113,14 +110,9 @@ local configs = {
                     }
                 }
             }
-        },
-        handlers = handlers,
-        capabilities = capabilities,
-        on_attach = on_attach
+        }
     },
     typescript = {
-        handlers = handlers,
-        capabilities = capabilities,
         on_attach = function(client, bufnr)
             client.resolved_capabilities.document_formatting = false
             on_attach(client, bufnr)
