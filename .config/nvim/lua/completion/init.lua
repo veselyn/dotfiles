@@ -8,7 +8,6 @@ compe.setup({
         tags = true,
         spell = true,
         calc = true,
-        omni = true,
         nvim_lsp = true,
         nvim_lua = true,
         vsnip = true,
