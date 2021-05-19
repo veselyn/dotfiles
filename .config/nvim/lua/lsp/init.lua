@@ -144,9 +144,13 @@ local configs = {
 local servers = lspinstall.installed_servers()
 
 for _, server in ipairs(servers) do
-    lspconfig[server].setup({
-        handlers = handlers,
-        capabilities = capabilities,
-        on_attach = on_attach
-    })
+    local config = configs[server]
+
+    if not config then config = {} end
+
+    if not config.handlers then config.handlers = handlers end
+    if not config.capabilities then config.capabilities = capabilities end
+    if not config.on_attach then config.on_attach = on_attach end
+
+    lspconfig[server].setup(config)
 end
