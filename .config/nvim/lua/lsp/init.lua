@@ -84,66 +84,62 @@ local handlers = {
 local linters = require('efm/linters')
 local formatters = require('efm/formatters')
 
-lspconfig.efm.setup({
-    filetypes = {
-        'lua', 'sh', 'javascript', 'javascriptreact', 'typescript',
-        'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'
+local configs = {
+    efm = {
+        filetypes = {
+            'lua', 'sh', 'javascript', 'javascriptreact', 'typescript',
+            'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'
+        },
+        init_options = {documentFormatting = true},
+        settings = {
+            languages = {
+                lua = {formatters.luaFormat},
+                sh = {linters.shellcheck, formatters.shfmt},
+                javascript = {linters.eslint_d, formatters.prettier},
+                javascriptreact = {linters.eslint_d, formatters.prettier},
+                typescript = {linters.eslint_d, formatters.prettier},
+                typescriptreact = {linters.eslint_d, formatters.prettier},
+                json = {formatters.prettier},
+                css = {formatters.prettier},
+                sass = {formatters.prettier},
+                scss = {formatters.prettier},
+                html = {formatters.prettier},
+                markdown = {linters.markdownlint}
+            }
+        },
+        handlers = handlers,
+        capabilities = capabilities,
+        on_attach = on_attach
     },
-    init_options = {documentFormatting = true},
-    settings = {
-        languages = {
-            lua = {formatters.luaFormat},
-            sh = {linters.shellcheck, formatters.shfmt},
-            javascript = {linters.eslint_d, formatters.prettier},
-            javascriptreact = {linters.eslint_d, formatters.prettier},
-            typescript = {linters.eslint_d, formatters.prettier},
-            typescriptreact = {linters.eslint_d, formatters.prettier},
-            json = {formatters.prettier},
-            css = {formatters.prettier},
-            sass = {formatters.prettier},
-            scss = {formatters.prettier},
-            html = {formatters.prettier},
-            markdown = {linters.markdownlint}
-        }
-    },
-    handlers = handlers,
-    capabilities = capabilities,
-    on_attach = on_attach
-})
-
-local lua_language_server = vim.fn.expand(
-                                '$HOME/.local/share/nvim/lua-language-server')
-local lua_language_server_binary = lua_language_server ..
-                                       '/bin/macOS/lua-language-server'
-local lua_language_server_main = lua_language_server .. '/main.lua'
-
-lspconfig.sumneko_lua.setup({
-    cmd = {lua_language_server_binary, '-E', lua_language_server_main},
-    settings = {
-        Lua = {
-            runtime = {version = 'LuaJIT', path = vim.split(package.path, ';')},
-            diagnostics = {globals = {'vim'}},
-            workspace = {
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
+    lua = {
+        settings = {
+            Lua = {
+                runtime = {
+                    version = 'LuaJIT',
+                    path = vim.split(package.path, ';')
+                },
+                diagnostics = {globals = {'vim'}},
+                workspace = {
+                    library = {
+                        [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+                        [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true
+                    }
                 }
             }
-        }
+        },
+        handlers = handlers,
+        capabilities = capabilities,
+        on_attach = on_attach
     },
-    handlers = handlers,
-    capabilities = capabilities,
-    on_attach = on_attach
-})
-
-lspconfig.tsserver.setup({
-    handlers = handlers,
-    capabilities = capabilities,
-    on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = false
-        on_attach(client, bufnr)
-    end
-})
+    typescript = {
+        handlers = handlers,
+        capabilities = capabilities,
+        on_attach = function(client, bufnr)
+            client.resolved_capabilities.document_formatting = false
+            on_attach(client, bufnr)
+        end
+    }
+}
 
 local servers = {
     'vimls', 'bashls', 'jsonls', 'cssls', 'html', 'pyright', 'jdtls',
