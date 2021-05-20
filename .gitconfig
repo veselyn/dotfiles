@@ -15,3 +15,5 @@
 	tool = nvimdiff
 [merge]
 	tool = nvimdiff
+[commit]
+	gpgsign = true
