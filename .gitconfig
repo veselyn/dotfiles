@@ -1,6 +1,7 @@
 [user]
 	email = v3s1ez@gmail.com
 	name = Veselin Ivanov
+	signingkey = B09DDF9D424E10D3
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
