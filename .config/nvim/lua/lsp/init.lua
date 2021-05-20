@@ -120,9 +120,18 @@ local configs = {
     }
 }
 
-local servers = lspinstall.installed_servers()
+local installed_servers = lspinstall.installed_servers()
+
+local servers = {
+    'bash', 'cpp', 'css', 'efm', 'html', 'java', 'json', 'lua', 'python',
+    'ruby', 'rust', 'typescript', 'vim'
+}
 
 for _, server in ipairs(servers) do
+    if not vim.tbl_contains(installed_servers, server) then
+        lspinstall.install_server(server)
+    end
+
     local config = configs[server]
 
     if not config then config = {} end
