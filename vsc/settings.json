@@ -3,5 +3,6 @@
     "workbench.editor.untitled.hint": "hidden",
     "workbench.colorTheme": "One Dark Pro",
     "editor.fontSize": 13,
-    "editor.fontFamily": "Menlo"
+    "editor.fontFamily": "Menlo",
+    "editor.tabSize": 2
 }
