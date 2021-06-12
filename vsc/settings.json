@@ -8,5 +8,6 @@
     "vim.useSystemClipboard": true,
     "workbench.activityBar.visible": false,
     "workbench.editor.showTabs": false,
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative"
 }
