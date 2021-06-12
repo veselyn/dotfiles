@@ -11,5 +11,8 @@
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
     "vim.leader": " ",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
