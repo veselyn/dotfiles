@@ -7,5 +7,6 @@
     "editor.tabSize": 2,
     "vim.useSystemClipboard": true,
     "workbench.activityBar.visible": false,
-    "workbench.editor.showTabs": false
+    "workbench.editor.showTabs": false,
+    "editor.minimap.enabled": false
 }
