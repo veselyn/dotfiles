@@ -6,5 +6,6 @@
     "editor.fontFamily": "Menlo",
     "editor.tabSize": 2,
     "vim.useSystemClipboard": true,
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "workbench.editor.showTabs": false
 }
