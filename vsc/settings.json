@@ -10,5 +10,6 @@
     "workbench.editor.showTabs": false,
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
-    "vim.leader": " "
+    "vim.leader": " ",
+    "editor.formatOnSave": true
 }
