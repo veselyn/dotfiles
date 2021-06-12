@@ -1,4 +1,5 @@
 {
     "workbench.startupEditor": "none",
-    "workbench.editor.untitled.hint": "hidden"
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.colorTheme": "One Dark Pro"
 }
