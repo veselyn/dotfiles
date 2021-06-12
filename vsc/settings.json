@@ -9,5 +9,6 @@
     "workbench.activityBar.visible": false,
     "workbench.editor.showTabs": false,
     "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "vim.leader": " "
 }
