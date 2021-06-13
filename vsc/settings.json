@@ -22,7 +22,7 @@
                 "D"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.declaration()<CR>"
+                "editor.action.revealDeclaration"
             ]
         },
         {
@@ -31,7 +31,7 @@
                 "d"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.definition()<CR>"
+                "editor.action.revealDefinition"
             ]
         },
         {
@@ -39,7 +39,7 @@
                 "K"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.hover()<CR>"
+                "editor.action.showHover"
             ]
         },
         {
@@ -48,7 +48,7 @@
                 "i"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.implementation()<CR>"
+                "editor.action.goToImplementation"
             ]
         },
         {
@@ -57,37 +57,7 @@
                 "k"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.signature_help()<CR>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w",
-                "a"
-            ],
-            "commands": [
-                "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w",
-                "r"
-            ],
-            "commands": [
-                "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w",
-                "l"
-            ],
-            "commands": [
-                "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>"
+                "editor.action.triggerParameterHints"
             ]
         },
         {
@@ -96,7 +66,7 @@
                 "D"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.type_definition()<CR>"
+                "editor.action.goToTypeDefinition"
             ]
         },
         {
@@ -106,7 +76,7 @@
                 "a"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.code_action()<CR>"
+                "editor.action.quickFix"
             ]
         },
         {
@@ -116,7 +86,7 @@
                 "n"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.rename()<CR>"
+                "editor.action.rename"
             ]
         },
         {
@@ -125,7 +95,7 @@
                 "r"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.references()<CR>"
+                "editor.action.goToReferences"
             ]
         },
         {
@@ -135,7 +105,7 @@
                 "s"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.document_symbol()<CR>"
+                "workbench.action.gotoSymbol"
             ]
         },
         {
@@ -145,16 +115,7 @@
                 "s"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>"
+                "workbench.action.showAllSymbols"
             ]
         },
         {
@@ -163,7 +124,7 @@
                 "d"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"
+                "editor.action.marker.prev"
             ]
         },
         {
@@ -172,16 +133,7 @@
                 "d"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>"
+                "editor.action.marker.next"
             ]
         },
         {
@@ -190,7 +142,7 @@
                 "f"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.formatting()<CR>"
+                "editor.action.formatDocument"
             ]
         },
         {
@@ -200,7 +152,7 @@
                 "f"
             ],
             "commands": [
-                "<cmd>lua vim.lsp.buf.range_formatting()<CR>"
+                "editor.action.formatSelection"
             ]
         }
     ]
