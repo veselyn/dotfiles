@@ -14,5 +14,194 @@
     "editor.formatOnSave": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "g",
+                "D"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.declaration()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.definition()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.hover()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.implementation()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.signature_help()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "a"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "r"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "l"
+            ],
+            "commands": [
+                "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "D"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.type_definition()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.code_action()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.rename()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.references()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "s"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.document_symbol()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "s"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "d"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "d"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.formatting()<CR>"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "f"
+            ],
+            "commands": [
+                "<cmd>lua vim.lsp.buf.range_formatting()<CR>"
+            ]
+        }
+    ]
 }
