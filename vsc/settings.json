@@ -15,6 +15,10 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "vim.hlsearch": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "vim.replaceWithRegister": true,
+    "vim.sneak": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
