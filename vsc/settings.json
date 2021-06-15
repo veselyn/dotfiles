@@ -14,6 +14,7 @@
     "editor.formatOnSave": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vim.hlsearch": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
