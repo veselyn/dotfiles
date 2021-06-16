@@ -12,6 +12,7 @@
     "editor.lineNumbers": "relative",
     "vim.leader": " ",
     "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "vim.hlsearch": true,
