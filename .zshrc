@@ -11,7 +11,7 @@ source "$HOME/.zsh/functions"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git tmux fzf z asdf docker docker-compose)
+plugins=(git tmux fzf z asdf vscode docker docker-compose)
 
 if type brew &>/dev/null; then
 	FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
