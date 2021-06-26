@@ -6,6 +6,7 @@ source ~/.config/nvim/plugins/lsp.vim
 source ~/.config/nvim/plugins/completion.vim
 source ~/.config/nvim/plugins/treesitter.vim
 source ~/.config/nvim/plugins/netrw.vim
+source ~/.config/nvim/plugins/camelcasemotion.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/indent-blankline.vim
 source ~/.config/nvim/plugins/indentline.vim
