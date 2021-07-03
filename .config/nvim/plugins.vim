@@ -21,7 +21,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'yggdroot/indentline'
 Plug 'cohama/lexima.vim'
 Plug 'mattn/emmet-vim'
 
