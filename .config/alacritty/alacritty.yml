@@ -1,8 +1,8 @@
 font:
   normal:
-    family: SF Mono
+    family: Menlo
     style: Regular
-  size: 11.0
+  size: 13.0
 
 window:
   padding:
