@@ -1,5 +1,6 @@
 source ~/.config/nvim/plugins.vim
 
+colorscheme onedark
 let mapleader = ' '
 
 source ~/.config/nvim/plugins/lsp.vim
@@ -19,6 +20,7 @@ let g:python3_host_prog = '~/.local/share/nvim/python3/bin/python'
 let g:ruby_host_prog = '~/.local/share/nvim/ruby/bin/neovim-ruby-host'
 let g:node_host_prog = '~/.local/share/nvim/node/.npm/bin/neovim-node-host'
 
+set termguicolors
 set hidden
 set backup
 set swapfile
