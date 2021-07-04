@@ -6,6 +6,10 @@ font:
   size: 13.0
 
 window:
+  dimensions:
+    columns: 80
+    lines: 24
+
   padding:
     x: 5
     y: 5
