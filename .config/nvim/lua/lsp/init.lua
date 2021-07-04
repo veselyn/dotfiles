@@ -123,7 +123,7 @@ local configs = {
 local installed_servers = lspinstall.installed_servers()
 
 local servers = {
-    'bash', 'cpp', 'css', 'efm', 'html', 'java', 'json', 'lua', 'python',
+    'bash', 'cpp', 'css', 'efm', 'go', 'html', 'java', 'json', 'lua', 'python',
     'ruby', 'rust', 'typescript', 'vim'
 }
 
