@@ -73,10 +73,6 @@ local formatters = require('efm/formatters')
 
 local configs = {
     efm = {
-        filetypes = {
-            'lua', 'sh', 'javascript', 'javascriptreact', 'typescript',
-            'typescriptreact', 'json', 'css', 'sass', 'scss', 'html', 'markdown'
-        },
         init_options = {documentFormatting = true},
         settings = {
             languages = {
