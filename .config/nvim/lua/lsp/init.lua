@@ -56,9 +56,12 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local handlers = {
-    ['textDocument/publishDiagnostics'] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics,
-        {signs = true, virtual_text = false})
+    ['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic
+                                                           .on_publish_diagnostics,
+                                                       {
+        signs = true,
+        virtual_text = false
+    })
 }
 
 local linters = require('efm/linters')
