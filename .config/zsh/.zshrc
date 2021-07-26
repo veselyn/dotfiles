@@ -4,8 +4,8 @@ export LANG="en_US.UTF-8"
 
 export EDITOR="nvim"
 
-source "$HOME/.zsh/aliases"
-source "$HOME/.zsh/functions"
+source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/functions"
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
