@@ -2,3 +2,4 @@
 .config/tmux/plugins/
 .config/nvim/.netrwhist
 .config/nvim/plugged/
+.config/asdf/tool-versions
