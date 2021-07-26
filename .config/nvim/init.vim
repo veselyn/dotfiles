@@ -32,6 +32,7 @@ set undodir=~/.local/share/nvim/undo//
 set shortmess+=I
 set updatetime=100
 set signcolumn=yes
+set lazyredraw
 set number
 set relativenumber
 set mouse=a
