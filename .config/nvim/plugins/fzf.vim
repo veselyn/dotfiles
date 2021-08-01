@@ -1,4 +1,4 @@
-let g:fzf_layout = {'down': '12'}
+let g:fzf_layout = {'down': '25%'}
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-\']
 
 nnoremap <leader>gf <cmd>Files<CR>
