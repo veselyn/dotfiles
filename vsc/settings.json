@@ -127,7 +127,6 @@
         {
             "before": [
                 "<leader>",
-                "d",
                 "s"
             ],
             "commands": [
@@ -137,8 +136,8 @@
         {
             "before": [
                 "<leader>",
-                "w",
-                "s"
+                "s",
+                "w"
             ],
             "commands": [
                 "workbench.action.showAllSymbols"
