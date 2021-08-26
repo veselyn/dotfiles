@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'joshdick/onedark.vim'
+Plug 'vimwiki/vimwiki'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
