@@ -70,20 +70,24 @@ local formatters = require('efm/formatters')
 local configs = {
     efm = {
         init_options = {documentFormatting = true},
+        filetypes = {
+            'css', 'html', 'javascript', 'javascriptreact', 'json', 'lua',
+            'markdown', 'sass', 'scss', 'sh', 'typescript', 'typescriptreact'
+        },
         settings = {
             languages = {
-                lua = {formatters.luaFormat},
-                sh = {linters.shellcheck, formatters.shfmt},
+                css = {formatters.prettier},
+                html = {formatters.prettier},
                 javascript = {linters.eslint_d, formatters.prettier},
                 javascriptreact = {linters.eslint_d, formatters.prettier},
-                typescript = {linters.eslint_d, formatters.prettier},
-                typescriptreact = {linters.eslint_d, formatters.prettier},
                 json = {formatters.prettier},
-                css = {formatters.prettier},
+                lua = {formatters.luaFormat},
+                markdown = {linters.markdownlint},
                 sass = {formatters.prettier},
                 scss = {formatters.prettier},
-                html = {formatters.prettier},
-                markdown = {linters.markdownlint}
+                sh = {linters.shellcheck, formatters.shfmt},
+                typescript = {linters.eslint_d, formatters.prettier},
+                typescriptreact = {linters.eslint_d, formatters.prettier}
             }
         }
     },
