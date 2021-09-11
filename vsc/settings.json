@@ -2,6 +2,7 @@
     "workbench.startupEditor": "none",
     "workbench.editor.untitled.hint": "hidden",
     "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
     "editor.fontSize": 13,
     "editor.fontFamily": "Menlo",
     "editor.tabSize": 2,
