@@ -29,7 +29,7 @@ set undofile
 set backupdir=~/.local/share/nvim/backup//
 set directory=~/.local/share/nvim/swap//
 set undodir=~/.local/share/nvim/undo//
-set shortmess+=I
+set shortmess+=Ic
 set updatetime=100
 set signcolumn=yes
 set lazyredraw
