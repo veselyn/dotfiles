@@ -38,7 +38,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'l3mon4d3/luasnip'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'cohama/lexima.vim'
+Plug 'windwp/nvim-autopairs'
 Plug 'mattn/emmet-vim'
 
 call plug#end()
