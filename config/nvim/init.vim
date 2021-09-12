@@ -10,6 +10,7 @@ source ~/.config/nvim/plugins/netrw.vim
 source ~/.config/nvim/plugins/camelcasemotion.vim
 source ~/.config/nvim/plugins/ctrlp.vim
 source ~/.config/nvim/plugins/fzf.vim
+source ~/.config/nvim/plugins/snippets.vim
 source ~/.config/nvim/plugins/indent-blankline.vim
 source ~/.config/nvim/plugins/indentline.vim
 source ~/.config/nvim/plugins/autopairs.vim
