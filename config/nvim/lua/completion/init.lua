@@ -15,7 +15,7 @@ cmp.setup({
     sources = {
         {name = 'path'}, {name = 'buffer'}, {name = 'tags'}, {name = 'spell'},
         {name = 'calc'}, {name = 'nvim_lsp'}, {name = 'nvim_lua'},
-        {name = 'luasnip'}
+        {name = 'luasnip'}, {name = 'treesitter'}
     }
 })
 
