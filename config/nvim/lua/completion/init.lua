@@ -11,8 +11,12 @@ cmp.setup({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true
         })
+    },
+    sources = {
+        {name = 'path'}, {name = 'buffer'}, {name = 'tags'}, {name = 'spell'},
+        {name = 'calc'}, {name = 'nvim_lsp'}, {name = 'nvim_lua'},
+        {name = 'luasnip'}
     }
-    -- sources = {}
 })
 
 -- compe.setup({
