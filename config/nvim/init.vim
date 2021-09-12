@@ -12,6 +12,7 @@ source ~/.config/nvim/plugins/ctrlp.vim
 source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/indent-blankline.vim
 source ~/.config/nvim/plugins/indentline.vim
+source ~/.config/nvim/plugins/autopairs.vim
 source ~/.config/nvim/plugins/emmet.vim
 source ~/.config/nvim/plugins/highlights.vim
 source ~/.config/nvim/plugins/maps.vim
