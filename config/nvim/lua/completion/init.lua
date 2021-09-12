@@ -1,5 +1,11 @@
 local cmp = require('cmp')
 
+cmp.setup({
+    -- snippet = {},
+    -- mapping = {},
+    -- sources = {}
+})
+
 -- compe.setup({
 --     enabled = true,
 --     autocomplete = false,
