@@ -3,6 +3,7 @@ local cmp = require('cmp')
 local luasnip = require('luasnip')
 
 cmp.setup({
+    completion = {autocomplete = false},
     snippet = {expand = function(args) luasnip.lsp_expand(args.body) end},
     mapping = {
         ['<C-d>'] = cmp.mapping.scroll_docs(-5),
