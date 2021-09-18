@@ -2,6 +2,8 @@ local cmp = require('cmp')
 
 local luasnip = require('luasnip')
 
+local lspkind = require('lspkind')
+
 local feedkey = function(key)
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true),
                           'n', true)
@@ -50,6 +52,25 @@ cmp.setup({
                 fallback()
             end
         end, {'i', 's'})
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = lspkind.presets.default[vim_item.kind] .. ' ' ..
+                                vim_item.kind
+
+            vim_item.menu = ({
+                path = '[PATH]',
+                buffer = '[BUFFER]',
+                tags = '[TAGS]',
+                spell = '[SPELL]',
+                calc = '[CALC]',
+                nvim_lsp = '[NVIM_LSP]',
+                nvim_lua = '[NVIM_LUA]',
+                luasnip = '[LUASNIP]',
+                treesitter = '[TREESITTER]'
+            })[entry.source.name]
+            return vim_item
+        end
     },
     sources = {
         {name = 'path'}, {name = 'buffer'}, {name = 'tags'}, {name = 'spell'},
