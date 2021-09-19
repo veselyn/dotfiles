@@ -19,7 +19,6 @@ function! plugins#load()
   Plug 'easymotion/vim-easymotion'
   Plug 'bkad/camelcasemotion'
   Plug 'airblade/vim-gitgutter'
-  Plug 'rafamadriz/friendly-snippets'
   Plug 'yggdroot/indentline'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mattn/emmet-vim'
@@ -27,6 +26,8 @@ function! plugins#load()
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'sirver/ultisnips'
+  Plug 'honza/vim-snippets'
 
   call plug#end()
 endfunction
