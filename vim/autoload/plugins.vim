@@ -22,6 +22,7 @@ function! plugins#load()
   Plug 'yggdroot/indentline'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mattn/emmet-vim'
+  Plug 'prabirshrestha/vim-lsp'
 
   call plug#end()
 endfunction
