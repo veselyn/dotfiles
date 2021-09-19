@@ -1,1 +1,1 @@
-let g:user_emmet_leader_key = '<C-M>'
+let g:user_emmet_leader_key = '<C-\>'
