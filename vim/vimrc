@@ -1,5 +1,7 @@
 call plugins#load()
 
+colorscheme onedark
+
 set termguicolors
 set hidden
 set backup
