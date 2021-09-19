@@ -1,0 +1,1 @@
+nnoremap \ <Cmd>nohlsearch<CR>
