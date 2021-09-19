@@ -24,6 +24,7 @@ function! plugins#load()
   Plug 'mattn/emmet-vim'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
+  Plug 'prabirshrestha/asyncomplete.vim'
 
   call plug#end()
 endfunction
