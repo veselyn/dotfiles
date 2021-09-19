@@ -1,5 +1,7 @@
 call plugins#load()
 
+let mapleader = ' '
+
 colorscheme onedark
 
 set termguicolors
