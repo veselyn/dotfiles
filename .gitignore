@@ -2,4 +2,6 @@
 config/tmux/plugins/
 config/nvim/.netrwhist
 config/nvim/plugged/
+vim/autoload/plug.vim
+vim/plugged/
 config/asdf/tool-versions
