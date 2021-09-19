@@ -1,7 +1,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 export LANG="en_US.UTF-8"
-export EDITOR="nvim"
+export EDITOR="vim"
 
 export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump"
