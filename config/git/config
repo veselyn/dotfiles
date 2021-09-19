@@ -12,8 +12,8 @@
 [init]
 	defaultBranch = master
 [core]
-	editor = nvim
+	editor = vim
 [diff]
-	tool = nvimdiff
+	tool = vimdiff
 [merge]
-	tool = nvimdiff
+	tool = vimdiff
