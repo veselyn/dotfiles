@@ -25,6 +25,7 @@ set splitright
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 set expandtab
 set shiftwidth=2
 set tabstop=2
