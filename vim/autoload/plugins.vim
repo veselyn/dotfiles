@@ -23,6 +23,7 @@ function! plugins#load()
   Plug 'jiangmiao/auto-pairs'
   Plug 'mattn/emmet-vim'
   Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
 
   call plug#end()
 endfunction
