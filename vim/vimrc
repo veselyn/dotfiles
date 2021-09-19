@@ -15,7 +15,7 @@ set lazyredraw
 set number
 set relativenumber
 set mouse=a
-set clipboard=unnamedplus
+set clipboard=unnamed
 set splitbelow
 set splitright
 set ignorecase
