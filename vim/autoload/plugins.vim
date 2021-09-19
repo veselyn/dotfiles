@@ -6,7 +6,6 @@ function plugins#load()
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug '/usr/local/opt/fzf'
 	Plug 'junegunn/fzf.vim'
-	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'tpope/vim-sensible'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-fugitive'
@@ -21,6 +20,8 @@ function plugins#load()
 	Plug 'bkad/camelcasemotion'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'rafamadriz/friendly-snippets'
+	Plug 'yggdroot/indentline'
+	Plug 'jiangmiao/auto-pairs'
 	Plug 'mattn/emmet-vim'
 
 	call plug#end()
