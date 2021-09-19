@@ -2,6 +2,7 @@ function! plugins#load()
   call plug#begin()
 
   Plug 'joshdick/onedark.vim'
+  Plug 'sheerun/vim-polyglot'
   Plug 'christoomey/vim-tmux-navigator'
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
