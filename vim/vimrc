@@ -7,9 +7,9 @@ set hidden
 set backup
 set swapfile
 set undofile
-set backupdir=~/.local/share/vim/backup//
-set directory=~/.local/share/vim/swap//
-set undodir=~/.local/share/vim/undo//
+set backupdir=$XDG_DATA_HOME/vim/backup//
+set directory=$XDG_DATA_HOME/vim/swap//
+set undodir=$XDG_DATA_HOME/vim/undo//
 set shortmess+=Ic
 set updatetime=100
 set signcolumn=yes
