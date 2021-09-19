@@ -1,1 +1,26 @@
 call plugins#load()
+
+set termguicolors
+set hidden
+set backup
+set swapfile
+set undofile
+set backupdir=~/.local/share/vim/backup//
+set directory=~/.local/share/vim/swap//
+set undodir=~/.local/share/vim/undo//
+set shortmess+=Ic
+set updatetime=100
+set signcolumn=yes
+set lazyredraw
+set number
+set relativenumber
+set mouse=a
+set clipboard=unnamedplus
+set splitbelow
+set splitright
+set ignorecase
+set smartcase
+set incsearch
+set expandtab
+set shiftwidth=2
+set tabstop=2
