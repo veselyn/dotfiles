@@ -7,6 +7,8 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> gi <Plug>(lsp-implementation)
   nmap <buffer> gt <Plug>(lsp-type-definition)
   nmap <buffer> \rn <Plug>(lsp-rename)
+  nmap <buffer> \ca <Plug>(lsp-code-action)
+  nmap <buffer> \cl <Plug>(lsp-code-lens)
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> \k <Plug>(lsp-signature-help)
