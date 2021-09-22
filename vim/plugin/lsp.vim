@@ -9,6 +9,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> \rn <Plug>(lsp-rename)
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+  nmap <buffer> \k <Plug>(lsp-signature-help)
   nmap <buffer> K <Plug>(lsp-hover)
   inoremap <buffer> <expr> <C-F> lsp#scroll(+5)
   inoremap <buffer> <expr> <C-D> lsp#scroll(-5)
