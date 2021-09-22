@@ -1,1 +1,1 @@
-nnoremap \ <Cmd>nohlsearch<CR>
+nnoremap \\ <Cmd>nohlsearch<CR>
