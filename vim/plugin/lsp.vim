@@ -11,11 +11,13 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> \k <Plug>(lsp-signature-help)
   nmap <buffer> K <Plug>(lsp-hover)
-  inoremap <buffer> <expr> <C-F> lsp#scroll(+5)
-  inoremap <buffer> <expr> <C-D> lsp#scroll(-5)
+  nmap <buffer> \f <Plug>(lsp-document-format)
 
   let g:lsp_format_sync_timeout = 1000
   autocmd! BufWritePre <buffer> call execute('LspDocumentFormatSync')
+
+  inoremap <buffer> <expr> <C-F> lsp#scroll(+5)
+  inoremap <buffer> <expr> <C-D> lsp#scroll(-5)
 endfunction
 
 augroup lsp_install
