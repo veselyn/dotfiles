@@ -1,3 +1,3 @@
-nnoremap <Leader>ts <Cmd>Sexplore<CR>
-nnoremap <Leader>tt <Cmd>Texplore<CR>
-nnoremap <Leader>tv <Cmd>Vexplore<CR>
+nnoremap <Leader>ns <Cmd>Sexplore<CR>
+nnoremap <Leader>nt <Cmd>Texplore<CR>
+nnoremap <Leader>nv <Cmd>Vexplore<CR>
