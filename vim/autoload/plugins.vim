@@ -32,6 +32,7 @@ function! plugins#load()
   Plug 'thomasfaingnaert/vim-lsp-ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'dense-analysis/ale'
+  Plug 'rhysd/vim-lsp-ale'
 
   call plug#end()
 endfunction
