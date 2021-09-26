@@ -1,2 +1,2 @@
-nnoremap \ <cmd>nohlsearch<CR>
-tnoremap <Esc> <C-\><C-n>
+nnoremap \\ <Cmd>nohlsearch<CR>
+tnoremap <Esc> <C-\><C-N>

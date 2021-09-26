@@ -1,1 +1,1 @@
-let g:camelcasemotion_key = '<leader>'
+call camelcasemotion#CreateMotionMappings('<Leader>')
