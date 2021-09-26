@@ -1,4 +1,4 @@
-function! plugins#load()
+function! plugins#load() abort
   call plug#begin()
 
   Plug 'joshdick/onedark.vim'
