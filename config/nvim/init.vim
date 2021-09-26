@@ -29,9 +29,9 @@ set hidden
 set backup
 set swapfile
 set undofile
-set backupdir=$XDG_DATA_HOME/vim/backup//
-set directory=$XDG_DATA_HOME/vim/swap//
-set undodir=$XDG_DATA_HOME/vim/undo//
+set backupdir=$XDG_DATA_HOME/nvim/backup//
+set directory=$XDG_DATA_HOME/nvim/swap//
+set undodir=$XDG_DATA_HOME/nvim/undo//
 set shortmess-=S
 set shortmess+=FIc
 set updatetime=100
