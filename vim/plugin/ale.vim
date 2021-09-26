@@ -15,7 +15,7 @@ function! s:on_lsp_buffer_enabled() abort
 endfunction
 
 function! s:on_ale_buffer_enabled() abort
-  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+  autocmd User lsp_buffer_enabled ++once call s:on_lsp_buffer_enabled()
 endfunction
 
 augroup ale_install
