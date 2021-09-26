@@ -24,17 +24,17 @@ cmp.setup({
     completion = {autocomplete = false},
     snippet = {expand = function(args) luasnip.lsp_expand(args.body) end},
     mapping = {
-        ['<C-d>'] = cmp.mapping.scroll_docs(-5),
-        ['<C-f>'] = cmp.mapping.scroll_docs(5),
+        ['<C-D>'] = cmp.mapping.scroll_docs(-5),
+        ['<C-F>'] = cmp.mapping.scroll_docs(5),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.close(),
+        ['<C-E>'] = cmp.mapping.close(),
         ['<CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true
         }),
         ['<Tab>'] = cmp.mapping(function(fallback)
             if vim.fn.pumvisible() == 1 then
-                feedkey('<C-n>')
+                feedkey('<C-N>')
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
             elseif has_words_before() then
@@ -45,7 +45,7 @@ cmp.setup({
         end, {'i', 's'}),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if vim.fn.pumvisible() == 1 then
-                feedkey('<C-p>')
+                feedkey('<C-P>')
             elseif luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else
