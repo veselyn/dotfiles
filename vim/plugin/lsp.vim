@@ -11,7 +11,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> <Leader>cl <Plug>(lsp-code-lens)
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
-  nmap <buffer> <Leader>d <Plug>(lsp-document-diagnostics)
+  nmap <buffer> <Leader>D <Plug>(lsp-document-diagnostics)
   nmap <buffer> <Leader>k <Plug>(lsp-signature-help)
   nmap <buffer> K <Plug>(lsp-hover)
   nmap <buffer> <Leader>f <Plug>(lsp-document-format)
