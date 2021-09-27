@@ -9,6 +9,7 @@ function! s:on_lsp_buffer_enabled() abort
 
   nmap <buffer> [g <Plug>(ale_previous)
   nmap <buffer> ]g <Plug>(ale_next)
+  nmap <buffer> <Leader>d <Plug>(ale_detail)
   nmap <buffer> <Leader>f <Plug>(ale_fix)
 
   autocmd! BufWritePre <buffer>
