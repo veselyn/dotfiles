@@ -12,9 +12,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git tmux fzf z asdf vscode docker docker-compose)
 
 if type brew &>/dev/null; then
-	FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
-	autoload -Uz compinit
-	compinit -d "$ZSH_COMPDUMP"
+  FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
+  autoload -Uz compinit
+  compinit -d "$ZSH_COMPDUMP"
 fi
 
 source "$ZDOTDIR/aliases"
