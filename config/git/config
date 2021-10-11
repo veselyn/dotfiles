@@ -1,19 +1,19 @@
 [user]
-	email = v3s1ez@gmail.com
-	name = Veselin Ivanov
-	signingkey = B09DDF9D424E10D3
+  email = v3s1ez@gmail.com
+  name = Veselin Ivanov
+  signingkey = B09DDF9D424E10D3
 [commit]
-	gpgsign = true
+  gpgsign = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [core]
-	editor = vim
+  editor = vim
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [merge]
-	tool = vimdiff
+  tool = vimdiff
