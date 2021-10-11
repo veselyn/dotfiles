@@ -16,6 +16,8 @@
   show = delta
 [interactive]
   diffFilter = delta --color-only --features=interactive
+[delta]
+  syntax-theme = OneHalfDark
 [init]
   defaultBranch = master
 [core]
