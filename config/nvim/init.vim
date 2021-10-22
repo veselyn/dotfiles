@@ -50,7 +50,7 @@ set incsearch
 set hlsearch
 set expandtab
 set shiftwidth=2
-set tabstop=8
+set tabstop=2
 set softtabstop=2
 set smarttab
 set showcmd
