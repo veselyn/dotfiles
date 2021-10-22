@@ -45,8 +45,8 @@ ctrl + alt - j : yabai -m window --insert south
 ctrl + alt - k : yabai -m window --insert north
 ctrl + alt - l : yabai -m window --insert east
 
-alt - d : yabai -m window --toggle zoom-parent
-alt - f : yabai -m window --toggle zoom-fullscreen
+shift + alt - d : yabai -m window --toggle zoom-parent
+shift + alt - f : yabai -m window --toggle zoom-fullscreen
 
 alt - e : yabai -m window --toggle split
 
