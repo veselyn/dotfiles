@@ -20,6 +20,7 @@ set lazyredraw
 set number
 set relativenumber
 set smartindent
+set cursorline
 set mouse=a
 set clipboard=unnamed
 set splitbelow

@@ -1,1 +1,1 @@
-highlight clear SignColumn
+highlight clear CursorLine
