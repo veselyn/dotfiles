@@ -21,12 +21,6 @@
   "vim.easymotion": true,
   "vim.replaceWithRegister": true,
   "vim.sneak": true,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
