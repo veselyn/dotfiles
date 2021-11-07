@@ -19,7 +19,7 @@ mouse:
 colors:
   primary:
     foreground: '0xabb2bf'
-    background: '0x282c34'
+    background: '0x000000'
 
   cursor:
     text: '0x2c323c'
