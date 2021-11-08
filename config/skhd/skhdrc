@@ -13,7 +13,7 @@ shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
 shift + cmd - l : yabai -m window --warp east
 
-shift + alt - ` : yabai -m space --balance
+shift + alt - backspace : yabai -m space --balance
 
 shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
