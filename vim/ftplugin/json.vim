@@ -1,4 +1,4 @@
-call Ale_buffer_enabled()
+let b:ale_enabled = 1
 
 let b:ale_linters = []
 
