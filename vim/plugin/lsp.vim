@@ -21,6 +21,8 @@ function! s:on_lsp_buffer_enabled() abort
 
   inoremap <buffer> <expr> <C-F> lsp#scroll(+5)
   inoremap <buffer> <expr> <C-D> lsp#scroll(-5)
+
+  doautocmd <nomodeline> User ale_buffer_enabled
 endfunction
 
 augroup lsp_install
