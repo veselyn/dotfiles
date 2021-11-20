@@ -23,3 +23,8 @@ augroup ale_install
   autocmd!
   autocmd User ale_buffer_enabled call s:on_ale_buffer_enabled()
 augroup END
+
+augroup ale
+  autocmd!
+  autocmd BufEnter * call s:on_ale_buffer_enabled()
+augroup END
