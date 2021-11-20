@@ -5,7 +5,7 @@ let g:ale_linters = {
 \}
 
 function! s:on_ale_buffer_enabled() abort
-  if !b:ale_enabled
+  if !exists('b:ale_enabled')
     return
   endif
 
