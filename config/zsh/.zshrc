@@ -1,7 +1,7 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH"
 
-export LANG='en_US.UTF-8'
 export EDITOR='vim'
+export LANG='en_US.UTF-8'
 
 export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump"
@@ -17,10 +17,10 @@ if type brew &>/dev/null; then
   compinit -d "$ZSH_COMPDUMP"
 fi
 
-source "$ZDOTDIR/aliases"
-source "$ZDOTDIR/functions"
 source '/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 source '/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/functions"
 source "$ZSH/oh-my-zsh.sh"
 
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/cache"
