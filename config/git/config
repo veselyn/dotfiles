@@ -4,11 +4,6 @@
   signingkey = B09DDF9D424E10D3
 [commit]
   gpgsign = true
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
 [pager]
   diff = delta
   log = delta
