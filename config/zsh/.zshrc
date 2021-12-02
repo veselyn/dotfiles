@@ -20,7 +20,6 @@ fi
 source '/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 source '/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 source "$ZDOTDIR/aliases"
-source "$ZDOTDIR/functions"
 source "$ZSH/oh-my-zsh.sh"
 
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/cache"
