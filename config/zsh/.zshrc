@@ -8,6 +8,7 @@ export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_TMUX_AUTOSTART='true'
+ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 ZSH_THEME='robbyrussell'
 
 plugins=(
