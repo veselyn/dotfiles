@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+pmset -g batt | tail -n 1 | awk '{ print $3 }' | sed 's/;//'
