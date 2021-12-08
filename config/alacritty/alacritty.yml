@@ -1,8 +1,8 @@
 font:
   normal:
-    family: Menlo
+    family: MesloLGS Nerd Font
 
-  size: 13.0
+  size: 10.0
 
 window:
   dimensions:
