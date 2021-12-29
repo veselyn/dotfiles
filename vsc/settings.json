@@ -21,6 +21,7 @@
   "vim.easymotion": true,
   "vim.replaceWithRegister": true,
   "vim.sneak": true,
+  "editor.inlineSuggest.enabled": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
