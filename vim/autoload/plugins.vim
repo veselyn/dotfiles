@@ -14,6 +14,7 @@ function! plugins#load() abort
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-capslock'
   Plug 'tpope/vim-vinegar'
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'justinmk/vim-sneak'
   Plug 'vim-scripts/replacewithregister'
   Plug 'easymotion/vim-easymotion'
