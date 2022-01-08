@@ -12,14 +12,14 @@ ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 ZSH_THEME='robbyrussell'
 
 plugins=(
-  git
-  tmux
-  fzf
-  z
   asdf
-  vscode
   docker
   docker-compose
+  fzf
+  git
+  tmux
+  vscode
+  z
 )
 
 if type brew &>/dev/null; then
