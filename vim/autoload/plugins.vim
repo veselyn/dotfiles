@@ -4,7 +4,7 @@ function! plugins#load() abort
   Plug 'joshdick/onedark.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-unimpaired'
