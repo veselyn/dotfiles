@@ -1,16 +1,7 @@
 resize() {
   case $1 in
-  left)
-    _resize_left
-    ;;
-  bottom)
-    _resize_bottom
-    ;;
-  top)
-    _resize_top
-    ;;
-  right)
-    _resize_right
+  left | bottom | top | right)
+    "_resize_$1"
     ;;
   esac
 }
