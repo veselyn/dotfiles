@@ -1,13 +1,25 @@
 #!/usr/bin/env sh
 
+start() {
+  brew services start "$1"
+}
+
+stop() {
+  brew services stop "$1"
+}
+
+restart() {
+  brew services restart "$1"
+}
+
 is_floating() {
   is_floating=$(yabai -m query --windows --window | jq '."is-floating"')
 
-  if [ "$is_floating" = 'false' ]; then
+  if [ "$is_floating" = false ]; then
     return 1
   fi
 
-  if [ "$is_floating" = 'true' ]; then
+  if [ "$is_floating" = true ]; then
     return 0
   fi
 }
@@ -53,6 +65,48 @@ resize_right() {
 }
 
 case $1 in
+start)
+  case $2 in
+  yabai)
+    start yabai
+    ;;
+  skhd)
+    start skhd
+    ;;
+  *)
+    start yabai
+    start skhd
+    ;;
+  esac
+  ;;
+stop)
+  case $2 in
+  yabai)
+    stop yabai
+    ;;
+  skhd)
+    stop skhd
+    ;;
+  *)
+    stop yabai
+    stop skhd
+    ;;
+  esac
+  ;;
+restart)
+  case $2 in
+  yabai)
+    restart yabai
+    ;;
+  skhd)
+    restart skhd
+    ;;
+  *)
+    restart yabai
+    restart skhd
+    ;;
+  esac
+  ;;
 resize)
   case $2 in
   left)
