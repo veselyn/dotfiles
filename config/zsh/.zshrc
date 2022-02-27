@@ -29,7 +29,7 @@ if type brew &>/dev/null; then
 fi
 
 source "$ZSH/oh-my-zsh.sh"
-source "$ZDOTDIR/aliases"
+source "$ZDOTDIR/aliases.sh"
 source '/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 source '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 
