@@ -4,6 +4,13 @@ let g:ale_linters = {
 \  '*': ['vim-lsp']
 \}
 
+let g:ale_fixers = {
+\  '*': [
+\    'remove_trailing_lines',
+\    'trim_whitespace'
+\  ]
+\}
+
 function! s:on_ale_buffer_enabled() abort
   if !exists('b:ale_enabled')
     return
