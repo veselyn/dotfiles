@@ -1,3 +1,6 @@
 #!/usr/bin/env sh
 
-pmset -g batt | grep -Eo '\d{1,3}%'
+battery=$(pmset -g batt)
+percentage=$(echo "$battery" | grep -Eo '\d{1,3}%')
+
+echo "$percentage"
