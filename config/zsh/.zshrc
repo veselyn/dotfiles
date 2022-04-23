@@ -22,6 +22,7 @@ plugins=(
   z
   macos
   jump
+  web-search
 )
 
 if type brew &>/dev/null; then
