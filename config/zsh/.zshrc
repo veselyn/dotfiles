@@ -21,6 +21,7 @@ plugins=(
   vscode
   z
   macos
+  jump
 )
 
 if type brew &>/dev/null; then
