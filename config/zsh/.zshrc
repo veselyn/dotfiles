@@ -17,12 +17,12 @@ plugins=(
   docker-compose
   fzf
   git
+  jump
+  macos
   tmux
   vscode
-  z
-  macos
-  jump
   web-search
+  z
 )
 
 if type brew &>/dev/null; then
