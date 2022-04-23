@@ -20,6 +20,7 @@ plugins=(
   tmux
   vscode
   z
+  macos
 )
 
 if type brew &>/dev/null; then
