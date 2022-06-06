@@ -3,6 +3,7 @@
 . "$(dirname "$0")/_yabaiscript/focus.sh"
 . "$(dirname "$0")/_yabaiscript/swap.sh"
 . "$(dirname "$0")/_yabaiscript/warp.sh"
+. "$(dirname "$0")/_yabaiscript/space.sh"
 . "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/resize.sh"
 
@@ -15,6 +16,9 @@ swap)
   ;;
 warp)
   warp "$2"
+  ;;
+space)
+  space "$2"
   ;;
 start | stop | restart)
   services "$1" "$2"
