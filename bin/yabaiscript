@@ -1,9 +1,13 @@
 #!/usr/bin/env sh
 
+. "$(dirname "$0")/_yabaiscript/focus.sh"
 . "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/resize.sh"
 
 case $1 in
+focus)
+  focus "$2"
+  ;;
 start | stop | restart)
   services "$1" "$2"
   ;;
