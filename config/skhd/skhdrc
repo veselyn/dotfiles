@@ -26,10 +26,10 @@ shift + alt - 8 : yabaiscript space 8
 shift + alt - 9 : yabaiscript space 9
 shift + alt - 0 : yabaiscript space 10
 
-shift + ctrl - h : yabai -m window --move rel:-10:0
-shift + ctrl - j : yabai -m window --move rel:0:10
-shift + ctrl - k : yabai -m window --move rel:0:-10
-shift + ctrl - l : yabai -m window --move rel:10:0
+shift + ctrl - h : yabaiscript move left
+shift + ctrl - j : yabaiscript move bottom
+shift + ctrl - k : yabaiscript move top
+shift + ctrl - l : yabaiscript move right
 
 shift + alt + cmd - h : yabaiscript resize left
 shift + alt + cmd - j : yabaiscript resize bottom
