@@ -1,17 +1,17 @@
-alt - h : yabaiscript focus west
-alt - j : yabaiscript focus south
-alt - k : yabaiscript focus north
-alt - l : yabaiscript focus east
+alt - h : yabaiscript focus left
+alt - j : yabaiscript focus bottom
+alt - k : yabaiscript focus top
+alt - l : yabaiscript focus right
 
-shift + alt - h : yabaiscript swap west
-shift + alt - j : yabaiscript swap south
-shift + alt - k : yabaiscript swap north
-shift + alt - l : yabaiscript swap east
+shift + alt - h : yabaiscript swap left
+shift + alt - j : yabaiscript swap bottom
+shift + alt - k : yabaiscript swap top
+shift + alt - l : yabaiscript swap right
 
-shift + cmd - h : yabaiscript warp west
-shift + cmd - j : yabaiscript warp south
-shift + cmd - k : yabaiscript warp north
-shift + cmd - l : yabaiscript warp east
+shift + cmd - h : yabaiscript warp left
+shift + cmd - j : yabaiscript warp bottom
+shift + cmd - k : yabaiscript warp top
+shift + cmd - l : yabaiscript warp right
 
 shift + alt - backspace : yabaiscript space balance
 
