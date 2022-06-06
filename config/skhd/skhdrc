@@ -41,10 +41,10 @@ ctrl + alt - j : yabaiscript insert bottom
 ctrl + alt - k : yabaiscript insert top
 ctrl + alt - l : yabaiscript insert right
 
-shift + alt - d : yabai -m window --toggle zoom-parent
-shift + alt - f : yabai -m window --toggle zoom-fullscreen
+shift + alt - d : yabaiscript toggle zoom-parent
+shift + alt - f : yabaiscript toggle zoom-fullscreen
 
-alt - e : yabai -m window --toggle split
+alt - e : yabaiscript toggle split
 
-alt - t : yabai -m window --toggle float;\
+alt - t : yabaiscript toggle float;\
           yabai -m window --grid 4:4:1:1:2:2

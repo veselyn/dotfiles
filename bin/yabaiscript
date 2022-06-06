@@ -8,6 +8,7 @@
 . "$(dirname "$0")/_yabaiscript/move.sh"
 . "$(dirname "$0")/_yabaiscript/resize.sh"
 . "$(dirname "$0")/_yabaiscript/insert.sh"
+. "$(dirname "$0")/_yabaiscript/toggle.sh"
 
 case $1 in
 start | stop | restart)
@@ -33,5 +34,8 @@ resize)
   ;;
 insert)
   insert "$2"
+  ;;
+toggle)
+  toggle "$2"
   ;;
 esac
