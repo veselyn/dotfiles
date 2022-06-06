@@ -8,10 +8,10 @@ shift + alt - j : yabaiscript swap south
 shift + alt - k : yabaiscript swap north
 shift + alt - l : yabaiscript swap east
 
-shift + cmd - h : yabai -m window --warp west
-shift + cmd - j : yabai -m window --warp south
-shift + cmd - k : yabai -m window --warp north
-shift + cmd - l : yabai -m window --warp east
+shift + cmd - h : yabaiscript warp west
+shift + cmd - j : yabaiscript warp south
+shift + cmd - k : yabaiscript warp north
+shift + cmd - l : yabaiscript warp east
 
 shift + alt - backspace : yabai -m space --balance
 
