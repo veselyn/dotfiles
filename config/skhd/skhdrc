@@ -36,10 +36,10 @@ shift + alt + cmd - j : yabaiscript resize bottom
 shift + alt + cmd - k : yabaiscript resize top
 shift + alt + cmd - l : yabaiscript resize right
 
-ctrl + alt - h : yabai -m window --insert west
-ctrl + alt - j : yabai -m window --insert south
-ctrl + alt - k : yabai -m window --insert north
-ctrl + alt - l : yabai -m window --insert east
+ctrl + alt - h : yabaiscript insert left
+ctrl + alt - j : yabaiscript insert bottom
+ctrl + alt - k : yabaiscript insert top
+ctrl + alt - l : yabaiscript insert right
 
 shift + alt - d : yabai -m window --toggle zoom-parent
 shift + alt - f : yabai -m window --toggle zoom-fullscreen

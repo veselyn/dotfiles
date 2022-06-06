@@ -1,14 +1,18 @@
 #!/usr/bin/env sh
 
+. "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/focus.sh"
 . "$(dirname "$0")/_yabaiscript/swap.sh"
 . "$(dirname "$0")/_yabaiscript/warp.sh"
 . "$(dirname "$0")/_yabaiscript/space.sh"
 . "$(dirname "$0")/_yabaiscript/move.sh"
-. "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/resize.sh"
+. "$(dirname "$0")/_yabaiscript/insert.sh"
 
 case $1 in
+start | stop | restart)
+  services "$1" "$2"
+  ;;
 focus)
   focus "$2"
   ;;
@@ -24,10 +28,10 @@ space)
 move)
   move "$2"
   ;;
-start | stop | restart)
-  services "$1" "$2"
-  ;;
 resize)
   resize "$2"
+  ;;
+insert)
+  insert "$2"
   ;;
 esac
