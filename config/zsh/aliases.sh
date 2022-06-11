@@ -1,5 +1,7 @@
 alias v='vim'
 alias vd='vimdiff'
+alias vss='vim -S Session.vim'
+
 alias r='ranger'
 
 alias gai='git add --interactive'
