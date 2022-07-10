@@ -17,6 +17,7 @@ function! s:on_ale_buffer_enabled() abort
   endif
 
   let b:ale_fix_on_save = 1
+  let b:ale_lint_delay = 100
 
   nmap <buffer> [g <Plug>(ale_previous)
   nmap <buffer> ]g <Plug>(ale_next)
