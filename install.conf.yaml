@@ -32,11 +32,13 @@
     - command: |-
         git submodule update --init --recursive
       description: Installing submodules
+
     - command: |-
         rm -rf ~/.config/tmux/plugins/tpm
         git clone https://github.com/tmux-plugins/tpm \
           ~/.config/tmux/plugins/tpm
       description: Installing tpm
+
     - command: |-
         rm -f ~/.vim/autoload/plug.vim
         curl \
