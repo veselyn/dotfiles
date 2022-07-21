@@ -40,6 +40,8 @@
         /bin/bash -c "$(curl $src)"
       description: Installing Homebrew
       stdin: true
+      stdout: true
+      stderr: true
 
     - command: |-
         src=https://github.com/tmux-plugins/tpm
