@@ -21,12 +21,12 @@
     ~/bin: bin
 
 - create:
-    - ~/source/private
-    - ~/source/public
-    - ~/source/work
     - ~/.local/share/vim/backup
     - ~/.local/share/vim/swap
     - ~/.local/share/vim/undo
+    - ~/source/private
+    - ~/source/public
+    - ~/source/work
 
 - shell:
     - command: |-
