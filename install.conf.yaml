@@ -21,9 +21,11 @@
     ~/bin: bin
 
 - create:
+    - ~/.cache/zsh
     - ~/.local/share/vim/backup
     - ~/.local/share/vim/swap
     - ~/.local/share/vim/undo
+    - ~/.local/state/zsh
     - ~/source/private
     - ~/source/public
     - ~/source/work
