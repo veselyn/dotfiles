@@ -8,6 +8,9 @@
     ~/.vim: vim
 
 - create:
+    - ~/.local/share/vim/backup
+    - ~/.local/share/vim/swap
+    - ~/.local/share/vim/undo
     - ~/source
 
 - shell:
