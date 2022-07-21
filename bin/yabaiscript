@@ -13,33 +13,33 @@
 
 case $1 in
 start | stop | restart)
-  services "$1" "$2"
-  ;;
+	services "$1" "$2"
+	;;
 focus)
-  focus "$2"
-  ;;
+	focus "$2"
+	;;
 swap)
-  swap "$2"
-  ;;
+	swap "$2"
+	;;
 warp)
-  warp "$2"
-  ;;
+	warp "$2"
+	;;
 space)
-  space "$2"
-  ;;
+	space "$2"
+	;;
 move)
-  move "$2"
-  ;;
+	move "$2"
+	;;
 resize)
-  resize "$2"
-  ;;
+	resize "$2"
+	;;
 insert)
-  insert "$2"
-  ;;
+	insert "$2"
+	;;
 toggle)
-  toggle "$2"
-  ;;
+	toggle "$2"
+	;;
 grid)
-  grid "$2"
-  ;;
+	grid "$2"
+	;;
 esac
