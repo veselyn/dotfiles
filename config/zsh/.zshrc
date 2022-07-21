@@ -12,23 +12,23 @@ ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
 ZSH_THEME='robbyrussell'
 
 plugins=(
-  asdf
-  docker
-  docker-compose
-  fzf
-  git
-  jump
-  macos
-  tmux
-  vscode
-  web-search
-  z
+	asdf
+	docker
+	docker-compose
+	fzf
+	git
+	jump
+	macos
+	tmux
+	vscode
+	web-search
+	z
 )
 
 if type brew &>/dev/null; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
-  autoload -Uz compinit
-  compinit -d "$ZSH_COMPDUMP"
+	FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
+	autoload -Uz compinit
+	compinit -d "$ZSH_COMPDUMP"
 fi
 
 source "$ZSH/oh-my-zsh.sh"
