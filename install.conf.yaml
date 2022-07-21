@@ -5,6 +5,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.zshenv: zshenv
     ~/.vim: vim
 
 - create:
