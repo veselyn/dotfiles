@@ -7,6 +7,15 @@
 - link:
     ~/.zshenv: zshenv
     ~/bin: bin
+    ~/.config/asdf: config/asdf
+    ~/.config/bat: config/bat
+    ~/.config/git: config/git
+    ~/.config/kitty: config/kitty
+    ~/.config/ranger: config/ranger
+    ~/.config/skhd: config/skhd
+    ~/.config/tmux: config/tmux
+    ~/.config/yabai: config/yabai
+    ~/.config/zsh: config/zsh
     ~/.vim: vim
 
 - create:
