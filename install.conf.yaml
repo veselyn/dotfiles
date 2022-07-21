@@ -36,6 +36,12 @@
       description: Installing submodules
 
     - command: |-
+        src=https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
+        /bin/bash -c "$(curl -fsSL $src)"
+      description: Installing Homebrew
+      stdin: true
+
+    - command: |-
         rm -rf ~/.config/tmux/plugins/tpm
         git clone https://github.com/tmux-plugins/tpm \
           ~/.config/tmux/plugins/tpm
