@@ -47,4 +47,4 @@ shift + alt - f : yabaiscript toggle zoom-fullscreen
 alt - e : yabaiscript toggle split
 
 alt - t : yabaiscript toggle float;\
-          yabaiscript grid center
+		yabaiscript grid center
