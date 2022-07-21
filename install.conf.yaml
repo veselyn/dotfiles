@@ -37,7 +37,7 @@
 
     - command: |-
         src=https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-        /bin/bash -c "$(curl $src)"
+        bash <(curl $src)
       description: Installing Homebrew
       stdin: true
       stdout: true
