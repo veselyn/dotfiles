@@ -42,9 +42,10 @@
       stdin: true
 
     - command: |-
-        rm -rf ~/.config/tmux/plugins/tpm
-        git clone https://github.com/tmux-plugins/tpm \
-          ~/.config/tmux/plugins/tpm
+        src=https://github.com/tmux-plugins/tpm
+        dest=~/.config/tmux/plugins/tpm
+        rm -rf $dest
+        git clone $src $dest
       description: Installing tpm
 
     - command: |-
