@@ -8,10 +8,12 @@
     ~/.vim: vim
 
 - create:
+    - ~/source/private
+    - ~/source/public
+    - ~/source/work
     - ~/.local/share/vim/backup
     - ~/.local/share/vim/swap
     - ~/.local/share/vim/undo
-    - ~/source
 
 - shell:
     - command: |-
