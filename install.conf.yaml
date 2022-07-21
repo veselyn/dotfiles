@@ -7,8 +7,6 @@
     - ~/.config
 
 - link:
-    ~/.zshenv: zshenv
-    ~/bin: bin
     ~/.config/asdf: config/asdf
     ~/.config/bat: config/bat
     ~/.config/git: config/git
@@ -19,6 +17,8 @@
     ~/.config/yabai: config/yabai
     ~/.config/zsh: config/zsh
     ~/.vim: vim
+    ~/.zshenv: zshenv
+    ~/bin: bin
 
 - create:
     - ~/source/private
