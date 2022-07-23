@@ -8,7 +8,7 @@ resize() {
 
 _resize_left() {
 	if _is_floating; then
-		yabai -m window --move rel:-10:0
+		yabai -m window --resize right:-10:0
 		return
 	fi
 
@@ -18,7 +18,7 @@ _resize_left() {
 
 _resize_bottom() {
 	if _is_floating; then
-		yabai -m window --move rel:0:10
+		yabai -m window --resize bottom:0:10
 		return
 	fi
 
@@ -28,7 +28,7 @@ _resize_bottom() {
 
 _resize_top() {
 	if _is_floating; then
-		yabai -m window --move rel:0:-10
+		yabai -m window --resize bottom:0:-10
 		return
 	fi
 
@@ -38,7 +38,7 @@ _resize_top() {
 
 _resize_right() {
 	if _is_floating; then
-		yabai -m window --move rel:10:0
+		yabai -m window --resize right:10:0
 		return
 	fi
 
