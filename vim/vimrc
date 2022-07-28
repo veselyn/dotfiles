@@ -4,6 +4,7 @@ let mapleader = ' '
 runtime plugin/onedark.vim
 colorscheme onedark
 
+set exrc
 set termguicolors
 set hidden
 set backup
