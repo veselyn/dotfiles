@@ -37,6 +37,7 @@ function! plugins#load() abort
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-vinegar'
 	Plug 'vim-scripts/replacewithregister'
+	Plug 'vimwiki/vimwiki'
 	Plug 'yggdroot/indentline'
 
 	call plug#end()
