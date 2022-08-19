@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -eu
+
 . "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/focus.sh"
 . "$(dirname "$0")/_yabaiscript/swap.sh"
