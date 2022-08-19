@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -eu
+
 battery=$(pmset -g batt)
 percentage=$(echo "$battery" | grep -Eo '\d{1,3}%')
 
