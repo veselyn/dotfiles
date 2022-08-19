@@ -1,1 +1,1 @@
-let g:vimwiki_map_prefix = '\w'
+let g:vimwiki_map_prefix = '<Leader>W'
