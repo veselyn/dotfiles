@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-set -eu
+set -e
 
 . "$(dirname "$0")/_yabaiscript/services.sh"
 . "$(dirname "$0")/_yabaiscript/focus.sh"
