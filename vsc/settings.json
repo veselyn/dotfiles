@@ -5,7 +5,7 @@
 	"workbench.iconTheme": "vscode-icons",
 	"editor.fontSize": 13,
 	"editor.fontFamily": "MesloLGS Nerd Font",
-	"editor.tabSize": 2,
+	"editor.insertSpaces": false,
 	"vim.useSystemClipboard": true,
 	"workbench.activityBar.visible": false,
 	"workbench.editor.showTabs": false,
