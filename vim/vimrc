@@ -1,7 +1,6 @@
 call plugins#load()
 
 let mapleader = ' '
-runtime plugin/onedark.vim
 colorscheme onedark
 
 set exrc

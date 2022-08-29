@@ -1,3 +1,8 @@
+if exists('s:loaded')
+	finish
+endif
+let s:loaded = 1
+
 let g:onedark_color_overrides = {
 \	"background": {
 \		"gui": "#000000",

@@ -1,5 +1,5 @@
 function! plugins#load() abort
-	call plug#begin()
+	call s:begin()
 
 	Plug 'airblade/vim-gitgutter'
 	Plug 'bkad/camelcasemotion'
@@ -40,5 +40,15 @@ function! plugins#load() abort
 	Plug 'vimwiki/vimwiki'
 	Plug 'yggdroot/indentline'
 
+	call s:end()
+endfunction
+
+function! s:begin() abort
+	runtime plugin/onedark.vim
+
+	call plug#begin()
+endfunction
+
+function! s:end() abort
 	call plug#end()
 endfunction
