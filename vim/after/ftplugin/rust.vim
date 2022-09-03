@@ -1,1 +1,1 @@
-compiler rustc
+compiler cargo
