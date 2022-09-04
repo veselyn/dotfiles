@@ -1,3 +1,3 @@
 nnoremap Q @q
 nnoremap Y y$
-nnoremap \\ <Cmd>nohlsearch<CR>
+nnoremap \ <Cmd>nohlsearch<CR>
