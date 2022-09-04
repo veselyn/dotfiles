@@ -36,4 +36,8 @@ source "$ZDOTDIR/aliases"
 source '/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 source '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
 
+if [ -f "$HOME/.local/aliases" ]; then
+	source "$HOME/.local/aliases"
+fi
+
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/cache"
