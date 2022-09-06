@@ -2,6 +2,7 @@ function! plugins#load() abort
 	call s:begin()
 
 	Plug 'airblade/vim-gitgutter'
+	Plug 'asheq/close-buffers.vim'
 	Plug 'bkad/camelcasemotion'
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'dense-analysis/ale'
