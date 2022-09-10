@@ -1,7 +1,5 @@
 .DS_Store
 /config/tmux/plugins/
-/config/nvim/.netrwhist
-/config/nvim/plugged/
 /vim/autoload/plug.vim
 /vim/plugged/
 /vim/.netrwhist
