@@ -6,6 +6,8 @@
 	gpgsign = true
 [delta]
 	syntax-theme = OneHalfDark
+[pull]
+	rebase = true
 [init]
 	defaultBranch = master
 [core]
