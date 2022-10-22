@@ -7,6 +7,7 @@ export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/.zcompdump"
 
+ZSH_CUSTOM="$ZDOTDIR/custom"
 ZSH_THEME='robbyrussell'
 ZSH_TMUX_AUTOSTART='true'
 ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
@@ -34,10 +35,5 @@ fi
 source "$ZSH/oh-my-zsh.sh"
 source '/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
 source '/opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
-source "$ZDOTDIR/aliases"
-
-if [ -f "$HOME/.local/aliases" ]; then
-	source "$HOME/.local/aliases"
-fi
 
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
