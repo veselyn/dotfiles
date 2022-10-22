@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-
 alias v='vim'
 alias vd='vimdiff'
 alias vss='vim -S Session.vim'
