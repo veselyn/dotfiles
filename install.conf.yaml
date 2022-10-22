@@ -15,6 +15,7 @@
     ~/.config/skhd: config/skhd
     ~/.config/tmux: config/tmux
     ~/.config/yabai: config/yabai
+    ~/.config/zathura: config/zathura
     ~/.config/zsh: config/zsh
     ~/.vim: vim
     ~/.zshenv: zshenv
