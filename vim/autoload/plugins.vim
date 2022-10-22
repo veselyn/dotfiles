@@ -14,6 +14,7 @@ function! plugins#load() abort
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'justinmk/vim-sneak'
+	Plug 'lervag/vimtex'
 	Plug 'mattn/emmet-vim'
 	Plug 'mattn/vim-lsp-settings'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
