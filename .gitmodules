@@ -4,3 +4,6 @@
 [submodule "private"]
 	path = private
 	url = git@github.com:v3s1e/private.git
+[submodule "work"]
+	path = work
+	url = git@github.com:v3s1e/work.git
