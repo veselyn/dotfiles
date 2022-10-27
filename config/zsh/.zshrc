@@ -19,7 +19,6 @@ plugins=(
 	jump
 	macos
 	tmux
-	vscode
 	web-search
 	z
 )
