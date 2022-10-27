@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH"
 
 export EDITOR='vim'
 export LANG='en_US.UTF-8'
