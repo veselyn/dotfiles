@@ -29,6 +29,7 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+set nowrapscan
 set noexpandtab
 set shiftwidth=4
 set tabstop=4
