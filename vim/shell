@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+clear
+shift
+zsh -c "$@"
