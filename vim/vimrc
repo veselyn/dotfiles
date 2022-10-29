@@ -1,6 +1,7 @@
 call plugins#load()
 
 let mapleader = ' '
+let maplocalleader = '\'
 colorscheme onedark
 
 set exrc
