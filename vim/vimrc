@@ -12,6 +12,8 @@ set undofile
 set backupdir=$XDG_DATA_HOME/vim/backup//
 set directory=$XDG_DATA_HOME/vim/swap//
 set undodir=$XDG_DATA_HOME/vim/undo//
+set shellpipe=2>&1\|\ tee
+set shell=$HOME/.vim/shell
 set shortmess-=S
 set shortmess+=FIc
 set updatetime=100
