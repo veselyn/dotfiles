@@ -1,6 +1,9 @@
 let g:indentLine_char = '│'
 let g:indentLine_setConceal = 0
 
+set concealcursor=
+set conceallevel=2
+
 set listchars=
 set listchars+=tab:│\ 
 set listchars+=trail:-
