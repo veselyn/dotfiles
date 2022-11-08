@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 services() {
 	case $1 in
 	start | stop | restart)

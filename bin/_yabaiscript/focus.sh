@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 focus() {
 	case $1 in
 	left | bottom | top | right)

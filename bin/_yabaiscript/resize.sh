@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 resize() {
 	case $1 in
 	left | bottom | top | right)

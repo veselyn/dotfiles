@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 swap() {
 	case $1 in
 	left | bottom | top | right)
