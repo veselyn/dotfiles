@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 insert() {
 	case $1 in
 	left | bottom | top | right)

@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 grid() {
 	case $1 in
 	center)

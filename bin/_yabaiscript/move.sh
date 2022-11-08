@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 move() {
 	case $1 in
 	left | bottom | top | right)

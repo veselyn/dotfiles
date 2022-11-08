@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 space() {
 	case $1 in
 	balance)
