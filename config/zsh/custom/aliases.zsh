@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 alias v='vim'
 alias vd='vimdiff'
