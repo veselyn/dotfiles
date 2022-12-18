@@ -1,5 +1,5 @@
 function! plugins#load() abort
-	call s:begin()
+	call plugins#begin()
 
 	Plug 'airblade/vim-gitgutter'
 	Plug 'asheq/close-buffers.vim'
@@ -44,15 +44,15 @@ function! plugins#load() abort
 	Plug 'vimwiki/vimwiki'
 	Plug 'yggdroot/indentline'
 
-	call s:end()
+	call plugins#end()
 endfunction
 
-function! s:begin() abort
+function! plugins#begin() abort
 	runtime plugin/onedark.vim
 
 	call plug#begin()
 endfunction
 
-function! s:end() abort
+function! plugins#end() abort
 	call plug#end()
 endfunction
