@@ -8,6 +8,7 @@ function! plugins#load() abort
 	Plug 'dense-analysis/ale'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'editorconfig/editorconfig-vim'
+	Plug 'francoiscabrol/ranger.vim'
 	Plug 'honza/vim-snippets'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'joshdick/onedark.vim'
