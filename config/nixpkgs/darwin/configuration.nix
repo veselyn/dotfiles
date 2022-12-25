@@ -11,6 +11,9 @@
   system.defaults.dock.autohide = true;
 
   homebrew.enable = true;
+  homebrew.casks =
+    [ "1password"
+    ];
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
