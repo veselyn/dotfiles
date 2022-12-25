@@ -49,6 +49,9 @@
             ];
         };
       };
+      tmux = {
+        enable = true;
+      };
       fzf = {
         enable = true;
       };
