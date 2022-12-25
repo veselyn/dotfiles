@@ -34,6 +34,7 @@
       pkgs._1password
       pkgs.fzf
       pkgs.neofetch
+      pkgs.ranger
       pkgs.vim-full
     ];
 
