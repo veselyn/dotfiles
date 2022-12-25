@@ -63,6 +63,7 @@
         shortcut = "a";
         terminal = "xterm-kitty";
         extraConfig = ''
+          set -g mouse on
           set -g status off
         '';
       };
