@@ -21,6 +21,9 @@
         [
           "${config.home.file."bin".source}"
         ];
+      sessionVariables = {
+        EDITOR = "vim";
+      };
     };
     programs = {
       zsh = {
