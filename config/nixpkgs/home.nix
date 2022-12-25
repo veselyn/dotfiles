@@ -42,11 +42,14 @@
               "git"
               "jump"
               "macos"
-              # TODO: Enable once tmux is set up.
-              # "tmux"
+              "tmux"
               "web-search"
               "z"
             ];
+          extraConfig = ''
+            ZSH_TMUX_AUTOSTART=true
+            ZSH_TMUX_CONFIG=${config.xdg.configFile."tmux/tmux.conf".source}
+          '';
         };
       };
       tmux = {
