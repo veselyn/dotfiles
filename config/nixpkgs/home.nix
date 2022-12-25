@@ -8,7 +8,7 @@
     home = "/Users/veselin";
   };
 
-  home-manager.users.veselin = { config, pkgs, ...}: {
+  home-manager.users.veselin = { config, pkgs, ... }: {
     home = {
       username = "veselin";
       homeDirectory = "/Users/veselin";
