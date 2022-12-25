@@ -23,5 +23,13 @@
         skhd.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/source/private/dotfiles/config/skhd";
       };
     };
+    programs = {
+      zsh = {
+        enable = true;
+        oh-my-zsh = {
+          enable = true;
+        };
+      };
+    };
   };
 }
