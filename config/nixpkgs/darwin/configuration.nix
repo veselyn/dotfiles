@@ -21,6 +21,7 @@
   nixpkgs.config.allowUnfree = true;
 
   services.yabai.enable = true;
+  services.skhd.enable = true;
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
