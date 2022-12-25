@@ -39,7 +39,6 @@
               # "private"
               # "work"
               "asdf"
-              "fzf"
               "git"
               "jump"
               "macos"
