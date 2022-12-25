@@ -52,6 +52,12 @@
       tmux = {
         enable = true;
         terminal = "xterm-kitty";
+        shortcut = "a";
+        keyMode = "vi";
+        customPaneNavigationAndResize = true;
+        baseIndex = 1;
+        clock24 = true;
+        escapeTime = 0;
       };
       fzf = {
         enable = true;
