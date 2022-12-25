@@ -6,6 +6,8 @@
 
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
 
+  system.defaults.dock.tilesize = 16;
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
