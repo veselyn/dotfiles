@@ -27,6 +27,16 @@
   services.yabai.enable = true;
   services.skhd.enable = true;
 
+  fonts = {
+    fontDir = {
+      enable = true;
+    };
+    fonts =
+      [
+        pkgs.nerdfonts
+      ];
+  };
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
