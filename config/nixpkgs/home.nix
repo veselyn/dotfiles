@@ -32,6 +32,21 @@
         oh-my-zsh = {
           enable = true;
           theme = "robbyrussell";
+          plugins =
+            [
+              # TODO: Separate private and work repositories.
+              # "private"
+              # "work"
+              "asdf"
+              "fzf"
+              "git"
+              "jump"
+              "macos"
+              # TODO: Enable once tmux is set up.
+              # "tmux"
+              "web-search"
+              "z"
+            ];
         };
       };
     };
