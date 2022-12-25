@@ -69,6 +69,7 @@
           size = 13;
         };
         settings = {
+          hide_window_decorations = "titlebar-only";
           macos_option_as_alt = "both";
           mouse_hide_wait = -1;
         };
