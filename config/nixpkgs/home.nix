@@ -68,6 +68,9 @@
           name = "MesloLGS Nerd Font";
           size = 13;
         };
+        settings = {
+          macos_option_as_alt = "both";
+        };
       };
     };
   };
