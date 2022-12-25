@@ -15,7 +15,8 @@
 
   homebrew.enable = true;
   homebrew.casks =
-    [ "1password"
+    [
+      "1password"
       "firefox"
     ];
 
@@ -28,7 +29,8 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
-    [ pkgs._1password
+    [
+      pkgs._1password
       pkgs.fzf
       pkgs.vim-full
     ];
@@ -42,7 +44,7 @@
   # nix.package = pkgs.nix;
 
   # Create /etc/zshrc that loads the nix-darwin environment.
-  programs.zsh.enable = true;  # default shell on catalina
+  programs.zsh.enable = true; # default shell on catalina
   # programs.fish.enable = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
