@@ -108,6 +108,7 @@
   environment.systemPackages =
     [
       pkgs._1password
+      pkgs.highlight
       pkgs.neofetch
       pkgs.ranger
     ];
