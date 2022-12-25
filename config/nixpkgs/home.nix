@@ -19,7 +19,6 @@
     };
     xdg = {
       configFile = {
-        yabai.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/source/private/dotfiles/config/yabai";
         skhd.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/source/private/dotfiles/config/skhd";
       };
     };
