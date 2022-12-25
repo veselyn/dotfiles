@@ -101,6 +101,17 @@
           signByDefault = true;
         };
       };
+      ssh = {
+        enable = true;
+        matchBlocks = {
+          "*" = {
+            extraOptions = {
+              AddKeysToAgent = "yes";
+              UseKeychain = "yes";
+            };
+          };
+        };
+      };
     };
   };
 }
