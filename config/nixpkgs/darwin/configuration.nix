@@ -5,6 +5,7 @@
   system.keyboard.remapCapsLockToEscape = true;
 
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
+  system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
 
   system.defaults.dock.tilesize = 16;
   system.defaults.dock.autohide = true;
