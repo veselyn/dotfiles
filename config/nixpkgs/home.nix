@@ -70,6 +70,7 @@
         };
         settings = {
           macos_option_as_alt = "both";
+          mouse_hide_wait = -1;
         };
       };
     };
