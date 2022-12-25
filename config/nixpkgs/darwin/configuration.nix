@@ -22,6 +22,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
     [ pkgs.vim
+      pkgs._1password
     ];
 
   # Use a custom configuration.nix location.
