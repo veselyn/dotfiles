@@ -61,6 +61,9 @@
         keyMode = "vi";
         shortcut = "a";
         terminal = "xterm-kitty";
+        extraConfig = ''
+          set-option -g status off
+        '';
       };
       fzf = {
         enable = true;
