@@ -54,7 +54,7 @@ function! plugins#begin() abort
 
 	runtime plugin/onedark.vim
 
-	call plug#begin()
+	call plug#begin(data_dir . '/plugged')
 endfunction
 
 function! plugins#end() abort

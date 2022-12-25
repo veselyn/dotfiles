@@ -110,7 +110,6 @@
       pkgs._1password
       pkgs.neofetch
       pkgs.ranger
-      pkgs.vim-full
     ];
 
   # Use a custom configuration.nix location.

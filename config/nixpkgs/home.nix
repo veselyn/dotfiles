@@ -80,6 +80,12 @@
           mouse_hide_wait = -1;
         };
       };
+      vim = {
+        enable = true;
+        extraConfig = ''
+          source ${config.home.file.".vim".source}/vimrc
+        '';
+      };
     };
   };
 }
