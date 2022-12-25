@@ -5,6 +5,7 @@
 
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
+  system.keyboard.nonUS.remapTilde = true;
 
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
   system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
