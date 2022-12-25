@@ -60,7 +60,7 @@
         shortcut = "a";
         terminal = "xterm-kitty";
         extraConfig = ''
-          set-option -g status off
+          set -g status off
         '';
       };
       fzf = {
