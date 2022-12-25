@@ -17,11 +17,6 @@
         ".vim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/source/private/dotfiles/vim";
       };
     };
-    xdg = {
-      configFile = {
-        skhd.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/source/private/dotfiles/config/skhd";
-      };
-    };
     programs = {
       zsh = {
         enable = true;
