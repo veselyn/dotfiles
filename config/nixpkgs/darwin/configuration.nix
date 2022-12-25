@@ -16,6 +16,7 @@
   homebrew.enable = true;
   homebrew.casks =
     [ "1password"
+      "firefox"
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
