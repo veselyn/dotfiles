@@ -29,6 +29,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
     [ pkgs._1password
+      pkgs.fzf
       pkgs.vim-full
     ];
 
