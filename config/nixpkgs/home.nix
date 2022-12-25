@@ -51,13 +51,13 @@
       };
       tmux = {
         enable = true;
-        terminal = "xterm-kitty";
-        shortcut = "a";
-        keyMode = "vi";
-        customPaneNavigationAndResize = true;
         baseIndex = 1;
         clock24 = true;
+        customPaneNavigationAndResize = true;
         escapeTime = 0;
+        keyMode = "vi";
+        shortcut = "a";
+        terminal = "xterm-kitty";
       };
       fzf = {
         enable = true;
