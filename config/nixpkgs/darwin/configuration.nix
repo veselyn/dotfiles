@@ -110,6 +110,7 @@
       pkgs._1password
       pkgs.highlight
       pkgs.neofetch
+      pkgs.nodejs
       pkgs.ranger
     ];
 
