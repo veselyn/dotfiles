@@ -88,8 +88,8 @@
 
         alt - e : yabaiscript toggle split
 
-        alt - t : yabaiscript toggle float;\
-                yabaiscript grid center
+        alt - t : yabaiscript toggle float; \
+          yabaiscript grid center
       '';
     };
   };
