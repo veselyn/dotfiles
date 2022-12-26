@@ -9,6 +9,7 @@
 
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
   system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
+  system.defaults.NSGlobalDomain.AppleKeyboardUIMode = 3;
 
   system.defaults.dock.tilesize = 16;
   system.defaults.dock.autohide = true;
