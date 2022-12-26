@@ -47,6 +47,8 @@
     skhd = {
       enable = true;
       skhdConfig = ''
+        alt - return : yabaiscript run terminal
+
         alt - h : yabaiscript focus left
         alt - j : yabaiscript focus bottom
         alt - k : yabaiscript focus top
