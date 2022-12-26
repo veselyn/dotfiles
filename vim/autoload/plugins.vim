@@ -59,5 +59,5 @@ endfunction
 
 function! plugins#end() abort
 	call plug#end()
-	execute 'set runtimepath=~/.vim,'.&runtimepath.',~/.vim/after'
+	let &runtimepath = '~/.vim,'.&runtimepath.',~/.vim/after'
 endfunction
