@@ -9,5 +9,5 @@ run() {
 }
 
 _run_terminal() {
-	kitty
+	kitty -1
 }
