@@ -3,6 +3,7 @@
 set -e
 
 . "$(dirname "$0")/_yabaiscript/services.sh"
+. "$(dirname "$0")/_yabaiscript/run.sh"
 . "$(dirname "$0")/_yabaiscript/focus.sh"
 . "$(dirname "$0")/_yabaiscript/swap.sh"
 . "$(dirname "$0")/_yabaiscript/warp.sh"
@@ -16,6 +17,9 @@ set -e
 case $1 in
 start | stop | restart)
 	services "$1" "$2"
+	;;
+run)
+	run "$2"
 	;;
 focus)
 	focus "$2"
