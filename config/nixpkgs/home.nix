@@ -69,6 +69,10 @@
         extraConfig = ''
           set -g mouse on
           set -g status off
+
+          bind-key -T prefix c new-window -c "#{pane_current_path}"
+          bind-key -T prefix \% split-window -h -c "#{pane_current_path}"
+          bind-key -T prefix \" split-window -c "#{pane_current_path}"
         '';
       };
       fzf = {
