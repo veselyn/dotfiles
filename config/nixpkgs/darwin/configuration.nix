@@ -12,6 +12,7 @@
 
   system.defaults.dock.tilesize = 16;
   system.defaults.dock.autohide = true;
+  system.defaults.dock.mru-spaces = false;
 
   homebrew.enable = true;
   homebrew.casks =
