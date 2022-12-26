@@ -15,6 +15,12 @@
   system.defaults.dock.autohide = true;
   system.defaults.dock.mru-spaces = false;
 
+  system.defaults.CustomUserPreferences = {
+    "com.apple.Accessibility" = {
+      ReduceMotionEnabled = 1;
+    };
+  };
+
   homebrew.enable = true;
   homebrew.casks =
     [
