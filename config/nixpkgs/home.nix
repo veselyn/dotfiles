@@ -124,6 +124,9 @@
       gh = {
         enable = true;
       };
+      zoxide = {
+        enable = true;
+      };
     };
   };
 }
