@@ -4,31 +4,31 @@
   imports = [ ../home.nix ];
 
   system = {
-    stateVersion = 4;
-    keyboard = {
-      enableKeyMapping = true;
-      remapCapsLockToEscape = true;
-      nonUS = {
-        remapTilde = true;
-      };
-    };
     defaults = {
-      NSGlobalDomain = {
-        _HIHideMenuBar = true;
-        "com.apple.keyboard.fnState" = true;
-        AppleKeyboardUIMode = 3;
-      };
-      dock = {
-        tilesize = 16;
-        autohide = true;
-        mru-spaces = false;
-      };
       CustomUserPreferences = {
         "com.apple.Accessibility" = {
           ReduceMotionEnabled = 1;
         };
       };
+      NSGlobalDomain = {
+        "com.apple.keyboard.fnState" = true;
+        AppleKeyboardUIMode = 3;
+        _HIHideMenuBar = true;
+      };
+      dock = {
+        autohide = true;
+        mru-spaces = false;
+        tilesize = 16;
+      };
     };
+    keyboard = {
+      enableKeyMapping = true;
+      nonUS = {
+        remapTilde = true;
+      };
+      remapCapsLockToEscape = true;
+    };
+    stateVersion = 4;
   };
 
   homebrew.enable = true;
