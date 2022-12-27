@@ -51,8 +51,6 @@ function! plugins#begin() abort
 		autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 	endif
 
-	runtime plugin/onedark.vim
-
 	call plug#begin(data_dir . '/plugged')
 endfunction
 
