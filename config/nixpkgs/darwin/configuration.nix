@@ -118,10 +118,13 @@
   environment.systemPackages =
     [
       pkgs._1password
+      pkgs.fd
       pkgs.highlight
       pkgs.neofetch
       pkgs.nodejs
       pkgs.ranger
+      pkgs.ripgrep
+      pkgs.silver-searcher
     ];
 
   # Use a custom configuration.nix location.
