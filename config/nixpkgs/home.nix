@@ -40,9 +40,6 @@
           theme = "robbyrussell";
           plugins =
             [
-              # TODO: Separate private and work repositories.
-              # "private"
-              # "work"
               "asdf"
               "git"
               "jump"
