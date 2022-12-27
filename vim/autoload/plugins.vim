@@ -4,7 +4,6 @@ function! plugins#load() abort
 	Plug 'airblade/vim-gitgutter'
 	Plug 'asheq/close-buffers.vim'
 	Plug 'bkad/camelcasemotion'
-	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'dense-analysis/ale'
 	Plug 'easymotion/vim-easymotion'
 	Plug 'editorconfig/editorconfig-vim'
