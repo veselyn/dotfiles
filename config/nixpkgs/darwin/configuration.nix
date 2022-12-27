@@ -3,21 +3,31 @@
 {
   imports = [ ../home.nix ];
 
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = true;
-  system.keyboard.nonUS.remapTilde = true;
-
-  system.defaults.NSGlobalDomain._HIHideMenuBar = true;
-  system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
-  system.defaults.NSGlobalDomain.AppleKeyboardUIMode = 3;
-
-  system.defaults.dock.tilesize = 16;
-  system.defaults.dock.autohide = true;
-  system.defaults.dock.mru-spaces = false;
-
-  system.defaults.CustomUserPreferences = {
-    "com.apple.Accessibility" = {
-      ReduceMotionEnabled = 1;
+  system = {
+    stateVersion = 4;
+    keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToEscape = true;
+      nonUS = {
+        remapTilde = true;
+      };
+    };
+    defaults = {
+      NSGlobalDomain = {
+        _HIHideMenuBar = true;
+        "com.apple.keyboard.fnState" = true;
+        AppleKeyboardUIMode = 3;
+      };
+      dock = {
+        tilesize = 16;
+        autohide = true;
+        mru-spaces = false;
+      };
+      CustomUserPreferences = {
+        "com.apple.Accessibility" = {
+          ReduceMotionEnabled = 1;
+        };
+      };
     };
   };
 
@@ -138,8 +148,4 @@
   # Create /etc/zshrc that loads the nix-darwin environment.
   programs.zsh.enable = true; # default shell on catalina
   # programs.fish.enable = true;
-
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 4;
 }
