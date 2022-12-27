@@ -41,6 +41,7 @@
           plugins =
             [
               "asdf"
+              "fzf"
               "git"
               "jump"
               "macos"
