@@ -22,6 +22,7 @@ function! plugins#load() abort
 	Plug 'prabirshrestha/vim-lsp'
 	Plug 'rhysd/vim-lsp-ale'
 	Plug 'rizzatti/dash.vim'
+	Plug 'sheerun/vim-polyglot'
 	Plug 'sirver/ultisnips'
 	Plug 'thomasfaingnaert/vim-lsp-snippets'
 	Plug 'thomasfaingnaert/vim-lsp-ultisnips'
