@@ -40,14 +40,12 @@
           theme = "robbyrussell";
           plugins =
             [
-              "asdf"
               "fzf"
               "git"
               "jump"
               "macos"
               "tmux"
               "web-search"
-              "z"
             ];
           extraConfig = ''
             ZSH_TMUX_AUTOSTART=true
