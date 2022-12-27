@@ -1,4 +1,5 @@
 let g:ale_linters_explicit = 1
+let g:ale_virtualtext_cursor = 0
 
 let g:ale_linters = {
 \	'*': ['vim-lsp']
