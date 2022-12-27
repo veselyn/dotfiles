@@ -37,6 +37,7 @@
       "1password"
       "firefox"
       "kitty"
+      "slack"
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
