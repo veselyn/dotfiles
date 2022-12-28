@@ -9,6 +9,7 @@ function! plugins#load() abort
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'francoiscabrol/ranger.vim'
 	Plug 'honza/vim-snippets'
+	Plug 'jeffkreeftmeijer/vim-dim'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'

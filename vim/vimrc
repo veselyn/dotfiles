@@ -2,8 +2,9 @@ call plugins#load()
 
 let mapleader = ' '
 let maplocalleader = '\'
-set background=dark
+colorscheme dim
 
+set background=dark
 set exrc
 set notermguicolors
 set hidden
