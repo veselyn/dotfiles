@@ -1,19 +1,17 @@
 function! s:toggle_quickfix() abort
 	if empty(filter(getwininfo(), 'v:val.quickfix'))
 		copen
-		return
+	else
+		cclose
 	endif
-
-	cclose
 endfunction
 
 function! s:toggle_loclist() abort
 	if empty(filter(getwininfo(), 'v:val.loclist'))
 		lopen
-		return
+	else
+		lclose
 	endif
-
-	lclose
 endfunction
 
 nnoremap <silent> <Leader>q :call <SID>toggle_quickfix()<CR>
