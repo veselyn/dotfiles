@@ -2,7 +2,7 @@ call plugins#load()
 
 let mapleader = ' '
 let maplocalleader = '\'
-colorscheme dim
+colorscheme default
 
 set background=dark
 set exrc
