@@ -9,7 +9,7 @@ function! s:default() abort
 		highlight Comment ctermfg=7
 	endif
 	highlight clear SignColumn
-	highlight link lspReference Visual
+	highlight link lspReference CursorLine
 endfunction
 
 augroup default
