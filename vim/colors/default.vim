@@ -1,6 +1,8 @@
 runtime colors/dim.vim
 
-function! s:dim() abort
+let colors_name = "default"
+
+function! s:default() abort
 	if &background == "light"
 		highlight Comment ctermfg=8
 	else
@@ -9,7 +11,7 @@ function! s:dim() abort
 	highlight clear SignColumn
 endfunction
 
-augroup dim
+augroup default
 	autocmd!
-	autocmd ColorScheme dim call s:dim()
+	autocmd ColorScheme default call s:default()
 augroup END
