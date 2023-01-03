@@ -4,9 +4,7 @@ let colors_name = "default"
 
 function! s:default() abort
 	if &background == "light"
-		highlight Comment ctermfg=8
 	else
-		highlight Comment ctermfg=7
 	endif
 	highlight clear SignColumn
 	highlight link lspReference CursorLine
