@@ -131,6 +131,7 @@
       pkgs._1password
       pkgs.fd
       pkgs.highlight
+      pkgs.kubectl
       pkgs.neofetch
       pkgs.nodejs
       pkgs.ranger
