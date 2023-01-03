@@ -129,6 +129,7 @@
   environment.systemPackages =
     [
       pkgs._1password
+      pkgs.awscli2
       pkgs.fd
       pkgs.highlight
       pkgs.kubectl
