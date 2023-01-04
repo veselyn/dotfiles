@@ -46,16 +46,8 @@
   nixpkgs.config.allowUnfree = true;
 
   services = {
-    yabai = {
+    nix-daemon = {
       enable = true;
-      config = {
-        layout = "bsp";
-        left_padding = 5;
-        bottom_padding = 5;
-        top_padding = 5;
-        right_padding = 5;
-        window_gap = 5;
-      };
     };
     skhd = {
       enable = true;
@@ -114,6 +106,17 @@
           yabaiscript grid center
       '';
     };
+    yabai = {
+      enable = true;
+      config = {
+        layout = "bsp";
+        left_padding = 5;
+        bottom_padding = 5;
+        top_padding = 5;
+        right_padding = 5;
+        window_gap = 5;
+      };
+    };
   };
 
   fonts = {
@@ -143,10 +146,6 @@
         pkgs.silver-searcher
       ];
   };
-
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-  # nix.package = pkgs.nix;
 
   programs = {
     zsh = {
