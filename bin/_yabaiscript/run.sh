@@ -9,5 +9,5 @@ run() {
 }
 
 _run_terminal() {
-	/Applications/kitty.app/Contents/MacOS/kitty -1
+	/Applications/kitty.app/Contents/MacOS/kitty -1 -d ~
 }
