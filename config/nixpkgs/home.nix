@@ -83,6 +83,7 @@
         };
         settings = {
           dynamic_background_opacity = "yes";
+          enable_audio_bell = false;
           hide_window_decorations = "titlebar-only";
           macos_option_as_alt = "both";
           mouse_hide_wait = -1;
