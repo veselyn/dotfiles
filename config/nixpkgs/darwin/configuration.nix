@@ -31,14 +31,16 @@
     stateVersion = 4;
   };
 
-  homebrew.enable = true;
-  homebrew.casks =
-    [
-      "1password"
-      "firefox"
-      "kitty"
-      "slack"
-    ];
+  homebrew = {
+    enable = true;
+    casks =
+      [
+        "1password"
+        "firefox"
+        "kitty"
+        "slack"
+      ];
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
