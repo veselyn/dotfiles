@@ -126,26 +126,23 @@
       ];
   };
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages =
-    [
-      pkgs._1password
-      pkgs.awscli2
-      pkgs.fd
-      pkgs.go
-      pkgs.highlight
-      pkgs.kubectl
-      pkgs.neofetch
-      pkgs.nodejs
-      pkgs.ranger
-      pkgs.ripgrep
-      pkgs.silver-searcher
-    ];
-
-  # Use a custom configuration.nix location.
-  # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+  environment = {
+    darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+    systemPackages =
+      [
+        pkgs._1password
+        pkgs.awscli2
+        pkgs.fd
+        pkgs.go
+        pkgs.highlight
+        pkgs.kubectl
+        pkgs.neofetch
+        pkgs.nodejs
+        pkgs.ranger
+        pkgs.ripgrep
+        pkgs.silver-searcher
+      ];
+  };
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
