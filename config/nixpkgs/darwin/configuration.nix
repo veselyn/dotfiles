@@ -3,32 +3,32 @@
 {
   imports = [ ../home.nix ];
 
-  system = {
-    defaults = {
-      CustomUserPreferences = {
-        "com.apple.Accessibility" = {
-          ReduceMotionEnabled = 1;
-        };
-      };
-      NSGlobalDomain = {
-        "com.apple.keyboard.fnState" = true;
-        AppleKeyboardUIMode = 3;
-        _HIHideMenuBar = true;
-      };
-      dock = {
-        autohide = true;
-        mru-spaces = false;
-        tilesize = 16;
-      };
+  environment = {
+    darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+    systemPackages =
+      [
+        pkgs._1password
+        pkgs.awscli2
+        pkgs.fd
+        pkgs.go
+        pkgs.highlight
+        pkgs.kubectl
+        pkgs.neofetch
+        pkgs.nodejs
+        pkgs.ranger
+        pkgs.ripgrep
+        pkgs.silver-searcher
+      ];
+  };
+
+  fonts = {
+    fontDir = {
+      enable = true;
     };
-    keyboard = {
-      enableKeyMapping = true;
-      nonUS = {
-        remapTilde = true;
-      };
-      remapCapsLockToEscape = true;
-    };
-    stateVersion = 4;
+    fonts =
+      [
+        pkgs.nerdfonts
+      ];
   };
 
   homebrew = {
@@ -55,6 +55,13 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+    };
+  };
+
+  programs = {
+    zsh = {
+      enable = true;
+      promptInit = "";
     };
   };
 
@@ -132,38 +139,31 @@
     };
   };
 
-  fonts = {
-    fontDir = {
-      enable = true;
+  system = {
+    defaults = {
+      CustomUserPreferences = {
+        "com.apple.Accessibility" = {
+          ReduceMotionEnabled = 1;
+        };
+      };
+      NSGlobalDomain = {
+        "com.apple.keyboard.fnState" = true;
+        AppleKeyboardUIMode = 3;
+        _HIHideMenuBar = true;
+      };
+      dock = {
+        autohide = true;
+        mru-spaces = false;
+        tilesize = 16;
+      };
     };
-    fonts =
-      [
-        pkgs.nerdfonts
-      ];
-  };
-
-  environment = {
-    darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-    systemPackages =
-      [
-        pkgs._1password
-        pkgs.awscli2
-        pkgs.fd
-        pkgs.go
-        pkgs.highlight
-        pkgs.kubectl
-        pkgs.neofetch
-        pkgs.nodejs
-        pkgs.ranger
-        pkgs.ripgrep
-        pkgs.silver-searcher
-      ];
-  };
-
-  programs = {
-    zsh = {
-      enable = true;
-      promptInit = "";
+    keyboard = {
+      enableKeyMapping = true;
+      nonUS = {
+        remapTilde = true;
+      };
+      remapCapsLockToEscape = true;
     };
+    stateVersion = 4;
   };
 }
