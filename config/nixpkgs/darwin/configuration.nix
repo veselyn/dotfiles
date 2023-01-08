@@ -5,20 +5,6 @@
 
   environment = {
     darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-    systemPackages =
-      [
-        pkgs._1password
-        pkgs.awscli2
-        pkgs.fd
-        pkgs.go
-        pkgs.highlight
-        pkgs.kubectl
-        pkgs.neofetch
-        pkgs.nodejs
-        pkgs.ranger
-        pkgs.ripgrep
-        pkgs.silver-searcher
-      ];
   };
 
   fonts = {
