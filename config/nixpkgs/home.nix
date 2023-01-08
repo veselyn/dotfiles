@@ -30,6 +30,25 @@
           sessionVariables = {
             EDITOR = "vim";
           };
+          packages =
+            [
+              pkgs._1password
+              pkgs.awscli2
+              pkgs.fd
+              pkgs.go
+              pkgs.highlight
+              pkgs.kubectl
+              pkgs.neofetch
+              pkgs.nodejs
+              pkgs.ranger
+              pkgs.ripgrep
+              pkgs.silver-searcher
+            ];
+        };
+        nixpkgs = {
+          config = {
+            allowUnfree = true;
+          };
         };
         programs = {
           zsh = {
