@@ -152,6 +152,9 @@
           bat = {
             enable = true;
           };
+          jq = {
+            enable = true;
+          };
         };
         xdg = {
           enable = true;
