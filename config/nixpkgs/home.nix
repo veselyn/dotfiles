@@ -138,6 +138,7 @@
             matchBlocks = {
               "*" = {
                 extraOptions = {
+                  IgnoreUnknown = "UseKeychain";
                   AddKeysToAgent = "yes";
                   UseKeychain = "yes";
                 };
