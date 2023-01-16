@@ -43,6 +43,7 @@
               pkgs.ranger
               pkgs.ripgrep
               pkgs.silver-searcher
+              pkgs.sshuttle
             ];
         };
         nixpkgs = {
