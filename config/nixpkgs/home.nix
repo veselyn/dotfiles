@@ -37,6 +37,7 @@
               pkgs.fd
               pkgs.go
               pkgs.highlight
+              pkgs.httpie
               pkgs.kubectl
               pkgs.neofetch
               pkgs.nodejs
