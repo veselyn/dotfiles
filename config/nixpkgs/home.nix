@@ -89,9 +89,9 @@
               set -g mouse on
               set -g status off
 
-              bind -T prefix c new-window -c "#{pane_current_path}"
-              bind -T prefix \% split-window -h -c "#{pane_current_path}"
-              bind -T prefix \" split-window -c "#{pane_current_path}"
+              bind c new-window -c "#{pane_current_path}"
+              bind \% split-window -h -c "#{pane_current_path}"
+              bind \" split-window -c "#{pane_current_path}"
             '';
           };
           fzf = {
