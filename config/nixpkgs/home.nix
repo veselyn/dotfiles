@@ -103,6 +103,8 @@
               bind c new-window -c "#{pane_current_path}"
               bind - split-window -c "#{pane_current_path}"
               bind \\ split-window -h -c "#{pane_current_path}"
+              bind _ split-window -f -c "#{pane_current_path}"
+              bind | split-window -f -h -c "#{pane_current_path}"
             '';
           };
           fzf = {
