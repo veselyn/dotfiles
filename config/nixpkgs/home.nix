@@ -94,6 +94,11 @@
               set -g status off
 
               bind C-a send C-a
+              bind C-h send C-h
+              bind C-j send C-j
+              bind C-k send C-k
+              bind C-l send C-l
+              bind C-\\ send C-\\
 
               bind c new-window -c "#{pane_current_path}"
               bind \% split-window -h -c "#{pane_current_path}"
