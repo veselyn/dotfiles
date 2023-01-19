@@ -35,6 +35,7 @@
               pkgs._1password
               pkgs.awscli2
               pkgs.fd
+              pkgs.gnumake
               pkgs.go
               pkgs.gofumpt
               pkgs.golines
