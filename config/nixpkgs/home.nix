@@ -43,6 +43,7 @@
               pkgs.httpie
               pkgs.kubectl
               pkgs.luaPackages.luacheck
+              pkgs.mkcert
               pkgs.neofetch
               pkgs.nodePackages.eslint
               pkgs.nodePackages.prettier
