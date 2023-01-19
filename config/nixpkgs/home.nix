@@ -36,15 +36,24 @@
               pkgs.awscli2
               pkgs.fd
               pkgs.go
+              pkgs.gofumpt
+              pkgs.golines
+              pkgs.gotools
               pkgs.highlight
               pkgs.httpie
               pkgs.kubectl
+              pkgs.luaPackages.luacheck
               pkgs.neofetch
+              pkgs.nodePackages.eslint
+              pkgs.nodePackages.prettier
               pkgs.nodejs
               pkgs.ranger
               pkgs.ripgrep
+              pkgs.shellcheck
+              pkgs.shfmt
               pkgs.silver-searcher
               pkgs.sshuttle
+              pkgs.stylua
             ];
         };
         nixpkgs = {
