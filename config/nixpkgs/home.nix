@@ -172,6 +172,10 @@
           };
           gh = {
             enable = true;
+            extensions =
+              [
+                pkgs.gh-dash
+              ];
           };
           zoxide = {
             enable = true;
