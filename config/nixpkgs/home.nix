@@ -187,6 +187,9 @@
           jq = {
             enable = true;
           };
+          tealdeer = {
+            enable = true;
+          };
         };
         xdg = {
           enable = true;
