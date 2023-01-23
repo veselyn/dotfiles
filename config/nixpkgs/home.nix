@@ -51,6 +51,7 @@
               pkgs.nodejs
               pkgs.ranger
               pkgs.ripgrep
+              pkgs.sd
               pkgs.shellcheck
               pkgs.shfmt
               pkgs.silver-searcher
