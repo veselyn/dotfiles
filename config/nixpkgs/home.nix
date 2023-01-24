@@ -34,14 +34,21 @@
             [
               pkgs._1password
               pkgs.awscli2
+              pkgs.coreutils-full
               pkgs.fd
+              pkgs.findutils
+              pkgs.findutils.locate
+              pkgs.gnugrep
               pkgs.gnumake
+              pkgs.gnused
+              pkgs.gnutar
               pkgs.go
               pkgs.gofumpt
               pkgs.golines
               pkgs.gotools
               pkgs.highlight
               pkgs.httpie
+              pkgs.inetutils
               pkgs.kubectl
               pkgs.luaPackages.luacheck
               pkgs.mkcert
@@ -57,6 +64,7 @@
               pkgs.silver-searcher
               pkgs.sshuttle
               pkgs.stylua
+              pkgs.time
             ];
         };
         nixpkgs = {
