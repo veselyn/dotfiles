@@ -152,6 +152,9 @@
         mru-spaces = false;
         tilesize = 16;
       };
+      magicmouse = {
+        MouseButtonMode = "TwoButton";
+      };
     };
     keyboard = {
       enableKeyMapping = true;
