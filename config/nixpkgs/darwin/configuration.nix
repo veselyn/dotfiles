@@ -26,6 +26,7 @@
     casks =
       [
         "1password"
+        "dash"
         "docker"
         "firefox"
         "kitty"
