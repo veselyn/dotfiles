@@ -166,6 +166,11 @@
               key = "B09DDF9D424E10D3";
               signByDefault = true;
             };
+            extraConfig = {
+              merge = {
+                tool = "vimdiff";
+              };
+            };
           };
           ssh = {
             enable = true;
