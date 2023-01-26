@@ -35,6 +35,7 @@
               pkgs._1password
               pkgs.awscli2
               pkgs.coreutils-full
+              pkgs.docker
               pkgs.fd
               pkgs.findutils
               pkgs.findutils.locate
