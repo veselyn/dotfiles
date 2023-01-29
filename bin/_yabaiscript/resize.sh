@@ -14,7 +14,7 @@ _resize_left() {
 		return
 	fi
 
-	yabai -m window --resize left:-10:0
+	yabai -m window --resize left:-10:0 || true
 	yabai -m window --resize right:-10:0
 }
 
@@ -24,7 +24,7 @@ _resize_bottom() {
 		return
 	fi
 
-	yabai -m window --resize bottom:0:10
+	yabai -m window --resize bottom:0:10 || true
 	yabai -m window --resize top:0:10
 }
 
@@ -34,7 +34,7 @@ _resize_top() {
 		return
 	fi
 
-	yabai -m window --resize top:0:-10
+	yabai -m window --resize top:0:-10 || true
 	yabai -m window --resize bottom:0:-10
 }
 
@@ -44,7 +44,7 @@ _resize_right() {
 		return
 	fi
 
-	yabai -m window --resize right:10:0
+	yabai -m window --resize right:10:0 || true
 	yabai -m window --resize left:10:0
 }
 
