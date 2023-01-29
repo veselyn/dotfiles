@@ -1,9 +1,9 @@
 runtime colors/dim.vim
 
-let colors_name = "default"
+let colors_name = 'default'
 
 function! s:default() abort
-	if &background == "light"
+	if &background == 'light'
 	else
 	endif
 	highlight clear SignColumn
