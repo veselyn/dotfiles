@@ -1,3 +1,3 @@
-silent execute '!mkdir -p' . ' ' . &backupdir
-silent execute '!mkdir -p' . ' ' . &directory
-silent execute '!mkdir -p' . ' ' . &undodir
+call mkdir(&backupdir, 'p')
+call mkdir(&directory, 'p')
+call mkdir(&undodir, 'p')
