@@ -13,7 +13,7 @@ function! Redir(cmd, rng, start, end) abort
 		else
 			let joined_lines = join(getline(a:start, a:end), '\n')
 			let cleaned_lines = substitute(shellescape(joined_lines), "'\\\\''", "\\\\'", 'g')
-			let output = systemlist(cmd . " <<< $" . cleaned_lines)
+			let output = systemlist(cmd . ' <<< $' . cleaned_lines)
 		endif
 	else
 		redir => output
