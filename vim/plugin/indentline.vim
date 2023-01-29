@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let g:indentLine_char = '│'
 let g:indentLine_setConceal = 0
 
