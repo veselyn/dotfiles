@@ -25,7 +25,9 @@ function! s:on_ale_buffer_enabled() abort
 	nmap <buffer> <Leader>d <Plug>(ale_detail)
 	nmap <buffer> <Leader>f <Plug>(ale_fix)
 
-	autocmd! BufWritePre <buffer>
+	augroup lsp_format
+		autocmd!
+	augroup END
 endfunction
 
 augroup ale_install
