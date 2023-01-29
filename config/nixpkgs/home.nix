@@ -66,6 +66,7 @@
               pkgs.sshuttle
               pkgs.stylua
               pkgs.time
+              pkgs.vim-vint
             ];
         };
         nixpkgs = {
