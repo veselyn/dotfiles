@@ -2,10 +2,11 @@ call plugins#load()
 
 let mapleader = ' '
 let maplocalleader = '\'
-colorscheme onedark
+colorscheme default
 
+set background=dark
 set exrc
-set termguicolors
+set notermguicolors
 set hidden
 set backup
 set swapfile

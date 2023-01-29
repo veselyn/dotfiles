@@ -10,8 +10,8 @@ function! plugins#load() abort
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'francoiscabrol/ranger.vim'
 	Plug 'honza/vim-snippets'
+	Plug 'jeffkreeftmeijer/vim-dim'
 	Plug 'jiangmiao/auto-pairs'
-	Plug 'joshdick/onedark.vim'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'justinmk/vim-sneak'
@@ -48,11 +48,19 @@ function! plugins#load() abort
 endfunction
 
 function! plugins#begin() abort
-	runtime plugin/onedark.vim
+	let data_dir = '~/.vim'
+	if empty(glob(data_dir . '/autoload/plug.vim'))
+		silent execute '!curl -fLo ' . data_dir . '/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+		augroup plugins_install
+			autocmd!
+			autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+		augroup END
+	endif
 
-	call plug#begin()
+	call plug#begin(data_dir . '/plugged')
 endfunction
 
 function! plugins#end() abort
 	call plug#end()
+	let &runtimepath = '~/.vim,' . &runtimepath . ',~/.vim/after'
 endfunction

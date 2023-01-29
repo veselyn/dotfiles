@@ -21,7 +21,10 @@ function! s:on_lsp_buffer_enabled() abort
 	nmap <buffer> <expr> <Down> lsp#scroll(+1)
 
 	let g:lsp_format_sync_timeout = 1000
-	autocmd! BufWritePre <buffer> call execute('LspDocumentFormatSync')
+	augroup lsp_format
+		autocmd!
+		autocmd! BufWritePre <buffer> call execute('LspDocumentFormatSync')
+	augroup END
 
 	doautocmd <nomodeline> User ale_buffer_enabled
 endfunction
