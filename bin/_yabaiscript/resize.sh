@@ -11,41 +11,37 @@ resize() {
 _resize_left() {
 	if _is_floating; then
 		yabai -m window --resize right:-10:0
-		return
+	else
+		yabai -m window --resize left:-10:0 || true
+		yabai -m window --resize right:-10:0
 	fi
-
-	yabai -m window --resize left:-10:0 || true
-	yabai -m window --resize right:-10:0
 }
 
 _resize_bottom() {
 	if _is_floating; then
 		yabai -m window --resize bottom:0:10
-		return
+	else
+		yabai -m window --resize bottom:0:10 || true
+		yabai -m window --resize top:0:10
 	fi
-
-	yabai -m window --resize bottom:0:10 || true
-	yabai -m window --resize top:0:10
 }
 
 _resize_top() {
 	if _is_floating; then
 		yabai -m window --resize bottom:0:-10
-		return
+	else
+		yabai -m window --resize top:0:-10 || true
+		yabai -m window --resize bottom:0:-10
 	fi
-
-	yabai -m window --resize top:0:-10 || true
-	yabai -m window --resize bottom:0:-10
 }
 
 _resize_right() {
 	if _is_floating; then
 		yabai -m window --resize right:10:0
-		return
+	else
+		yabai -m window --resize right:10:0 || true
+		yabai -m window --resize left:10:0
 	fi
-
-	yabai -m window --resize right:10:0 || true
-	yabai -m window --resize left:10:0
 }
 
 _is_floating() {
