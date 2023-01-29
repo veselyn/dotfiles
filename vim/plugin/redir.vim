@@ -4,8 +4,8 @@ function! Redir(cmd, rng, start, end) abort
 			execute win . 'windo close'
 		endif
 	endfor
-	if a:cmd =~ '^!'
-		let cmd = a:cmd =~' %'
+	if a:cmd =~# '^!'
+		let cmd = a:cmd =~# ' %'
 			\ ? matchstr(substitute(a:cmd, ' %', ' ' . shellescape(escape(expand('%:p'), '\')), ''), '^!\zs.*')
 			\ : matchstr(a:cmd, '^!\zs.*')
 		if a:rng == 0
