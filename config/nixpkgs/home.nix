@@ -34,6 +34,7 @@
             [
               pkgs._1password
               pkgs.awscli2
+              pkgs.buf
               pkgs.coreutils-full
               pkgs.docker
               pkgs.fd
