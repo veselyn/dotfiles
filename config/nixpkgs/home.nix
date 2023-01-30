@@ -48,7 +48,6 @@
               pkgs.gofumpt
               pkgs.golines
               pkgs.gotools
-              pkgs.highlight
               pkgs.httpie
               pkgs.inetutils
               pkgs.kubectl
