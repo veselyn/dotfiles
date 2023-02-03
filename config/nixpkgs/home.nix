@@ -59,6 +59,7 @@
               pkgs.nodejs
               pkgs.ranger
               pkgs.ripgrep
+              pkgs.rustup
               pkgs.sd
               pkgs.shellcheck
               pkgs.shfmt
