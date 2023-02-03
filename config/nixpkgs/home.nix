@@ -66,6 +66,7 @@
               pkgs.silver-searcher
               pkgs.sshuttle
               pkgs.stylua
+              pkgs.terraform
               pkgs.time
               pkgs.vim-vint
             ];
