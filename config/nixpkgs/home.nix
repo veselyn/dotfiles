@@ -68,6 +68,13 @@
               pkgs.time
               pkgs.vim-vint
             ];
+          shellAliases = {
+            gai = "git add --interactive";
+            r = "ranger";
+            v = "vim";
+            vd = "vimdiff";
+            vs = "vim -S Session.vim";
+          };
         };
         nixpkgs = {
           config = {
