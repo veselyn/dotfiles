@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ <home-manager/nix-darwin> ];
-
   users = {
     users = {
       veselin = {
