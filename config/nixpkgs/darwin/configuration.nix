@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../home.nix ];
-
   environment = {
     darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
   };
