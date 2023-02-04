@@ -51,6 +51,7 @@
               pkgs.luaPackages.luacheck
               pkgs.mkcert
               pkgs.neofetch
+              pkgs.nixpkgs-fmt
               pkgs.nodePackages.eslint
               pkgs.nodePackages.prettier
               pkgs.nodejs
