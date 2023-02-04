@@ -1,11 +1,16 @@
 {
   description = "A very basic flake";
 
-  outputs = { self, nixpkgs }: {
+  inputs = {
+    darwin.url = "github:lnl7/nix-darwin";
+  };
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
+  outputs = { darwin, ... }: {
+    darwinConfigurations = {
+      veselins-macbook-pro = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        modules = [ ];
+      };
+    };
   };
 }
