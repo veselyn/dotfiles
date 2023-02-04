@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "dotfiles";
 
   inputs = {
     darwin.url = "github:lnl7/nix-darwin";
