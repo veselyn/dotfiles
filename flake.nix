@@ -19,6 +19,7 @@
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
+
         modules = [
           ./config/nixpkgs/darwin/configuration.nix
           home-manager.darwinModules.home-manager
