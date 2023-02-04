@@ -62,6 +62,7 @@
               pkgs.shfmt
               pkgs.silver-searcher
               pkgs.sshuttle
+              pkgs.statix
               pkgs.stylua
               pkgs.terraform
               pkgs.time
