@@ -68,6 +68,7 @@
               pkgs.terraform
               pkgs.time
               pkgs.vim-vint
+              pkgs.watch
             ];
           shellAliases = {
             gai = "git add --interactive";
