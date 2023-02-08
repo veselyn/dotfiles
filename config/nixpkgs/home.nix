@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ <home-manager/nix-darwin> ];
-
   users = {
     users = {
       veselin = {
@@ -53,6 +51,7 @@
               pkgs.luaPackages.luacheck
               pkgs.mkcert
               pkgs.neofetch
+              pkgs.nixpkgs-fmt
               pkgs.nodePackages.eslint
               pkgs.nodePackages.prettier
               pkgs.nodejs
@@ -64,6 +63,7 @@
               pkgs.shfmt
               pkgs.silver-searcher
               pkgs.sshuttle
+              pkgs.statix
               pkgs.stylua
               pkgs.terraform
               pkgs.time
