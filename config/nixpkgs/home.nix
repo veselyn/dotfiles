@@ -181,6 +181,11 @@
                 tool = "vimdiff";
               };
             };
+            ignores =
+              [
+                ".vimrc"
+                "Session.vim"
+              ];
           };
           ssh = {
             enable = true;
