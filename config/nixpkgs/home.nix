@@ -46,7 +46,6 @@
               pkgs.gnutar
               pkgs.go
               pkgs.gofumpt
-              pkgs.golines
               pkgs.gotools
               pkgs.httpie
               pkgs.inetutils
