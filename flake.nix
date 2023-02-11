@@ -21,7 +21,7 @@
         system = "aarch64-darwin";
 
         modules = [
-          ./config/nixpkgs/darwin/configuration.nix
+          ./modules/darwin
           home-manager.darwinModules.home-manager
           ./config/nixpkgs/home.nix
         ];
