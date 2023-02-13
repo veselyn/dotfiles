@@ -31,10 +31,6 @@
         "kitty"
         "slack"
       ];
-    masApps =
-      {
-        Amphetamine = 937984704;
-      };
   };
 
   nix = {
