@@ -140,6 +140,8 @@
       NSGlobalDomain = {
         "com.apple.keyboard.fnState" = true;
         AppleKeyboardUIMode = 3;
+        InitialKeyRepeat = 15;
+        KeyRepeat = 2;
         _HIHideMenuBar = true;
       };
       dock = {
