@@ -44,6 +44,7 @@
               pkgs.gnutar
               pkgs.go
               pkgs.gofumpt
+              pkgs.golangci-lint
               pkgs.gotools
               pkgs.httpie
               pkgs.inetutils
