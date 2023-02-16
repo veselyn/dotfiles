@@ -63,6 +63,7 @@
               pkgs.shellcheck
               pkgs.shfmt
               pkgs.silver-searcher
+              pkgs.sqlfluff
               pkgs.sshuttle
               pkgs.statix
               pkgs.stylua
