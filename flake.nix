@@ -23,7 +23,29 @@
         modules = [
           ./modules/darwin
           home-manager.darwinModules.home-manager
-          ./modules/home-manager
+          {
+            users = {
+              users = {
+                veselin = {
+                  name = "veselin";
+                  home = "/Users/veselin";
+                };
+              };
+            };
+
+            home-manager = {
+              users = {
+                veselin = {
+                  imports = [ ./modules/home-manager ];
+
+                  home = {
+                    username = "veselin";
+                    homeDirectory = "/Users/veselin";
+                  };
+                };
+              };
+            };
+          }
         ];
       };
     };
