@@ -76,9 +76,6 @@
     };
   };
   programs = {
-    jq = {
-      enable = true;
-    };
     tealdeer = {
       enable = true;
     };
