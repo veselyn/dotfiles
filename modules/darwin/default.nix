@@ -7,6 +7,50 @@
 
   environment = {
     darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+    systemPackages =
+      [
+        pkgs._1password
+        pkgs.awscli2
+        pkgs.buf
+        pkgs.coreutils-full
+        pkgs.docker
+        pkgs.fd
+        pkgs.findutils
+        pkgs.findutils.locate
+        pkgs.gnugrep
+        pkgs.gnumake
+        pkgs.gnused
+        pkgs.gnutar
+        pkgs.go
+        pkgs.gofumpt
+        pkgs.golangci-lint
+        pkgs.gotools
+        pkgs.httpie
+        pkgs.inetutils
+        pkgs.kubectl
+        pkgs.luaPackages.luacheck
+        pkgs.mkcert
+        pkgs.neofetch
+        pkgs.nixpkgs-fmt
+        pkgs.nodePackages.eslint
+        pkgs.nodePackages.prettier
+        pkgs.nodejs
+        pkgs.ranger
+        pkgs.ripgrep
+        pkgs.rustup
+        pkgs.sd
+        pkgs.shellcheck
+        pkgs.shfmt
+        pkgs.silver-searcher
+        pkgs.sqlfluff
+        pkgs.sshuttle
+        pkgs.statix
+        pkgs.stylua
+        pkgs.terraform
+        pkgs.time
+        pkgs.vim-vint
+        pkgs.watch
+      ];
   };
 
   fonts = {
