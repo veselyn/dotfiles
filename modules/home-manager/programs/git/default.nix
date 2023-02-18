@@ -14,10 +14,9 @@ _:
         tool = "vimdiff";
       };
     };
-    ignores =
-      [
-        ".vimrc"
-        "Session.vim"
-      ];
+    ignores = [
+      ".vimrc"
+      "Session.vim"
+    ];
   };
 }

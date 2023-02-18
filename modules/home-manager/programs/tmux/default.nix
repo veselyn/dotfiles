@@ -10,10 +10,9 @@
     keyMode = "vi";
     shortcut = "a";
     terminal = "xterm-kitty";
-    plugins =
-      [
-        pkgs.tmuxPlugins.vim-tmux-navigator
-      ];
+    plugins = [
+      pkgs.tmuxPlugins.vim-tmux-navigator
+    ];
     extraConfig = ''
       set -g mouse on
       set -g status off
