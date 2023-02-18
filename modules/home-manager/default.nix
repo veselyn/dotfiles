@@ -26,11 +26,6 @@
       vs = "vim -S Session.vim";
     };
   };
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
   xdg = {
     enable = true;
   };
