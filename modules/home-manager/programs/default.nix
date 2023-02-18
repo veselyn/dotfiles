@@ -7,6 +7,7 @@
     ./gh
     ./git
     ./gpg
+    ./jq
     ./kitty
     ./ssh
     ./tmux
