@@ -76,9 +76,6 @@
     };
   };
   programs = {
-    zoxide = {
-      enable = true;
-    };
     bat = {
       enable = true;
     };
