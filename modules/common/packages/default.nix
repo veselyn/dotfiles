@@ -1,25 +1,30 @@
 { pkgs, ... }:
 
-{
-  environment.systemPackages = [
-    pkgs._1password
-    pkgs.awscli2
-    pkgs.buf
+let
+  coreutils = [
     pkgs.coreutils-full
-    pkgs.docker
-    pkgs.fd
     pkgs.findutils
     pkgs.findutils.locate
     pkgs.gnugrep
     pkgs.gnumake
     pkgs.gnused
     pkgs.gnutar
+    pkgs.inetutils
+    pkgs.time
+  ];
+in
+{
+  environment.systemPackages = coreutils ++ [
+    pkgs._1password
+    pkgs.awscli2
+    pkgs.buf
+    pkgs.docker
+    pkgs.fd
     pkgs.go
     pkgs.gofumpt
     pkgs.golangci-lint
     pkgs.gotools
     pkgs.httpie
-    pkgs.inetutils
     pkgs.kubectl
     pkgs.luaPackages.luacheck
     pkgs.mkcert
@@ -40,7 +45,6 @@
     pkgs.statix
     pkgs.stylua
     pkgs.terraform
-    pkgs.time
     pkgs.vim-vint
     pkgs.watch
   ];
