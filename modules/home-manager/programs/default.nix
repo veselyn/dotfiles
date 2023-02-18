@@ -10,6 +10,7 @@
     ./ssh
     ./tmux
     ./vim
+    ./zoxide
     ./zsh
   ];
 }
