@@ -3,6 +3,7 @@
 {
   imports = [
     ./fzf
+    ./gh
     ./git
     ./gpg
     ./kitty
