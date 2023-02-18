@@ -76,9 +76,6 @@
     };
   };
   programs = {
-    bat = {
-      enable = true;
-    };
     jq = {
       enable = true;
     };
