@@ -5,6 +5,7 @@
     ./fzf
     ./kitty
     ./tmux
+    ./vim
     ./zsh
   ];
 }
