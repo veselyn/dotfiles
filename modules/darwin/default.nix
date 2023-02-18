@@ -14,37 +14,33 @@
     fontDir = {
       enable = true;
     };
-    fonts =
-      [
-        pkgs.nerdfonts
-      ];
+    fonts = [
+      pkgs.nerdfonts
+    ];
   };
 
   homebrew = {
     enable = true;
-    brews =
-      [
-        "nss"
-      ];
-    casks =
-      [
-        "1password"
-        "airtame"
-        "dash"
-        "docker"
-        "firefox"
-        "kitty"
-        "slack"
-      ];
+    brews = [
+      "nss"
+    ];
+    casks = [
+      "1password"
+      "airtame"
+      "dash"
+      "docker"
+      "firefox"
+      "kitty"
+      "slack"
+    ];
   };
 
   nix = {
     settings = {
-      experimental-features =
-        [
-          "nix-command"
-          "flakes"
-        ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 
