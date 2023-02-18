@@ -76,9 +76,6 @@
     };
   };
   programs = {
-    gpg = {
-      enable = true;
-    };
     git = {
       enable = true;
       userName = "Veselin Ivanov";
