@@ -76,9 +76,6 @@
     };
   };
   programs = {
-    fzf = {
-      enable = true;
-    };
     kitty = {
       enable = true;
       font = {
