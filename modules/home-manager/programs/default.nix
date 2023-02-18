@@ -10,6 +10,7 @@
     ./jq
     ./kitty
     ./ssh
+    ./tealdeer
     ./tmux
     ./vim
     ./zoxide

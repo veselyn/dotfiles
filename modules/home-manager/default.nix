@@ -75,11 +75,7 @@
       allowUnfree = true;
     };
   };
-  programs = {
-    tealdeer = {
-      enable = true;
-    };
-  };
+  programs = { };
   xdg = {
     enable = true;
   };
