@@ -75,7 +75,6 @@
       allowUnfree = true;
     };
   };
-  programs = { };
   xdg = {
     enable = true;
   };
