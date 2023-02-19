@@ -1,61 +1,63 @@
 { pkgs, ... }:
 
+with pkgs;
+
 let
   coreutils = [
-    pkgs.coreutils-full
-    pkgs.findutils
-    pkgs.findutils.locate
-    pkgs.gnugrep
-    pkgs.gnumake
-    pkgs.gnused
-    pkgs.gnutar
-    pkgs.inetutils
-    pkgs.time
+    coreutils-full
+    findutils
+    findutils.locate
+    gnugrep
+    gnumake
+    gnused
+    gnutar
+    inetutils
+    time
   ];
   ale = {
     linters = [
-      pkgs.buf
-      pkgs.golangci-lint
-      pkgs.luaPackages.luacheck
-      pkgs.nodePackages.eslint
-      pkgs.rustup
-      pkgs.shellcheck
-      pkgs.sqlfluff
-      pkgs.statix
-      pkgs.vim-vint
+      buf
+      golangci-lint
+      luaPackages.luacheck
+      nodePackages.eslint
+      rustup
+      shellcheck
+      sqlfluff
+      statix
+      vim-vint
     ];
     fixers = [
-      pkgs.buf
-      pkgs.gofumpt
-      pkgs.nixpkgs-fmt
-      pkgs.nodePackages.prettier
-      pkgs.rustup
-      pkgs.shfmt
-      pkgs.sqlfluff
-      pkgs.stylua
-      pkgs.terraform
+      buf
+      gofumpt
+      nixpkgs-fmt
+      nodePackages.prettier
+      rustup
+      shfmt
+      sqlfluff
+      stylua
+      terraform
     ];
   };
   others = [
-    pkgs._1password
-    pkgs.awscli2
-    pkgs.buf
-    pkgs.docker
-    pkgs.fd
-    pkgs.go
-    pkgs.gotools
-    pkgs.httpie
-    pkgs.kubectl
-    pkgs.mkcert
-    pkgs.neofetch
-    pkgs.nodejs
-    pkgs.ranger
-    pkgs.ripgrep
-    pkgs.sd
-    pkgs.silver-searcher
-    pkgs.sshuttle
-    pkgs.terraform
-    pkgs.watch
+    _1password
+    awscli2
+    buf
+    docker
+    fd
+    go
+    gotools
+    httpie
+    kubectl
+    mkcert
+    neofetch
+    nodejs
+    ranger
+    ripgrep
+    sd
+    silver-searcher
+    sshuttle
+    terraform
+    watch
   ];
 in
 {
