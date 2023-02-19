@@ -12,40 +12,49 @@ let
     pkgs.inetutils
     pkgs.time
   ];
+  ale = {
+    linters = [
+      pkgs.buf
+      pkgs.golangci-lint
+      pkgs.luaPackages.luacheck
+      pkgs.nodePackages.eslint
+      pkgs.shellcheck
+      pkgs.sqlfluff
+      pkgs.statix
+      pkgs.vim-vint
+    ];
+    fixers = [
+      pkgs.buf
+      pkgs.gofumpt
+      pkgs.nixpkgs-fmt
+      pkgs.nodePackages.prettier
+      pkgs.shfmt
+      pkgs.sqlfluff
+      pkgs.stylua
+    ];
+  };
 in
 {
-  environment.systemPackages = coreutils ++ [
+  environment.systemPackages = coreutils ++ ale.linters ++ ale.fixers ++ [
     pkgs._1password
     pkgs.awscli2
     pkgs.buf
     pkgs.docker
     pkgs.fd
     pkgs.go
-    pkgs.gofumpt
-    pkgs.golangci-lint
     pkgs.gotools
     pkgs.httpie
     pkgs.kubectl
-    pkgs.luaPackages.luacheck
     pkgs.mkcert
     pkgs.neofetch
-    pkgs.nixpkgs-fmt
-    pkgs.nodePackages.eslint
-    pkgs.nodePackages.prettier
     pkgs.nodejs
     pkgs.ranger
     pkgs.ripgrep
     pkgs.rustup
     pkgs.sd
-    pkgs.shellcheck
-    pkgs.shfmt
     pkgs.silver-searcher
-    pkgs.sqlfluff
     pkgs.sshuttle
-    pkgs.statix
-    pkgs.stylua
     pkgs.terraform
-    pkgs.vim-vint
     pkgs.watch
   ];
 }
