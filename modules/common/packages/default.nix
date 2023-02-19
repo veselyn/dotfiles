@@ -14,30 +14,28 @@ let
     inetutils
     time
   ];
-  ale = {
-    linters = [
-      buf
-      golangci-lint
-      luaPackages.luacheck
-      nodePackages.eslint
-      rustup
-      shellcheck
-      sqlfluff
-      statix
-      vim-vint
-    ];
-    fixers = [
-      buf
-      gofumpt
-      nixpkgs-fmt
-      nodePackages.prettier
-      rustup
-      shfmt
-      sqlfluff
-      stylua
-      terraform
-    ];
-  };
+  linters = [
+    buf
+    golangci-lint
+    luaPackages.luacheck
+    nodePackages.eslint
+    rustup
+    shellcheck
+    sqlfluff
+    statix
+    vim-vint
+  ];
+  fixers = [
+    buf
+    gofumpt
+    nixpkgs-fmt
+    nodePackages.prettier
+    rustup
+    shfmt
+    sqlfluff
+    stylua
+    terraform
+  ];
   others = [
     _1password
     awscli2
@@ -62,7 +60,7 @@ let
 in
 {
   environment.systemPackages = coreutils
-    ++ ale.linters
-    ++ ale.fixers
+    ++ linters
+    ++ fixers
     ++ others;
 }
