@@ -33,9 +33,7 @@ let
       pkgs.stylua
     ];
   };
-in
-{
-  environment.systemPackages = coreutils ++ ale.linters ++ ale.fixers ++ [
+  others = [
     pkgs._1password
     pkgs.awscli2
     pkgs.buf
@@ -57,4 +55,10 @@ in
     pkgs.terraform
     pkgs.watch
   ];
+in
+{
+  environment.systemPackages = coreutils
+    ++ ale.fixers
+    ++ ale.linters
+    ++ others;
 }
