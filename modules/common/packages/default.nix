@@ -18,6 +18,7 @@ let
       pkgs.golangci-lint
       pkgs.luaPackages.luacheck
       pkgs.nodePackages.eslint
+      pkgs.rustup
       pkgs.shellcheck
       pkgs.sqlfluff
       pkgs.statix
@@ -28,9 +29,11 @@ let
       pkgs.gofumpt
       pkgs.nixpkgs-fmt
       pkgs.nodePackages.prettier
+      pkgs.rustup
       pkgs.shfmt
       pkgs.sqlfluff
       pkgs.stylua
+      pkgs.terraform
     ];
   };
   others = [
@@ -48,7 +51,6 @@ let
     pkgs.nodejs
     pkgs.ranger
     pkgs.ripgrep
-    pkgs.rustup
     pkgs.sd
     pkgs.silver-searcher
     pkgs.sshuttle
