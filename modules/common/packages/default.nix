@@ -60,7 +60,7 @@ let
 in
 {
   environment.systemPackages = coreutils
-    ++ ale.fixers
     ++ ale.linters
+    ++ ale.fixers
     ++ others;
 }
