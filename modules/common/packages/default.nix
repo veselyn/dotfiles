@@ -59,8 +59,10 @@ let
   ];
 in
 {
-  environment.systemPackages = coreutils
-    ++ linters
-    ++ fixers
-    ++ others;
+  environment.systemPackages = lib.flatten (builtins.attrValues {
+    inherit coreutils;
+    inherit linters;
+    inherit fixers;
+    inherit others;
+  });
 }
