@@ -3,6 +3,7 @@
 {
   programs.vim = {
     enable = true;
+    defaultEditor = true;
     packageConfigurable = pkgs.vim_configurable.override {
       guiSupport = false;
       darwinSupport = true;
