@@ -14,9 +14,6 @@
     sessionPath = [
       "${config.home.file."bin".source}"
     ];
-    sessionVariables = {
-      EDITOR = "vim";
-    };
     shellAliases = {
       gai = "git add --interactive";
       r = "ranger";
