@@ -17,13 +17,13 @@ services() {
 }
 
 _start() {
-	brew services start "$1"
+	launchctl bootstrap gui/"$UID" ~/Library/LaunchAgents/org.nixos."$1".plist
 }
 
 _stop() {
-	brew services stop "$1"
+	launchctl bootout gui/"$UID"/org.nixos."$1"
 }
 
 _restart() {
-	brew services restart "$1"
+	launchctl kickstart -k gui/"$UID"/org.nixos."$1"
 }
