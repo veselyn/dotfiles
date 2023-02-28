@@ -25,3 +25,9 @@ call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
 \	'completor': function('asyncomplete#sources#tags#completor'),
 \	'allowlist': ['*']
 \}))
+
+call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
+\	'name': 'omni',
+\	'completor': function('asyncomplete#sources#omni#completor'),
+\	'allowlist': ['*']
+\}))
