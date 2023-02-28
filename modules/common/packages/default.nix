@@ -40,6 +40,7 @@ let
     _1password
     awscli2
     buf
+    cloc
     docker
     fd
     go
