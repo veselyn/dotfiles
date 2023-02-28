@@ -21,6 +21,7 @@ function! plugins#load() abort
 	Plug 'prabirshrestha/asyncomplete-buffer.vim'
 	Plug 'prabirshrestha/asyncomplete-file.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+	Plug 'prabirshrestha/asyncomplete-tags.vim'
 	Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
 	Plug 'prabirshrestha/asyncomplete.vim'
 	Plug 'prabirshrestha/vim-lsp'
