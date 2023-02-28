@@ -45,6 +45,7 @@ let
     fd
     go
     gotools
+    grc
     httpie
     kubectl
     mkcert
