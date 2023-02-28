@@ -18,6 +18,7 @@ function! plugins#load() abort
 	Plug 'lervag/vimtex'
 	Plug 'mattn/emmet-vim'
 	Plug 'mattn/vim-lsp-settings'
+	Plug 'prabirshrestha/asyncomplete-buffer.vim'
 	Plug 'prabirshrestha/asyncomplete-file.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
 	Plug 'prabirshrestha/asyncomplete-ultisnips.vim'
