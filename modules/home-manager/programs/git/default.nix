@@ -10,6 +10,9 @@ _:
       signByDefault = true;
     };
     extraConfig = {
+      init = {
+        defaultBranch = "master";
+      };
       merge = {
         tool = "vimdiff";
       };
