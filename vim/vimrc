@@ -26,6 +26,7 @@ set number
 set relativenumber
 set smartindent
 set mouse=a
+set ttymouse=sgr
 set clipboard=unnamed
 set splitbelow
 set splitright
