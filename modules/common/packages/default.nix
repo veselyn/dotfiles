@@ -46,6 +46,7 @@ let
     go
     gotools
     grc
+    highlight
     httpie
     kubectl
     mkcert
