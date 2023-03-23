@@ -24,5 +24,8 @@ _:
       ".vimrc"
       "Session.vim"
     ];
+    difftastic = {
+      enable = true;
+    };
   };
 }
