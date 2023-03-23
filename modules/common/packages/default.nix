@@ -40,6 +40,7 @@ let
     _1password
     awscli2
     buf
+    cargo-watch
     cloc
     docker
     fd
