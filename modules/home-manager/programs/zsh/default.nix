@@ -24,6 +24,13 @@
     };
     shellAliases = {
       gai = "ga --interactive";
+      gdn = "gd --no-ext-diff";
+      gdcan = "gdca --no-ext-diff";
+      gdcwn = "gdcw --no-ext-diff";
+      gdsn = "gds --no-ext-diff";
+      gdtn = "gdt --no-ext-diff";
+      gdupn = "gdup --no-ext-diff";
+      gdwn = "gdw --no-ext-diff";
     };
   };
 }
