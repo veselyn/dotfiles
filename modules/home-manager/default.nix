@@ -15,7 +15,6 @@
       "${config.home.file."bin".source}"
     ];
     shellAliases = {
-      gai = "git add --interactive";
       r = "ranger";
       v = "vim";
       vd = "vimdiff";
