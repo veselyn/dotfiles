@@ -9,6 +9,7 @@
     ./gpg
     ./jq
     ./kitty
+    ./nnn
     ./ssh
     ./tealdeer
     ./tmux
