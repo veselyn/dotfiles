@@ -53,7 +53,6 @@ let
     mkcert
     neofetch
     nodejs
-    ranger
     ripgrep
     sd
     silver-searcher
