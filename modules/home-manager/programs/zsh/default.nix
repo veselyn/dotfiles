@@ -22,5 +22,8 @@
         ZSH_TMUX_CONFIG=${config.xdg.configFile."tmux/tmux.conf".source}
       '';
     };
+    shellAliases = {
+      gai = "ga --interactive";
+    };
   };
 }
