@@ -3,6 +3,7 @@
 {
   imports = [
     ./bat
+    ./direnv
     ./fzf
     ./gh
     ./git
