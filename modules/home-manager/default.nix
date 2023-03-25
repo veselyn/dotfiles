@@ -15,7 +15,7 @@
       "${config.home.file."bin".source}"
     ];
     shellAliases = {
-      r = "ranger";
+      n = "nnn";
       v = "vim";
       vd = "vimdiff";
       vs = "vim -S Session.vim";
