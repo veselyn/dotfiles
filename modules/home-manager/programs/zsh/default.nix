@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.zsh = {
@@ -32,5 +32,8 @@
       gdupn = "gdup --no-ext-diff";
       gdwn = "gdw --no-ext-diff";
     };
+    initExtra = ''
+      source ${pkgs.nnn.src}/misc/quitcd/quitcd.bash_zsh
+    '';
   };
 }
