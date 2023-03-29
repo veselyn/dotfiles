@@ -30,6 +30,7 @@
       "dash"
       "docker"
       "firefox"
+      "google-chrome"
       "kitty"
       "slack"
     ];
