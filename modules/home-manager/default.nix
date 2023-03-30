@@ -15,6 +15,7 @@
       "${config.home.file."bin".source}"
     ];
     shellAliases = {
+      ls = "ls --color=auto";
       v = "vim";
       vd = "vimdiff";
       vs = "vim -S Session.vim";
