@@ -31,6 +31,7 @@ function! plugins#load() abort
 	Plug 'sirver/ultisnips'
 	Plug 'thomasfaingnaert/vim-lsp-snippets'
 	Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+	Plug 'tpope/vim-abolish'
 	Plug 'tpope/vim-capslock'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-endwise'
