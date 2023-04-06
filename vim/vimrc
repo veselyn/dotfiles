@@ -5,7 +5,6 @@ let maplocalleader = '\'
 colorscheme default
 
 set background=dark
-set exrc
 set notermguicolors
 set hidden
 set backup
