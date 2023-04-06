@@ -34,6 +34,7 @@ function! plugins#load() abort
 	Plug 'tpope/vim-abolish'
 	Plug 'tpope/vim-capslock'
 	Plug 'tpope/vim-commentary'
+	Plug 'tpope/vim-dispatch'
 	Plug 'tpope/vim-endwise'
 	Plug 'tpope/vim-eunuch'
 	Plug 'tpope/vim-fugitive'
