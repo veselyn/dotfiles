@@ -41,6 +41,7 @@ function! plugins#load() abort
 	Plug 'tpope/vim-obsession'
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-rhubarb'
+	Plug 'tpope/vim-scriptease'
 	Plug 'tpope/vim-sensible'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-unimpaired'
