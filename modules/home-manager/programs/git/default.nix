@@ -21,6 +21,7 @@ _:
       };
     };
     ignores = [
+      ".vim-lsp-settings/"
       ".vimrc"
       "Session.vim"
     ];
