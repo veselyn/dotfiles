@@ -15,7 +15,7 @@
     };
   };
 
-  outputs = { nixpkgs, darwin, home-manager, ... }: {
+  outputs = { self, nixpkgs, darwin, home-manager }: {
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
