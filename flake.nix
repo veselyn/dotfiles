@@ -42,6 +42,24 @@
       };
     };
 
+    packages = {
+      aarch64-darwin =
+        let
+          system = "aarch64-darwin";
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          battery = pkgs.writeShellApplication {
+            name = "battery";
+            text = ''
+              battery=$(pmset -g batt)
+              percentage=$(echo "$battery" | grep -Po '\d{1,3}%')
+              echo "$percentage"
+            '';
+          };
+        };
+    };
+
     formatter = {
       aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
     };
