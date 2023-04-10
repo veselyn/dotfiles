@@ -60,6 +60,15 @@
         };
     };
 
+    apps = {
+      aarch64-darwin = {
+        battery = {
+          type = "app";
+          program = "${self.packages.aarch64-darwin.battery}/bin/battery";
+        };
+      };
+    };
+
     formatter = {
       aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
     };
