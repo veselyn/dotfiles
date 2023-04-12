@@ -36,6 +36,9 @@ let
     stylua
     terraform
   ];
+  scripts = with pkgs.scripts; [
+    battery
+  ];
   others = [
     _1password
     awscli2
@@ -66,6 +69,7 @@ in
     inherit coreutils;
     inherit linters;
     inherit fixers;
+    inherit scripts;
     inherit others;
   });
 }
