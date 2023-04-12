@@ -20,6 +20,8 @@
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
 
+        specialArgs = { inherit self; };
+
         modules = [
           ./modules/darwin
           home-manager.darwinModules.home-manager
@@ -29,6 +31,7 @@
               home = "/Users/veselin";
             };
 
+            home-manager.useGlobalPkgs = true;
             home-manager.users.veselin = {
               imports = [ ./modules/home-manager ];
 
@@ -39,6 +42,14 @@
             };
           }
         ];
+      };
+    };
+
+    overlays = {
+      scripts = final: prev: {
+        scripts = {
+          inherit (self.packages.aarch64-darwin) battery;
+        };
       };
     };
 
