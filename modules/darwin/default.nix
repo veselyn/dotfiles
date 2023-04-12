@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ self, pkgs, ... }:
 
 {
   imports = [
@@ -46,6 +46,7 @@
   };
 
   nixpkgs = {
+    overlays = builtins.attrValues self.overlays;
     config = {
       allowUnfree = true;
     };
