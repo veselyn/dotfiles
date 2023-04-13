@@ -49,10 +49,7 @@
 
     overlays = {
       scripts = final: prev:
-        let
-          packages = self.packages.${prev.system};
-        in
-        {
+        let packages = self.packages.${prev.system}; in {
           scripts = {
             inherit (packages) battery;
           };
@@ -81,10 +78,7 @@
     };
 
     apps = flake-utils.lib.eachDefaultSystemMap (system:
-      let
-        packages = self.packages.${system};
-      in
-      {
+      let packages = self.packages.${system}; in {
         battery = {
           type = "app";
           program = "${packages.battery}/bin/battery";
