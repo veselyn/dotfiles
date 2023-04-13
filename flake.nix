@@ -17,7 +17,7 @@
     flake-utils.url = "github:numtide/flake-utils/main";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, flake-utils }: {
+  outputs = { self, nixpkgs, darwin, home-manager, flake-utils } @ inputs: {
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
@@ -98,13 +98,6 @@
       }
     );
 
-    formatter = flake-utils.lib.eachDefaultSystemMap (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system; overlays = builtins.attrValues self.overlays;
-        };
-      in
-      pkgs.nixpkgs-fmt
-    );
+    formatter = import ./formatter inputs;
   };
 }
