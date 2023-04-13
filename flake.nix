@@ -34,6 +34,7 @@
             };
 
             home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.users.veselin = {
               imports = [ ./modules/home-manager ];
 
