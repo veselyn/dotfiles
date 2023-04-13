@@ -63,7 +63,10 @@
       aarch64-darwin =
         let
           system = "aarch64-darwin";
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = builtins.attrValues self.overlays;
+          };
         in
         {
           battery = pkgs.writeShellApplication {
