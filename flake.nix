@@ -73,14 +73,17 @@
         };
     };
 
-    apps = {
-      aarch64-darwin = {
+    apps = flake-utils.lib.eachDefaultSystemMap (system:
+      let
+        packages = self.packages.${system};
+      in
+      {
         battery = {
           type = "app";
-          program = "${self.packages.aarch64-darwin.battery}/bin/battery";
+          program = "${packages.battery}/bin/battery";
         };
-      };
-    };
+      }
+    );
 
     formatter = flake-utils.lib.eachDefaultSystemMap (system:
       let
