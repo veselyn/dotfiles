@@ -48,11 +48,15 @@
     };
 
     overlays = {
-      scripts = final: prev: {
-        scripts = {
-          inherit (self.packages.aarch64-darwin) battery;
+      scripts = final: prev:
+        let
+          packages = self.packages.${prev.system};
+        in
+        {
+          scripts = {
+            inherit (packages) battery;
+          };
         };
-      };
     };
 
     packages = {
