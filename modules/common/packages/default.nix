@@ -38,6 +38,7 @@ let
   ];
   scripts = with pkgs.scripts; [
     battery
+    flushdns
   ];
   others = [
     _1password

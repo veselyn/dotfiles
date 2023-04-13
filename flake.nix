@@ -55,6 +55,7 @@
         let packages = self.packages.${prev.system}; in {
           scripts = {
             inherit (packages) battery;
+            inherit (packages) flushdns;
           };
         };
     };
@@ -74,6 +75,13 @@
             echo "$percentage"
           '';
         };
+        flushdns = pkgs.writeShellApplication {
+          name = "flushdns";
+          text = ''
+            dscacheutil -flushcache
+            killall -HUP mDNSResponder
+          '';
+        };
       }
     );
 
@@ -82,6 +90,10 @@
         battery = {
           type = "app";
           program = "${packages.battery}/bin/battery";
+        };
+        flushdns = {
+          type = "app";
+          program = "${packages.flushdns}/bin/flushdns";
         };
       }
     );
