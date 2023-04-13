@@ -56,25 +56,23 @@
         };
     };
 
-    packages = {
-      aarch64-darwin =
-        let
-          system = "aarch64-darwin";
-          pkgs = import nixpkgs {
-            inherit system; overlays = builtins.attrValues self.overlays;
-          };
-        in
-        {
-          battery = pkgs.writeShellApplication {
-            name = "battery";
-            text = ''
-              battery=$(pmset -g batt)
-              percentage=$(echo "$battery" | grep -Po '\d{1,3}%')
-              echo "$percentage"
-            '';
-          };
+    packages = flake-utils.lib.eachDefaultSystemMap (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system; overlays = builtins.attrValues self.overlays;
         };
-    };
+      in
+      {
+        battery = pkgs.writeShellApplication {
+          name = "battery";
+          text = ''
+            battery=$(pmset -g batt)
+            percentage=$(echo "$battery" | grep -Po '\d{1,3}%')
+            echo "$percentage"
+          '';
+        };
+      }
+    );
 
     apps = flake-utils.lib.eachDefaultSystemMap (system:
       let packages = self.packages.${system}; in {
