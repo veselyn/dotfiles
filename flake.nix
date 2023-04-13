@@ -13,9 +13,11 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flake-utils.url = "github:numtide/flake-utils/main";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager }: {
+  outputs = { self, nixpkgs, darwin, home-manager, flake-utils }: {
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
