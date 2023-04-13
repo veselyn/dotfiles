@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-set -eu
-
-sudo dscacheutil -flushcache
-sudo killall -HUP mDNSResponder
