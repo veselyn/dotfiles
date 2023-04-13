@@ -2,6 +2,6 @@ _:
 
 {
   imports = [
-    ./packages
+    ./packages.nix
   ];
 }
