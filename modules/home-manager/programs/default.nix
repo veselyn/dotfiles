@@ -2,20 +2,20 @@ _:
 
 {
   imports = [
-    ./bat
-    ./direnv
-    ./fzf
-    ./gh
-    ./git
-    ./gpg
-    ./jq
-    ./kitty
-    ./nnn
-    ./ssh
-    ./tealdeer
-    ./tmux
-    ./vim
-    ./zoxide
-    ./zsh
+    ./bat.nix
+    ./direnv.nix
+    ./fzf.nix
+    ./gh.nix
+    ./git.nix
+    ./gpg.nix
+    ./jq.nix
+    ./kitty.nix
+    ./nnn.nix
+    ./ssh.nix
+    ./tealdeer.nix
+    ./tmux.nix
+    ./vim.nix
+    ./zoxide.nix
+    ./zsh.nix
   ];
 }
