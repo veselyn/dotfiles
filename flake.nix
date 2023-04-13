@@ -82,8 +82,14 @@
       };
     };
 
-    formatter = {
-      aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
-    };
+    formatter = flake-utils.lib.eachDefaultSystemMap (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = builtins.attrValues self.overlays;
+        };
+      in
+      pkgs.nixpkgs-fmt
+    );
   };
 }
