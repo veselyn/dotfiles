@@ -33,14 +33,16 @@
               home = "/Users/veselin";
             };
 
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.veselin = {
-              imports = [ ./modules/home-manager ];
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.veselin = {
+                imports = [ ./modules/home-manager ];
 
-              home = {
-                username = "veselin";
-                homeDirectory = "/Users/veselin";
+                home = {
+                  username = "veselin";
+                  homeDirectory = "/Users/veselin";
+                };
               };
             };
           }
