@@ -50,9 +50,9 @@
       };
     };
 
-    overlays = import ./overlays inputs;
-    packages = import ./packages inputs;
     apps = import ./apps inputs;
     formatter = import ./formatter inputs;
+    overlays = import ./overlays inputs;
+    packages = import ./packages inputs;
   };
 }
