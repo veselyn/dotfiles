@@ -9,13 +9,7 @@ flake-utils.lib.eachDefaultSystemMap (
     scripts = pkgs.callPackage ../scripts { };
   in
   {
-    battery = {
-      type = "app";
-      program = "${scripts.battery}/bin/battery";
-    };
-    flushdns = {
-      type = "app";
-      program = "${scripts.flushdns}/bin/flushdns";
-    };
+    battery = flake-utils.lib.mkApp { drv = scripts.battery; };
+    flushdns = flake-utils.lib.mkApp { drv = scripts.flushdns; };
   }
 )
