@@ -2,10 +2,10 @@
 
 {
   scripts = final: prev:
-    let packages = self.packages.${prev.system}; in {
+    let scripts = final.callPackage ../scripts { }; in {
       scripts = {
-        inherit (packages) battery;
-        inherit (packages) flushdns;
+        inherit (scripts) battery;
+        inherit (scripts) flushdns;
       };
     };
 }
