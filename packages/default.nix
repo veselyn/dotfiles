@@ -6,22 +6,10 @@ flake-utils.lib.eachDefaultSystemMap (
     pkgs = import nixpkgs {
       inherit system; overlays = builtins.attrValues self.overlays;
     };
+    scripts = pkgs.callPackage ../scripts { };
   in
   {
-    battery = pkgs.writeShellApplication {
-      name = "battery";
-      text = ''
-        battery=$(pmset -g batt)
-        percentage=$(echo "$battery" | grep -Po '\d{1,3}%')
-        echo "$percentage"
-      '';
-    };
-    flushdns = pkgs.writeShellApplication {
-      name = "flushdns";
-      text = ''
-        dscacheutil -flushcache
-        killall -HUP mDNSResponder
-      '';
-    };
+    inherit (scripts) battery;
+    inherit (scripts) flushdns;
   }
 )
