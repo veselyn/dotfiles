@@ -2,8 +2,5 @@
 
 pkgs.writeShellApplication {
   name = "flushdns";
-  text = ''
-    dscacheutil -flushcache
-    killall -HUP mDNSResponder
-  '';
+  text = builtins.readFile ./flushdns.sh;
 }
