@@ -6,9 +6,7 @@
     ./services
   ];
 
-  environment = {
-    darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-  };
+  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
   fonts = {
     fontDir = {
