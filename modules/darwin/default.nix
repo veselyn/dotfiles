@@ -39,4 +39,6 @@
       enable = true;
     };
   };
+
+  system.stateVersion = 4;
 }
