@@ -4,27 +4,11 @@
   imports = [
     ../common
     ./fonts.nix
+    ./homebrew.nix
     ./services
   ];
 
   environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
-  homebrew = {
-    enable = true;
-    brews = [
-      "nss"
-    ];
-    casks = [
-      "1password"
-      "airtame"
-      "dash"
-      "docker"
-      "firefox"
-      "google-chrome"
-      "kitty"
-      "slack"
-    ];
-  };
 
   nix = {
     settings = {
