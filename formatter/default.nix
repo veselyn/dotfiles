@@ -7,5 +7,5 @@ flake-utils.lib.eachDefaultSystemMap (
       inherit system; overlays = builtins.attrValues self.overlays;
     };
   in
-  pkgs.nixpkgs-fmt
+  pkgs.alejandra
 )
