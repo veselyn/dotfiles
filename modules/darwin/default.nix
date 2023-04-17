@@ -25,11 +25,9 @@
     };
   };
 
-  programs = {
-    zsh = {
-      enable = true;
-      promptInit = "";
-    };
+  programs.zsh = {
+    enable = true;
+    promptInit = "";
   };
 
   system.stateVersion = 4;
