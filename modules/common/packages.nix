@@ -28,7 +28,7 @@ let
   fixers = [
     buf
     gofumpt
-    nixpkgs-fmt
+    alejandra
     nodePackages.prettier
     rustup
     shfmt
