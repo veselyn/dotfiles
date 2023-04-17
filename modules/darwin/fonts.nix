@@ -2,9 +2,7 @@
 
 {
   fonts = {
-    fontDir = {
-      enable = true;
-    };
+    fontDir.enable = true;
     fonts = [
       pkgs.nerdfonts
     ];
