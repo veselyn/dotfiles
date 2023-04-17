@@ -31,6 +31,5 @@ _:
       };
       remapCapsLockToEscape = true;
     };
-    stateVersion = 4;
   };
 }
