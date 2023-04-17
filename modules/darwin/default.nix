@@ -20,9 +20,7 @@
 
   nixpkgs = {
     overlays = builtins.attrValues self.overlays;
-    config = {
-      allowUnfree = true;
-    };
+    config.allowUnfree = true;
   };
 
   programs.zsh = {
