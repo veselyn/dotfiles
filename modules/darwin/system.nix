@@ -23,9 +23,7 @@ _:
         tilesize = 16;
       };
 
-      magicmouse = {
-        MouseButtonMode = "TwoButton";
-      };
+      magicmouse.MouseButtonMode = "TwoButton";
     };
 
     keyboard = {
