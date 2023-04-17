@@ -11,11 +11,7 @@
 
   environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
-  services = {
-    nix-daemon = {
-      enable = true;
-    };
-  };
+  services.nix-daemon.enable = true;
 
   nix = {
     settings = {
