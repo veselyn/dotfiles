@@ -3,9 +3,11 @@ _:
 {
   homebrew = {
     enable = true;
+
     brews = [
       "nss"
     ];
+
     casks = [
       "1password"
       "airtame"
