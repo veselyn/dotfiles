@@ -8,6 +8,7 @@ _:
           ReduceMotionEnabled = 1;
         };
       };
+
       NSGlobalDomain = {
         "com.apple.keyboard.fnState" = true;
         AppleKeyboardUIMode = 3;
@@ -15,15 +16,18 @@ _:
         KeyRepeat = 2;
         _HIHideMenuBar = true;
       };
+
       dock = {
         autohide = true;
         mru-spaces = false;
         tilesize = 16;
       };
+
       magicmouse = {
         MouseButtonMode = "TwoButton";
       };
     };
+
     keyboard = {
       enableKeyMapping = true;
       nonUS = {
