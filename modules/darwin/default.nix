@@ -3,19 +3,11 @@
 {
   imports = [
     ../common
+    ./fonts.nix
     ./services
   ];
 
   environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
-  fonts = {
-    fontDir = {
-      enable = true;
-    };
-    fonts = [
-      pkgs.nerdfonts
-    ];
-  };
 
   homebrew = {
     enable = true;
