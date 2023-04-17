@@ -11,6 +11,12 @@
 
   environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
+  services = {
+    nix-daemon = {
+      enable = true;
+    };
+  };
+
   nix = {
     settings = {
       experimental-features = [
@@ -31,12 +37,6 @@
     zsh = {
       enable = true;
       promptInit = "";
-    };
-  };
-
-  services = {
-    nix-daemon = {
-      enable = true;
     };
   };
 
