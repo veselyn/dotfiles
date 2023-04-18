@@ -14,6 +14,7 @@
     ];
     extraConfig = ''
       set -g status off
+      set -g renumber-windows on
 
       bind C-a send C-a
       bind C-h send C-h
