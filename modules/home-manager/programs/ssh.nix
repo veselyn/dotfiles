@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   programs.ssh = {
     enable = true;
     forwardAgent = true;

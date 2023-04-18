@@ -1,14 +1,17 @@
-{ self, nixpkgs, flake-utils, ... }:
-
+{
+  self,
+  nixpkgs,
+  flake-utils,
+  ...
+}:
 flake-utils.lib.eachDefaultSystemMap (
-  system:
-  let
+  system: let
     pkgs = import nixpkgs {
-      inherit system; overlays = builtins.attrValues self.overlays;
+      inherit system;
+      overlays = builtins.attrValues self.overlays;
     };
-    scripts = pkgs.callPackage ../scripts { };
-  in
-  {
+    scripts = pkgs.callPackage ../scripts {};
+  in {
     inherit (scripts) battery;
     inherit (scripts) flushdns;
   }

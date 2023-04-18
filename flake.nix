@@ -17,12 +17,18 @@
     flake-utils.url = "github:numtide/flake-utils/main";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, flake-utils } @ inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    darwin,
+    home-manager,
+    flake-utils,
+  } @ inputs: {
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
 
-        specialArgs = { inherit self; };
+        specialArgs = {inherit self;};
 
         modules = [
           ./modules/darwin
@@ -37,7 +43,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.veselin = {
-                imports = [ ./modules/home-manager ];
+                imports = [./modules/home-manager];
 
                 home = {
                   username = "veselin";
