@@ -6,13 +6,13 @@
     customPaneNavigationAndResize = true;
     escapeTime = 0;
     keyMode = "vi";
+    mouse = true;
     shortcut = "a";
     terminal = "xterm-kitty";
     plugins = [
       pkgs.tmuxPlugins.vim-tmux-navigator
     ];
     extraConfig = ''
-      set -g mouse on
       set -g status off
 
       bind C-a send C-a
