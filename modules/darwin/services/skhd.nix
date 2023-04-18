@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   services.skhd = {
     enable = true;
     skhdConfig = ''

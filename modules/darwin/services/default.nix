@@ -1,6 +1,4 @@
-_:
-
-{
+_: {
   imports = [
     ./skhd.nix
     ./yabai.nix

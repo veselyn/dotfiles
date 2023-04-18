@@ -1,8 +1,5 @@
-{ pkgs, ... }:
-
-with pkgs;
-
-let
+{pkgs, ...}:
+with pkgs; let
   coreutils = [
     coreutils-full
     findutils
@@ -64,8 +61,7 @@ let
     terraform
     watch
   ];
-in
-{
+in {
   environment.systemPackages = lib.flatten (builtins.attrValues {
     inherit coreutils;
     inherit linters;
