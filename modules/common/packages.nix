@@ -49,6 +49,7 @@ with pkgs; let
     gotools
     grc
     highlight
+    htop
     httpie
     kubectl
     mkcert
