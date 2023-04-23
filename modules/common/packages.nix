@@ -55,6 +55,7 @@ with pkgs; let
     mkcert
     neofetch
     nodejs
+    python3
     ripgrep
     sd
     silver-searcher
