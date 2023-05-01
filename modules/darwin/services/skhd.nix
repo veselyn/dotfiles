@@ -2,58 +2,62 @@ _: {
   services.skhd = {
     enable = true;
     skhdConfig = ''
-      alt - return : yabaiscript run terminal
+      alt - return : /Applications/kitty.app/Contents/MacOS/kitty -1 -d ~
 
-      alt - h : yabaiscript focus left
-      alt - j : yabaiscript focus bottom
-      alt - k : yabaiscript focus top
-      alt - l : yabaiscript focus right
+      alt - h : yabai -m window --focus west
+      alt - j : yabai -m window --focus south
+      alt - k : yabai -m window --focus north
+      alt - l : yabai -m window --focus east
 
-      shift + alt - h : yabaiscript swap left
-      shift + alt - j : yabaiscript swap bottom
-      shift + alt - k : yabaiscript swap top
-      shift + alt - l : yabaiscript swap right
+      shift + alt - h : yabai -m window --swap west
+      shift + alt - j : yabai -m window --swap south
+      shift + alt - k : yabai -m window --swap north
+      shift + alt - l : yabai -m window --swap east
 
-      shift + cmd - h : yabaiscript warp left
-      shift + cmd - j : yabaiscript warp bottom
-      shift + cmd - k : yabaiscript warp top
-      shift + cmd - l : yabaiscript warp right
+      shift + cmd - h : yabai -m window --warp west
+      shift + cmd - j : yabai -m window --warp south
+      shift + cmd - k : yabai -m window --warp north
+      shift + cmd - l : yabai -m window --warp east
 
-      shift + alt - backspace : yabaiscript space balance
+      shift + alt - backspace : yabai -m space --balance
 
-      shift + alt - 1 : yabaiscript space 1
-      shift + alt - 2 : yabaiscript space 2
-      shift + alt - 3 : yabaiscript space 3
-      shift + alt - 4 : yabaiscript space 4
-      shift + alt - 5 : yabaiscript space 5
-      shift + alt - 6 : yabaiscript space 6
-      shift + alt - 7 : yabaiscript space 7
-      shift + alt - 8 : yabaiscript space 8
-      shift + alt - 9 : yabaiscript space 9
-      shift + alt - 0 : yabaiscript space 10
+      shift + alt - 1 : yabai -m window --space 1
+      shift + alt - 2 : yabai -m window --space 2
+      shift + alt - 3 : yabai -m window --space 3
+      shift + alt - 4 : yabai -m window --space 4
+      shift + alt - 5 : yabai -m window --space 5
+      shift + alt - 6 : yabai -m window --space 6
+      shift + alt - 7 : yabai -m window --space 7
+      shift + alt - 8 : yabai -m window --space 8
+      shift + alt - 9 : yabai -m window --space 9
+      shift + alt - 0 : yabai -m window --space 10
 
-      shift + ctrl - h : yabaiscript move left
-      shift + ctrl - j : yabaiscript move bottom
-      shift + ctrl - k : yabaiscript move top
-      shift + ctrl - l : yabaiscript move right
+      shift + ctrl - h : yabai -m window --move rel:-10:0
+      shift + ctrl - j : yabai -m window --move rel:0:10
+      shift + ctrl - k : yabai -m window --move rel:0:-10
+      shift + ctrl - l : yabai -m window --move rel:10:0
 
-      shift + alt + cmd - h : yabaiscript resize left
-      shift + alt + cmd - j : yabaiscript resize bottom
-      shift + alt + cmd - k : yabaiscript resize top
-      shift + alt + cmd - l : yabaiscript resize right
+      shift + alt + cmd - h : yabai -m window --resize left:-10:0; \
+        yabai -m window --resize right:-10:0
+      shift + alt + cmd - j : yabai -m window --resize bottom:0:10; \
+        yabai -m window --resize top:0:10
+      shift + alt + cmd - k : yabai -m window --resize top:0:-10; \
+        yabai -m window --resize bottom:0:-10
+      shift + alt + cmd - l : yabai -m window --resize right:10:0; \
+        yabai -m window --resize left:10:0
 
-      ctrl + alt - h : yabaiscript insert left
-      ctrl + alt - j : yabaiscript insert bottom
-      ctrl + alt - k : yabaiscript insert top
-      ctrl + alt - l : yabaiscript insert right
+      ctrl + alt - h : yabai -m window --insert west
+      ctrl + alt - j : yabai -m window --insert south
+      ctrl + alt - k : yabai -m window --insert north
+      ctrl + alt - l : yabai -m window --insert east
 
-      shift + alt - d : yabaiscript toggle zoom-parent
-      shift + alt - f : yabaiscript toggle zoom-fullscreen
+      shift + alt - d : yabai -m window --toggle zoom-parent
+      shift + alt - f : yabai -m window --toggle zoom-fullscreen
 
-      alt - e : yabaiscript toggle split
+      alt - e : yabai -m window --toggle split
 
-      alt - t : yabaiscript toggle float; \
-        yabaiscript grid center
+      alt - t : yabai -m window --toggle float; \
+        yabai -m window --grid 4:4:1:1:2:2
     '';
   };
 }

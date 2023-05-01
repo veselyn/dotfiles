@@ -2,50 +2,28 @@
 
 set -e
 
-. "$(dirname "$0")/_yabaiscript/services.sh"
-. "$(dirname "$0")/_yabaiscript/run.sh"
-. "$(dirname "$0")/_yabaiscript/focus.sh"
-. "$(dirname "$0")/_yabaiscript/swap.sh"
-. "$(dirname "$0")/_yabaiscript/warp.sh"
-. "$(dirname "$0")/_yabaiscript/space.sh"
-. "$(dirname "$0")/_yabaiscript/move.sh"
-. "$(dirname "$0")/_yabaiscript/resize.sh"
-. "$(dirname "$0")/_yabaiscript/insert.sh"
-. "$(dirname "$0")/_yabaiscript/toggle.sh"
-. "$(dirname "$0")/_yabaiscript/grid.sh"
+_start() {
+	launchctl bootstrap gui/"$UID" ~/Library/LaunchAgents/org.nixos."$1".plist
+}
+
+_stop() {
+	launchctl bootout gui/"$UID"/org.nixos."$1"
+}
+
+_restart() {
+	launchctl kickstart -k gui/"$UID"/org.nixos."$1"
+}
 
 case $1 in
 start | stop | restart)
-	services "$1" "$2"
-	;;
-run)
-	run "$2"
-	;;
-focus)
-	focus "$2"
-	;;
-swap)
-	swap "$2"
-	;;
-warp)
-	warp "$2"
-	;;
-space)
-	space "$2"
-	;;
-move)
-	move "$2"
-	;;
-resize)
-	resize "$2"
-	;;
-insert)
-	insert "$2"
-	;;
-toggle)
-	toggle "$2"
-	;;
-grid)
-	grid "$2"
+	case $2 in
+	yabai | skhd)
+		"_$1" "$2"
+		;;
+	*)
+		"_$1" yabai
+		"_$1" skhd
+		;;
+	esac
 	;;
 esac
