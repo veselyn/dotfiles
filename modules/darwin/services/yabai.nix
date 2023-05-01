@@ -9,6 +9,7 @@ _: {
       right_padding = 5;
       window_gap = 5;
       mouse_follows_focus = "on";
+      focus_follows_mouse = "autofocus";
     };
   };
 }
