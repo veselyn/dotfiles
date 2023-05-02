@@ -22,8 +22,6 @@ _: {
       };
 
       magicmouse.MouseButtonMode = "TwoButton";
-
-      spaces.spans-displays = true;
     };
 
     keyboard = {
