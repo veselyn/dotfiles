@@ -55,6 +55,7 @@ with pkgs; let
     mkcert
     neofetch
     nodejs
+    parallel
     python3
     ripgrep
     sd
