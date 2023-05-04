@@ -1,6 +1,7 @@
 _: {
   services.yabai = {
     enable = true;
+    enableScriptingAddition = true;
     config = {
       layout = "bsp";
       left_padding = 5;
