@@ -2,7 +2,6 @@
   programs.kitty = {
     enable = true;
     font = {
-      package = pkgs.nerdfonts;
       name = "MesloLGS Nerd Font";
       size = 13;
     };
