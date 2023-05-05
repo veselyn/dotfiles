@@ -33,7 +33,7 @@ with pkgs; let
     stylua
     terraform
   ];
-  scripts = with pkgs.scripts; [
+  scripts = [
     battery
     flushdns
     yabaictl
