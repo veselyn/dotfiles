@@ -13,4 +13,5 @@ flake-utils.lib.eachDefaultSystemMap (system: let
 in {
   inherit (scripts) battery;
   inherit (scripts) flushdns;
+  inherit (scripts) yabaictl;
 })

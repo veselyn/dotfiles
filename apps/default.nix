@@ -13,4 +13,5 @@ flake-utils.lib.eachDefaultSystemMap (system: let
 in {
   battery = flake-utils.lib.mkApp {drv = scripts.battery;};
   flushdns = flake-utils.lib.mkApp {drv = scripts.flushdns;};
+  yabaictl = flake-utils.lib.mkApp {drv = scripts.yabaictl;};
 })
