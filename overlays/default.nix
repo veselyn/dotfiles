@@ -1,9 +1,9 @@
 {self, ...}: {
   default = final: prev: let
-    scripts = prev.callPackages ../scripts {};
+    pkgs = prev.callPackages ../pkgs {};
   in {
     inherit
-      (scripts)
+      (pkgs)
       battery
       flushdns
       yabaictl
