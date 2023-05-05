@@ -6,6 +6,7 @@
       (pkgs)
       battery
       flushdns
+      yabai
       yabaictl
       ;
   };
