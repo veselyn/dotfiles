@@ -36,6 +36,7 @@ with pkgs; let
   scripts = with pkgs.scripts; [
     battery
     flushdns
+    yabaictl
   ];
   others = [
     _1password

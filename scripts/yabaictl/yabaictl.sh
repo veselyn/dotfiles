@@ -1,28 +1,24 @@
-#!/usr/bin/env sh
-
-set -e
-
-_start() {
+start() {
 	launchctl bootstrap gui/"$UID" ~/Library/LaunchAgents/org.nixos."$1".plist
 }
 
-_stop() {
+stop() {
 	launchctl bootout gui/"$UID"/org.nixos."$1"
 }
 
-_restart() {
+restart() {
 	launchctl kickstart -k gui/"$UID"/org.nixos."$1"
 }
 
-case $1 in
+case ${1-} in
 start | stop | restart)
-	case $2 in
+	case ${2-} in
 	yabai | skhd)
-		"_$1" "$2"
+		"$1" "$2"
 		;;
 	*)
-		"_$1" yabai
-		"_$1" skhd
+		"$1" yabai
+		"$1" skhd
 		;;
 	esac
 	;;
