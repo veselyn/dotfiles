@@ -1,6 +1,6 @@
 {self, ...}: {
   scripts = final: prev: let
-    scripts = final.callPackage ../scripts {};
+    scripts = final.callPackages ../scripts {};
   in {
     scripts = {
       inherit (scripts) battery;
