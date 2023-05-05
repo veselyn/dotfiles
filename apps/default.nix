@@ -10,8 +10,12 @@ flake-utils.lib.eachDefaultSystemMap (system: let
     overlays = builtins.attrValues self.overlays;
   };
   scripts = pkgs.callPackages ../scripts {};
-in {
-  battery = flake-utils.lib.mkApp {drv = scripts.battery;};
-  flushdns = flake-utils.lib.mkApp {drv = scripts.flushdns;};
-  yabaictl = flake-utils.lib.mkApp {drv = scripts.yabaictl;};
-})
+in
+  builtins.mapAttrs (_: drv: flake-utils.lib.mkApp {inherit drv;}) {
+    inherit
+      (scripts)
+      battery
+      flushdns
+      yabaictl
+      ;
+  })
