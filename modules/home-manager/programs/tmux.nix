@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
+
     baseIndex = 1;
     clock24 = true;
     customPaneNavigationAndResize = true;
@@ -9,9 +10,11 @@
     mouse = true;
     shortcut = "a";
     terminal = "xterm-kitty";
+
     plugins = [
       pkgs.tmuxPlugins.vim-tmux-navigator
     ];
+
     extraConfig = ''
       set -g status off
       set -g renumber-windows on
