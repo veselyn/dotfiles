@@ -9,7 +9,7 @@ flake-utils.lib.eachDefaultSystemMap (system: let
     inherit system;
     overlays = builtins.attrValues self.overlays;
   };
-  scripts = pkgs.callPackage ../scripts {};
+  scripts = pkgs.callPackages ../scripts {};
 in {
   inherit (scripts) battery;
   inherit (scripts) flushdns;
