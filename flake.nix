@@ -19,10 +19,9 @@
 
   outputs = {
     self,
-    nixpkgs,
     darwin,
     home-manager,
-    flake-utils,
+    ...
   } @ inputs: {
     darwinConfigurations = {
       veselins-macbook-pro = darwin.lib.darwinSystem {
