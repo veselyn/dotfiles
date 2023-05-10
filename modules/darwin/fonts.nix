@@ -1,11 +1,9 @@
-{pkgs, ...}: let
-  nerdfonts = pkgs.nerdfonts.override {fonts = ["Meslo"];};
-in {
+{pkgs, ...}: {
   fonts = {
     fontDir.enable = true;
 
-    fonts = [
-      nerdfonts
+    fonts = with pkgs; [
+      (nerdfonts.override {fonts = ["Meslo"];})
     ];
   };
 }

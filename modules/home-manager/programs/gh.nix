@@ -2,8 +2,8 @@
   programs.gh = {
     enable = true;
 
-    extensions = [
-      pkgs.gh-dash
+    extensions = with pkgs; [
+      gh-dash
     ];
   };
 }

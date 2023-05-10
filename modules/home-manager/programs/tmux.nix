@@ -11,8 +11,8 @@
     shortcut = "a";
     terminal = "xterm-kitty";
 
-    plugins = [
-      pkgs.tmuxPlugins.vim-tmux-navigator
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
     ];
 
     extraConfig = ''
