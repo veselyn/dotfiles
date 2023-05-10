@@ -8,7 +8,7 @@
 
     defaultEditor = true;
 
-    packageConfigurable = pkgs.vim_configurable.override {
+    packageConfigurable = pkgs.vim-full.override {
       guiSupport = false;
       darwinSupport = true;
     };
