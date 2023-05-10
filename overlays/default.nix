@@ -1,6 +1,6 @@
 {nixpkgs-master, ...}: {
   default = final: prev: let
-    master = import nixpkgs-master {system = prev.system;};
+    master = import nixpkgs-master {inherit (prev) system;};
     pkgs = prev.callPackages ../pkgs {};
   in {
     inherit master;
