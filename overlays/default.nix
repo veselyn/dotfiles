@@ -1,4 +1,4 @@
-{self, ...}: {
+_: {
   default = final: prev: let
     pkgs = prev.callPackages ../pkgs {};
   in {
