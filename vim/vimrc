@@ -1,5 +1,3 @@
-call plugins#load()
-
 let mapleader = ' '
 let maplocalleader = '\'
 colorscheme default

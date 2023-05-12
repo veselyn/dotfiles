@@ -12,5 +12,7 @@
       yabai
       yabaictl
       ;
+
+    vimPlugins = prev.vimPlugins // master.vimPlugins;
   };
 }
