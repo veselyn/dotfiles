@@ -70,5 +70,5 @@
     '';
   };
 
-  home.file.".vim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/vim";
+  home.file.".vim".source = ../../../vim;
 }
