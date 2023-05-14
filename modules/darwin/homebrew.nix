@@ -14,6 +14,7 @@ _: {
       "firefox"
       "google-chrome"
       "kitty"
+      "skim"
       "slack"
     ];
   };
