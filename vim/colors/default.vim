@@ -2,15 +2,9 @@ runtime colors/dim.vim
 
 let colors_name = 'default'
 
-function! s:default() abort
-	if &background ==# 'light'
-	else
-	endif
-	highlight clear SignColumn
-	highlight link lspReference CursorLine
-endfunction
+if &background ==# 'dark'
+else
+endif
 
-augroup default
-	autocmd!
-	autocmd ColorScheme default call s:default()
-augroup END
+highlight clear SignColumn
+highlight link lspReference CursorLine
