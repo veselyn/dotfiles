@@ -54,7 +54,6 @@
       vim-repeat
       vim-rhubarb
       vim-scriptease
-      vim-sensible
       vim-sneak
       vim-snippets
       vim-surround
