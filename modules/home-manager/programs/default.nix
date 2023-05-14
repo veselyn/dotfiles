@@ -6,6 +6,7 @@ _: {
     ./gh.nix
     ./git.nix
     ./gpg.nix
+    ./htop.nix
     ./jq.nix
     ./kitty.nix
     ./nnn.nix
