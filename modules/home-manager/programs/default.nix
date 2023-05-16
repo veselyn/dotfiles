@@ -8,6 +8,7 @@ _: {
     ./gpg.nix
     ./htop.nix
     ./jq.nix
+    ./k9s.nix
     ./kitty.nix
     ./nnn.nix
     ./ssh.nix
