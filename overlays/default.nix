@@ -19,7 +19,6 @@
       yabaictl
       ;
 
-    vimPlugins = prev.vimPlugins // master.vimPlugins;
     texlive = stable.texlive;
   };
 }
