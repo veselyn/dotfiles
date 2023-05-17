@@ -18,7 +18,5 @@
       yabai
       yabaictl
       ;
-
-    texlive = stable.texlive;
   };
 }
