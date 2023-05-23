@@ -52,6 +52,7 @@ with pkgs; let
     highlight
     httpie
     kubectl
+    kubectx
     mkcert
     neofetch
     nodejs
