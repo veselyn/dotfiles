@@ -42,6 +42,9 @@
     };
 
     initExtra = ''
+      bindkey ^N down-line-or-beginning-search
+      bindkey ^P up-line-or-beginning-search
+
       source ${pkgs.nnn.src}/misc/quitcd/quitcd.bash_zsh
     '';
   };
