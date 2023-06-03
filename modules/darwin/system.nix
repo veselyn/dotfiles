@@ -23,7 +23,7 @@ _: {
       };
 
       finder = {
-        AppleShowAllExtensions = false;
+        AppleShowAllExtensions = true;
         AppleShowAllFiles = false;
         CreateDesktop = true;
         FXDefaultSearchScope = null;
