@@ -16,6 +16,7 @@ with pkgs; let
     golangci-lint
     luaPackages.luacheck
     nodePackages.eslint
+    python3Packages.flake8
     rustup
     shellcheck
     sqlfluff
@@ -27,6 +28,7 @@ with pkgs; let
     buf
     gofumpt
     nodePackages.prettier
+    python3Packages.black
     rustup
     shfmt
     sqlfluff
