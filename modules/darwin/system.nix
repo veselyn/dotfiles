@@ -10,6 +10,7 @@ _: {
       NSGlobalDomain = {
         "com.apple.keyboard.fnState" = true;
         AppleKeyboardUIMode = 3;
+        ApplePressAndHoldEnabled = false;
         InitialKeyRepeat = 15;
         KeyRepeat = 2;
         _HIHideMenuBar = true;
