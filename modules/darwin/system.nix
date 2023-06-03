@@ -30,7 +30,7 @@ _: {
         FXEnableExtensionChangeWarning = true;
         FXPreferredViewStyle = "icnv";
         QuitMenuItem = false;
-        ShowPathbar = false;
+        ShowPathbar = true;
         ShowStatusBar = false;
         _FXShowPosixPathInTitle = false;
       };
