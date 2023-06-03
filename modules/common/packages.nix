@@ -23,9 +23,9 @@ with pkgs; let
     vim-vint
   ];
   fixers = [
+    alejandra
     buf
     gofumpt
-    alejandra
     nodePackages.prettier
     rustup
     shfmt
