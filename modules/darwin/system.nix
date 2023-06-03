@@ -28,7 +28,7 @@ _: {
         CreateDesktop = true;
         FXDefaultSearchScope = null;
         FXEnableExtensionChangeWarning = true;
-        FXPreferredViewStyle = "icnv";
+        FXPreferredViewStyle = "Nlsv";
         QuitMenuItem = false;
         ShowPathbar = true;
         ShowStatusBar = false;
