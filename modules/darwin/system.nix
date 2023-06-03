@@ -22,6 +22,19 @@ _: {
         tilesize = 16;
       };
 
+      finder = {
+        AppleShowAllExtensions = false;
+        AppleShowAllFiles = false;
+        CreateDesktop = true;
+        FXDefaultSearchScope = null;
+        FXEnableExtensionChangeWarning = true;
+        FXPreferredViewStyle = "icnv";
+        QuitMenuItem = false;
+        ShowPathbar = false;
+        ShowStatusBar = false;
+        _FXShowPosixPathInTitle = false;
+      };
+
       magicmouse.MouseButtonMode = "TwoButton";
 
       spaces.spans-displays = false;
