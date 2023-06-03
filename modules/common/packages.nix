@@ -28,7 +28,8 @@ with pkgs; let
     buf
     gofumpt
     nodePackages.prettier
-    python3Packages.black
+    python3Packages.autopep8
+    python3Packages.isort
     rustup
     shfmt
     sqlfluff
