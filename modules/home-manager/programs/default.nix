@@ -10,6 +10,7 @@ _: {
     ./jq.nix
     ./k9s.nix
     ./kitty.nix
+    ./neovim.nix
     ./nnn.nix
     ./ssh.nix
     ./tealdeer.nix
