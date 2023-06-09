@@ -12,7 +12,9 @@
     vimAlias = true;
     vimdiffAlias = true;
 
-    plugins = with pkgs.vimPlugins; [];
+    plugins = with pkgs.vimPlugins; [
+      telescope-nvim
+    ];
   };
 
   xdg.configFile.nvim.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
