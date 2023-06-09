@@ -14,6 +14,7 @@
 
     plugins = with pkgs.vimPlugins; [
       telescope-nvim
+      vim-tmux-navigator
     ];
   };
 
