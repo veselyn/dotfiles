@@ -13,6 +13,7 @@
     vimdiffAlias = true;
 
     plugins = with pkgs.vimPlugins; [
+      nvim-lspconfig
       nvim-treesitter.withAllGrammars
       telescope-nvim
       vim-tmux-navigator
