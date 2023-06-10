@@ -13,10 +13,15 @@
     vimdiffAlias = true;
 
     plugins = with pkgs.vimPlugins; [
+      ReplaceWithRegister
+      camelcasemotion
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       telescope-nvim
       vim-dim
+      vim-easymotion
+      vim-sneak
+      vim-surround
       vim-tmux-navigator
     ];
   };
