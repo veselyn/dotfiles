@@ -16,6 +16,7 @@
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       telescope-nvim
+      vim-dim
       vim-tmux-navigator
     ];
   };
