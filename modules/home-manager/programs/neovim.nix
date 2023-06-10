@@ -15,6 +15,7 @@
     plugins = with pkgs.vimPlugins; [
       ReplaceWithRegister
       camelcasemotion
+      indent-blankline-nvim
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       telescope-nvim
