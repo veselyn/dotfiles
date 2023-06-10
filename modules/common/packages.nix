@@ -11,31 +11,6 @@ with pkgs; let
     inetutils
     time
   ];
-  linters = [
-    buf
-    golangci-lint
-    luaPackages.luacheck
-    nodePackages.eslint
-    python3Packages.flake8
-    rustup
-    shellcheck
-    sqlfluff
-    statix
-    vim-vint
-  ];
-  fixers = [
-    alejandra
-    buf
-    gofumpt
-    nodePackages.prettier
-    python3Packages.autopep8
-    python3Packages.isort
-    rustup
-    shfmt
-    sqlfluff
-    stylua
-    terraform
-  ];
   scripts = [
     battery
     flushdns
@@ -71,8 +46,6 @@ with pkgs; let
 in {
   environment.systemPackages = lib.flatten (builtins.attrValues {
     inherit coreutils;
-    inherit linters;
-    inherit fixers;
     inherit scripts;
     inherit others;
   });

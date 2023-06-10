@@ -69,5 +69,34 @@
     '';
   };
 
+  home.packages = with pkgs;
+    lib.flatten (builtins.attrValues {
+      linters = [
+        buf
+        golangci-lint
+        luaPackages.luacheck
+        nodePackages.eslint
+        python3Packages.flake8
+        rustup
+        shellcheck
+        sqlfluff
+        statix
+        vim-vint
+      ];
+      fixers = [
+        alejandra
+        buf
+        gofumpt
+        nodePackages.prettier
+        python3Packages.autopep8
+        python3Packages.isort
+        rustup
+        shfmt
+        sqlfluff
+        stylua
+        terraform
+      ];
+    });
+
   home.file.".vim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/vim";
 }
