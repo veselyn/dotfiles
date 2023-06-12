@@ -27,6 +27,7 @@
       vim-easymotion
       vim-endwise
       vim-eunuch
+      vim-fugitive
       vim-obsession
       vim-repeat
       vim-rsi
