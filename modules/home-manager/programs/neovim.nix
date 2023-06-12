@@ -25,6 +25,7 @@
       vim-sneak
       vim-surround
       vim-tmux-navigator
+      vim-unimpaired
     ];
   };
 
