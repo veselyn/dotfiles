@@ -22,6 +22,7 @@
       vim-commentary
       vim-dim
       vim-easymotion
+      vim-obsession
       vim-sleuth
       vim-sneak
       vim-surround
