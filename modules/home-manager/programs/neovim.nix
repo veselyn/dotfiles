@@ -20,6 +20,7 @@
       nvim-treesitter.withAllGrammars
       telescope-nvim
       vim-abolish
+      vim-capslock
       vim-commentary
       vim-dim
       vim-dispatch
