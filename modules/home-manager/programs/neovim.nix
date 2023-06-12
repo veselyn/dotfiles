@@ -24,6 +24,7 @@
       vim-dim
       vim-dispatch
       vim-easymotion
+      vim-eunuch
       vim-obsession
       vim-sleuth
       vim-sneak
