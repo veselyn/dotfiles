@@ -21,6 +21,7 @@
       telescope-nvim
       vim-dim
       vim-easymotion
+      vim-sleuth
       vim-sneak
       vim-surround
       vim-tmux-navigator
