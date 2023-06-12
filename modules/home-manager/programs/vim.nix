@@ -53,6 +53,7 @@
       vim-polyglot
       vim-repeat
       vim-rhubarb
+      vim-rsi
       vim-scriptease
       vim-sneak
       vim-snippets
