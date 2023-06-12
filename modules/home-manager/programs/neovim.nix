@@ -28,6 +28,7 @@
       vim-endwise
       vim-eunuch
       vim-obsession
+      vim-rsi
       vim-sleuth
       vim-sneak
       vim-surround
