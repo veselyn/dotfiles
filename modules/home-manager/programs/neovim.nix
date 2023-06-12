@@ -30,6 +30,7 @@
       vim-fugitive
       vim-obsession
       vim-repeat
+      vim-rhubarb
       vim-rsi
       vim-sleuth
       vim-sneak
