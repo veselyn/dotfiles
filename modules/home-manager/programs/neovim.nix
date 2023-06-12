@@ -19,6 +19,7 @@
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       telescope-nvim
+      vim-abolish
       vim-commentary
       vim-dim
       vim-dispatch
