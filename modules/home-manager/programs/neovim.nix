@@ -21,6 +21,7 @@
       telescope-nvim
       vim-commentary
       vim-dim
+      vim-dispatch
       vim-easymotion
       vim-obsession
       vim-sleuth
