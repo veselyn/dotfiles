@@ -20,6 +20,7 @@
       nvim-lspconfig
       nvim-treesitter-endwise
       nvim-treesitter.withAllGrammars
+      nvim-ts-autotag
       telescope-nvim
       vim-abolish
       vim-capslock
