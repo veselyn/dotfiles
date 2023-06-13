@@ -30,6 +30,7 @@
       vim-easymotion
       vim-eunuch
       vim-fugitive
+      vim-gitgutter
       vim-obsession
       vim-repeat
       vim-rhubarb
