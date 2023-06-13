@@ -16,6 +16,7 @@
       ReplaceWithRegister
       camelcasemotion
       indent-blankline-nvim
+      nvim-autopairs
       nvim-lspconfig
       nvim-treesitter-endwise
       nvim-treesitter.withAllGrammars
