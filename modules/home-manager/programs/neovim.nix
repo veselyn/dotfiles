@@ -17,6 +17,7 @@
       camelcasemotion
       indent-blankline-nvim
       nvim-lspconfig
+      nvim-treesitter-endwise
       nvim-treesitter.withAllGrammars
       telescope-nvim
       vim-abolish
@@ -25,7 +26,6 @@
       vim-dim
       vim-dispatch
       vim-easymotion
-      vim-endwise
       vim-eunuch
       vim-fugitive
       vim-obsession
