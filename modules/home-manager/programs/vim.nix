@@ -4,9 +4,9 @@
   ...
 }: {
   programs.vim = {
-    enable = true;
+    enable = false;
 
-    defaultEditor = false;
+    defaultEditor = true;
 
     packageConfigurable = pkgs.vim-full.override {
       guiSupport = false;
