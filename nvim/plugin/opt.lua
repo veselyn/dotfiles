@@ -1,4 +1,5 @@
 vim.opt.backup = true
+vim.opt.backupdir:remove(".")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = nil
 vim.opt.list = true
