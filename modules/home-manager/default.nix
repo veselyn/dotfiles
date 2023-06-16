@@ -4,7 +4,7 @@ _: {
   ];
 
   home = {
-    stateVersion = "22.11";
+    stateVersion = "23.05";
 
     shellAliases = {
       ls = "ls --color=auto";
