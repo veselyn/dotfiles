@@ -29,7 +29,7 @@
       veselins-macbook-pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
 
-        specialArgs = {inherit self;};
+        specialArgs = {inherit inputs;};
 
         modules = [
           ./modules/darwin
