@@ -15,6 +15,7 @@
     plugins = with pkgs.vimPlugins; [
       ReplaceWithRegister
       camelcasemotion
+      dash-vim
       indent-blankline-nvim
       nvim-autopairs
       nvim-lspconfig
