@@ -13,4 +13,5 @@ vim.opt.sidescrolloff = 2
 vim.opt.signcolumn = "yes"
 vim.opt.swapfile = true
 vim.opt.undofile = true
+vim.opt.updatetime = 100
 vim.opt.wrap = false
