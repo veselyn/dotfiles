@@ -35,6 +35,7 @@
       vim-repeat
       vim-rhubarb
       vim-rsi
+      vim-scriptease
       vim-sleuth
       vim-sneak
       vim-surround
