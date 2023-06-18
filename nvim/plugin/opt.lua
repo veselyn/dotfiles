@@ -2,6 +2,7 @@ vim.opt.backup = true
 vim.opt.backupdir:remove(".")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = nil
+vim.opt.lazyredraw = true
 vim.opt.list = true
 vim.opt.listchars:append({ extends = ">", precedes = "<" })
 vim.opt.listchars:append({ tab = "│ " })
