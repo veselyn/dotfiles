@@ -15,6 +15,7 @@
     plugins = with pkgs.vimPlugins; [
       ReplaceWithRegister
       camelcasemotion
+      close-buffers-vim
       dash-vim
       indent-blankline-nvim
       nvim-autopairs
