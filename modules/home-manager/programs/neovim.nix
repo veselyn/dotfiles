@@ -20,6 +20,7 @@
       indent-blankline-nvim
       nvim-autopairs
       nvim-lspconfig
+      nvim-treesitter-context
       nvim-treesitter-endwise
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
