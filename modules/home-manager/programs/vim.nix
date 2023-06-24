@@ -75,11 +75,11 @@
     lib.flatten (builtins.attrValues {
       linters = [
         buf
+        cargo
         golangci-lint
         luaPackages.luacheck
         nodePackages.eslint
         python3Packages.flake8
-        rustup
         shellcheck
         sqlfluff
         statix
@@ -92,7 +92,7 @@
         nodePackages.prettier
         python3Packages.autopep8
         python3Packages.isort
-        rustup
+        rustfmt
         shfmt
         sqlfluff
         stylua
