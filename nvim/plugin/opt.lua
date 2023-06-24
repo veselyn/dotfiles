@@ -19,3 +19,4 @@ vim.opt.tabstop = 4
 vim.opt.undofile = true
 vim.opt.updatetime = 100
 vim.opt.wrap = false
+vim.opt.wrapscan = false
