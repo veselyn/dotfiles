@@ -53,6 +53,7 @@
       servers = [
         gopls
         lua-language-server
+        rust-analyzer
       ];
       linters = [
       ];
