@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
 
 lspconfig.lua_ls.setup({
-	on_attach = function(client, bufnr)
+	on_attach = function(_, bufnr)
 		local function map(mode, lhs, rhs)
 			vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
 		end
