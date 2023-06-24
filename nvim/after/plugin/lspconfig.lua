@@ -33,6 +33,7 @@ local function on_attach(_, bufnr)
 end
 
 local servers = {
+	"gopls",
 	"lua_ls",
 }
 
