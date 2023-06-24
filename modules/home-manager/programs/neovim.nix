@@ -48,9 +48,16 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    lua-language-server
-  ];
+  home.packages = with pkgs;
+    lib.flatten (builtins.attrValues {
+      servers = [
+        lua-language-server
+      ];
+      linters = [
+      ];
+      fixers = [
+      ];
+    });
 
   xdg.configFile.nvim.source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/nvim";
 }
