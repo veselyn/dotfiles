@@ -1,5 +1,13 @@
 local lspconfig = require("lspconfig")
 
+local function format()
+	vim.lsp.buf.format({ async = true })
+end
+
+local function list_workspace_folders()
+	print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+end
+
 local function on_attach(_, bufnr)
 	local function map(mode, lhs, rhs)
 		vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
@@ -9,7 +17,7 @@ local function on_attach(_, bufnr)
 	map("n", "<LocalLeader>[d", vim.diagnostic.goto_prev)
 	map("n", "<LocalLeader>]d", vim.diagnostic.goto_next)
 	map("n", "<LocalLeader>e", vim.diagnostic.open_float)
-	map("n", "<LocalLeader>f", function() vim.lsp.buf.format({ async = true }) end)
+	map("n", "<LocalLeader>f", format)
 	map("n", "<LocalLeader>gD", vim.lsp.buf.declaration)
 	map("n", "<LocalLeader>gd", vim.lsp.buf.definition)
 	map("n", "<LocalLeader>gi", vim.lsp.buf.implementation)
@@ -19,7 +27,7 @@ local function on_attach(_, bufnr)
 	map("n", "<LocalLeader>q", vim.diagnostic.setloclist)
 	map("n", "<LocalLeader>rn", vim.lsp.buf.rename)
 	map("n", "<LocalLeader>wa", vim.lsp.buf.add_workspace_folder)
-	map("n", "<LocalLeader>wl", function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end)
+	map("n", "<LocalLeader>wl", list_workspace_folders)
 	map("n", "<LocalLeader>wr", vim.lsp.buf.remove_workspace_folder)
 	map({ "n", "x" }, "<LocalLeader>ca", vim.lsp.buf.code_action)
 end
