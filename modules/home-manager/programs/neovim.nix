@@ -18,6 +18,7 @@
       close-buffers-vim
       dash-vim
       indent-blankline-nvim
+      null-ls-nvim
       nvim-autopairs
       nvim-lspconfig
       nvim-treesitter-context
