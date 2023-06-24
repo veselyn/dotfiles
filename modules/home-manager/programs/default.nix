@@ -16,7 +16,6 @@ _: {
     ./tealdeer.nix
     ./texlive.nix
     ./tmux.nix
-    ./vim.nix
     ./zoxide.nix
     ./zsh.nix
   ];

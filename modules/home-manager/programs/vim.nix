@@ -4,7 +4,7 @@
   ...
 }: {
   programs.vim = {
-    enable = false;
+    enable = true;
 
     defaultEditor = true;
 
