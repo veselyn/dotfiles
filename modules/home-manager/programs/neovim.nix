@@ -51,6 +51,7 @@
   home.packages = with pkgs;
     lib.flatten (builtins.attrValues {
       servers = [
+        gopls
         lua-language-server
       ];
       linters = [
