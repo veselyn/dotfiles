@@ -1,1 +1,1 @@
-vim.g["sneak#use_ic_scs"] = 1
+vim.g["sneak#use_ic_scs"] = true
