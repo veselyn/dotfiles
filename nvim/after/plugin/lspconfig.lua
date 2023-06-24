@@ -35,6 +35,7 @@ end
 local servers = {
 	"gopls",
 	"lua_ls",
+	"rust_analyzer",
 }
 
 for _, server in ipairs(servers) do
