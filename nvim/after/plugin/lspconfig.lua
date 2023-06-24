@@ -32,6 +32,12 @@ local function on_attach(_, bufnr)
 	map({ "n", "x" }, "<LocalLeader>ca", vim.lsp.buf.code_action)
 end
 
-lspconfig.lua_ls.setup({
-	on_attach = on_attach,
-})
+local servers = {
+	"lua_ls",
+}
+
+for _, server in ipairs(servers) do
+	lspconfig[server].setup({
+		on_attach = on_attach,
+	})
+end
