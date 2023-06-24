@@ -1,4 +1,5 @@
 local telescope = require("telescope")
+local builtin = require("telescope.builtin")
 
 telescope.setup({
 	defaults = {
@@ -7,8 +8,6 @@ telescope.setup({
 		},
 	},
 })
-
-local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<Leader>f#", builtin.grep_string)
 vim.keymap.set("n", "<Leader>f*", builtin.grep_string)
