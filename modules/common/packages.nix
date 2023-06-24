@@ -21,10 +21,13 @@ with pkgs; {
       _1password
       awscli2
       buf
+      cargo
       cargo-watch
+      clippy
       cloc
       docker
       fd
+      gcc
       go
       gotools
       grc
@@ -38,6 +41,8 @@ with pkgs; {
       parallel
       python3
       ripgrep
+      rustc
+      rustfmt
       sd
       silver-searcher
       sshuttle
