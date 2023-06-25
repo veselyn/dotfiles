@@ -26,7 +26,7 @@ function! s:on_ale_buffer_enabled() abort
 	nmap <buffer> <Leader>f <Plug>(ale_fix)
 
 	augroup lsp_format
-		autocmd!
+		autocmd! * <buffer>
 	augroup END
 endfunction
 
