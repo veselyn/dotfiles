@@ -22,7 +22,7 @@ function! s:on_lsp_buffer_enabled() abort
 
 	let g:lsp_format_sync_timeout = 1000
 	augroup lsp_format
-		autocmd!
+		autocmd! * <buffer>
 		autocmd! BufWritePre <buffer> call execute('LspDocumentFormatSync')
 	augroup END
 
