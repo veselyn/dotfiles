@@ -16,6 +16,7 @@
       ReplaceWithRegister
       camelcasemotion
       close-buffers-vim
+      copilot-vim
       dash-vim
       indent-blankline-nvim
       neodev-nvim
