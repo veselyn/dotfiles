@@ -35,6 +35,7 @@ with pkgs; {
       httpie
       kubectl
       kubectx
+      luajit
       mkcert
       neofetch
       nodejs
