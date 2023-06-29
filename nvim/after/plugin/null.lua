@@ -1,3 +1,7 @@
 local null = require("null-ls")
 
-null.setup({})
+null.setup({
+	sources = {
+		null.builtins.formatting.stylua,
+	},
+})
