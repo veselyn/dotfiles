@@ -58,9 +58,9 @@
         lua-language-server
         rust-analyzer
       ];
-      linters = [
+      diagnostics = [
       ];
-      fixers = [
+      formatting = [
       ];
     });
 
