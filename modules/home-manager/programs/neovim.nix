@@ -61,6 +61,7 @@
       diagnostics = [
       ];
       formatting = [
+        stylua
       ];
     });
 
