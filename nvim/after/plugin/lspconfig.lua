@@ -44,6 +44,7 @@ local function on_attach(_, bufnr)
 end
 
 local servers = {
+	"bashls",
 	"gopls",
 	"lua_ls",
 	"rust_analyzer",
