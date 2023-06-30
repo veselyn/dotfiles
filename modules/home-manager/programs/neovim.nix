@@ -56,6 +56,7 @@
       servers = [
         gopls
         lua-language-server
+        nodePackages.bash-language-server
         rust-analyzer
       ];
       diagnostics = [
