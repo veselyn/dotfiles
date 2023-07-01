@@ -61,6 +61,7 @@
         rust-analyzer
       ];
       diagnostics = [
+        statix
       ];
       formatting = [
         alejandra
