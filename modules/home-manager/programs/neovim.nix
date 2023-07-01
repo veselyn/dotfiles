@@ -63,6 +63,7 @@
       diagnostics = [
       ];
       formatting = [
+        alejandra
         stylua
       ];
     });
