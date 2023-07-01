@@ -1,4 +1,5 @@
 local lspconfig = require("lspconfig")
+local format_on_save = require("aul.lsp.format")
 
 local function format()
 	vim.lsp.buf.format({ async = true })
@@ -32,15 +33,7 @@ local function on_attach(_, bufnr)
 	map("n", "<LocalLeader>wr", vim.lsp.buf.remove_workspace_folder)
 	map({ "n", "x" }, "<LocalLeader>ca", vim.lsp.buf.code_action)
 
-	local augroup = vim.api.nvim_create_augroup("LspFormat", { clear = false })
-	vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-	vim.api.nvim_create_autocmd("BufWritePre", {
-		group = augroup,
-		buffer = bufnr,
-		callback = function()
-			vim.lsp.buf.format({ async = false })
-		end,
-	})
+	format_on_save(bufnr)
 end
 
 local servers = {
