@@ -40,6 +40,7 @@ local servers = {
 	"bashls",
 	"gopls",
 	"lua_ls",
+	"nil_ls",
 	"rust_analyzer",
 }
 
