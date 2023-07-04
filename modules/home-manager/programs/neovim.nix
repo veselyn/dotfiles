@@ -13,22 +13,22 @@
     vimdiffAlias = true;
 
     plugins = with pkgs.vimPlugins; [
-      nvim-cmp
-      cmp-nvim-lsp
-      luasnip
-      cmp_luasnip
-      friendly-snippets
-      cmp-path
-      cmp-buffer
       ReplaceWithRegister
       camelcasemotion
       close-buffers-vim
+      cmp-buffer
+      cmp-nvim-lsp
+      cmp-path
+      cmp_luasnip
       copilot-vim
       dash-vim
+      friendly-snippets
       indent-blankline-nvim
+      luasnip
       neodev-nvim
       null-ls-nvim
       nvim-autopairs
+      nvim-cmp
       nvim-lspconfig
       nvim-treesitter-context
       nvim-treesitter-endwise
