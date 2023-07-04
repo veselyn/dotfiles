@@ -10,7 +10,10 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-	mapping = cmp.mapping.preset.insert(),
+	mapping = cmp.mapping.preset.insert({
+		["<C-D>"] = cmp.mapping.scroll_docs(1),
+		["<C-U>"] = cmp.mapping.scroll_docs(-1),
+	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
