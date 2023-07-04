@@ -15,6 +15,7 @@
     plugins = with pkgs.vimPlugins; [
       nvim-cmp
       cmp-nvim-lsp
+      luasnip
       ReplaceWithRegister
       camelcasemotion
       close-buffers-vim
