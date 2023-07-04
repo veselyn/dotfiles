@@ -1,5 +1,8 @@
 local lspconfig = require("lspconfig")
+local cmplsp = require("cmp_nvim_lsp")
 local format_on_save = require("aul.lsp.format")
+
+local capabilities = cmplsp.default_capabilities()
 
 local function format()
 	vim.lsp.buf.format({ async = true })
@@ -48,6 +51,7 @@ local servers = {
 
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({
+		capabilities = capabilities,
 		on_attach = on_attach,
 	})
 end
