@@ -17,6 +17,7 @@
       cmp-nvim-lsp
       luasnip
       cmp_luasnip
+      friendly-snippets
       ReplaceWithRegister
       camelcasemotion
       close-buffers-vim
