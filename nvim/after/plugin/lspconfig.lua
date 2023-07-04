@@ -2,6 +2,14 @@ local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
 local format_on_save = require("aul.lsp.format")
 
+local servers = {
+	"bashls",
+	"gopls",
+	"lua_ls",
+	"nil_ls",
+	"rust_analyzer",
+}
+
 local capabilities = cmplsp.default_capabilities()
 
 local function format()
@@ -40,14 +48,6 @@ local function on_attach(_, bufnr)
 
 	format_on_save(bufnr)
 end
-
-local servers = {
-	"bashls",
-	"gopls",
-	"lua_ls",
-	"nil_ls",
-	"rust_analyzer",
-}
 
 for _, server in ipairs(servers) do
 	lspconfig[server].setup({
