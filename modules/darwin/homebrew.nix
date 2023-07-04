@@ -16,6 +16,7 @@ _: {
       "kitty"
       "skim"
       "slack"
+      "vmware-fusion"
     ];
   };
 }
