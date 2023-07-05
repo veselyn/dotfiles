@@ -10,6 +10,7 @@ _: {
       "1password"
       "airtame"
       "dash"
+      "discord"
       "docker"
       "firefox"
       "google-chrome"
