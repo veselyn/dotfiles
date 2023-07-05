@@ -17,6 +17,7 @@ _: {
       window_border_width = 1;
       active_window_border_color = "0xffffffff";
       normal_window_border_color = "0x00000000";
+      insert_feedback_color = "0xffffffff";
     };
   };
 }
