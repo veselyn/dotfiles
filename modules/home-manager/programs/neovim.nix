@@ -13,6 +13,7 @@
     vimdiffAlias = true;
 
     plugins = with pkgs.vimPlugins; [
+      bufjump-nvim
       ReplaceWithRegister
       camelcasemotion
       close-buffers-vim
