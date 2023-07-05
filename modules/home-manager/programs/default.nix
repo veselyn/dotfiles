@@ -10,12 +10,12 @@ _: {
     ./jq.nix
     ./k9s.nix
     ./kitty.nix
+    ./neovim.nix
     ./nnn.nix
     ./ssh.nix
     ./tealdeer.nix
     ./texlive.nix
     ./tmux.nix
-    ./vim.nix
     ./zoxide.nix
     ./zsh.nix
   ];

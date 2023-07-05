@@ -19,6 +19,7 @@ with pkgs; {
     ];
     others = [
       _1password
+      alejandra
       awscli2
       buf
       cargo
@@ -29,25 +30,39 @@ with pkgs; {
       fd
       gcc
       go
+      gofumpt
+      golangci-lint
       gotools
       grc
       highlight
       httpie
       kubectl
       kubectx
+      luaPackages.luacheck
       luajit
       mkcert
       neofetch
+      nodePackages.eslint
+      nodePackages.prettier
       nodejs
       parallel
       python3
+      python3Packages.autopep8
+      python3Packages.flake8
+      python3Packages.isort
       ripgrep
       rustc
       rustfmt
       sd
+      shellcheck
+      shfmt
       silver-searcher
+      sqlfluff
       sshuttle
+      statix
+      stylua
       terraform
+      vim-vint
       watch
     ];
   });
