@@ -17,7 +17,5 @@
       flushdns
       yabaictl
       ;
-
-    vimPlugins = prev.vimPlugins // {inherit (master.vimPlugins) bufjump-nvim;};
   };
 }
