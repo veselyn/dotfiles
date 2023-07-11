@@ -17,6 +17,7 @@ _: {
       "kitty"
       "skim"
       "slack"
+      "time-out"
       "vmware-fusion"
     ];
   };
