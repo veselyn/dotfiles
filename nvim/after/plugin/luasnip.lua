@@ -7,13 +7,26 @@ from_lua.lazy_load()
 from_snipmate.lazy_load()
 from_vscode.lazy_load()
 
-vim.keymap.set("i", "<C-Y>", luasnip.expand)
-vim.keymap.set({ "i", "s" }, "<C-E>", luasnip.change_choice)
+vim.keymap.set("i", "<C-Y>", function()
+	if luasnip.expandable() then
+		luasnip.expand()
+	end
+end)
+
+vim.keymap.set({ "i", "s" }, "<C-E>", function()
+	if luasnip.choice_active() then
+		luasnip.change_choice()
+	end
+end)
 
 vim.keymap.set({ "i", "s" }, "<C-F>", function()
-	luasnip.jump(1)
+	if luasnip.jumpable(1) then
+		luasnip.jump(1)
+	end
 end)
 
 vim.keymap.set({ "i", "s" }, "<C-B>", function()
-	luasnip.jump(-1)
+	if luasnip.jumpable(-1) then
+		luasnip.jump(-1)
+	end
 end)
