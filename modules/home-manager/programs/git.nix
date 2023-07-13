@@ -28,6 +28,6 @@ _: {
       "Session.vim"
     ];
 
-    difftastic.enable = true;
+    diff-so-fancy.enable = true;
   };
 }
