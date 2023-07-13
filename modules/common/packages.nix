@@ -42,6 +42,7 @@ with pkgs; {
       luajit
       mkcert
       neofetch
+      nix-init
       nodePackages.eslint
       nodePackages.prettier
       nodejs
