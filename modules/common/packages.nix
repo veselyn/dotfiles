@@ -63,6 +63,7 @@ with pkgs; {
       statix
       stylua
       terraform
+      tree
       vim-vint
       watch
     ];
