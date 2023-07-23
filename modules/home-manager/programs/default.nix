@@ -6,6 +6,7 @@ _: {
     ./gh.nix
     ./git.nix
     ./gpg.nix
+    ./home-manager.nix
     ./htop.nix
     ./jq.nix
     ./k9s.nix
