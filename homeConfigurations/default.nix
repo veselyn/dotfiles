@@ -13,11 +13,8 @@
     extraSpecialArgs = {inherit inputs;};
 
     modules = [
+      ../modules/home
       {
-        imports = [
-          ../modules/home
-        ];
-
         home = {
           username = "veselin";
           homeDirectory = "/Users/veselin";
