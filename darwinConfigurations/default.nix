@@ -4,8 +4,6 @@
 
     specialArgs = {inherit inputs;};
 
-    modules = [
-      ../modules/darwin
-    ];
+    modules = [../modules/darwin];
   };
 }
