@@ -32,7 +32,7 @@
 
         modules = [
           {
-            imports = [./modules/home-manager];
+            imports = [./modules/home];
 
             home = {
               username = "veselin";
