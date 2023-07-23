@@ -22,6 +22,27 @@
   outputs = inputs: {
     apps = import ./apps inputs;
     darwinConfigurations = import ./darwinConfigurations inputs;
+
+    homeConfigurations = {
+      "veselin" = inputs.home-manager.lib.homeManagerConfiguration {
+        pkgs = import inputs.nixpkgs {
+          system = "aarch64-darwin";
+          overlays = builtins.attrValues inputs.self.overlays;
+        };
+
+        modules = [
+          {
+            imports = [./modules/home-manager];
+
+            home = {
+              username = "veselin";
+              homeDirectory = "/Users/veselin";
+            };
+          }
+        ];
+      };
+    };
+
     formatter = import ./formatter inputs;
     overlays = import ./overlays inputs;
     packages = import ./packages inputs;
