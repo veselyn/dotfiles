@@ -32,7 +32,9 @@
 
         modules = [
           {
-            imports = [./modules/home];
+            imports = [
+              ./modules/home
+            ];
 
             home = {
               username = "veselin";
