@@ -14,12 +14,7 @@
 
     modules = [
       ../modules/home
-      {
-        home = {
-          username = "veselin";
-          homeDirectory = "/Users/veselin";
-        };
-      }
+      {modules.home.user = "veselin";}
     ];
   };
 }

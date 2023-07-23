@@ -1,18 +1,41 @@
-_: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./programs
   ];
 
-  home = {
-    stateVersion = "23.05";
-
-    shellAliases = {
-      ls = "ls --color=auto";
-      v = "vim";
-      vd = "vimdiff";
-      vs = "vim -S Session.vim";
+  options = with lib; {
+    modules.home = {
+      user = mkOption {};
     };
   };
 
-  xdg.enable = true;
+  config = let
+    cfg = config.modules.home;
+  in {
+    home = {
+      stateVersion = "23.05";
+
+      username = cfg.user;
+      homeDirectory = let
+        directory =
+          if pkgs.stdenv.isDarwin
+          then "/Users"
+          else "/home";
+      in "${directory}/${cfg.user}";
+
+      shellAliases = {
+        ls = "ls --color=auto";
+        v = "vim";
+        vd = "vimdiff";
+        vs = "vim -S Session.vim";
+      };
+    };
+
+    xdg.enable = true;
+  };
 }
