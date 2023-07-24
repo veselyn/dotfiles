@@ -1,6 +1,6 @@
 {pkgs, ...}:
 with pkgs; {
-  environment.systemPackages = lib.flatten (builtins.attrValues {
+  home.packages = lib.flatten (builtins.attrValues {
     coreutils = [
       coreutils-full
       findutils
