@@ -4,7 +4,7 @@
   self,
   ...
 } @ inputs: {
-  "veselin" = home-manager.lib.homeManagerConfiguration {
+  "veselin@aarch64-darwin" = home-manager.lib.homeManagerConfiguration {
     pkgs = import nixpkgs {
       system = "aarch64-darwin";
       overlays = builtins.attrValues self.overlays;
