@@ -8,6 +8,7 @@
     pkgs = import nixpkgs {
       system = "aarch64-darwin";
       overlays = builtins.attrValues self.overlays;
+      config.allowUnfree = true;
     };
 
     extraSpecialArgs = {inherit inputs;};
