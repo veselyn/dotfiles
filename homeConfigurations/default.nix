@@ -18,4 +18,19 @@
       {modules.home.user = "veselin";}
     ];
   };
+
+  "veselin@aarch64-linux" = home-manager.lib.homeManagerConfiguration {
+    pkgs = import nixpkgs {
+      system = "aarch64-linux";
+      overlays = builtins.attrValues self.overlays;
+      config.allowUnfree = true;
+    };
+
+    extraSpecialArgs = {inherit inputs;};
+
+    modules = [
+      ../modules/home
+      {modules.home.user = "veselin";}
+    ];
+  };
 }
