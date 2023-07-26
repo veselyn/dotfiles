@@ -24,6 +24,7 @@
     darwinConfigurations = import ./darwinConfigurations inputs;
     formatter = import ./formatter inputs;
     homeConfigurations = import ./homeConfigurations inputs;
+    nixosConfigurations = import ./nixosConfigurations inputs;
     overlays = import ./overlays inputs;
     packages = import ./packages inputs;
   };
