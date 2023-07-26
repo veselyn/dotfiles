@@ -18,7 +18,6 @@
       {modules.home.user = "veselin";}
     ];
   };
-
   "veselin@aarch64-linux" = home-manager.lib.homeManagerConfiguration {
     pkgs = import nixpkgs {
       system = "aarch64-linux";
