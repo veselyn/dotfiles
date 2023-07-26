@@ -3,6 +3,7 @@
 # and in the NixOS manual (accessible by running `nixos-help`).
 _: {
   imports = [
+    ../common
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
