@@ -1,20 +1,29 @@
-_: {
+{lib, ...}: {
   imports = [
     ../common
     ./fonts.nix
     ./homebrew.nix
     ./services
     ./system.nix
+    ./users.nix
   ];
 
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
-  services.nix-daemon.enable = true;
-
-  programs.zsh = {
-    enable = true;
-    promptInit = "";
+  options = {
+    modules.darwin = with lib; {
+      user = mkOption {};
+    };
   };
 
-  system.stateVersion = 4;
+  config = {
+    environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
+
+    services.nix-daemon.enable = true;
+
+    programs.zsh = {
+      enable = true;
+      promptInit = "";
+    };
+
+    system.stateVersion = 4;
+  };
 }

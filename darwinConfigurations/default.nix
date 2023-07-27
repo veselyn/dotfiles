@@ -4,6 +4,9 @@
 
     specialArgs = {inherit inputs;};
 
-    modules = [../modules/darwin];
+    modules = [
+      ../modules/darwin
+      {modules.darwin.user = "veselin";}
+    ];
   };
 }
