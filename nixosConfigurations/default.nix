@@ -4,6 +4,9 @@
 
     specialArgs = {inherit inputs;};
 
-    modules = [../modules/nixos];
+    modules = [
+      ../modules/nixos
+      {modules.nixos.user = "veselin";}
+    ];
   };
 }
