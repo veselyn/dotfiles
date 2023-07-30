@@ -20,5 +20,9 @@ _: {
       "time-out"
       "vmware-fusion"
     ];
+
+    masApps = {
+      Xcode = 497799835;
+    };
   };
 }
