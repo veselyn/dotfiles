@@ -11,6 +11,10 @@
       nixpkgs = {
         flake = inputs.nixpkgs;
       };
+
+      nixpkgs-stable = {
+        flake = inputs.nixpkgs-stable;
+      };
     };
   };
 }
