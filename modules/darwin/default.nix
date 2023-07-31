@@ -1,7 +1,6 @@
 {lib, ...}: {
   imports = [
     ../common
-    ./fonts.nix
     ./homebrew.nix
     ./services
     ./system.nix
