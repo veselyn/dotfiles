@@ -7,6 +7,7 @@
     modules = [
       ../modules/darwin
       {modules.darwin.user = "veselin";}
+      ../modules/common
     ];
   };
 }

@@ -16,6 +16,7 @@
     modules = [
       ../modules/home
       {modules.home.user = "veselin";}
+      ../modules/common
     ];
   };
   "veselin@aarch64-linux" = home-manager.lib.homeManagerConfiguration {
@@ -30,6 +31,7 @@
     modules = [
       ../modules/home
       {modules.home.user = "veselin";}
+      ../modules/common
     ];
   };
 }

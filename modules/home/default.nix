@@ -5,7 +5,6 @@
   ...
 }: {
   imports = [
-    ../common
     ./packages.nix
     ./programs
   ];

@@ -7,6 +7,7 @@
     modules = [
       ../modules/nixos
       {modules.nixos.user = "veselin";}
+      ../modules/common
     ];
   };
 }
