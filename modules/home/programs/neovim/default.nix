@@ -19,6 +19,7 @@
       cmp_luasnip
       copilot-vim
       dash-vim
+      diffview-nvim
       friendly-snippets
       indent-blankline-nvim
       luasnip
