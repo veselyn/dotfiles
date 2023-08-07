@@ -53,6 +53,7 @@
       vim-tmux-navigator
       vim-unimpaired
       vim-vinegar
+      vimtex
     ];
   };
 
