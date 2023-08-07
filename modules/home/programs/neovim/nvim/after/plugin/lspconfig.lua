@@ -8,6 +8,7 @@ local servers = {
 	"lua_ls",
 	"nil_ls",
 	"rust_analyzer",
+	"tsserver",
 }
 
 local capabilities = cmplsp.default_capabilities()
