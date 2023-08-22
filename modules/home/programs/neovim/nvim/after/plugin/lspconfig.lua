@@ -52,8 +52,15 @@ local function on_attach(_, bufnr)
 end
 
 for _, server in ipairs(servers) do
-	lspconfig[server].setup({
+	local config = {
 		capabilities = capabilities,
 		on_attach = on_attach,
-	})
+	}
+
+	local success, result = pcall(require, "aul.lsp.configs." .. server)
+	if success then
+		config = vim.tbl_deep_extend("force", config, result)
+	end
+
+	lspconfig[server].setup(config)
 end
