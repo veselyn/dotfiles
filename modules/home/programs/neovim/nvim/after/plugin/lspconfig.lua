@@ -7,6 +7,7 @@ local servers = {
 	"gopls",
 	"lua_ls",
 	"nil_ls",
+	"omnisharp",
 	"rust_analyzer",
 	"tsserver",
 }
