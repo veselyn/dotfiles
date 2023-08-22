@@ -65,6 +65,7 @@
         nil
         nodePackages.bash-language-server
         nodePackages.typescript-language-server
+        omnisharp-roslyn
         rust-analyzer
       ];
       diagnostics = [
