@@ -27,6 +27,7 @@ with pkgs; {
       clippy
       cloc
       docker
+      dotnet-sdk_7
       fd
       gcc
       go
