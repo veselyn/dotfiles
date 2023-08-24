@@ -8,7 +8,7 @@ _: {
     userEmail = "me@veselyn.com";
 
     signing = {
-      key = "B09DDF9D424E10D3";
+      key = "415F6249A29FEB3F";
       signByDefault = true;
     };
 
