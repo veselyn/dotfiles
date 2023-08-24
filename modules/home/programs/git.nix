@@ -5,7 +5,7 @@ _: {
     lfs.enable = true;
 
     userName = "Veselin Ivanov";
-    userEmail = "v3s1ez@gmail.com";
+    userEmail = "me@veselyn.com";
 
     signing = {
       key = "B09DDF9D424E10D3";
