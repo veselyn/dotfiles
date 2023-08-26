@@ -67,6 +67,7 @@
         nodePackages.typescript-language-server
         omnisharp-roslyn
         rust-analyzer
+        texlab
       ];
       diagnostics = [
         statix

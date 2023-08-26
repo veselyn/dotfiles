@@ -9,6 +9,7 @@ local servers = {
 	"nil_ls",
 	"omnisharp",
 	"rust_analyzer",
+	"texlab",
 	"tsserver",
 }
 
