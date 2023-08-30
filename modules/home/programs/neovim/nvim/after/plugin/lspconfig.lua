@@ -4,7 +4,10 @@ local format_on_save = require("aul.lsp.format")
 
 local servers = {
 	"bashls",
+	"cssls",
 	"gopls",
+	"html",
+	"jsonls",
 	"lua_ls",
 	"nil_ls",
 	"omnisharp",

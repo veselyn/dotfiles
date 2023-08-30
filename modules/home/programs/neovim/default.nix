@@ -68,6 +68,7 @@
         omnisharp-roslyn
         rust-analyzer
         texlab
+        vscode-langservers-extracted
       ];
       diagnostics = [
         statix
