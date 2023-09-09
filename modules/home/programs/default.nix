@@ -12,7 +12,6 @@ _: {
     ./k9s.nix
     ./kitty.nix
     ./neovim
-    ./nnn.nix
     ./ssh.nix
     ./tealdeer.nix
     ./texlive.nix
