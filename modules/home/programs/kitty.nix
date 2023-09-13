@@ -3,6 +3,7 @@ _: {
     enable = true;
 
     settings = {
+      confirm_os_window_close = 0;
       dynamic_background_opacity = true;
       enable_audio_bell = false;
       hide_window_decorations = "titlebar-only";
