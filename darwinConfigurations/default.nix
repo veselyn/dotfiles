@@ -2,15 +2,13 @@
   darwin,
   home-manager,
   ...
-} @ inputs: {
-  veselins-macbook-pro = darwin.lib.darwinSystem {
-    system = "aarch64-darwin";
-
-    specialArgs = {inherit inputs;};
-
-    modules = [
+} @ inputs: let
+  mkConfiguration = {
+    system,
+    user,
+    baseModules ? [
       ../modules/darwin
-      {modules.darwin.user = "veselin";}
+      {modules.darwin.user = user;}
       home-manager.darwinModules.home-manager
       {
         home-manager = {
@@ -19,13 +17,26 @@
 
           extraSpecialArgs = {inherit inputs;};
 
-          users.veselin = {
+          users.${user} = {
             imports = [../modules/home];
-            modules.home.user = "veselin";
+            modules.home.user = user;
           };
         };
       }
       ../modules/common
-    ];
+    ],
+    extraModules ? [],
+  }:
+    darwin.lib.darwinSystem {
+      inherit system;
+
+      specialArgs = {inherit inputs;};
+
+      modules = baseModules ++ extraModules;
+    };
+in {
+  veselins-macbook-pro = mkConfiguration {
+    system = "aarch64-darwin";
+    user = "veselin";
   };
 }
