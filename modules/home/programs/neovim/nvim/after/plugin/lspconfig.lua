@@ -11,6 +11,7 @@ local servers = {
 	"lua_ls",
 	"nil_ls",
 	"omnisharp",
+	"pyright",
 	"rust_analyzer",
 	"texlab",
 	"tsserver",

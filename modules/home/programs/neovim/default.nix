@@ -64,6 +64,7 @@
         lua-language-server
         nil
         nodePackages.bash-language-server
+        nodePackages.pyright
         nodePackages.typescript-language-server
         omnisharp-roslyn
         rust-analyzer
