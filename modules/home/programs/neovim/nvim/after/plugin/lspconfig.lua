@@ -15,6 +15,7 @@ local servers = {
 	"rust_analyzer",
 	"texlab",
 	"tsserver",
+	"yamlls",
 }
 
 local capabilities = cmplsp.default_capabilities()

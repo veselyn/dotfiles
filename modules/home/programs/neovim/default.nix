@@ -66,6 +66,7 @@
         nodePackages.bash-language-server
         nodePackages.pyright
         nodePackages.typescript-language-server
+        nodePackages.yaml-language-server
         omnisharp-roslyn
         rust-analyzer
         texlab
