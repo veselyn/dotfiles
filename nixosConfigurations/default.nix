@@ -6,6 +6,8 @@
   mkConfiguration = {
     system,
     user,
+    specialArgs ? {inherit inputs;},
+    extraArgs ? {},
     baseModules ? [
       ../modules/nixos
       {modules.nixos.user = user;}
@@ -15,7 +17,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
 
-          extraSpecialArgs = {inherit inputs;};
+          extraSpecialArgs = specialArgs // extraArgs;
 
           users.${user} = {
             imports = [../modules/home];
@@ -30,7 +32,7 @@
     nixpkgs.lib.nixosSystem {
       inherit system;
 
-      specialArgs = {inherit inputs;};
+      specialArgs = specialArgs // extraArgs;
 
       modules = baseModules ++ extraModules;
     };
