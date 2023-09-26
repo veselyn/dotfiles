@@ -7,6 +7,8 @@
   mkConfiguration = {
     system,
     user,
+    specialArgs ? {inherit inputs;},
+    extraArgs ? {},
     baseModules ? [
       ../modules/home
       {modules.home.user = user;}
@@ -21,7 +23,7 @@
         config.allowUnfree = true;
       };
 
-      extraSpecialArgs = {inherit inputs;};
+      extraSpecialArgs = specialArgs // extraArgs;
 
       modules = baseModules ++ extraModules;
     };
