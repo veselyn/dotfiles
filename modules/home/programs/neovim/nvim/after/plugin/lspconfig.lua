@@ -7,6 +7,7 @@ local servers = {
 	"cssls",
 	"gopls",
 	"html",
+	"jdtls",
 	"jsonls",
 	"lua_ls",
 	"nil_ls",

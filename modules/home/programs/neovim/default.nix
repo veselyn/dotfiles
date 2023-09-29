@@ -61,6 +61,7 @@
     lib.flatten (builtins.attrValues {
       servers = [
         gopls
+        jdt-language-server
         lua-language-server
         nil
         nodePackages.bash-language-server
