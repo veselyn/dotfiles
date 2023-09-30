@@ -6,6 +6,7 @@
     clock24 = true;
     customPaneNavigationAndResize = true;
     escapeTime = 0;
+    historyLimit = 10000;
     keyMode = "vi";
     mouse = true;
     shortcut = "a";
