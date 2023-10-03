@@ -10,6 +10,7 @@
 
     plugins = with pkgs.vimPlugins; [
       ReplaceWithRegister
+      SchemaStore-nvim
       bufjump-nvim
       camelcasemotion
       close-buffers-vim
