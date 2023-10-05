@@ -2,6 +2,7 @@ vim.opt.backup = true
 vim.opt.backupdir:remove(".")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.expandtab = false
+vim.opt.grepprg = "rg --vimgrep"
 vim.opt.guicursor = nil
 vim.opt.ignorecase = true
 vim.opt.lazyredraw = true
