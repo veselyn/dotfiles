@@ -1,4 +1,4 @@
-local indentline = require("indent_blankline")
+local indentline = require("ibl")
 
 indentline.setup({
 	show_current_context = true,
