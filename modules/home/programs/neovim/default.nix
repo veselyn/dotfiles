@@ -24,6 +24,7 @@
       friendly-snippets
       indent-blankline-nvim
       luasnip
+      neoconf-nvim
       neodev-nvim
       null-ls-nvim
       nvim-autopairs
