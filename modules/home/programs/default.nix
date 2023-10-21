@@ -11,6 +11,7 @@ _: {
     ./jq.nix
     ./k9s.nix
     ./kitty.nix
+    ./lazygit.nix
     ./neovim
     ./ssh.nix
     ./tealdeer.nix
