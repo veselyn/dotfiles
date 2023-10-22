@@ -1,4 +1,8 @@
-_: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
 
@@ -11,14 +15,15 @@ _: {
 
       theme = "robbyrussell";
 
-      plugins = [
-        "fzf"
-        "git"
-        "jump"
-        "macos"
-        "tmux"
-        "web-search"
-      ];
+      plugins =
+        [
+          "fzf"
+          "git"
+          "jump"
+          "tmux"
+          "web-search"
+        ]
+        ++ lib.optional pkgs.stdenv.isDarwin "macos";
 
       extraConfig = ''
         ZSH_TMUX_AUTOSTART=true
