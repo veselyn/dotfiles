@@ -12,19 +12,8 @@
       ../modules/nixos
       {modules.nixos.user = user;}
       home-manager.nixosModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-
-          extraSpecialArgs = specialArgs // extraArgs;
-
-          users.${user} = {
-            imports = [../modules/home];
-            modules.home.user = user;
-          };
-        };
-      }
+      ../modules/home/linux.nix
+      {modules.home.user = user;}
       ../modules/common
     ],
     extraModules ? [],

@@ -12,19 +12,8 @@
       ../modules/darwin
       {modules.darwin.user = user;}
       home-manager.darwinModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-
-          extraSpecialArgs = specialArgs // extraArgs;
-
-          users.${user} = {
-            imports = [../modules/home];
-            modules.home.user = user;
-          };
-        };
-      }
+      ../modules/home/darwin.nix
+      {modules.home.user = user;}
       ../modules/common
     ],
     extraModules ? [],

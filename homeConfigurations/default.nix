@@ -10,7 +10,7 @@
     specialArgs ? {inherit inputs;},
     extraArgs ? {},
     baseModules ? [
-      ../modules/home
+      ../modules/home/standalone.nix
       {modules.home.user = user;}
       ../modules/common
     ],
