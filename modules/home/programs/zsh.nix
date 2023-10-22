@@ -1,4 +1,4 @@
-{config, ...}: {
+_: {
   programs.zsh = {
     enable = true;
 
@@ -22,7 +22,6 @@
 
       extraConfig = ''
         ZSH_TMUX_AUTOSTART=true
-        ZSH_TMUX_CONFIG=${config.xdg.configFile."tmux/tmux.conf".source}
       '';
     };
 
