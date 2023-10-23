@@ -18,7 +18,7 @@
 
       users.${cfg.user} = {
         imports = [./standalone.nix];
-        modules.home.user = cfg.user;
+        modules.home = cfg;
       };
     };
   };
