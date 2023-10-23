@@ -1,14 +1,11 @@
 {
   config,
-  lib,
   specialArgs,
   ...
 }: {
-  options = with lib; {
-    modules.home = {
-      user = mkOption {};
-    };
-  };
+  imports = [
+    ./options.nix
+  ];
 
   config = let
     cfg = config.modules.home;

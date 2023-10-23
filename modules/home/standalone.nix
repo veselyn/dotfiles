@@ -1,19 +1,13 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
   imports = [
+    ./options.nix
     ./packages.nix
     ./programs
   ];
-
-  options = with lib; {
-    modules.home = {
-      user = mkOption {};
-    };
-  };
 
   config = let
     cfg = config.modules.home;
