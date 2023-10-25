@@ -1,6 +1,7 @@
 vim.keymap.set("n", "<Leader>l", function()
+	local tabpagenr = vim.fn.tabpagenr()
 	for _, value in ipairs(vim.fn.getwininfo()) do
-		if value.loclist == 1 then
+		if value.tabnr == tabpagenr and value.loclist == 1 then
 			vim.cmd.lclose()
 			return
 		end
@@ -12,8 +13,9 @@ vim.keymap.set("n", "<Leader>l", function()
 end)
 
 vim.keymap.set("n", "<Leader>q", function()
+	local tabpagenr = vim.fn.tabpagenr()
 	for _, value in ipairs(vim.fn.getwininfo()) do
-		if value.quickfix == 1 then
+		if value.tabnr == tabpagenr and value.quickfix == 1 then
 			vim.cmd.cclose()
 			return
 		end
