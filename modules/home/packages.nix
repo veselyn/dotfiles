@@ -61,6 +61,7 @@ with pkgs; {
       silver-searcher
       sqlfluff
       sshuttle
+      ssm-session-manager-plugin
       statix
       stylua
       terraform
