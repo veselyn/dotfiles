@@ -12,7 +12,7 @@
       ../modules/darwin
       {modules.darwin.user = user;}
       home-manager.darwinModules.home-manager
-      ../modules/home/darwin.nix
+      ../modules/home/darwin
       {modules.home.user = user;}
       ../modules/common
     ],

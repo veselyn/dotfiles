@@ -12,7 +12,7 @@
       ../modules/nixos
       {modules.nixos.user = user;}
       home-manager.nixosModules.home-manager
-      ../modules/home/linux.nix
+      ../modules/home/linux
       {modules.home.user = user;}
       ../modules/common
     ],

@@ -4,9 +4,9 @@
   ...
 }: {
   imports = [
-    ./options.nix
-    ./packages.nix
-    ./programs
+    ../options.nix
+    ../packages.nix
+    ../programs
   ];
 
   config = let

@@ -1,5 +1,5 @@
 _: {
   imports = [
-    ./module.nix
+    ../module.nix
   ];
 }

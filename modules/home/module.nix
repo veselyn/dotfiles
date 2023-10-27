@@ -17,7 +17,7 @@
       extraSpecialArgs = specialArgs;
 
       users.${cfg.user} = {
-        imports = [./standalone.nix];
+        imports = [./standalone];
         modules.home = cfg;
       };
     };
