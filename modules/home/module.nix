@@ -2,24 +2,22 @@
   config,
   specialArgs,
   ...
-}: {
+}: let
+  cfg = config.modules.home;
+in {
   imports = [
     ./options.nix
   ];
 
-  config = let
-    cfg = config.modules.home;
-  in {
-    home-manager = {
-      useGlobalPkgs = true;
-      useUserPackages = true;
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
 
-      extraSpecialArgs = specialArgs;
+    extraSpecialArgs = specialArgs;
 
-      users.${cfg.user} = {
-        imports = [./standalone];
-        modules.home = cfg;
-      };
+    users.${cfg.user} = {
+      imports = [./standalone];
+      modules.home = cfg;
     };
   };
 }
