@@ -4,6 +4,7 @@ _: {
 
     config = {
       modifier = "Mod4";
+      terminal = "kitty";
     };
   };
 }
