@@ -21,7 +21,18 @@
 
     services.openssh.enable = true;
 
-    virtualisation.vmware.guest.enable = true;
+    services.xserver = {
+      enable = true;
+
+      windowManager.i3 = {
+        enable = true;
+      };
+    };
+
+    virtualisation.vmware.guest = {
+      enable = true;
+      headless = true;
+    };
 
     # networking.hostName = "nixos"; # Define your hostname.
     # Pick only one of the below networking options.
