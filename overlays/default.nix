@@ -16,6 +16,7 @@
       battery
       flushdns
       yabaictl
+      oh-my-zsh
       ;
   };
 }
