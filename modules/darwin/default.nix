@@ -6,8 +6,8 @@
     ./users.nix
   ];
 
-  options = {
-    modules.darwin = with lib; {
+  options = with lib; {
+    modules.darwin = {
       user = mkOption {};
     };
   };

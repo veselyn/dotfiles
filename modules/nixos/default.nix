@@ -8,8 +8,8 @@
     ./users.nix
   ];
 
-  options = {
-    modules.nixos = with lib; {
+  options = with lib; {
+    modules.nixos = {
       user = mkOption {};
     };
   };
