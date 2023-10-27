@@ -52,6 +52,7 @@ with pkgs; {
       python3Packages.autopep8
       python3Packages.flake8
       python3Packages.isort
+      python3Packages.pip
       ripgrep
       rustc
       rustfmt
