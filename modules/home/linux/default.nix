@@ -8,6 +8,7 @@ in {
   home-manager = {
     users.${cfg.user} = {
       imports = [
+        ./i3.nix
         ./services
       ];
     };
