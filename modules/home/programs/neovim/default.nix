@@ -34,6 +34,7 @@
       nvim-treesitter-endwise
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
+      rainbow-delimiters-nvim
       telescope-nvim
       vim-abolish
       vim-capslock
