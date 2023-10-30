@@ -9,6 +9,7 @@ in {
     users.${cfg.user} = {
       imports = [
         ./i3.nix
+        ./programs
         ./services
       ];
     };

@@ -2,7 +2,6 @@ _: {
   imports = [
     ./bat.nix
     ./direnv.nix
-    ./firefox.nix
     ./fzf.nix
     ./gh.nix
     ./git.nix
