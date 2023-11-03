@@ -12,11 +12,6 @@ _: {
       mouse_follows_focus = "on";
       window_origin_display = "focused";
       window_shadow = "off";
-      window_border = "on";
-      window_border_blur = "off";
-      window_border_width = 1;
-      active_window_border_color = "0xffffffff";
-      normal_window_border_color = "0x00000000";
       insert_feedback_color = "0xffffffff";
     };
   };
