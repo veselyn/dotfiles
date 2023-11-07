@@ -5,6 +5,12 @@ cmp.setup({
 	completion = {
 		autocomplete = false,
 	},
+	formatting = {
+		format = function(_, vim_item)
+			vim_item.menu = nil
+			return vim_item
+		end,
+	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-D>"] = cmp.mapping.scroll_docs(1),
 		["<C-U>"] = cmp.mapping.scroll_docs(-1),
