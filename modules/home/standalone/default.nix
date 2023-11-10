@@ -9,6 +9,7 @@ in {
     ../options.nix
     ../packages.nix
     ../programs
+    ../shellAliases.nix
   ];
 
   home = {
@@ -21,15 +22,6 @@ in {
         then "/Users"
         else "/home";
     in "${directory}/${cfg.user}";
-
-    shellAliases = {
-      gai = "git add --interactive";
-      ls = "ls --color=auto";
-      s = "echo $SHLVL";
-      v = "vim";
-      vd = "vimdiff";
-      vs = "vim -S Session.vim";
-    };
   };
 
   xdg.enable = true;
