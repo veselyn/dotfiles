@@ -30,10 +30,6 @@
       '';
     };
 
-    shellAliases = {
-      gai = "ga --interactive";
-    };
-
     initExtra = ''
       bindkey ^N down-line-or-beginning-search
       bindkey ^P up-line-or-beginning-search

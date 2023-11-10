@@ -23,6 +23,7 @@ in {
     in "${directory}/${cfg.user}";
 
     shellAliases = {
+      gai = "git add --interactive";
       ls = "ls --color=auto";
       s = "echo $SHLVL";
       v = "vim";
