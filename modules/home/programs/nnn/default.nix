@@ -1,9 +1,19 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: let
+  cfg = config.programs.nnn;
+in {
   programs.nnn = {
     enable = true;
+
+    package = pkgs.nnn.overrideAttrs (prev: {
+      patches = prev.patches ++ [./quitcd.patch];
+    });
   };
 
   programs.zsh.initExtra = ''
-    source ${pkgs.nnn}/share/quitcd/quitcd.bash_sh_zsh
+    source ${cfg.package}/share/quitcd/quitcd.bash_sh_zsh
   '';
 }
