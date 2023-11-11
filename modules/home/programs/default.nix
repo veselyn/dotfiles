@@ -14,7 +14,7 @@ _: {
     ./kitty.nix
     ./lazygit.nix
     ./neovim
-    ./nnn.nix
+    ./nnn
     ./ssh.nix
     ./tealdeer.nix
     ./texlive.nix
