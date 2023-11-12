@@ -37,6 +37,7 @@ with pkgs; {
       grc
       highlight
       httpie
+      just
       kubectl
       kubectx
       luaPackages.luacheck
