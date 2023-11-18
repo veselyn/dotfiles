@@ -81,6 +81,7 @@
       ];
       formatting = [
         alejandra
+        gofumpt
         stylua
       ];
     });
