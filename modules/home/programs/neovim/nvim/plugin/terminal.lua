@@ -7,6 +7,10 @@ vim.api.nvim_create_autocmd("TermOpen", {
 	end,
 })
 
+vim.keymap.set("n", "<Leader>te", function()
+	vim.cmd.edit("term://$SHELL")
+end)
+
 vim.keymap.set("n", "<Leader>ts", function()
 	vim.cmd.split("term://$SHELL")
 end)
