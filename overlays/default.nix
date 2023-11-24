@@ -24,13 +24,5 @@
         sha256 = "sha256-kbMbB9LUc32kob91cGn7vrHyF1e3RtQMxRxh/Y55a/w=";
       };
     });
-
-    yabai = prev.yabai.overrideAttrs rec {
-      version = "6.0.1";
-      src = final.fetchzip {
-        url = "https://github.com/koekeishiya/yabai/releases/download/v${version}/yabai-v${version}.tar.gz";
-        hash = "sha256-CXkGVoJcGSkooxe7eIhwaM6FkOI45NVw5jdLJAzgFBM=";
-      };
-    };
   };
 }
