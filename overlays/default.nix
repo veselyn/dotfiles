@@ -24,5 +24,7 @@
         sha256 = "sha256-kbMbB9LUc32kob91cGn7vrHyF1e3RtQMxRxh/Y55a/w=";
       };
     });
+
+    inherit (stable) awscli2;
   };
 }
