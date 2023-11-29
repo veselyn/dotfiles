@@ -20,8 +20,8 @@
 
     oh-my-zsh = prev.oh-my-zsh.overrideAttrs (previousAttrs: {
       src = previousAttrs.src.override {
-        rev = "5c22c5812ec8b980d223b8252edc7759dd354014";
-        sha256 = "sha256-kbMbB9LUc32kob91cGn7vrHyF1e3RtQMxRxh/Y55a/w=";
+        rev = "418046e9583f635b0303e4b8cf31c356b175cec3";
+        sha256 = "sha256-r36vF37J+3rLGg0QzmT4U8Lp5nqRhAs8We0aDtBJKJM=";
       };
     });
   };
