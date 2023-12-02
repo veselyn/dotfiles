@@ -22,7 +22,7 @@ _: {
     ];
 
     masApps = {
-      "Kindle Classic" = 405399194;
+      Kindle = 302584613;
       Xcode = 497799835;
     };
   };
