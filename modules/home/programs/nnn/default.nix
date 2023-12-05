@@ -8,8 +8,8 @@ in {
   programs.nnn = {
     enable = true;
 
-    package = pkgs.nnn.overrideAttrs (prev: {
-      patches = prev.patches ++ [./quitcd.patch];
+    package = pkgs.nnn.overrideAttrs (previousAttrs: {
+      patches = previousAttrs.patches ++ [./quitcd.patch];
     });
   };
 
