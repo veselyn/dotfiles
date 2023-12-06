@@ -26,7 +26,7 @@
       luasnip
       neoconf-nvim
       neodev-nvim
-      null-ls-nvim
+      none-ls-nvim
       nvim-autopairs
       nvim-cmp
       nvim-lspconfig
