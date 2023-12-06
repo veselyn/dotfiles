@@ -77,10 +77,13 @@
         vscode-langservers-extracted
       ];
       diagnostics = [
+        mypy
+        pylint
         statix
       ];
       formatting = [
         alejandra
+        black
         gofumpt
         stylua
       ];
