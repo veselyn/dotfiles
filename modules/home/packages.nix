@@ -70,6 +70,7 @@ with pkgs; {
       tree
       vim-vint
       watch
+      wget
     ];
   });
 }
