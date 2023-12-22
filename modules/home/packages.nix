@@ -40,6 +40,7 @@ with pkgs; {
       just
       kubectl
       kubectx
+      lazydocker
       luaPackages.luacheck
       luajit
       mkcert
