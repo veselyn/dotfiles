@@ -21,10 +21,10 @@
 
   outputs = inputs: {
     apps = import ./apps inputs;
-    darwinConfigurations = import ./darwinConfigurations inputs;
+    darwinConfigurations = import ./darwin-configurations inputs;
     formatter = import ./formatter inputs;
-    homeConfigurations = import ./homeConfigurations inputs;
-    nixosConfigurations = import ./nixosConfigurations inputs;
+    homeConfigurations = import ./home-configurations inputs;
+    nixosConfigurations = import ./nixos-configurations inputs;
     overlays = import ./overlays inputs;
     packages = import ./packages inputs;
   };
