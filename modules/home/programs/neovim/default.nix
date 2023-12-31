@@ -18,6 +18,7 @@
       cmp-nvim-lsp
       cmp-path
       cmp_luasnip
+      conflict-marker-vim
       copilot-vim
       dash-vim
       diffview-nvim
