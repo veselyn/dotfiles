@@ -10,6 +10,8 @@ telescope.setup({
 	},
 })
 
+telescope.load_extension("fzf")
+
 local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, function()
 		rhs(themes.get_ivy({ layout_config = { height = 100 } }))

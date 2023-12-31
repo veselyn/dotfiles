@@ -36,6 +36,7 @@
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
       rainbow-delimiters-nvim
+      telescope-fzf-native-nvim
       telescope-nvim
       vim-abolish
       vim-capslock
