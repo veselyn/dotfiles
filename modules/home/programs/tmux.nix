@@ -34,4 +34,12 @@
       bind | split-window -f -h -c "#{pane_current_path}"
     '';
   };
+
+  programs.zsh.oh-my-zsh = {
+    plugins = ["tmux"];
+
+    extraConfig = ''
+      ZSH_TMUX_AUTOSTART=true
+    '';
+  };
 }

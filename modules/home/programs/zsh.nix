@@ -20,14 +20,9 @@
           "fzf"
           "git"
           "jump"
-          "tmux"
           "web-search"
         ]
         ++ lib.optional pkgs.stdenv.isDarwin "macos";
-
-      extraConfig = ''
-        ZSH_TMUX_AUTOSTART=true
-      '';
     };
 
     initExtra = ''
