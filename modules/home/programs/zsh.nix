@@ -17,7 +17,6 @@
 
       plugins =
         [
-          "fzf"
           "git"
           "jump"
           "web-search"
