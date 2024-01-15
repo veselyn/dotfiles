@@ -7,5 +7,6 @@ in
     user = "veselin";
     extraModules = [
       ./system.nix
+      ./homebrew.nix
     ];
   }
