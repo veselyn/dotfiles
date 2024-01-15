@@ -1,6 +1,6 @@
 _: {
   programs.texlive = {
-    enable = true;
+    enable = false;
 
     extraPackages = texlive: {
       inherit (texlive) scheme-full;
