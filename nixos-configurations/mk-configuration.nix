@@ -4,12 +4,18 @@
   ...
 } @ inputs: {
   system,
+  hostName,
   user,
   specialArgs ? {inherit inputs;},
   extraArgs ? {},
   baseModules ? [
     ../modules/nixos
-    {modules.nixos.user = user;}
+    {
+      modules.nixos = {
+        inherit hostName;
+        inherit user;
+      };
+    }
     home-manager.nixosModules.home-manager
     ../modules/home/linux
     {modules.home.user = user;}
