@@ -18,10 +18,16 @@
     }
     home-manager.nixosModules.home-manager
     ../modules/home/linux
-    {modules.home.user = user;}
+    {
+      modules.home = {
+        imports = extraHomeModules;
+        inherit user;
+      };
+    }
     ../modules/common
   ],
   extraModules ? [],
+  extraHomeModules ? [],
 }:
 nixpkgs.lib.nixosSystem {
   inherit system;
