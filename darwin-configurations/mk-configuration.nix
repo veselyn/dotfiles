@@ -18,10 +18,16 @@
     }
     home-manager.darwinModules.home-manager
     ../modules/home/darwin
-    {modules.home.user = user;}
+    {
+      modules.home = {
+        imports = extraHomeModules;
+        inherit user;
+      };
+    }
     ../modules/common
   ],
   extraModules ? [],
+  extraHomeModules ? [],
 }:
 darwin.lib.darwinSystem {
   inherit system;

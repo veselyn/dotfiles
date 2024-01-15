@@ -1,23 +1,35 @@
 {
   config,
+  lib,
   specialArgs,
   ...
-}: let
-  cfg = config.modules.home;
-in {
+} @ args: {
   imports = [
     ./options.nix
   ];
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
+  options = with lib; {
+    modules.home = {
+      imports = mkOption {};
+    };
+  };
 
-    extraSpecialArgs = specialArgs;
+  config = let
+    cfg = config.modules.home;
+  in {
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
 
-    users.${cfg.user} = {
-      imports = [./standalone];
-      modules.home = cfg;
+      extraSpecialArgs = specialArgs;
+
+      users.${cfg.user} = {
+        imports = [./standalone] ++ cfg.imports;
+        modules.home = let
+          inherit (import ./options.nix args) options;
+        in
+          builtins.intersectAttrs options.modules.home cfg;
+      };
     };
   };
 }
