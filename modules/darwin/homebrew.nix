@@ -20,4 +20,8 @@ _: {
       Xcode = 497799835;
     };
   };
+
+  environment.extraInit = ''
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  '';
 }
