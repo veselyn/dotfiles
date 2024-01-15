@@ -6,7 +6,7 @@ in
     hostName = "veselins-work-macbook-pro";
     user = "veselin";
     extraModules = [
-      ./system.nix
       ./homebrew.nix
+      ./system.nix
     ];
   }
