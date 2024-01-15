@@ -9,4 +9,7 @@ in
       ./homebrew.nix
       ./system.nix
     ];
+    extraHomeModules = [
+      ./home/packages.nix
+    ];
   }

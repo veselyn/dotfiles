@@ -20,7 +20,6 @@ with pkgs; {
     others = [
       _1password
       alejandra
-      awscli2
       black
       cargo
       cargo-watch
@@ -42,7 +41,6 @@ with pkgs; {
       lazydocker
       luaPackages.luacheck
       luajit
-      mkcert
       mypy
       neofetch
       nix-init
@@ -61,11 +59,8 @@ with pkgs; {
       shfmt
       silver-searcher
       sqlfluff
-      sshuttle
-      ssm-session-manager-plugin
       statix
       stylua
-      terraform
       tree
       watch
       wget
