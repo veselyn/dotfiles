@@ -3,11 +3,13 @@
 # and in the NixOS manual (accessible by running `nixos-help`).
 {lib, ...}: {
   imports = [
+    ./networking.nix
     ./users.nix
   ];
 
   options = with lib; {
     modules.nixos = {
+      hostName = mkOption {};
       user = mkOption {};
     };
   };
@@ -34,7 +36,6 @@
       headless = true;
     };
 
-    # networking.hostName = "nixos"; # Define your hostname.
     # Pick only one of the below networking options.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
