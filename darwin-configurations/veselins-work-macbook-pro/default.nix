@@ -5,4 +5,7 @@ in
     system = "aarch64-darwin";
     hostName = "veselins-work-macbook-pro";
     user = "veselin";
+    extraModules = [
+      ./system.nix
+    ];
   }

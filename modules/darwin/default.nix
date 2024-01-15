@@ -3,7 +3,6 @@
     ./homebrew.nix
     ./networking.nix
     ./services
-    ./system.nix
     ./users.nix
   ];
 
