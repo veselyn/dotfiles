@@ -2,13 +2,8 @@ _: {
   homebrew = {
     enable = true;
 
-    brews = [
-      "nss"
-    ];
-
     casks = [
       "1password"
-      "airtame"
       "dash"
       "discord"
       "docker"
@@ -17,7 +12,6 @@ _: {
       "kitty"
       "skim"
       "slack"
-      "time-out"
       "vmware-fusion"
     ];
 
