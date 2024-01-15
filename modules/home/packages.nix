@@ -22,13 +22,11 @@ with pkgs; {
       alejandra
       awscli2
       black
-      buf
       cargo
       cargo-watch
       clippy
       cloc
       docker
-      dotnet-sdk_7
       fd
       gcc
       go
@@ -69,7 +67,6 @@ with pkgs; {
       stylua
       terraform
       tree
-      vim-vint
       watch
       wget
     ];
