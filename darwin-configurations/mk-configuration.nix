@@ -4,12 +4,18 @@
   ...
 } @ inputs: {
   system,
+  hostName,
   user,
   specialArgs ? {inherit inputs;},
   extraArgs ? {},
   baseModules ? [
     ../modules/darwin
-    {modules.darwin.user = user;}
+    {
+      modules.darwin = {
+        inherit hostName;
+        inherit user;
+      };
+    }
     home-manager.darwinModules.home-manager
     ../modules/home/darwin
     {modules.home.user = user;}

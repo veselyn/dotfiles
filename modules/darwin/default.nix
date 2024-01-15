@@ -1,6 +1,7 @@
 {lib, ...}: {
   imports = [
     ./homebrew.nix
+    ./networking.nix
     ./services
     ./system.nix
     ./users.nix
@@ -8,6 +9,7 @@
 
   options = with lib; {
     modules.darwin = {
+      hostName = mkOption {};
       user = mkOption {};
     };
   };
