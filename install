@@ -18,10 +18,9 @@ function main() {
 
 	nix run nixpkgs#git -- clone https://github.com/veselyn/dotfiles.git
 	cd dotfiles
+	git remote set-url --push origin git@github.com:veselyn/dotfiles.git
 
 	nix run nix-darwin -- switch --flake .#"$configuration"
-
-	git remote set-url --push origin git@github.com:veselyn/dotfiles.git
 }
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
