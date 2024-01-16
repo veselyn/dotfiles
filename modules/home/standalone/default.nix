@@ -6,6 +6,7 @@
   cfg = config.modules.home;
 in {
   imports = [
+    ../1password.nix
     ../options.nix
     ../packages.nix
     ../programs
