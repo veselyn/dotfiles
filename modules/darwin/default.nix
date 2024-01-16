@@ -4,6 +4,7 @@
     ./networking.nix
     ./programs
     ./services
+    ./system.nix
     ./users.nix
   ];
 
