@@ -2,6 +2,7 @@
   imports = [
     ./homebrew.nix
     ./networking.nix
+    ./programs
     ./services
     ./users.nix
   ];
@@ -14,11 +15,6 @@
   };
 
   config = {
-    programs.zsh = {
-      enable = true;
-      promptInit = "";
-    };
-
     system.stateVersion = 4;
   };
 }
