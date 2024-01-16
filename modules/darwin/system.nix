@@ -8,6 +8,7 @@ _: {
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
   system.defaults.dock.autohide = true;
   system.defaults.dock.mru-spaces = false;
+  system.defaults.dock.tilesize = 16;
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
 }
