@@ -14,8 +14,6 @@
   };
 
   config = {
-    environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
     services.nix-daemon.enable = true;
 
     programs.zsh = {
