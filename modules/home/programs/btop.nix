@@ -1,5 +1,5 @@
 _: {
   programs.btop = {
-    enable = true;
+    enable = false;
   };
 }
