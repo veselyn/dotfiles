@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+function main() {
+	local command=$1
+
+	case "$command" in
+	disable)
+		csrutil enable --without fs --without debug --without nvram
+		;;
+	enable)
+		csrutil enable
+		;;
+	*)
+		echo >&2 'unknown command'
+		return 1
+		;;
+	esac
+}
+
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+	main "$@"
+fi
