@@ -1,4 +1,4 @@
-_: {
+{lib, ...}: {
   system = {
     defaults = {
       CustomUserPreferences = {
@@ -39,7 +39,7 @@ _: {
 
       spaces.spans-displays = false;
 
-      universalaccess = {
+      universalaccess = lib.mkForce {
         closeViewScrollWheelToggle = true;
         closeViewZoomFollowsFocus = true;
       };
