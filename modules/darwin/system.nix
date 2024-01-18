@@ -11,6 +11,7 @@ _: {
   system.defaults.dock.tilesize = 16;
   system.defaults.universalaccess.closeViewScrollWheelToggle = null;
   system.defaults.universalaccess.closeViewZoomFollowsFocus = null;
+  system.defaults.universalaccess.reduceMotion = true;
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
 }
