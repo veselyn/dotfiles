@@ -2,19 +2,23 @@
 
 set -euo pipefail
 
+function recovery() {
+	[[ ${__OSINSTALL_ENVIRONMENT:-0} == 1 ]]
+}
+
 function main() {
 	local command=$1
 
 	case "$command" in
 	disable)
-		if [[ $__OSINSTALL_ENVIRONMENT == 1 ]]; then
+		if recovery; then
 			csrutil enable --without fs --without debug --without nvram
 		else
 			nvram boot-args=-arm64e_preview_abi
 		fi
 		;;
 	enable)
-		if [[ $__OSINSTALL_ENVIRONMENT == 1 ]]; then
+		if recovery; then
 			csrutil enable
 		else
 			nvram -d boot-args
