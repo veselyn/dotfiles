@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   programs.git = {
     enable = true;
 
@@ -8,11 +8,20 @@ _: {
     userEmail = "me@veselyn.com";
 
     signing = {
-      key = "415F6249A29FEB3F";
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22";
       signByDefault = true;
     };
 
     extraConfig = {
+      gpg = {
+        format = "ssh";
+        ssh = {
+          program =
+            if pkgs.stdenv.isDarwin
+            then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+            else "/opt/1Password/op-ssh-sign";
+        };
+      };
       init = {
         defaultBranch = "master";
       };
