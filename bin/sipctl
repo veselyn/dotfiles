@@ -14,14 +14,14 @@ function main() {
 		if recovery; then
 			csrutil enable --without fs --without debug --without nvram
 		else
-			nvram boot-args=-arm64e_preview_abi
+			sudo nvram boot-args=-arm64e_preview_abi
 		fi
 		;;
 	enable)
 		if recovery; then
 			csrutil enable
 		else
-			nvram -d boot-args
+			sudo nvram -d boot-args
 		fi
 		;;
 	status)
