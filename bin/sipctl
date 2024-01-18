@@ -8,12 +8,17 @@ function main() {
 	case "$command" in
 	disable)
 		csrutil enable --without fs --without debug --without nvram
+		nvram boot-args=-arm64e_preview_abi
 		;;
 	enable)
 		csrutil enable
+		nvram -d boot-args
 		;;
 	status)
 		csrutil status
+		set +e
+		nvram boot-args
+		set -e
 		;;
 	*)
 		echo >&2 'unknown command'
