@@ -9,8 +9,8 @@ _: {
   system.defaults.dock.autohide = true;
   system.defaults.dock.mru-spaces = false;
   system.defaults.dock.tilesize = 16;
-  system.defaults.universalaccess.closeViewScrollWheelToggle = null;
-  system.defaults.universalaccess.closeViewZoomFollowsFocus = null;
+  system.defaults.universalaccess.closeViewScrollWheelToggle = true;
+  system.defaults.universalaccess.closeViewZoomFollowsFocus = true;
   system.defaults.universalaccess.reduceMotion = true;
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
