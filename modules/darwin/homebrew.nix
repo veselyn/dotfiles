@@ -19,6 +19,9 @@ _: {
       "1Password for Safari" = 1569813296;
       Kindle = 302584613;
       Xcode = 497799835;
+      Numbers = 409203825;
+      Keynote = 409183694;
+      Pages = 409201541;
     };
   };
 
