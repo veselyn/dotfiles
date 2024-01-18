@@ -12,6 +12,9 @@ function main() {
 	enable)
 		csrutil enable
 		;;
+	status)
+		csrutil status
+		;;
 	*)
 		echo >&2 'unknown command'
 		return 1
