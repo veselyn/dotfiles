@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
 function recovery() {
 	[[ ${__OSINSTALL_ENVIRONMENT:-0} == 1 ]]
 }
@@ -38,5 +36,7 @@ function main() {
 }
 
 if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+	set -euo pipefail
+
 	main "$@"
 fi
