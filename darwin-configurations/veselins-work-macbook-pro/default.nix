@@ -11,5 +11,6 @@ in
     ];
     extraHomeModules = [
       ./home/packages.nix
+      ./home/git.nix
     ];
   }
