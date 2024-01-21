@@ -56,6 +56,8 @@ local function on_attach(_, bufnr)
 	map({ "n", "x" }, "<LocalLeader>ca", vim.lsp.buf.code_action)
 
 	format_on_save(bufnr)
+
+	vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
 end
 
 for _, server in ipairs(servers) do
