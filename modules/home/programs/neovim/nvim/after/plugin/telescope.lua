@@ -41,6 +41,6 @@ vim.api.nvim_create_autocmd("User", {
 		map("n", "<LocalLeader>fgR", builtin.lsp_references)
 		map("n", "<LocalLeader>fgd", builtin.lsp_definitions)
 		map("n", "<LocalLeader>fgo", builtin.lsp_type_definitions)
-		map("n", "<LocalLeader>fws", builtin.lsp_workspace_symbols)
+		map("n", "<LocalLeader>fws", builtin.lsp_dynamic_workspace_symbols)
 	end,
 })
