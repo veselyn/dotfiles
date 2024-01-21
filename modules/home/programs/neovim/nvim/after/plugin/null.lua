@@ -1,5 +1,4 @@
 local null = require("null-ls")
-local format_on_save = require("aul.lsp.format")
 
 null.setup({
 	sources = {
@@ -13,6 +12,6 @@ null.setup({
 		null.builtins.formatting.trim_whitespace,
 	},
 	on_attach = function(_, bufnr)
-		format_on_save(bufnr)
+		vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
 	end,
 })

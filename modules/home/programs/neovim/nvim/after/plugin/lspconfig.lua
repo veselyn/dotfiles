@@ -1,6 +1,5 @@
 local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
-local format_on_save = require("aul.lsp.format")
 
 local servers = {
 	"bashls",
@@ -54,8 +53,6 @@ local function on_attach(_, bufnr)
 	map("n", "gl", vim.diagnostic.open_float)
 	map("n", "go", vim.lsp.buf.type_definition)
 	map({ "n", "x" }, "<LocalLeader>ca", vim.lsp.buf.code_action)
-
-	format_on_save(bufnr)
 
 	vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
 end
