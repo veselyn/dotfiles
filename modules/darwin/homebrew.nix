@@ -11,7 +11,6 @@ _: {
       "google-chrome"
       "kitty"
       "skim"
-      "slack"
       "tailscale"
       "vmware-fusion"
     ];
