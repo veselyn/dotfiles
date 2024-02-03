@@ -12,6 +12,7 @@ _: {
       "kitty"
       "skim"
       "slack"
+      "tailscale"
       "vmware-fusion"
     ];
 
