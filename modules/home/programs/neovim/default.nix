@@ -80,6 +80,7 @@
       ];
       diagnostics = [
         mypy
+        nodePackages.eslint
         pylint
         statix
       ];
@@ -87,6 +88,7 @@
         alejandra
         black
         gofumpt
+        nodePackages.prettier
         stylua
       ];
     });
