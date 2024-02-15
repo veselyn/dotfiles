@@ -16,11 +16,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    treefmt.url = "github:numtide/treefmt-nix/main";
     flake-utils.url = "github:numtide/flake-utils/main";
   };
 
   outputs = inputs: {
     apps = import ./apps inputs;
+    checks = import ./checks inputs;
     darwinConfigurations = import ./darwin-configurations inputs;
     formatter = import ./formatter inputs;
     homeConfigurations = import ./home-configurations inputs;

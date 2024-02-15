@@ -10,7 +10,9 @@ flake-utils.lib.eachDefaultSystemMap (system: let
     inherit system;
     overlays = builtins.attrValues self.overlays;
   };
-
-  treefmtModule = treefmt.lib.evalModule pkgs ./treefmt.nix;
-in
-  treefmtModule.config.build.wrapper)
+in {
+  formatting = let
+    treefmtModule = treefmt.lib.evalModule pkgs ../formatter/treefmt.nix;
+  in
+    treefmtModule.config.build.check self;
+})
