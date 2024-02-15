@@ -1,5 +1,9 @@
 {
   projectRootFile = "flake.nix";
 
-  programs.alejandra.enable = true;
+  programs = {
+    alejandra.enable = true;
+    shfmt.enable = true;
+    stylua.enable = true;
+  };
 }
