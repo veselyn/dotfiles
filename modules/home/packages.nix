@@ -48,6 +48,7 @@ with pkgs; {
       nodePackages.prettier
       nodejs
       parallel
+      pre-commit
       pylint
       python3
       python3Packages.pip
