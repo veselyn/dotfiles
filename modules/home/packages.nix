@@ -21,6 +21,7 @@ with pkgs; {
       _1password
       alejandra
       black
+      cachix
       cargo
       cargo-watch
       clippy
