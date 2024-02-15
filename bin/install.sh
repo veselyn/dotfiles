@@ -21,7 +21,7 @@ function main() {
 	nix run nix-darwin -- switch --flake .#"$configuration"
 }
 
-if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
 	set -euo pipefail
 
 	main "$@"
