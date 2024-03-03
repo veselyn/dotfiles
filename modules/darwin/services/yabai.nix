@@ -11,7 +11,7 @@ _: {
       window_gap = 1;
       mouse_follows_focus = "on";
       window_origin_display = "focused";
-      window_shadow = "off";
+      window_shadow = "on";
       insert_feedback_color = "0xffffffff";
     };
   };
