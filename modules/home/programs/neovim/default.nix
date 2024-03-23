@@ -66,6 +66,7 @@
   home.packages = with pkgs;
     lib.flatten (builtins.attrValues {
       servers = [
+        emmet-language-server
         gopls
         jdt-language-server
         lua-language-server

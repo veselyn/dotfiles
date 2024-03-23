@@ -4,6 +4,7 @@ local cmplsp = require("cmp_nvim_lsp")
 local servers = {
 	"bashls",
 	"cssls",
+	"emmet_language_server",
 	"gopls",
 	"html",
 	"jdtls",
