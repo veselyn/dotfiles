@@ -28,6 +28,14 @@ map("n", "<Leader>fj", builtin.git_files)
 map("n", "<Leader>fp", builtin.pickers)
 map("n", "<Leader>fr", builtin.resume)
 
+local function document_diagnostics(opts)
+	builtin.diagnostics(vim.tbl_extend("force", opts, { bufnr = 0 }))
+end
+
+local function workspace_diagnostics(opts)
+	builtin.diagnostics(vim.tbl_extend("force", opts, { bufnr = nil }))
+end
+
 vim.api.nvim_create_autocmd("User", {
 	group = vim.api.nvim_create_augroup("LspOnAttach" .. vim.fn.expand("<sfile>:t:r"), {}),
 	pattern = "LspOnAttach",
@@ -41,6 +49,8 @@ vim.api.nvim_create_autocmd("User", {
 		map("n", "<LocalLeader>fgR", builtin.lsp_references)
 		map("n", "<LocalLeader>fgd", builtin.lsp_definitions)
 		map("n", "<LocalLeader>fgo", builtin.lsp_type_definitions)
+		map("n", "<LocalLeader>fl", document_diagnostics)
+		map("n", "<LocalLeader>fq", workspace_diagnostics)
 		map("n", "<LocalLeader>fws", builtin.lsp_dynamic_workspace_symbols)
 	end,
 })
