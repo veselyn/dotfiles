@@ -26,6 +26,7 @@ with pkgs; {
       cargo-watch
       clippy
       cloc
+      devenv
       docker
       fd
       gcc
