@@ -64,6 +64,7 @@ with pkgs; {
       statix
       stylua
       tree
+      treefmt
       watch
       wget
     ];
