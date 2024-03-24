@@ -61,7 +61,6 @@ with pkgs; {
       shellcheck
       shfmt
       silver-searcher
-      sqlfluff
       statix
       stylua
       tree
