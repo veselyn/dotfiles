@@ -4,6 +4,12 @@ return {
 			check = {
 				command = "clippy",
 			},
+			files = {
+				excludeDirs = {
+					".devenv/",
+					".direnv/",
+				},
+			},
 		},
 	},
 }
