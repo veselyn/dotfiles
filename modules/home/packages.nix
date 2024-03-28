@@ -15,6 +15,7 @@ with pkgs; {
     scripts = [
       battery
       flushdns
+      gitpick
       yabaictl
     ];
     others = [
