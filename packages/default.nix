@@ -14,6 +14,7 @@ in {
     (pkgs)
     battery
     flushdns
+    gitpick
     yabaictl
     ;
 })
