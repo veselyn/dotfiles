@@ -1,8 +1,8 @@
-ref=$1
+rev=$1
 path=$2
 
-files=$(git ls-tree -r --name-only "$ref" "$path")
+files=$(git ls-tree -r --name-only "$rev" "$path")
 
 for file in $files; do
-	git show "$ref":"$file" >"$file"
+	git show "$rev":"$file" >"$file"
 done
