@@ -10,6 +10,7 @@ _: {
       "firefox"
       "google-chrome"
       "kitty"
+      "monitorcontrol"
       "skim"
       "tailscale"
       "vmware-fusion"
