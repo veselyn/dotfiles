@@ -37,6 +37,11 @@
       "Session.vim"
     ];
 
-    diff-so-fancy.enable = true;
+    delta = {
+      enable = true;
+      options = {
+        diff-so-fancy = true;
+      };
+    };
   };
 }
