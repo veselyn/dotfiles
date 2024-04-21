@@ -67,8 +67,7 @@ _: {
 
       alt - e : yabai -m window --toggle split
 
-      alt - t : yabai -m window --toggle float; \
-        yabai -m window --grid 4:4:1:1:2:2
+      alt - t : yabai -m window --toggle float
 
       .blacklist [
         "vmware fusion"
