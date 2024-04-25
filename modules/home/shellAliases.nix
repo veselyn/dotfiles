@@ -1,7 +1,8 @@
 _: {
   home.shellAliases = {
     c = "pbcopy";
-    dsf = "diff-so-fancy";
+    da = "delta";
+    das = "delta --side-by-side";
     gai = "git add --interactive";
     ldr = "lazydocker";
     lg = "lazygit";
