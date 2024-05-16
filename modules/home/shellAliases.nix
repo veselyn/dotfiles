@@ -1,6 +1,6 @@
 _: {
   home.shellAliases = {
-    "gclean!" = "git clean -d";
+    "gclean!" = "git clean --force -d";
     c = "pbcopy";
     da = "delta";
     das = "delta --side-by-side";
