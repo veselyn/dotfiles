@@ -1,4 +1,5 @@
 _: {
+  system.defaults.".GlobalPreferences"."com.apple.mouse.scaling" = 1.0;
   system.defaults.NSGlobalDomain."com.apple.keyboard.fnState" = true;
   system.defaults.NSGlobalDomain.AppleInterfaceStyle = "Dark";
   system.defaults.NSGlobalDomain.AppleKeyboardUIMode = 3;
