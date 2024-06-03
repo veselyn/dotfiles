@@ -1,6 +1,6 @@
 local bufjump = require("bufjump")
 
 bufjump.setup({
-	forward = "<M-i>",
-	backward = "<M-o>",
+	backward_key = "<M-o>",
+	forward_key = "<M-i>",
 })
