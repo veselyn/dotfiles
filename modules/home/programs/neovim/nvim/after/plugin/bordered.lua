@@ -1,17 +1,11 @@
-local cmp = require("cmp")
+vim.diagnostic.config({
+	float = { border = "rounded" },
+})
 
-local open_floating_preview = vim.lsp.util.open_floating_preview
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = "rounded",
+})
 
-function vim.lsp.util.open_floating_preview(contents, syntax, opts)
-	opts.border = "rounded"
-
-	local bufnr, winnr = open_floating_preview(contents, syntax, opts)
-
-	vim.wo[winnr].winhighlight = table.concat({
-		vim.wo[winnr].winhighlight,
-		cmp.config.window.bordered().winhighlight,
-		"NormalFloat:Normal",
-	}, ",")
-
-	return bufnr, winnr
-end
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	border = "rounded",
+})
