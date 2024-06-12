@@ -3,6 +3,7 @@ local cmplsp = require("cmp_nvim_lsp")
 
 local servers = {
 	"bashls",
+	"clangd",
 	"cssls",
 	"emmet_language_server",
 	"eslint",
