@@ -8,7 +8,6 @@ in {
   home-manager = {
     users.${cfg.user} = {
       imports = [
-        ./packages.nix
       ];
     };
   };
