@@ -7,7 +7,7 @@
     enable = true;
 
     config = {
-      modifier = "Mod4";
+      modifier = "Mod1";
       terminal = "kitty";
 
       keybindings = let
