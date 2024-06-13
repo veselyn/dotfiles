@@ -19,7 +19,6 @@ with pkgs; {
       yabaictl
     ];
     others = [
-      _1password-gui
       alejandra
       black
       cachix
