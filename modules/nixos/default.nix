@@ -4,6 +4,7 @@
 {lib, ...}: {
   imports = [
     ./networking.nix
+    ./programs
     ./users.nix
   ];
 
