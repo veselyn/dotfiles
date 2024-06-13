@@ -32,6 +32,8 @@
           semicolon = "resize grow width 10 px or 10 ppt";
         };
       };
+
+      fonts.size = 11.0;
     };
   };
 }
