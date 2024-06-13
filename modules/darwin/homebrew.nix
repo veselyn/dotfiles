@@ -14,6 +14,7 @@ _: {
       "skim"
       "sony-ps-remote-play"
       "tailscale"
+      "utm"
       "vmware-fusion"
     ];
 
