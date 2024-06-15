@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  options,
   ...
 }: {
   xsession.windowManager.i3 = {
@@ -34,6 +35,11 @@
       };
 
       fonts.size = 11.0;
+
+      bars = let
+        default = (options.xsession.windowManager.i3.config.type.getSubOptions {}).bars.default;
+      in
+        [(builtins.head default // {fonts.size = 11.0;})] ++ builtins.tail default;
     };
   };
 }
