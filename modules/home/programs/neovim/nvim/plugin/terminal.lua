@@ -1,9 +1,11 @@
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 vim.api.nvim_create_autocmd("TermOpen", {
-	group = vim.api.nvim_create_augroup("StartInsert", {}),
+	group = vim.api.nvim_create_augroup("TermOnOpen", {}),
 	callback = function()
 		vim.cmd.startinsert()
+		vim.opt_local.number = false
+		vim.opt_local.relativenumber = false
 	end,
 })
 
