@@ -38,6 +38,7 @@
       rainbow-delimiters-nvim
       telescope-fzf-native-nvim
       telescope-nvim
+      tinykeymap
       trim-nvim
       vim-abolish
       vim-capslock
