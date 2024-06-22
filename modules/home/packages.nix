@@ -24,6 +24,7 @@ with pkgs; {
       black
       cachix
       cargo
+      cargo-modules
       cargo-watch
       clippy
       cloc
