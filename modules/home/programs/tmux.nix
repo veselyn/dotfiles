@@ -20,11 +20,11 @@
       set -g status off
       set -g renumber-windows on
 
-      bind C-a send C-a
-      bind C-h send C-h
-      bind C-j send C-j
-      bind C-k send C-k
-      bind C-l send C-l
+      bind C-A send C-A
+      bind C-H send C-H
+      bind C-J send C-J
+      bind C-K send C-K
+      bind C-L send C-L
       bind C-\\ send C-\\
 
       bind c new-window -c "#{pane_current_path}"
