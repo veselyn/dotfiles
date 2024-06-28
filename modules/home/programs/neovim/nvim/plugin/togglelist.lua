@@ -22,3 +22,13 @@ vim.keymap.set("n", "<Leader>q", function()
 	end
 	vim.cmd.copen()
 end)
+
+vim.keymap.set("n", "<Leader>=", function()
+	local tabpagenr = vim.fn.tabpagenr()
+	for _, value in ipairs(vim.fn.getwininfo()) do
+		if value.tabnr == tabpagenr and value.loclist == 1 or value.quickfix == 1 then
+			vim.wo[value.winid].winfixheight = false
+		end
+	end
+	vim.cmd("vertical wincmd =")
+end)
