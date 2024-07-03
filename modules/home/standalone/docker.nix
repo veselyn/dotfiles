@@ -1,6 +1,6 @@
 _: {
   programs.zsh.initExtra = ''
-    if command -v docker; then
+    if command -v docker >/dev/null; then
       source <(docker completion zsh)
     fi
   '';
