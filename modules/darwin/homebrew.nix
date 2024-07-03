@@ -1,4 +1,6 @@
-_: {
+{config, ...}: let
+  cfg = config.homebrew;
+in {
   homebrew = {
     enable = true;
 
@@ -32,6 +34,10 @@ _: {
   };
 
   environment.extraInit = ''
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(${cfg.brewPrefix}/brew shellenv)"
+  '';
+
+  programs.zsh.interactiveShellInit = ''
+    fpath+=${builtins.dirOf cfg.brewPrefix}/share/zsh/site-functions
   '';
 }
