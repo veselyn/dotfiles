@@ -7,6 +7,11 @@
     package = pkgs.nix;
     settings.experimental-features = ["nix-command" "flakes"];
 
+    gc = {
+      automatic = true;
+      options = "--delete-older-than 30d";
+    };
+
     registry = {
       nixpkgs = {
         flake = inputs.nixpkgs;
