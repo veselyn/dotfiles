@@ -6,11 +6,11 @@
   cfg = config.modules.home;
 in {
   imports = [
-    ../1password.nix
     ../options.nix
-    ../packages.nix
-    ../programs
-    ../shellAliases.nix
+    ./1password.nix
+    ./packages.nix
+    ./programs
+    ./shellAliases.nix
   ];
 
   home = {
