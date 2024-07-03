@@ -12,6 +12,8 @@
       options = "--delete-older-than 30d";
     };
 
+    optimise.automatic = true;
+
     registry = {
       nixpkgs = {
         flake = inputs.nixpkgs;
