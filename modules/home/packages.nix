@@ -29,7 +29,6 @@ with pkgs; {
       clippy
       cloc
       devenv
-      docker
       fd
       gcc
       go
