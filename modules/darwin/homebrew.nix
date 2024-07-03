@@ -34,7 +34,7 @@ in {
   };
 
   environment.extraInit = ''
-    eval "$(${cfg.brewPrefix}/brew shellenv)"
+    source <(${cfg.brewPrefix}/brew shellenv)
   '';
 
   programs.zsh.interactiveShellInit = ''
