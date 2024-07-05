@@ -31,6 +31,10 @@ local function list_workspace_folders()
 	print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 end
 
+local function toggle_inlay_hint()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end
+
 local function on_attach(_, bufnr)
 	local function map(mode, lhs, rhs)
 		vim.keymap.set(mode, lhs, rhs, { buffer = bufnr })
@@ -38,6 +42,7 @@ local function on_attach(_, bufnr)
 
 	map("n", "<LocalLeader>ds", vim.lsp.buf.document_symbol)
 	map("n", "<LocalLeader>f", format)
+	map("n", "<LocalLeader>h", toggle_inlay_hint)
 	map("n", "<LocalLeader>k", vim.lsp.buf.signature_help)
 	map("n", "<LocalLeader>l", vim.diagnostic.setloclist)
 	map("n", "<LocalLeader>q", vim.diagnostic.setqflist)
