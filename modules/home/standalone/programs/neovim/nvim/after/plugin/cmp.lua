@@ -23,8 +23,8 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "path" },
 		{ name = "nvim_lsp" },
-		{ name = "buffer" },
 		{ name = "luasnip" },
+		{ name = "buffer" },
 	}),
 	window = {
 		completion = cmp.config.window.bordered(),
