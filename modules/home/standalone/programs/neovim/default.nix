@@ -73,10 +73,10 @@
         lua-language-server
         nil
         nodePackages.bash-language-server
-        nodePackages.pyright
         nodePackages.typescript-language-server
         nodePackages.yaml-language-server
         omnisharp-roslyn
+        pyright
         rust-analyzer
         texlab
         vscode-langservers-extracted
