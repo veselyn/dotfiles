@@ -1,3 +1,3 @@
-local dev = require("neodev")
+local dev = require("lazydev")
 
 dev.setup()

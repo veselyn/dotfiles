@@ -24,9 +24,9 @@
       diffview-nvim
       friendly-snippets
       indent-blankline-nvim
+      lazydev-nvim
       luasnip
       neoconf-nvim
-      neodev-nvim
       none-ls-nvim
       nvim-autopairs
       nvim-cmp
