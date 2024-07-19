@@ -6,7 +6,7 @@ in {
 
     casks = [
       "1password"
-      "dash"
+      "dash@6"
       "discord"
       "docker"
       "firefox"
