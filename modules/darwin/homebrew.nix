@@ -22,7 +22,7 @@ in {
 
     masApps = {
       "1Password for Safari" = 1569813296;
-      Ghostery = 1436953057;
+      Ghostery = 6504861501;
       Keynote = 409183694;
       Kindle = 302584613;
       Numbers = 409203825;
