@@ -61,6 +61,7 @@
       vim-unimpaired
       vim-vinegar
       vimtex
+      zen-mode-nvim
     ];
   };
 
