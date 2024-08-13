@@ -16,11 +16,7 @@
   extraModules ? [],
 }:
 home-manager.lib.homeManagerConfiguration {
-  pkgs = import nixpkgs {
-    inherit system;
-    overlays = builtins.attrValues self.overlays;
-    config.allowUnfree = true;
-  };
+  pkgs = self.lib.mkPkgs nixpkgs system {};
 
   extraSpecialArgs = specialArgs // extraArgs;
 

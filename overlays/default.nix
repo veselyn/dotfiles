@@ -1,11 +1,16 @@
 {
   nixpkgs-stable,
   nixpkgs-master,
+  self,
   ...
 }: {
-  default = final: prev: let
-    stable = import nixpkgs-stable {inherit (prev) system;};
-    master = import nixpkgs-master {inherit (prev) system;};
+  lib = final: prev: {
+    lib = prev.lib.extend (finalLib: prevLib: self.lib);
+  };
+
+  pkgs = final: prev: let
+    stable = prev.lib.mkPkgs nixpkgs-stable prev.system {};
+    master = prev.lib.mkPkgs nixpkgs-master prev.system {};
     pkgs = prev.lib.recurseIntoAttrs (prev.callPackages ../pkgs {});
   in {
     inherit stable;

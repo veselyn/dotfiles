@@ -5,10 +5,7 @@
   ...
 }:
 flake-utils.lib.eachDefaultSystemMap (system: let
-  pkgs = import nixpkgs {
-    inherit system;
-    overlays = builtins.attrValues self.overlays;
-  };
+  pkgs = self.lib.mkPkgs nixpkgs system {};
 in {
   inherit
     (pkgs)

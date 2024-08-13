@@ -28,6 +28,7 @@
     darwinConfigurations = callOutput ./darwin-configurations;
     formatter = callOutput ./formatter;
     homeConfigurations = callOutput ./home-configurations;
+    lib = callOutput ./lib;
     nixosConfigurations = callOutput ./nixos-configurations;
     overlays = callOutput ./overlays;
     packages = callOutput ./packages;
