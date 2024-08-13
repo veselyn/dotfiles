@@ -12,7 +12,7 @@ with pkgs; {
       inetutils
       time
     ];
-    scripts = [
+    scripts = with own; [
       battery
       flushdns
       gitpick
