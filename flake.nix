@@ -20,14 +20,16 @@
     flake-utils.url = "github:numtide/flake-utils/main";
   };
 
-  outputs = inputs: {
-    apps = import ./apps inputs;
-    checks = import ./checks inputs;
-    darwinConfigurations = import ./darwin-configurations inputs;
-    formatter = import ./formatter inputs;
-    homeConfigurations = import ./home-configurations inputs;
-    nixosConfigurations = import ./nixos-configurations inputs;
-    overlays = import ./overlays inputs;
-    packages = import ./packages inputs;
+  outputs = inputs: let
+    callOutput = file: import file inputs;
+  in {
+    apps = callOutput ./apps;
+    checks = callOutput ./checks;
+    darwinConfigurations = callOutput ./darwin-configurations;
+    formatter = callOutput ./formatter;
+    homeConfigurations = callOutput ./home-configurations;
+    nixosConfigurations = callOutput ./nixos-configurations;
+    overlays = callOutput ./overlays;
+    packages = callOutput ./packages;
   };
 }
