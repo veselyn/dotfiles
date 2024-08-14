@@ -13,7 +13,6 @@ with pkgs; {
       time
     ];
     scripts = with own; [
-      battery
       flushdns
       gitpick
       yabaictl
