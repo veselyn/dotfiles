@@ -1,7 +1,2 @@
-{self, ...}: nixpkgs: system: args:
-import nixpkgs ({
-    inherit system;
-    overlays = builtins.attrValues self.overlays;
-    config.allowUnfree = true;
-  }
-  // args)
+{self, ...}: nixpkgs: system: overrides:
+import nixpkgs (self.lib.pkgsConfig ({inherit system;} // overrides))

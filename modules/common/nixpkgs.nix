@@ -1,6 +1,3 @@
 {inputs, ...}: {
-  nixpkgs = {
-    overlays = builtins.attrValues inputs.self.overlays;
-    config.allowUnfree = true;
-  };
+  nixpkgs = inputs.self.lib.pkgsConfig {};
 }
