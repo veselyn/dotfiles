@@ -9,7 +9,6 @@
     own = {
       inherit
         (pkgs)
-        flushdns
         gitpick
         yabaictl
         ;
