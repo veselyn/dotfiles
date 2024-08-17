@@ -19,6 +19,8 @@
     flake-utils.url = "github:numtide/flake-utils/main";
     treefmt.url = "github:numtide/treefmt-nix/main";
     devenv.url = "github:cachix/devenv/main";
+
+    raspberry-pi.url = "github:nix-community/raspberry-pi-nix/master";
   };
 
   outputs = inputs: let

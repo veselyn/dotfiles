@@ -5,7 +5,7 @@
   ...
 } @ inputs: {
   system,
-  user,
+  user ? null,
   specialArgs ? {inherit inputs;},
   extraArgs ? {},
   baseModules ? [
