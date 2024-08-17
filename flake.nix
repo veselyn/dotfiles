@@ -16,8 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    treefmt.url = "github:numtide/treefmt-nix/main";
     flake-utils.url = "github:numtide/flake-utils/main";
+    treefmt.url = "github:numtide/treefmt-nix/main";
+    devenv.url = "github:cachix/devenv/main";
   };
 
   outputs = inputs: let
@@ -26,6 +27,7 @@
     apps = callOutput ./apps;
     checks = callOutput ./checks;
     darwinConfigurations = callOutput ./darwin-configurations;
+    devShells = callOutput ./dev-shells;
     formatter = callOutput ./formatter;
     homeConfigurations = callOutput ./home-configurations;
     lib = callOutput ./lib;
