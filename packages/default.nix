@@ -8,7 +8,7 @@ flake-utils.lib.eachDefaultSystemMap (system: let
   pkgs = self.lib.mkPkgs nixpkgs system {};
 in {
   inherit
-    (pkgs)
+    (pkgs.own)
     gitpick
     yabaictl
     ;
