@@ -13,6 +13,13 @@ in {
     inherit inputs pkgs;
     modules = [
       {
+        languages = {
+          lua.enable = true;
+          lua.package = pkgs.luajit;
+          nix.enable = true;
+          shell.enable = true;
+        };
+
         packages = [
           formatter
         ];
