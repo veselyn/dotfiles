@@ -9,7 +9,7 @@ flake-utils.lib.eachDefaultSystemMap (system: let
 in
   builtins.mapAttrs (_: drv: flake-utils.lib.mkApp {inherit drv;}) {
     inherit
-      (pkgs)
+      (pkgs.own)
       gitpick
       yabaictl
       ;
