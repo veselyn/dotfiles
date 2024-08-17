@@ -10,8 +10,6 @@ in
   builtins.mapAttrs (_: drv: flake-utils.lib.mkApp {inherit drv;}) {
     inherit
       (pkgs)
-      battery
-      flushdns
       gitpick
       yabaictl
       ;

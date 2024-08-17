@@ -9,8 +9,6 @@ flake-utils.lib.eachDefaultSystemMap (system: let
 in {
   inherit
     (pkgs)
-    battery
-    flushdns
     gitpick
     yabaictl
     ;

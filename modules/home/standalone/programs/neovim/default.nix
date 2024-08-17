@@ -63,39 +63,24 @@
       vimtex
       zen-mode-nvim
     ];
-  };
 
-  home.packages = with pkgs;
-    lib.flatten (builtins.attrValues {
-      servers = [
-        emmet-language-server
-        gopls
-        jdt-language-server
-        lua-language-server
-        nil
-        nodePackages.bash-language-server
-        nodePackages.typescript-language-server
-        nodePackages.yaml-language-server
-        omnisharp-roslyn
-        pyright
-        rust-analyzer
-        texlab
-        vscode-langservers-extracted
-      ];
-      diagnostics = [
-        mypy
-        nodePackages.eslint
-        pylint
-        statix
-      ];
-      formatting = [
-        alejandra
-        black
-        gofumpt
-        nodePackages.prettier
-        stylua
-      ];
-    });
+    extraPackages = with pkgs; [
+      emmet-language-server
+      gopls
+      jdt-language-server
+      lua-language-server
+      nil
+      nodePackages.bash-language-server
+      nodePackages.typescript-language-server
+      nodePackages.yaml-language-server
+      omnisharp-roslyn
+      pyright
+      rust-analyzer
+      texlab
+      treefmt
+      vscode-langservers-extracted
+    ];
+  };
 
   xdg.configFile.nvim.source = ./nvim;
 }

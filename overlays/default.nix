@@ -9,8 +9,6 @@
     own = {
       inherit
         (pkgs)
-        battery
-        flushdns
         gitpick
         yabaictl
         ;
