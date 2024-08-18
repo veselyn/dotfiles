@@ -6,11 +6,7 @@ in
     hostName = "veselins-raspberry-pi";
     baseModules = [];
     extraModules = [
-      inputs.raspberry-pi.nixosModules.raspberry-pi
-
-      (_: {
-        raspberry-pi-nix.board = "bcm2712";
-      })
+      ./hardware.nix
 
       ({lib, ...}:
         with lib; {
