@@ -22,13 +22,45 @@
 
     programs.zsh.enable = true;
 
-    services.openssh.enable = true;
+    services = {
+      openssh.enable = true;
 
-    services.xserver = {
-      enable = true;
-
-      windowManager.i3 = {
+      xserver = {
         enable = true;
+
+        windowManager.i3 = {
+          enable = true;
+        };
+      };
+
+      autorandr = {
+        enable = true;
+
+        profiles = {
+          laptop = {
+            fingerprint = {
+              Virtual-1 = "--CONNECTED-BUT-EDID-UNAVAILABLE--Virtual-1";
+            };
+            config = {
+              Virtual-1 = {
+                dpi = 192;
+                mode = "3600x2252";
+              };
+            };
+          };
+
+          desktop = {
+            fingerprint = {
+              Virtual-1 = "--CONNECTED-BUT-EDID-UNAVAILABLE--Virtual-1";
+            };
+            config = {
+              Virtual-1 = {
+                dpi = 96;
+                mode = "3440x1440";
+              };
+            };
+          };
+        };
       };
     };
 
