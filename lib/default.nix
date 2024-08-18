@@ -3,4 +3,5 @@ inputs: let
 in {
   mkPkgs = callLib ./mk-pkgs.nix;
   pkgsConfig = callLib ./pkgs-config.nix;
+  sshKeys = callLib ./ssh-keys.nix;
 }
