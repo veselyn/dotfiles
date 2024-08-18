@@ -14,9 +14,9 @@ function main() {
 
 	NONINTERACTIVE=1 bash <(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
 
-	nix run nixpkgs#git -- clone https://github.com/veselyn/dotfiles.git
-	cd dotfiles
-	git remote set-url --push origin git@github.com:veselyn/dotfiles.git
+	nix run nixpkgs#git -- clone https://github.com/veselyn/universe.git
+	cd universe
+	git remote set-url --push origin git@github.com:veselyn/universe.git
 
 	nix run nix-darwin -- switch --flake .#"$configuration"
 }
