@@ -5,7 +5,7 @@
   ...
 }: {
   lib = final: prev: {
-    own = self.lib;
+    lib = prev.lib.extend (final: prev: {own = self.lib;});
   };
 
   pkgsOwn = final: prev: let
