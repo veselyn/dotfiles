@@ -3,12 +3,12 @@
     own = self.lib;
   };
 
-  pkgs = final: prev: let
-    ownPkgs = prev.lib.recurseIntoAttrs (prev.callPackages ../pkgs {});
+  pkgsOwn = final: prev: let
+    pkgsOwn = prev.lib.recurseIntoAttrs (prev.callPackages ../pkgs {});
   in {
     own = {
       inherit
-        (ownPkgs)
+        (pkgsOwn)
         gitpick
         yabaictl
         ;
