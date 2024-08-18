@@ -8,26 +8,29 @@ in
     extraModules = [
       ./hardware.nix
 
-      ({lib, ...}:
-        with lib; {
-          users.users = {
-            veselin = {
-              extraGroups = ["wheel"];
-              hashedPassword = "$y$j9T$sIqju9VgjcLyOFscy3B8B1$UzUfQf9aAyFeHH0.GfsbIJR3.U.Kg0AATf4E50nsz08";
-              isNormalUser = true;
-              openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22"];
-            };
+      ({pkgs, ...}: let
+        inherit (pkgs) lib;
+      in {
+        nixpkgs = inputs.self.lib.pkgsConfig {};
+
+        users.users = {
+          veselin = {
+            extraGroups = ["wheel"];
+            hashedPassword = "$y$j9T$sIqju9VgjcLyOFscy3B8B1$UzUfQf9aAyFeHH0.GfsbIJR3.U.Kg0AATf4E50nsz08";
+            isNormalUser = true;
+            openssh.authorizedKeys.keys = with lib.own.sshKeys; [master];
           };
+        };
 
-          services.openssh.enable = true;
+        services.openssh.enable = true;
 
-          networking.wireless = {
-            enable = true;
-            userControlled.enable = true;
-          };
-          systemd.services.wpa_supplicant.wantedBy = mkOverride 50 [];
+        networking.wireless = {
+          enable = true;
+          userControlled.enable = true;
+        };
+        systemd.services.wpa_supplicant.wantedBy = lib.mkOverride 50 [];
 
-          system.stateVersion = "24.05";
-        })
+        system.stateVersion = "24.05";
+      })
     ];
   }
