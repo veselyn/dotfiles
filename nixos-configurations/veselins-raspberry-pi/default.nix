@@ -17,6 +17,7 @@ in
       }: let
         inherit (pkgs) lib;
       in {
+        nix.settings.experimental-features = ["nix-command" "flakes"];
         nixpkgs = inputs.self.lib.pkgsConfig {};
 
         users.users = {
