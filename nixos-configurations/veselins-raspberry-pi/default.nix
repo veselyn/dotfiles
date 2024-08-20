@@ -1,7 +1,7 @@
 inputs: let
   mkConfiguration = import ../mk-configuration.nix inputs;
 in
-  mkConfiguration {
+  mkConfiguration rec {
     system = "aarch64-linux";
     hostName = "veselins-raspberry-pi";
     baseModules = [];
@@ -42,6 +42,8 @@ in
           userControlled.enable = true;
         };
         systemd.services.wpa_supplicant.wantedBy = lib.mkOverride 50 [];
+
+        networking.hostName = hostName;
 
         system.stateVersion = "24.05";
       })
