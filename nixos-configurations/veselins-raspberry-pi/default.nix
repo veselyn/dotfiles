@@ -22,7 +22,7 @@ in
         users.users = {
           veselin = {
             extraGroups = ["wheel"];
-            hashedPassword = "$y$j9T$sIqju9VgjcLyOFscy3B8B1$UzUfQf9aAyFeHH0.GfsbIJR3.U.Kg0AATf4E50nsz08";
+            hashedPasswordFile = config.age.secrets.veselinPassword.path;
             isNormalUser = true;
             openssh.authorizedKeys.keys = with lib.own.sshKeys; [master];
           };
