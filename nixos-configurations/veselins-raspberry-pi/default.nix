@@ -8,7 +8,13 @@ in
     extraModules = [
       ./hardware.nix
 
-      ({pkgs, ...}: let
+      ./secrets
+
+      ({
+        pkgs,
+        config,
+        ...
+      }: let
         inherit (pkgs) lib;
       in {
         nixpkgs = inputs.self.lib.pkgsConfig {};
