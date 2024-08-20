@@ -28,7 +28,14 @@ in
           };
         };
 
-        services.openssh.enable = true;
+        services = {
+          openssh.enable = true;
+
+          tailscale = {
+            enable = true;
+            authKeyFile = config.age.secrets.tailscaleAuthKey.path;
+          };
+        };
 
         networking.wireless = {
           enable = true;
