@@ -1,4 +1,5 @@
 {
+  agenix,
   darwin,
   home-manager,
   ...
@@ -20,10 +21,19 @@
     ../modules/home/darwin
     {
       modules.home = {
-        imports = extraHomeModules;
+        imports =
+          [
+            agenix.homeManagerModules.age
+            ../modules/agenix
+            ../modules/secrets
+          ]
+          ++ extraHomeModules;
         inherit user;
       };
     }
+    agenix.darwinModules.age
+    ../modules/agenix
+    ../modules/secrets
     ../modules/common
   ],
   extraModules ? [],

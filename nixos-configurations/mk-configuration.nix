@@ -1,4 +1,5 @@
 {
+  agenix,
   home-manager,
   nixpkgs,
   ...
@@ -20,10 +21,19 @@
     ../modules/home/linux
     {
       modules.home = {
-        imports = extraHomeModules;
+        imports =
+          [
+            agenix.homeManagerModules.age
+            ../modules/agenix
+            ../modules/secrets
+          ]
+          ++ extraHomeModules;
         inherit user;
       };
     }
+    agenix.nixosModules.age
+    ../modules/agenix
+    ../modules/secrets
     ../modules/common
   ],
   extraModules ? [],

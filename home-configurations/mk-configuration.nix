@@ -1,4 +1,5 @@
 {
+  agenix,
   home-manager,
   nixpkgs,
   self,
@@ -11,6 +12,9 @@
   baseModules ? [
     ../modules/home/standalone
     {modules.home.user = user;}
+    agenix.nixosModules.age
+    ../modules/agenix
+    ../modules/secrets
     ../modules/common
   ],
   extraModules ? [],

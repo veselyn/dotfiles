@@ -20,6 +20,8 @@
     treefmt.url = "github:numtide/treefmt-nix/main";
     devenv.url = "github:cachix/devenv/main";
 
+    agenix.url = "github:ryantm/agenix/main";
+
     raspberry-pi.url = "github:nix-community/raspberry-pi-nix/master";
   };
 
