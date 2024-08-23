@@ -1,4 +1,6 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  inherit (pkgs) lib;
+in {
   programs.git = {
     enable = true;
 
@@ -8,7 +10,7 @@
     userEmail = "me@veselyn.com";
 
     signing = {
-      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22";
+      key = lib.own.sshKeys.master;
       signByDefault = true;
     };
 
