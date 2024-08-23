@@ -38,10 +38,20 @@ in
           };
         };
 
-        services.home-assistant = {
-          enable = true;
-          openFirewall = true;
-          config = {};
+        virtualisation.oci-containers = {
+          containers = {
+            home-assistant = {
+              image = "ghcr.io/home-assistant/home-assistant:stable";
+              ports = ["8123:8123"];
+              volumes = [
+                "home-assistant:/config"
+              ];
+              extraOptions = [
+                "--network=host"
+                "--device=/dev/ttyUSB1:/dev/ttyUSB1"
+              ];
+            };
+          };
         };
 
         networking.wireless = {
