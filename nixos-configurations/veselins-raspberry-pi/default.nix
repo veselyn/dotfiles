@@ -38,6 +38,12 @@ in
           };
         };
 
+        services.home-assistant = {
+          enable = true;
+          openFirewall = true;
+          config = {};
+        };
+
         networking.wireless = {
           enable = true;
           userControlled.enable = true;
