@@ -28,9 +28,6 @@
       merge = {
         tool = "vimdiff";
       };
-      pull = {
-        rebase = true;
-      };
     };
 
     ignores = [
