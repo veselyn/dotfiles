@@ -48,7 +48,10 @@ in
               ];
               extraOptions = [
                 "--network=host"
-                "--device=/dev/ttyUSB1:/dev/ttyUSB1"
+
+                (let
+                  device = "/dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_fce2eeb67c9bed11a28105bfa7669f5d-if00-port0";
+                in "--device=${device}:${device}")
               ];
             };
           };
