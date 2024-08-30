@@ -1,0 +1,41 @@
+let mapleader = ' '
+let maplocalleader = '\'
+colorscheme default
+
+set background=dark
+set notermguicolors
+set hidden
+set backup
+set swapfile
+set undofile
+set backupdir=$XDG_DATA_HOME/vim/backup//
+set directory=$XDG_DATA_HOME/vim/swap//
+set undodir=$XDG_DATA_HOME/vim/undo//
+set shellpipe=2>&1\|\ tee
+set shell=$HOME/.vim/shell
+set shortmess-=S
+set shortmess+=FIc
+set updatetime=100
+set signcolumn=yes
+set colorcolumn=80
+set lazyredraw
+set number
+set relativenumber
+set smartindent
+set mouse=a
+set ttymouse=sgr
+set clipboard=unnamed
+set splitbelow
+set splitright
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set nowrapscan
+set noexpandtab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set smarttab
+set showcmd
+set nowrap

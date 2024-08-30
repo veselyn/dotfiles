@@ -7,11 +7,11 @@
 in {
   imports = [
     ../options.nix
-    ./1password.nix
-    ./docker.nix
-    ./packages.nix
-    ./programs
-    ./shellAliases.nix
+    ../1password.nix
+    ../docker.nix
+    ../packages.nix
+    ../programs
+    ../shellAliases.nix
   ];
 
   home = {
