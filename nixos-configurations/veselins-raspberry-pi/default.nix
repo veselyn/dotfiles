@@ -30,6 +30,15 @@ in
           };
         };
 
+        programs = {
+          git.enable = true;
+          neovim.defaultEditor = true;
+          neovim.enable = true;
+          neovim.viAlias = true;
+          neovim.vimAlias = true;
+          tmux.enable = true;
+        };
+
         services = {
           openssh.enable = true;
 
