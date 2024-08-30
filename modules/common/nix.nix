@@ -19,6 +19,10 @@
         flake = inputs.nixpkgs;
       };
 
+      nixpkgs-unstable = {
+        flake = inputs.nixpkgs-unstable;
+      };
+
       nixpkgs-stable = {
         flake = inputs.nixpkgs-stable;
       };
