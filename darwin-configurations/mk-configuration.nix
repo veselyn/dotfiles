@@ -4,6 +4,7 @@
   home-manager,
   ...
 } @ inputs: {
+  nixpkgs ? inputs.nixpkgs,
   system,
   hostName,
   user ? null,
@@ -35,6 +36,7 @@
     ../modules/agenix
     ../modules/secrets
     ../modules/common
+    {modules.common.nixpkgs = nixpkgs;}
   ],
   extraModules ? [],
   extraHomeModules ? [],
@@ -44,5 +46,5 @@ darwin.lib.darwinSystem {
 
   specialArgs = specialArgs // extraArgs;
 
-  modules = baseModules ++ extraModules;
+  modules = [{nixpkgs.source = nixpkgs;}] ++ baseModules ++ extraModules;
 }

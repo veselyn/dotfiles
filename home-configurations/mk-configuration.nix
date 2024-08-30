@@ -1,10 +1,10 @@
 {
   agenix,
   home-manager,
-  nixpkgs,
   self,
   ...
 } @ inputs: {
+  nixpkgs ? inputs.nixpkgs,
   system,
   user ? null,
   specialArgs ? {inherit inputs;},
@@ -16,6 +16,7 @@
     ../modules/agenix
     ../modules/secrets
     ../modules/common
+    {modules.common.nixpkgs = nixpkgs;}
   ],
   extraModules ? [],
 }:

@@ -1,9 +1,9 @@
 {
   agenix,
   home-manager,
-  nixpkgs,
   ...
 } @ inputs: {
+  nixpkgs ? inputs.nixpkgs,
   system,
   hostName,
   user ? null,
@@ -35,6 +35,7 @@
     ../modules/agenix
     ../modules/secrets
     ../modules/common
+    {modules.common.nixpkgs = nixpkgs;}
   ],
   extraModules ? [],
   extraHomeModules ? [],

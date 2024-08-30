@@ -1,8 +1,11 @@
 {
+  config,
   inputs,
   pkgs,
   ...
-}: {
+}: let
+  cfg = config.modules.common;
+in {
   nix = {
     package = pkgs.nix;
     settings.experimental-features = ["nix-command" "flakes"];
@@ -16,7 +19,7 @@
 
     registry = {
       nixpkgs = {
-        flake = inputs.nixpkgs;
+        flake = cfg.nixpkgs;
       };
 
       nixpkgs-unstable = {
