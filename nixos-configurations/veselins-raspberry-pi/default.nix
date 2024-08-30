@@ -2,6 +2,7 @@ inputs: let
   mkConfiguration = import ../mk-configuration.nix inputs;
 in
   mkConfiguration rec {
+    nixpkgs = inputs.nixpkgs-stable;
     system = "aarch64-linux";
     hostName = "veselins-raspberry-pi";
     baseModules = [];
