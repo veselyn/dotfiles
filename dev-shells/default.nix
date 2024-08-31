@@ -20,7 +20,8 @@ in {
           shell.enable = true;
         };
 
-        packages = [
+        packages = with pkgs; [
+          agenix
           formatter
         ];
 
