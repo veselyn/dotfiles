@@ -48,6 +48,18 @@ in
           };
         };
 
+        services.nginx = {
+          enable = true;
+          virtualHosts = {
+            "_" = {
+              default = true;
+              locations."/" = {
+                return = 404;
+              };
+            };
+          };
+        };
+
         virtualisation.oci-containers = {
           containers = {
             home-assistant = {
