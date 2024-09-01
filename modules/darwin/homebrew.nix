@@ -14,9 +14,7 @@ in {
       "kitty"
       "monitorcontrol"
       "skim"
-      "sony-ps-remote-play"
       "tailscale"
-      "utm"
       "vmware-fusion"
     ];
 
