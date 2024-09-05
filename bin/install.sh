@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 function nix() {
 	command nix --extra-experimental-features 'nix-command flakes' "$@"
 }
@@ -18,11 +20,7 @@ function main() {
 	cd universe
 	git remote set-url --push origin git@github.com:veselyn/universe.git
 
-	nix run nix-darwin -- switch --flake .#"$configuration"
+	nix run nix-darwin -- switch --flake ".#${configuration}"
 }
 
-if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
-	set -euo pipefail
-
-	main "$@"
-fi
+main "$@"

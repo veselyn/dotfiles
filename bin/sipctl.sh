@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 function recovery() {
 	[[ ${__OSINSTALL_ENVIRONMENT:-0} == 1 ]]
 }
@@ -7,25 +9,25 @@ function recovery() {
 function main() {
 	local command=$1
 
-	case "$command" in
+	case "${command}" in
 	disable)
 		if recovery; then
-			csrutil enable --without fs --without debug --without nvram
+			csrutil enable --without 'fs' --without 'debug' --without 'nvram'
 		else
-			sudo nvram boot-args=-arm64e_preview_abi
+			sudo nvram boot-args=-'arm64e_preview_abi'
 		fi
 		;;
 	enable)
 		if recovery; then
 			csrutil enable
 		else
-			sudo nvram -d boot-args
+			sudo nvram -d 'boot-args'
 		fi
 		;;
 	status)
 		csrutil status
 		set +e
-		nvram boot-args
+		nvram 'boot-args'
 		set -e
 		;;
 	*)
@@ -35,8 +37,4 @@ function main() {
 	esac
 }
 
-if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
-	set -euo pipefail
-
-	main "$@"
-fi
+main "$@"
