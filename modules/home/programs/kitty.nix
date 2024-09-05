@@ -2,6 +2,8 @@ _: {
   programs.kitty = {
     enable = true;
 
+    shellIntegration.mode = "no-cursor";
+
     settings = {
       confirm_os_window_close = 0;
       dynamic_background_opacity = true;
@@ -9,8 +11,11 @@ _: {
       hide_window_decorations = "titlebar-only";
       macos_option_as_alt = "both";
       mouse_hide_wait = -1;
+      tab_bar_style = "hidden";
     };
 
-    shellIntegration.mode = "no-cursor";
+    keybindings = {
+      "super+f" = "select_tab";
+    };
   };
 }
