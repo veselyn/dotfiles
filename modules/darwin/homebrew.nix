@@ -15,6 +15,7 @@ in {
       "monitorcontrol"
       "skim"
       "tailscale"
+      "utm"
       "vmware-fusion"
     ];
 
