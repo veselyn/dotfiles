@@ -16,6 +16,7 @@ local servers = {
 	"omnisharp",
 	"pyright",
 	"rust_analyzer",
+	"tailwindcss",
 	"texlab",
 	"tsserver",
 	"yamlls",

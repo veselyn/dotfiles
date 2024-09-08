@@ -76,6 +76,7 @@
       omnisharp-roslyn
       pyright
       rust-analyzer
+      tailwindcss-language-server
       texlab
       treefmt
       vscode-langservers-extracted
