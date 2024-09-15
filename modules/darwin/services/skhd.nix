@@ -69,6 +69,10 @@ _: {
 
       alt - t : yabai -m window --toggle float
 
+      :: passthrough
+      shift + alt - p ; passthrough
+      passthrough < shift + alt - p ; default
+
       .blacklist [
         "vmware fusion"
       ]
