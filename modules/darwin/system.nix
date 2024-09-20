@@ -6,6 +6,7 @@ _: {
   system.defaults.NSGlobalDomain.ApplePressAndHoldEnabled = false;
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 15;
   system.defaults.NSGlobalDomain.KeyRepeat = 2;
+  system.defaults.NSGlobalDomain.NSWindowShouldDragOnGesture = true;
   system.defaults.NSGlobalDomain._HIHideMenuBar = true;
   system.defaults.alf.globalstate = 1;
   system.defaults.dock.autohide = true;
