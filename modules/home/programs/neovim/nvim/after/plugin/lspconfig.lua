@@ -18,7 +18,7 @@ local servers = {
 	"rust_analyzer",
 	"tailwindcss",
 	"texlab",
-	"tsserver",
+	"ts_ls",
 	"yamlls",
 }
 
