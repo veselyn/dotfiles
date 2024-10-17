@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts/main";
     treefmt-nix.url = "github:numtide/treefmt-nix/main";
+    devenv.url = "github:cachix/devenv/main";
   };
 
   outputs = inputs @ {flake-parts, ...}:
