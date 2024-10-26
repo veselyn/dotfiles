@@ -12,9 +12,21 @@
     shortcut = "a";
     terminal = "xterm-kitty";
 
-    plugins = with pkgs.tmuxPlugins; [
-      vim-tmux-navigator
-    ];
+    plugins = let
+      open = {
+        plugin = pkgs.tmuxPlugins.open;
+        extraConfig = ''
+          set -g @open o
+          set -g @open-editor C-o
+          set -g @open-S https://www.google.com/search?q=
+        '';
+      };
+    in
+      with pkgs.tmuxPlugins; [
+        open
+        tmux-thumbs
+        vim-tmux-navigator
+      ];
 
     extraConfig = ''
       set -g default-command $SHELL
