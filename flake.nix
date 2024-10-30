@@ -14,6 +14,7 @@
 
       imports = [
         ./dev
+        ./home
         ./hosts
         ./lib
         ./modules
