@@ -330,6 +330,27 @@
         "type": "github"
       }
     },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1730395835,
+        "narHash": "sha256-ADGhFqM8hCabAEx2PADy+vi+iynO9aq221PxDZwrhww=",
+        "owner": "lnl7",
+        "repo": "nix-darwin",
+        "rev": "8dbda1064b0678cf0679e4f4091e91f7497e69a2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lnl7",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
     "nix-github-actions": {
       "inputs": {
         "nixpkgs": [
@@ -681,6 +702,7 @@
       "inputs": {
         "devenv": "devenv",
         "flake-parts": "flake-parts_2",
+        "nix-darwin": "nix-darwin",
         "nixpkgs": "nixpkgs_4",
         "treefmt-nix": "treefmt-nix"
       }
