@@ -5,6 +5,13 @@
 }: let
   cfg = config.self.modules.darwin;
 in {
+  imports = [
+    ./homebrew.nix
+    ./programs
+    ./services
+    ./system.nix
+  ];
+
   options = {
     self.modules.darwin = {
       enable = lib.mkEnableOption "darwin";
