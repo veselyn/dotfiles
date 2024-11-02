@@ -72,10 +72,6 @@ _: {
       :: passthrough
       shift + alt - p ; passthrough
       passthrough < shift + alt - p ; default
-
-      .blacklist [
-        "vmware fusion"
-      ]
     '';
   };
 }
