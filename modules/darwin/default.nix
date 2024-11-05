@@ -15,10 +15,19 @@ in {
   options = {
     self.modules.darwin = {
       enable = lib.mkEnableOption "darwin";
+
+      username = lib.mkOption {
+        type = lib.types.str;
+      };
     };
   };
 
   config = lib.mkIf cfg.enable {
+    users.users.${cfg.username} = {
+      name = cfg.username;
+      home = "/Users/${cfg.username}";
+    };
+
     services.nix-daemon.enable = true;
     system.stateVersion = 5;
   };
