@@ -6,6 +6,15 @@
 }: let
   cfg = config.self.modules.home;
 in {
+  imports = [
+    ./1password.nix
+    ./docker.nix
+    ./packages.nix
+    ./programs
+    ./shellAliases.nix
+    ./xdg.nix
+  ];
+
   options = {
     self.modules.home = {
       enable = lib.mkEnableOption "home";
