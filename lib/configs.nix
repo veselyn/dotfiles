@@ -29,6 +29,13 @@
               inherit username;
             };
           }
+
+          {
+            imports = [self.modules.generic.default];
+            self.modules.generic = {
+              enable = true;
+            };
+          }
         ];
       };
 
@@ -52,6 +59,13 @@
             self.modules.home = {
               enable = true;
               inherit username;
+            };
+          }
+
+          {
+            imports = [self.modules.generic.default];
+            self.modules.generic = {
+              enable = true;
             };
           }
         ];
