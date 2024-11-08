@@ -1,6 +1,7 @@
 toplevel @ {
   inputs,
   self,
+  withSystem,
   ...
 }: {
   flake.lib = {
@@ -11,7 +12,10 @@ toplevel @ {
       inputs.nix-darwin.lib.darwinSystem {
         inherit system;
 
-        specialArgs = {inherit toplevel;};
+        specialArgs = {
+          inherit toplevel;
+          perSystem = withSystem system (ctx: ctx);
+        };
 
         modules = [
           {
@@ -48,7 +52,10 @@ toplevel @ {
       inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = {inherit toplevel;};
+        extraSpecialArgs = {
+          inherit toplevel;
+          perSystem = withSystem system (ctx: ctx);
+        };
 
         modules = [
           {
