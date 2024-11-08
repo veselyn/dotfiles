@@ -1,14 +1,14 @@
 {
   config,
-  inputs,
   lib,
+  toplevel,
   ...
 }: let
   cfg = config.self.modules.darwin.home;
 in {
   imports = [
-    inputs.home-manager.darwinModules.home-manager
-    inputs.self.modules.generic.home
+    toplevel.inputs.home-manager.darwinModules.home-manager
+    toplevel.self.modules.generic.home
   ];
 
   options = {
@@ -19,7 +19,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     home-manager.users.${cfg.username} = {
-      imports = [inputs.self.modules.home.darwin];
+      imports = [toplevel.self.modules.home.darwin];
       self.modules.home = cfg;
     };
   };

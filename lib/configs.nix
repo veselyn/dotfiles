@@ -1,4 +1,4 @@
-{
+toplevel @ {
   inputs,
   self,
   ...
@@ -11,7 +11,7 @@
       inputs.nix-darwin.lib.darwinSystem {
         inherit system;
 
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit toplevel;};
 
         modules = [
           {
@@ -48,7 +48,7 @@
       inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = {inherit toplevel;};
 
         modules = [
           {
