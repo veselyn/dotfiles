@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  perSystem,
   pkgs,
   ...
 }: let
@@ -44,10 +45,19 @@
       wget
       ;
   };
+
+  self = builtins.attrValues {
+    inherit
+      (perSystem.self'.packages)
+      gitpick
+      yabaictl
+      ;
+  };
 in {
   config = lib.mkIf cfg.enable {
     home.packages =
       coreutils
-      ++ others;
+      ++ others
+      ++ self;
   };
 }
