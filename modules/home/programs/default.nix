@@ -18,6 +18,7 @@ in {
     programs = {
       bat.enable = true;
       btop.enable = true;
+      command-not-found.enable = true;
       direnv.enable = true;
       direnv.nix-direnv.enable = true;
       fzf.enable = true;
