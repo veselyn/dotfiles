@@ -25,6 +25,7 @@
         ./hosts
         ./lib
         ./modules
+        ./pkgs
       ];
     };
 }
