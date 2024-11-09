@@ -46,6 +46,25 @@ toplevel @ {
         ];
       };
 
+    mkNixOS = {
+      system,
+      modules ? [],
+    }:
+      inputs.nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          {
+            imports = [self.modules.nixos.default];
+            self.modules.nixos = {
+              enable = true;
+            };
+          }
+
+          {imports = modules;}
+        ];
+      };
+
     mkHome = {
       system,
       username,
