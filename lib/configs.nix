@@ -76,6 +76,13 @@ toplevel @ {
             };
           }
 
+          {
+            imports = [self.modules.generic.default];
+            self.modules.generic = {
+              enable = true;
+            };
+          }
+
           {imports = modules;}
         ];
       };
