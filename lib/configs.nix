@@ -48,6 +48,7 @@ toplevel @ {
 
     mkNixOS = {
       system,
+      username,
       modules ? [],
     }:
       inputs.nixpkgs.lib.nixosSystem {
@@ -58,6 +59,7 @@ toplevel @ {
             imports = [self.modules.nixos.default];
             self.modules.nixos = {
               enable = true;
+              inherit username;
             };
           }
 
