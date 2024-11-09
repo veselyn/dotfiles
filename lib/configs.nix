@@ -54,10 +54,23 @@ toplevel @ {
       inputs.nixpkgs.lib.nixosSystem {
         inherit system;
 
+        specialArgs = {
+          inherit toplevel;
+          perSystem = withSystem system (ctx: ctx);
+        };
+
         modules = [
           {
             imports = [self.modules.nixos.default];
             self.modules.nixos = {
+              enable = true;
+              inherit username;
+            };
+          }
+
+          {
+            imports = [self.modules.nixos.home];
+            self.modules.nixos.home = {
               enable = true;
               inherit username;
             };
