@@ -7,6 +7,7 @@
   cfg = config.self.modules.nixos;
 in {
   imports = [
+    ./services
   ];
 
   options = {
