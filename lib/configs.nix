@@ -8,6 +8,7 @@ toplevel @ {
     mkDarwin = {
       system,
       username,
+      modules ? [],
     }:
       inputs.nix-darwin.lib.darwinSystem {
         inherit system;
@@ -40,12 +41,15 @@ toplevel @ {
               enable = true;
             };
           }
+
+          {imports = modules;}
         ];
       };
 
     mkHome = {
       system,
       username,
+      modules ? [],
     }: let
       pkgs = import inputs.nixpkgs {inherit system;};
     in
@@ -75,6 +79,8 @@ toplevel @ {
               enable = true;
             };
           }
+
+          {imports = modules;}
         ];
       };
   };
