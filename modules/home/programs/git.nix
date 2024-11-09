@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  toplevel,
   ...
 }: let
   cfg = config.self.modules.home;
@@ -16,7 +17,7 @@ in {
       userEmail = "me@veselyn.com";
 
       signing = {
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22";
+        key = toplevel.self.keys.ssh.master;
         signByDefault = true;
       };
 

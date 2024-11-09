@@ -23,6 +23,7 @@
         ./dev
         ./home
         ./hosts
+        ./keys
         ./lib
         ./modules
         ./pkgs
