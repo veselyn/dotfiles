@@ -25,6 +25,7 @@ in {
       extraGroups = ["wheel"];
       hashedPassword = "$y$j9T$PeH7qw8mng473jD.vm154/$QAA7tdfQUrw1BdBrXjOX/hegKBsn0IW6FJRK4I43qOA";
       isNormalUser = true;
+      openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22"];
       shell = pkgs.zsh;
     };
 
