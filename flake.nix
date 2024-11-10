@@ -26,6 +26,7 @@
         ./keys
         ./lib
         ./modules
+        ./overlays
         ./pkgs
       ];
     };
