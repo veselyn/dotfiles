@@ -9,6 +9,7 @@ toplevel @ {
       system,
       username,
       modules ? [],
+      nixpkgs ? inputs.nixpkgs,
     }:
       inputs.nix-darwin.lib.darwinSystem {
         inherit system;
@@ -23,7 +24,7 @@ toplevel @ {
             imports = [self.modules.darwin.default];
             self.modules.darwin = {
               enable = true;
-              inherit username;
+              inherit username nixpkgs;
             };
           }
 
@@ -50,8 +51,9 @@ toplevel @ {
       system,
       username,
       modules ? [],
+      nixpkgs ? inputs.nixpkgs,
     }:
-      inputs.nixpkgs.lib.nixosSystem {
+      nixpkgs.lib.nixosSystem {
         inherit system;
 
         specialArgs = {
@@ -91,8 +93,9 @@ toplevel @ {
       system,
       username,
       modules ? [],
+      nixpkgs ? inputs.nixpkgs,
     }: let
-      pkgs = import inputs.nixpkgs {inherit system;};
+      pkgs = import nixpkgs {inherit system;};
     in
       inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
