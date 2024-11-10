@@ -1,19 +1,22 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }: let
-  cfg = config.programs.nnn;
+  cfg = config.self.modules.home;
 in {
-  programs.nnn = {
-    enable = true;
+  config = lib.mkIf cfg.enable {
+    programs.nnn = {
+      enable = true;
 
-    package = pkgs.nnn.overrideAttrs (previousAttrs: {
-      patches = previousAttrs.patches ++ [./quitcd.patch];
-    });
+      package = pkgs.nnn.overrideAttrs (previousAttrs: {
+        patches = previousAttrs.patches ++ [./quitcd.patch];
+      });
+    };
+
+    programs.zsh.initExtra = ''
+      source ${config.programs.nnn.package}/share/quitcd/quitcd.bash_sh_zsh
+    '';
   };
-
-  programs.zsh.initExtra = ''
-    source ${cfg.package}/share/quitcd/quitcd.bash_sh_zsh
-  '';
 }

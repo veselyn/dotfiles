@@ -1,5 +1,25 @@
-{pkgs, ...}: let
-  gcoreutils = with pkgs;
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  cfg = config.self.modules.home;
+
+  gcoreutils = let
+    inherit
+      (pkgs)
+      coreutils-full
+      findutils
+      gnugrep
+      gnumake
+      gnused
+      gnutar
+      inetutils
+      runCommand
+      time
+      ;
+  in
     runCommand "gcoreutils" {} ''
       mkdir -p "$out/bin"
 
@@ -22,5 +42,7 @@
       prefix "${time}"
     '';
 in {
-  home.packages = [gcoreutils];
+  config = lib.mkIf cfg.enable {
+    home.packages = [gcoreutils];
+  };
 }

@@ -1,45 +1,53 @@
-{pkgs, ...}: let
-  inherit (pkgs) lib;
+{
+  config,
+  lib,
+  pkgs,
+  toplevel,
+  ...
+}: let
+  cfg = config.self.modules.home;
 in {
-  programs.git = {
-    enable = true;
+  config = lib.mkIf cfg.enable {
+    programs.git = {
+      enable = true;
 
-    lfs.enable = true;
+      lfs.enable = true;
 
-    userName = "Veselin Ivanov";
-    userEmail = "me@veselyn.com";
+      userName = "Veselin Ivanov";
+      userEmail = "me@veselyn.com";
 
-    signing = {
-      key = lib.own.sshKeys.master;
-      signByDefault = true;
-    };
+      signing = {
+        key = toplevel.self.keys.ssh.master;
+        signByDefault = true;
+      };
 
-    extraConfig = {
-      gpg = {
-        format = "ssh";
-        ssh = {
-          program =
-            if pkgs.stdenv.isDarwin
-            then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
-            else "${pkgs._1password-gui}/bin/op-ssh-sign";
+      extraConfig = {
+        gpg = {
+          format = "ssh";
+          ssh = {
+            program =
+              if pkgs.stdenv.isDarwin
+              then "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+              else "${pkgs._1password-gui}/bin/op-ssh-sign";
+          };
+        };
+        init = {
+          defaultBranch = "master";
+        };
+        merge = {
+          tool = "vimdiff";
         };
       };
-      init = {
-        defaultBranch = "master";
-      };
-      merge = {
-        tool = "vimdiff";
-      };
-    };
 
-    ignores = [
-      "Session.vim"
-    ];
+      ignores = [
+        "Session.vim"
+      ];
 
-    delta = {
-      enable = true;
-      options = {
-        diff-so-fancy = true;
+      delta = {
+        enable = true;
+        options = {
+          diff-so-fancy = true;
+        };
       };
     };
   };

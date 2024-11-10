@@ -1,17 +1,8 @@
-{config, ...}: let
-  cfg = config.modules.home;
-in {
+_: {
   imports = [
-    ../module.nix
+    ../.
+    ./i3.nix
+    ./programs
+    ./services
   ];
-
-  home-manager = {
-    users.${cfg.user} = {
-      imports = [
-        ./i3.nix
-        ./programs
-        ./services
-      ];
-    };
-  };
 }

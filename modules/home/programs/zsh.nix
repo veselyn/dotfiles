@@ -1,32 +1,37 @@
 {
+  config,
   lib,
   pkgs,
   ...
-}: {
-  programs.zsh = {
-    enable = true;
-
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-
-    oh-my-zsh = {
+}: let
+  cfg = config.self.modules.home;
+in {
+  config = lib.mkIf cfg.enable {
+    programs.zsh = {
       enable = true;
 
-      theme = "robbyrussell";
+      autosuggestion.enable = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
 
-      plugins =
-        [
-          "git"
-          "jump"
-          "web-search"
-        ]
-        ++ lib.optional pkgs.stdenv.isDarwin "macos";
+      oh-my-zsh = {
+        enable = true;
+
+        theme = "robbyrussell";
+
+        plugins =
+          [
+            "git"
+            "jump"
+            "web-search"
+          ]
+          ++ lib.optional pkgs.stdenv.isDarwin "macos";
+      };
+
+      initExtra = ''
+        bindkey ^N down-line-or-beginning-search
+        bindkey ^P up-line-or-beginning-search
+      '';
     };
-
-    initExtra = ''
-      bindkey ^N down-line-or-beginning-search
-      bindkey ^P up-line-or-beginning-search
-    '';
   };
 }

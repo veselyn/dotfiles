@@ -1,15 +1,6 @@
-{config, ...}: let
-  cfg = config.modules.home;
-in {
+_: {
   imports = [
-    ../module.nix
+    ../.
+    ./gcoreutils.nix
   ];
-
-  home-manager = {
-    users.${cfg.user} = {
-      imports = [
-        ./gcoreutils.nix
-      ];
-    };
-  };
 }

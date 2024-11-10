@@ -1,5 +1,8 @@
-{writeShellApplication}:
-writeShellApplication {
-  name = "gitpick";
-  text = builtins.readFile ./gitpick.sh;
+_: {
+  perSystem = {pkgs, ...}: {
+    packages.gitpick = pkgs.writeShellApplication {
+      name = "gitpick";
+      text = builtins.readFile ./gitpick.sh;
+    };
+  };
 }

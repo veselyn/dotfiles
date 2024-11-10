@@ -1,7 +1,12 @@
-inputs: let
-  callLib = file: import file inputs;
-in {
-  mkPkgs = callLib ./mk-pkgs.nix;
-  pkgsConfig = callLib ./pkgs-config.nix;
-  sshKeys = callLib ./ssh-keys.nix;
+{lib, ...}: {
+  imports = [
+    ./configs.nix
+    ./pkgs.nix
+  ];
+
+  options = {
+    flake.lib = lib.mkOption {
+      type = lib.types.attrs;
+    };
+  };
 }

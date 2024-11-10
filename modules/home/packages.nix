@@ -1,23 +1,31 @@
-{pkgs, ...}:
-with pkgs; {
-  home.packages = lib.flatten (builtins.attrValues {
-    coreutils = [
+{
+  config,
+  lib,
+  perSystem,
+  pkgs,
+  ...
+}: let
+  cfg = config.self.modules.home;
+
+  coreutils = builtins.attrValues {
+    inherit
+      (pkgs)
       coreutils-full
       findutils
-      findutils.locate
       gnugrep
       gnumake
       gnused
       gnutar
       inetutils
       time
-    ];
-    scripts = with own; [
-      gitpick
-      yabaictl
-    ];
-    others = [
-      _1password
+      ;
+    inherit (pkgs.findutils) locate;
+  };
+
+  others = builtins.attrValues {
+    inherit
+      (pkgs)
+      _1password-cli
       cachix
       devenv
       fd
@@ -35,6 +43,21 @@ with pkgs; {
       treefmt
       watch
       wget
-    ];
-  });
+      ;
+  };
+
+  self = builtins.attrValues {
+    inherit
+      (perSystem.self'.packages)
+      gitpick
+      yabaictl
+      ;
+  };
+in {
+  config = lib.mkIf cfg.enable {
+    home.packages =
+      coreutils
+      ++ others
+      ++ self;
+  };
 }

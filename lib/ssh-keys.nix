@@ -1,4 +1,0 @@
-_: {
-  master = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJBKvLCEwUG+hT5G0PFIHLPJK/rM8EiPngEkAkvLmo22";
-  universe = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH9iXyeezyD/q29m2NziaRRP7e/9PYv2hegB4zNJb5rE";
-}

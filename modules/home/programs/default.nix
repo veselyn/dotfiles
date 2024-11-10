@@ -1,25 +1,36 @@
-_: {
+{
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.self.modules.home;
+in {
   imports = [
-    ./bat.nix
-    ./btop.nix
-    ./direnv.nix
-    ./fzf.nix
-    ./gh.nix
     ./git.nix
-    ./gpg.nix
-    ./home-manager.nix
-    ./htop.nix
-    ./jq.nix
-    ./k9s.nix
     ./kitty.nix
-    ./lazygit.nix
     ./neovim
     ./nnn
-    ./ssh.nix
-    ./tealdeer.nix
-    ./texlive.nix
     ./tmux.nix
-    ./zoxide.nix
     ./zsh.nix
   ];
+
+  config = lib.mkIf cfg.enable {
+    programs = {
+      bat.enable = true;
+      btop.enable = true;
+      command-not-found.enable = true;
+      direnv.enable = true;
+      direnv.nix-direnv.enable = true;
+      fzf.enable = true;
+      gh.enable = true;
+      gpg.enable = true;
+      htop.enable = true;
+      jq.enable = true;
+      k9s.enable = true;
+      lazygit.enable = true;
+      ssh.enable = true;
+      tealdeer.enable = true;
+      zoxide.enable = true;
+    };
+  };
 }
