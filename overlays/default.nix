@@ -1,15 +1,13 @@
-{inputs, ...}: let
-  mkPkgs = nixpkgs: system:
-    import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-in {
+{
+  inputs,
+  self,
+  ...
+}: {
   flake.overlays = {
     default = final: _prev: {
-      unstable = mkPkgs inputs.nixpkgs final.system;
-      stable = mkPkgs inputs.nixpkgs-stable final.system;
-      master = mkPkgs inputs.nixpkgs-master final.system;
+      unstable = self.lib.mkPkgs inputs.nixpkgs {inherit (final) system;};
+      stable = self.lib.mkPkgs inputs.nixpkgs-stable {inherit (final) system;};
+      master = self.lib.mkPkgs inputs.nixpkgs-master {inherit (final) system;};
     };
   };
 }
