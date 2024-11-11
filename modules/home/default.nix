@@ -26,13 +26,15 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    home.username = cfg.username;
-    home.homeDirectory = let
-      directory =
-        if pkgs.stdenv.isDarwin
-        then "/Users"
-        else "/home";
-    in "${directory}/${cfg.username}";
+    home = {
+      inherit (cfg) username;
+      homeDirectory = let
+        directory =
+          if pkgs.stdenv.isDarwin
+          then "/Users"
+          else "/home";
+      in "${directory}/${cfg.username}";
+    };
 
     programs.home-manager.enable = true;
     home.stateVersion = "24.11";
