@@ -20,20 +20,11 @@
             self'.formatter
           ];
 
-          pre-commit.hooks.deadnix.enable = true;
-
-          pre-commit.hooks.statix = let
-            config = (pkgs.formats.toml {}).generate "statix.toml" {
-              disabled = ["repeated_keys"];
-            };
-          in {
-            enable = true;
-            args = ["--config" "${config}"];
-          };
-
-          pre-commit.hooks.treefmt = {
-            enable = true;
-            package = self'.formatter;
+          pre-commit.hooks = {
+            deadnix.enable = true;
+            statix.enable = true;
+            treefmt.enable = true;
+            treefmt.package = self'.formatter;
           };
         }
       ];
