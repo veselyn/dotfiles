@@ -1,5 +1,5 @@
 {
-  description = "universe";
+  description = "dotfiles";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
