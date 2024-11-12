@@ -23,6 +23,9 @@ function main() {
 			;;
 		esac
 		;;
+	load-sa)
+		sudo yabai --load-sa
+		;;
 	esac
 }
 
