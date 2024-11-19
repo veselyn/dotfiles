@@ -1,5 +1,5 @@
 function start() {
-	launchctl bootstrap "gui/${UID}" "$HOME/Library/LaunchAgents/org.nixos.$1.plist"
+	launchctl bootstrap "gui/${UID}" "${HOME}/Library/LaunchAgents/org.nixos.$1.plist"
 }
 
 function stop() {
