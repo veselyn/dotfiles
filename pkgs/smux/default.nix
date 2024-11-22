@@ -7,6 +7,7 @@ _: {
           (pkgs)
           argc
           fzf
+          jq
           tmux
           ;
       };
