@@ -1,32 +1,57 @@
+# @cmd Start services
+# @arg service[=all|yabai|skhd]
 function start() {
-	launchctl bootstrap "gui/${UID}" "${HOME}/Library/LaunchAgents/org.nixos.$1.plist"
+	local service=${argc_service?}
+
+	local -a services
+	if [[ ${service} == 'all' ]]; then
+		services+=('yabai' 'skhd')
+	else
+		services+=("${service}")
+	fi
+
+	for service in "${services[@]}"; do
+		launchctl bootstrap "gui/${UID}" "${HOME}/Library/LaunchAgents/org.nixos.${service}.plist"
+	done
 }
 
+# @cmd Stop services
+# @arg service[=all|yabai|skhd]
 function stop() {
-	launchctl bootout "gui/${UID}/org.nixos.$1"
+	local service=${argc_service?}
+
+	local -a services
+	if [[ ${service} == 'all' ]]; then
+		services+=('yabai' 'skhd')
+	else
+		services+=("${service}")
+	fi
+
+	for service in "${services[@]}"; do
+		launchctl bootout "gui/${UID}/org.nixos.${service}"
+	done
 }
 
+# @cmd Restart services
+# @arg service[=all|yabai|skhd]
 function restart() {
-	launchctl kickstart -k "gui/${UID}/org.nixos.$1"
+	local service=${argc_service?}
+
+	local -a services
+	if [[ ${service} == 'all' ]]; then
+		services+=('yabai' 'skhd')
+	else
+		services+=("${service}")
+	fi
+
+	for service in "${services[@]}"; do
+		launchctl kickstart -k "gui/${UID}/org.nixos.${service}"
+	done
 }
 
-function main() {
-	case $1 in
-	start | stop | restart)
-		case ${2-} in
-		yabai | skhd)
-			"$1" "$2"
-			;;
-		*)
-			"$1" yabai
-			"$1" skhd
-			;;
-		esac
-		;;
-	load-sa)
-		sudo yabai --load-sa
-		;;
-	esac
+# @cmd Load scripting additions
+function load-sa() {
+	sudo yabai --load-sa
 }
 
-main "$@"
+eval "$(argc --argc-eval "$0" "$@")"
