@@ -50,6 +50,7 @@
     inherit
       (perSystem.self'.packages)
       gitpick
+      smux
       yabaictl
       ;
   };
