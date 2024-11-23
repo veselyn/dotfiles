@@ -1,8 +1,15 @@
-rev=$1
-path=$2
+# @arg rev!
+# @arg path!
+function main() {
+	local rev=${argc_rev?}
+	local path=${argc_path?}
 
-files=$(git ls-tree -r --name-only "${rev}" "${path}")
+	local files
+	files=$(git ls-tree -r --name-only "${rev}" "${path}")
 
-for file in ${files}; do
-	git show "${rev}:${file}" >"${file}"
-done
+	for file in ${files}; do
+		git show "${rev}:${file}" >"${file}"
+	done
+}
+
+eval "$(argc --argc-eval "$0" "$@")"
