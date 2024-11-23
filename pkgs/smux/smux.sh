@@ -34,18 +34,20 @@ function list() {
 }
 
 # @cmd Add a directory to tracked list
-# @arg path!
+# @arg path
 function add() {
+	local path=${argc_path-${PWD}}
+
 	local abs_path
-	abs_path=$(realpath "${argc_path}")
+	abs_path=$(realpath "${path}")
 
 	if [[ ! -d ${abs_path} ]]; then
-		echo >&2 "error: '${argc_path}' is not a directory"
+		echo >&2 "error: '${path}' is not a directory"
 		return 1
 	fi
 
 	if [[ $(jq --arg path "${abs_path}" 'has($path)' "${db}") == true ]]; then
-		echo >&2 "error: '${argc_path}' is already tracked"
+		echo >&2 "error: '${path}' is already tracked"
 		return 1
 	fi
 
@@ -55,13 +57,15 @@ function add() {
 }
 
 # @cmd Remove a directory from tracked list
-# @arg path!
+# @arg path
 function rm() {
+	local path=${argc_path-${PWD}}
+
 	local abs_path
-	abs_path=$(realpath "${argc_path}")
+	abs_path=$(realpath "${path}")
 
 	if [[ $(jq --arg path "${abs_path}" 'has($path)' "${db}") == false ]]; then
-		echo >&2 "error: '${argc_path}' is not tracked"
+		echo >&2 "error: '${path}' is not tracked"
 		return 1
 	fi
 
