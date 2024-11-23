@@ -6,10 +6,12 @@ _: {
         inherit
           (pkgs)
           argc
+          fd
           fzf
           jq
           tmux
           ;
+        inherit (pkgs.unixtools) column;
       };
       text = builtins.readFile ./smux.sh;
     };
