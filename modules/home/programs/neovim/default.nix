@@ -78,6 +78,7 @@ in {
       extraPackages = builtins.attrValues {
         inherit
           (pkgs)
+          elixir-ls
           emmet-language-server
           gopls
           jdt-language-server
