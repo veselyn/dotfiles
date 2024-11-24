@@ -1,4 +1,5 @@
 # @cmd Start services
+# @meta require-tools launchctl
 # @arg service[=all|yabai|skhd]
 function start() {
 	local service=${argc_service?}
@@ -16,6 +17,7 @@ function start() {
 }
 
 # @cmd Stop services
+# @meta require-tools launchctl
 # @arg service[=all|yabai|skhd]
 function stop() {
 	local service=${argc_service?}
@@ -33,6 +35,7 @@ function stop() {
 }
 
 # @cmd Restart services
+# @meta require-tools launchctl
 # @arg service[=all|yabai|skhd]
 function restart() {
 	local service=${argc_service?}
@@ -50,6 +53,7 @@ function restart() {
 }
 
 # @cmd Load scripting additions
+# @meta require-tools yabai
 function load-sa() {
 	sudo yabai --load-sa
 }

@@ -9,6 +9,7 @@ function _argc_before() {
 
 # @cmd Switch to a session
 # @meta default-subcommand
+# @meta require-tools fzf,tmux
 # @arg path
 function switch() {
 	local path
@@ -28,6 +29,7 @@ function switch() {
 }
 
 # @cmd List tracked directories
+# @meta require-tools column,fd,jq
 # @flag -r --recursive
 # @alias ls
 function list() {
@@ -63,6 +65,7 @@ function list() {
 }
 
 # @cmd Add a directory to tracked list
+# @meta require-tools jq
 # @flag -r --recursive
 # @arg path
 function add() {
@@ -101,6 +104,7 @@ function add() {
 
 # @cmd Update a directory in tracked list
 # @alias up
+# @meta require-tools jq
 # @option -r --recursive[true|false]
 # @arg path
 function update() {
@@ -137,6 +141,7 @@ function update() {
 }
 
 # @cmd Remove a directory from tracked list
+# @meta require-tools jq
 # @arg path
 function rm() {
 	local path=${argc_path-${PWD}}
