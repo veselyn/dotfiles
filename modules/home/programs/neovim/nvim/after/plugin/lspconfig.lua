@@ -5,6 +5,7 @@ local servers = {
 	"bashls",
 	"clangd",
 	"cssls",
+	"elixirls",
 	"emmet_language_server",
 	"eslint",
 	"gopls",
