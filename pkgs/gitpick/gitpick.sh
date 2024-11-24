@@ -1,3 +1,4 @@
+# @meta require-tools git
 # @flag -r --recursive
 # @arg rev!
 # @arg path!
