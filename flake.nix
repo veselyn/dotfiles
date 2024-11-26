@@ -30,6 +30,7 @@
         ./modules
         ./overlays
         ./pkgs
+        ./templates
       ];
     };
 }
