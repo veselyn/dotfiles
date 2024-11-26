@@ -17,6 +17,7 @@ in {
     nix = {
       package = pkgs.nix;
       registry = {
+        self.flake = toplevel.self;
         nixpkgs-unstable.flake = toplevel.inputs.nixpkgs;
         nixpkgs-stable.flake = toplevel.inputs.nixpkgs-stable;
         nixpkgs-master.flake = toplevel.inputs.nixpkgs-master;
