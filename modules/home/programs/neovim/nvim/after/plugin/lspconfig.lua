@@ -6,7 +6,6 @@ local servers = {
 	"clangd",
 	"cssls",
 	"elixirls",
-	"emmet_language_server",
 	"eslint",
 	"gopls",
 	"html",

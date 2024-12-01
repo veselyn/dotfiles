@@ -79,7 +79,6 @@ in {
         inherit
           (pkgs)
           elixir-ls
-          emmet-language-server
           gopls
           lua-language-server
           nil
