@@ -81,7 +81,6 @@ in {
           elixir-ls
           emmet-language-server
           gopls
-          jdt-language-server
           lua-language-server
           nil
           omnisharp-roslyn
