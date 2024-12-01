@@ -83,7 +83,6 @@ in {
           gopls
           lua-language-server
           nil
-          omnisharp-roslyn
           pyright
           rust-analyzer
           tailwindcss-language-server

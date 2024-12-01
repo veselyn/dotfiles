@@ -13,7 +13,6 @@ local servers = {
 	"jsonls",
 	"lua_ls",
 	"nil_ls",
-	"omnisharp",
 	"pyright",
 	"rust_analyzer",
 	"tailwindcss",
