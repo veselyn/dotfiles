@@ -21,6 +21,6 @@ jobs:
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@main
         with:
-          commit-msg: "feat(flake): update lock file"
-          pr-title: "feat(flake): update lock file"
+          commit-msg: "flake: update lock file"
+          pr-title: "flake: update lock file"
           base: develop
