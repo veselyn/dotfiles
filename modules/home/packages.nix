@@ -37,6 +37,7 @@
       nix-init
       parallel
       ripgrep
+      rlwrap
       sd
       silver-searcher
       tree
