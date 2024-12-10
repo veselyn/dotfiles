@@ -7,6 +7,10 @@
 }: let
   cfg = config.self.modules.generic;
 in {
+  imports = [
+    ./nix.nix
+  ];
+
   options = {
     self.modules.generic = {
       enable = lib.mkEnableOption "generic";
