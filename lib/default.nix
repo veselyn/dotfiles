@@ -1,6 +1,7 @@
 {lib, ...}: {
   imports = [
     ./configs.nix
+    ./per-system.nix
     ./pkgs.nix
   ];
 
