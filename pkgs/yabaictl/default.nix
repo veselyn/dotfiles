@@ -1,6 +1,6 @@
-_: {
-  perSystem = {pkgs, ...}: {
-    packages.yabaictl = pkgs.writeShellApplication {
+{self, ...}: {
+  flake.packages = self.lib.mkPerDarwinSystem ({pkgs, ...}: {
+    yabaictl = pkgs.writeShellApplication {
       name = "yabaictl";
       runtimeInputs = builtins.attrValues {
         inherit
@@ -11,5 +11,5 @@ _: {
       };
       text = builtins.readFile ./yabaictl.sh;
     };
-  };
+  });
 }

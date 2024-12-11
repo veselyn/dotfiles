@@ -47,14 +47,23 @@
       ;
   };
 
-  self = builtins.attrValues {
-    inherit
-      (perSystem.self'.packages)
-      gitpick
-      smux
-      yabaictl
-      ;
-  };
+  self = builtins.attrValues ({
+      inherit
+        (perSystem.self'.packages)
+        gitpick
+        smux
+        ;
+    }
+    // (
+      if pkgs.stdenv.isDarwin
+      then {
+        inherit
+          (perSystem.self'.packages)
+          yabaictl
+          ;
+      }
+      else {}
+    ));
 in {
   config = lib.mkIf cfg.enable {
     home.packages =
