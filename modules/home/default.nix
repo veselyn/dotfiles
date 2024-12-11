@@ -11,7 +11,7 @@ in {
     ./docker.nix
     ./packages.nix
     ./programs
-    ./shellAliases.nix
+    ./shell-aliases.nix
     ./xdg.nix
   ];
 
