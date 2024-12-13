@@ -12,7 +12,7 @@ in {
 
         NSGlobalDomain = {
           "com.apple.keyboard.fnState" = true;
-          AppleInterfaceStyle = "Dark";
+          AppleInterfaceStyleSwitchesAutomatically = true;
           AppleKeyboardUIMode = 3;
           ApplePressAndHoldEnabled = false;
           InitialKeyRepeat = 15;
