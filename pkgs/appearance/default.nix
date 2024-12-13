@@ -6,6 +6,7 @@
         inherit
           (pkgs)
           argc
+          kitty
           ;
       };
       text = builtins.readFile ./appearance.sh;

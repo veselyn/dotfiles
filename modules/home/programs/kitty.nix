@@ -12,10 +12,12 @@ in {
       shellIntegration.mode = "no-cursor";
 
       settings = {
+        allow_remote_control = "socket-only";
         confirm_os_window_close = 0;
         dynamic_background_opacity = true;
         enable_audio_bell = false;
         hide_window_decorations = "titlebar-only";
+        listen_on = "unix:kitty-$USER";
         macos_option_as_alt = "both";
         mouse_hide_wait = -1;
         tab_bar_style = "hidden";
@@ -24,6 +26,10 @@ in {
       keybindings = {
         "super+f" = "select_tab";
       };
+
+      extraConfig = ''
+        include theme.conf
+      '';
     };
   };
 }
