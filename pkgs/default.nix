@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./appearance
     ./gitpick
     ./smux
     ./yabaictl
