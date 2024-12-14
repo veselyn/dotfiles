@@ -7,6 +7,7 @@
           (pkgs)
           argc
           kitty
+          neovim
           ;
       };
       text = builtins.readFile ./appearance.sh;
