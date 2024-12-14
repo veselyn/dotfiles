@@ -6,6 +6,7 @@
         inherit
           (pkgs)
           argc
+          coreutils
           kitty
           neovim
           ;

@@ -6,6 +6,7 @@ _: {
         inherit
           (pkgs)
           argc
+          coreutils
           fd
           fzf
           jq
