@@ -21,6 +21,10 @@ in {
         window_shadow = "off";
         insert_feedback_color = "0xffffffff";
       };
+      extraConfig = ''
+        yabai -m signal --add event=dock_did_restart action='sudo yabai --load-sa'
+        sudo yabai --load-sa
+      '';
     };
   };
 }
