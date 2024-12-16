@@ -19,7 +19,7 @@ function switch() {
 	abs_path=$(realpath "${path}")
 
 	local session
-	session=$(basename "${abs_path}")
+	session=$(basename "${abs_path}" | tr '.' '_') # Tmux already replaces dots with underscores.
 
 	if ! tmux has-session -t="${session}" 2>/dev/null; then
 		tmux new-session -d -c "${abs_path}" -s "${session}"
