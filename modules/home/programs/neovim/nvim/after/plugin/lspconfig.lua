@@ -14,6 +14,7 @@ local servers = {
 	"nil_ls",
 	"pyright",
 	"rust_analyzer",
+	"sourcekit",
 	"tailwindcss",
 	"texlab",
 	"ts_ls",

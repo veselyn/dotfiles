@@ -84,6 +84,7 @@ in {
           nil
           pyright
           rust-analyzer
+          sourcekit-lsp
           tailwindcss-language-server
           texlab
           treefmt
