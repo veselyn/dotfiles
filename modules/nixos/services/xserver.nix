@@ -5,13 +5,8 @@
 }: let
   cfg = config.self.modules.nixos;
 in {
-  imports = [
-    ./openssh.nix
-    ./xserver.nix
-  ];
-
   config = lib.mkIf cfg.enable {
-    services = {
-    };
+    services.xserver.enable = true;
+    services.xserver.windowManager.i3.enable = true;
   };
 }

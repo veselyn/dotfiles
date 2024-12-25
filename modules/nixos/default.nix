@@ -9,6 +9,7 @@
 in {
   imports = [
     ./services
+    ./vmware.nix
   ];
 
   options = {

@@ -5,6 +5,7 @@
 
     modules = [
       ./hardware.nix
+      {self.modules.nixos.vmware.enable = true;}
     ];
   };
 }
