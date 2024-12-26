@@ -10,6 +10,7 @@
     inherit
       (pkgs)
       _1password-gui
+      man-pages
       ;
   };
 in {
