@@ -9,12 +9,11 @@
   socketPath = "${config.home.homeDirectory}/.1password/agent.sock";
 in {
   config = lib.mkIf cfg.enable {
-    programs.ssh.matchBlocks."*".extraOptions = {
-      IdentityAgent = socketPath;
-    };
-
     home.sessionVariables = {
-      SSH_AUTH_SOCK = socketPath;
+      SSH_AUTH_SOCK =
+        if pkgs.stdenv.isDarwin
+        then socketPath
+        else "\${SSH_AUTH_SOCK:-${socketPath}}";
     };
 
     home.file.${socketPath} = {

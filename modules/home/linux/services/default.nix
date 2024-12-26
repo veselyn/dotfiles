@@ -7,8 +7,6 @@
 in {
   config = lib.mkIf cfg.enable {
     services = {
-      gpg-agent.enable = true;
-      ssh-agent.enable = true;
     };
   };
 }
