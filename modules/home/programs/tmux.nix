@@ -65,10 +65,6 @@ in {
 
     programs.zsh.oh-my-zsh = {
       plugins = ["tmux"];
-
-      extraConfig = ''
-        ZSH_TMUX_AUTOSTART=true
-      '';
     };
   };
 }
