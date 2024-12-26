@@ -9,7 +9,7 @@
 in {
   imports = [
     ./services
-    ./vmware.nix
+    ./virtualisation
   ];
 
   options = {
