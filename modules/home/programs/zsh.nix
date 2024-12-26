@@ -21,7 +21,6 @@ in {
 
         plugins =
           [
-            "git"
             "jump"
             "web-search"
           ]
