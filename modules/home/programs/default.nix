@@ -6,6 +6,7 @@
   cfg = config.self.modules.home;
 in {
   imports = [
+    ./atuin.nix
     ./git.nix
     ./kitty.nix
     ./neovim
