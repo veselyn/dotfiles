@@ -40,6 +40,7 @@
       rlwrap
       sd
       silver-searcher
+      spacer
       tree
       treefmt
       watch
