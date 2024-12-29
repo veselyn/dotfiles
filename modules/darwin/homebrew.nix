@@ -16,6 +16,7 @@ in {
         "docker"
         "firefox"
         "google-chrome"
+        "keyboardcleantool"
         "kitty"
         "monitorcontrol"
         "skim"
