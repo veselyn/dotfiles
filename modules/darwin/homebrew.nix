@@ -11,6 +11,7 @@ in {
 
       casks = [
         "1password"
+        "chatgpt"
         "dash@6"
         "discord"
         "docker"
