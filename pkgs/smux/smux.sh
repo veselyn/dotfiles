@@ -18,6 +18,11 @@ function switch() {
 	local abs_path
 	abs_path=$(realpath "${path}")
 
+	if [[ ! -d ${abs_path} ]]; then
+		echo >&2 "error: '${path}' is not a directory"
+		return 1
+	fi
+
 	local session
 	session=$(basename "${abs_path}" | tr '.' '_') # Tmux already replaces dots with underscores.
 
@@ -29,9 +34,9 @@ function switch() {
 }
 
 # @cmd List tracked directories
+# @alias ls
 # @meta require-tools column,fd,jq
 # @flag -r --recursive
-# @alias ls
 function list() {
 	local recursive=${argc_recursive-0}
 
@@ -114,11 +119,6 @@ function update() {
 	local abs_path
 	abs_path=$(realpath "${path}")
 
-	if [[ ! -d ${abs_path} ]]; then
-		echo >&2 "error: '${path}' is not a directory"
-		return 1
-	fi
-
 	if [[ $(jq --arg path "${abs_path}" 'has($path)' "${db}") == false ]]; then
 		echo >&2 "error: '${path}' is not tracked"
 		return 1
@@ -141,9 +141,10 @@ function update() {
 }
 
 # @cmd Remove a directory from tracked list
+# @alias rm
 # @meta require-tools jq
 # @arg path
-function rm() {
+function remove() {
 	local path=${argc_path-${PWD}}
 
 	local abs_path
