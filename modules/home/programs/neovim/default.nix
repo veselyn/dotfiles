@@ -99,6 +99,13 @@ in {
       };
     };
 
-    xdg.configFile.nvim.source = ./nvim;
+    xdg.configFile.nvim.source = let
+      symlink = false;
+    in
+      if symlink
+      then
+        config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/dotfiles/modules/home/programs/neovim/nvim"
+      else ./nvim;
   };
 }
