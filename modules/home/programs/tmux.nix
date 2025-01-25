@@ -59,6 +59,10 @@ in {
         bind _ split-window -f -c '#{pane_current_path}'
         bind | split-window -f -h -c '#{pane_current_path}'
 
+        bind * switch-client -l
+        bind ( switch-client -p
+        bind ) switch-client -n
+
         bind C-f new-window ${perSystem.self'.packages.smux}/bin/smux
       '';
     };
