@@ -33,6 +33,7 @@ in {
           dash-vim
           diffview-nvim
           friendly-snippets
+          harpoon2
           indent-blankline-nvim
           lazydev-nvim
           luasnip
