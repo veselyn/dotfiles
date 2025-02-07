@@ -34,6 +34,7 @@
       kubectl
       kubectx
       lazydocker
+      lnav
       nix-init
       parallel
       ripgrep
