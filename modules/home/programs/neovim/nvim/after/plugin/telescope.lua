@@ -12,6 +12,10 @@ telescope.setup({
 
 telescope.load_extension("fzf")
 
+local function man_pages(opts)
+	builtin.man_pages(vim.tbl_extend("force", opts, { sections = { "ALL" } }))
+end
+
 local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, function()
 		rhs(themes.get_ivy({ layout_config = { height = 100 } }))
@@ -22,7 +26,7 @@ map("n", "<Leader>f#", builtin.grep_string)
 map("n", "<Leader>f*", builtin.grep_string)
 map("n", "<Leader>fB", builtin.git_branches)
 map("n", "<Leader>fC", builtin.git_commits)
-map("n", "<Leader>fM", builtin.man_pages)
+map("n", "<Leader>fM", man_pages)
 map("n", "<Leader>fS", builtin.git_stash)
 map("n", "<Leader>fb", builtin.buffers)
 map("n", "<Leader>fc", builtin.git_bcommits)
