@@ -13,7 +13,7 @@ in {
     };
   };
 
-  config = lib.mkIf (cfg.enable && cfg.vmware.enable) {
+  config = lib.mkIf cfg.vmware.enable {
     networking.firewall.enable = false;
     virtualisation.vmware.guest.enable = true;
   };
