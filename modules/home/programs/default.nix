@@ -29,6 +29,7 @@ in {
       jq.enable = true;
       k9s.enable = true;
       lazygit.enable = true;
+      man.generateCaches = true;
       ssh.enable = true;
       tealdeer.enable = true;
       zoxide.enable = true;

@@ -8,6 +8,7 @@
   cfg = config.self.modules.nixos;
 in {
   imports = [
+    ./documentation.nix
     ./services
     ./virtualisation
     ./vmware.nix
