@@ -8,6 +8,7 @@ vim.opt.ignorecase = true
 vim.opt.lazyredraw = true
 vim.opt.list = true
 vim.opt.listchars:append({ extends = ">", precedes = "<" })
+vim.opt.listchars:append({ tab = "▏ " })
 vim.opt.mousemodel = "extend"
 vim.opt.number = true
 vim.opt.relativenumber = true
