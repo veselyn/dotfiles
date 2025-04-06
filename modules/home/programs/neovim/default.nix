@@ -84,6 +84,7 @@ in {
           lua-language-server
           nil
           pyright
+          ruby-lsp
           rust-analyzer
           sourcekit-lsp
           tailwindcss-language-server
