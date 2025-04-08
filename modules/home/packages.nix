@@ -28,16 +28,13 @@
       _1password-cli
       cachix
       devenv
-      fd
       httpie
       just
       kubectl
       kubectx
-      lazydocker
       lnav
       nix-init
       parallel
-      ripgrep
       rlwrap
       sd
       silver-searcher
