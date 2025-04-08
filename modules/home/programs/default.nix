@@ -7,6 +7,7 @@
 in {
   imports = [
     ./atuin.nix
+    ./fzf.nix
     ./git.nix
     ./kitty.nix
     ./neovim
@@ -23,7 +24,6 @@ in {
       direnv.enable = true;
       direnv.nix-direnv.enable = true;
       fd.enable = true;
-      fzf.enable = true;
       gh.enable = true;
       gpg.enable = true;
       htop.enable = true;
