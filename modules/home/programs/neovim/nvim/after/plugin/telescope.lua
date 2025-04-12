@@ -13,40 +13,34 @@ telescope.setup({
 telescope.load_extension("fzf")
 
 local function man_pages(opts)
-	builtin.man_pages(vim.tbl_extend("force", opts, { sections = { "ALL" } }))
+	builtin.man_pages(vim.tbl_extend("force", opts or {}, { sections = { "ALL" } }))
 end
 
-local function map(mode, lhs, rhs, opts)
-	vim.keymap.set(mode, lhs, function()
-		rhs(themes.get_ivy({ layout_config = { height = 100 } }))
-	end, opts)
-end
-
-map("n", "<Leader>f#", builtin.grep_string)
-map("n", "<Leader>f*", builtin.grep_string)
-map("n", "<Leader>fB", builtin.git_branches)
-map("n", "<Leader>fC", builtin.git_commits)
-map("n", "<Leader>fM", man_pages)
-map("n", "<Leader>fS", builtin.git_stash)
-map("n", "<Leader>fb", builtin.buffers)
-map("n", "<Leader>fc", builtin.git_bcommits)
-map("n", "<Leader>fe", builtin.registers)
-map("n", "<Leader>ff", builtin.find_files)
-map("n", "<Leader>fg", builtin.live_grep)
-map("n", "<Leader>fh", builtin.help_tags)
-map("n", "<Leader>fj", builtin.git_files)
-map("n", "<Leader>fm", builtin.marks)
-map("n", "<Leader>fp", builtin.pickers)
-map("n", "<Leader>fr", builtin.resume)
-map("n", "<Leader>fs", builtin.git_status)
-map("x", "<Leader>fc", builtin.git_bcommits_range)
+vim.keymap.set("n", "<Leader>f#", builtin.grep_string)
+vim.keymap.set("n", "<Leader>f*", builtin.grep_string)
+vim.keymap.set("n", "<Leader>fB", builtin.git_branches)
+vim.keymap.set("n", "<Leader>fC", builtin.git_commits)
+vim.keymap.set("n", "<Leader>fM", man_pages)
+vim.keymap.set("n", "<Leader>fS", builtin.git_stash)
+vim.keymap.set("n", "<Leader>fb", builtin.buffers)
+vim.keymap.set("n", "<Leader>fc", builtin.git_bcommits)
+vim.keymap.set("n", "<Leader>fe", builtin.registers)
+vim.keymap.set("n", "<Leader>ff", builtin.find_files)
+vim.keymap.set("n", "<Leader>fg", builtin.live_grep)
+vim.keymap.set("n", "<Leader>fh", builtin.help_tags)
+vim.keymap.set("n", "<Leader>fj", builtin.git_files)
+vim.keymap.set("n", "<Leader>fm", builtin.marks)
+vim.keymap.set("n", "<Leader>fp", builtin.pickers)
+vim.keymap.set("n", "<Leader>fr", builtin.resume)
+vim.keymap.set("n", "<Leader>fs", builtin.git_status)
+vim.keymap.set("x", "<Leader>fc", builtin.git_bcommits_range)
 
 local function document_diagnostics(opts)
-	builtin.diagnostics(vim.tbl_extend("force", opts, { bufnr = 0 }))
+	builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = 0 }))
 end
 
 local function workspace_diagnostics(opts)
-	builtin.diagnostics(vim.tbl_extend("force", opts, { bufnr = nil }))
+	builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = nil }))
 end
 
 vim.api.nvim_create_autocmd("User", {
@@ -54,7 +48,7 @@ vim.api.nvim_create_autocmd("User", {
 	pattern = "LspOnAttach",
 	callback = function(args)
 		local map = function(mode, lhs, rhs)
-			map(mode, lhs, rhs, { buffer = args.data.bufnr })
+			vim.keymap.set(mode, lhs, rhs, { buffer = args.data.bufnr })
 		end
 
 		map("n", "<LocalLeader>fds", builtin.lsp_document_symbols)
