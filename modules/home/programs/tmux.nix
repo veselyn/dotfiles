@@ -63,6 +63,9 @@ in {
         bind ( switch-client -p
         bind ) switch-client -n
 
+        bind -n C-/ select-window -l
+        bind -n C-_ select-window -l
+
         bind C-f new-window ${perSystem.self'.packages.smux}/bin/smux
       '';
     };
