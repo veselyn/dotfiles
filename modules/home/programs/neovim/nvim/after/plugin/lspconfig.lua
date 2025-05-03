@@ -1,5 +1,6 @@
 local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
+local configs = require("aul.lsp.configs")
 
 local servers = {
 	"bashls",
@@ -69,8 +70,8 @@ for _, server in ipairs(servers) do
 		on_attach = on_attach,
 	}
 
-	local success, result = pcall(require, "aul.lsp.configs." .. server)
-	if success then
+	local result = configs.get(server, config)
+	if result then
 		config = vim.tbl_deep_extend("force", config, result)
 	end
 

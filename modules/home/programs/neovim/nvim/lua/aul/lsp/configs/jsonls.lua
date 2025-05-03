@@ -1,9 +1,11 @@
 local schemastore = require("schemastore")
 
-return {
-	settings = {
-		json = {
-			schemas = schemastore.json.schemas(),
+return function()
+	return {
+		settings = {
+			json = {
+				schemas = schemastore.json.schemas(),
+			},
 		},
-	},
-}
+	}
+end

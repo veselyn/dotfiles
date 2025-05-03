@@ -1,7 +1,9 @@
-return {
-	settings = {
-		gopls = {
-			gofumpt = true,
+return function()
+	return {
+		settings = {
+			gopls = {
+				gofumpt = true,
+			},
 		},
-	},
-}
+	}
+end
