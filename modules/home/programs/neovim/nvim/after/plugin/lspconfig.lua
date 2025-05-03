@@ -1,24 +1,7 @@
 local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
 local configs = require("aul.lsp.configs")
-
-local servers = {
-	"bashls",
-	"clangd",
-	"cssls",
-	"elixirls",
-	"gopls",
-	"html",
-	"jsonls",
-	"lua_ls",
-	"nil_ls",
-	"pyright",
-	"rust_analyzer",
-	"sourcekit",
-	"texlab",
-	"ts_ls",
-	"yamlls",
-}
+local servers = require("aul.lsp.servers")
 
 local capabilities = cmplsp.default_capabilities()
 
