@@ -1,6 +1,6 @@
 return {
 	settings = {
-		["gopls"] = {
+		gopls = {
 			gofumpt = true,
 		},
 	},
