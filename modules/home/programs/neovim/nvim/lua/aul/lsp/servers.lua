@@ -18,6 +18,27 @@ local M = {
 	"yamlls",
 }
 
+function M:add(server)
+	if vim.tbl_contains(self, server) then
+		return
+	end
+
+	table.insert(self, server)
+end
+
+function M:remove(server)
+	if not vim.tbl_contains(self, server) then
+		return
+	end
+
+	for index, value in ipairs(self) do
+		if value == server then
+			table.remove(self, index)
+			break
+		end
+	end
+end
+
 function M:iter()
 	local servers = {}
 
