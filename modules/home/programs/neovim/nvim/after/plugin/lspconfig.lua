@@ -1,9 +1,6 @@
 local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
-local configs = require("aul.lsp.configs")
 local servers = require("aul.lsp.servers")
-
-local capabilities = cmplsp.default_capabilities()
 
 local function format()
 	vim.lsp.buf.format({ async = true })
@@ -47,16 +44,9 @@ local function on_attach(_, bufnr)
 	vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
 end
 
-for _, server in ipairs(servers) do
-	local config = {
-		capabilities = capabilities,
+for server, config in servers:iter() do
+	lspconfig[server].setup(config({
+		capabilities = cmplsp.default_capabilities(),
 		on_attach = on_attach,
-	}
-
-	local result = configs.get(server, config)
-	if result then
-		config = vim.tbl_deep_extend("force", config, result)
-	end
-
-	lspconfig[server].setup(config)
+	}))
 end
