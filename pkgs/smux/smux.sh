@@ -30,6 +30,10 @@ function switch() {
 		tmux new-session -d -c "${abs_path}" -s "${session}"
 	fi
 
+	if [[ -z ${TMUX-} ]]; then
+		tmux attach-session -t="${session}"
+	fi
+
 	tmux switch-client -t="${session}"
 }
 
