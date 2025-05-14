@@ -50,6 +50,7 @@ in {
           telescope-nvim
           tinykeymap
           trim-nvim
+          undotree
           vim-abolish
           vim-capslock
           vim-commentary
