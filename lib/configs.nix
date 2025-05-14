@@ -1,5 +1,6 @@
 toplevel @ {
   inputs,
+  lib,
   self,
   withSystem,
   ...
@@ -22,7 +23,7 @@ toplevel @ {
         modules = [
           {
             imports = [self.modules.darwin.default];
-            self.modules.darwin = {
+            self.modules.darwin = lib.mkDefault {
               enable = true;
               inherit username nixpkgs;
             };
@@ -30,7 +31,7 @@ toplevel @ {
 
           {
             imports = [self.modules.darwin.home];
-            self.modules.darwin.home = {
+            self.modules.darwin.home = lib.mkDefault {
               enable = true;
               inherit username;
             };
@@ -38,7 +39,7 @@ toplevel @ {
 
           {
             imports = [self.modules.generic.default];
-            self.modules.generic = {
+            self.modules.generic = lib.mkDefault {
               enable = true;
             };
           }
@@ -64,7 +65,7 @@ toplevel @ {
         modules = [
           {
             imports = [self.modules.nixos.default];
-            self.modules.nixos = {
+            self.modules.nixos = lib.mkDefault {
               enable = true;
               inherit username;
             };
@@ -72,7 +73,7 @@ toplevel @ {
 
           {
             imports = [self.modules.nixos.home];
-            self.modules.nixos.home = {
+            self.modules.nixos.home = lib.mkDefault {
               enable = true;
               inherit username;
             };
@@ -80,7 +81,7 @@ toplevel @ {
 
           {
             imports = [self.modules.generic.default];
-            self.modules.generic = {
+            self.modules.generic = lib.mkDefault {
               enable = true;
             };
           }
@@ -111,7 +112,7 @@ toplevel @ {
               if pkgs.stdenv.isDarwin
               then [self.modules.home.darwin]
               else [self.modules.home.linux];
-            self.modules.home = {
+            self.modules.home = lib.mkDefault {
               enable = true;
               inherit username;
             };
@@ -119,7 +120,7 @@ toplevel @ {
 
           {
             imports = [self.modules.generic.default];
-            self.modules.generic = {
+            self.modules.generic = lib.mkDefault {
               enable = true;
             };
           }
