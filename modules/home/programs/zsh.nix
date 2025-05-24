@@ -27,7 +27,7 @@ in {
           ++ lib.optional pkgs.stdenv.isDarwin "macos";
       };
 
-      initExtra = ''
+      initContent = ''
         bindkey ^N down-line-or-beginning-search
         bindkey ^P up-line-or-beginning-search
       '';
