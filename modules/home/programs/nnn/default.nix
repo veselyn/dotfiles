@@ -15,7 +15,7 @@ in {
       });
     };
 
-    programs.zsh.initExtra = ''
+    programs.zsh.initContent = ''
       source ${config.programs.nnn.package}/share/quitcd/quitcd.bash_sh_zsh
     '';
   };
