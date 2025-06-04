@@ -53,7 +53,6 @@ in {
           undotree
           vim-abolish
           vim-capslock
-          vim-commentary
           vim-dim
           vim-dispatch
           vim-easymotion
