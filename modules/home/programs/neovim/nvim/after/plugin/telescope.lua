@@ -43,21 +43,13 @@ local function workspace_diagnostics(opts)
 	builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = nil }))
 end
 
-vim.api.nvim_create_autocmd("User", {
-	group = vim.api.nvim_create_augroup("LspOnAttach" .. vim.fn.expand("<sfile>:t:r"), {}),
-	pattern = "LspOnAttach",
-	callback = function(args)
-		local map = function(mode, lhs, rhs)
-			vim.keymap.set(mode, lhs, rhs, { buffer = args.data.bufnr })
-		end
-
-		map("n", "<LocalLeader>fds", builtin.lsp_document_symbols)
-		map("n", "<LocalLeader>fgI", builtin.lsp_implementations)
-		map("n", "<LocalLeader>fgR", builtin.lsp_references)
-		map("n", "<LocalLeader>fgd", builtin.lsp_definitions)
-		map("n", "<LocalLeader>fgo", builtin.lsp_type_definitions)
-		map("n", "<LocalLeader>fl", document_diagnostics)
-		map("n", "<LocalLeader>fq", workspace_diagnostics)
-		map("n", "<LocalLeader>fws", builtin.lsp_dynamic_workspace_symbols)
-	end,
-})
+vim.keymap.set("n", "<Leader>gO", builtin.lsp_document_symbols)
+vim.keymap.set("n", "<Leader>gP", builtin.lsp_dynamic_workspace_symbols)
+vim.keymap.set("n", "<Leader>go", builtin.lsp_document_symbols)
+vim.keymap.set("n", "<Leader>gp", builtin.lsp_dynamic_workspace_symbols)
+vim.keymap.set("n", "<Leader>grd", builtin.lsp_definitions)
+vim.keymap.set("n", "<Leader>gri", builtin.lsp_implementations)
+vim.keymap.set("n", "<Leader>grl", document_diagnostics)
+vim.keymap.set("n", "<Leader>grq", workspace_diagnostics)
+vim.keymap.set("n", "<Leader>grr", builtin.lsp_references)
+vim.keymap.set("n", "<Leader>grt", builtin.lsp_type_definitions)
