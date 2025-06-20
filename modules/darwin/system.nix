@@ -29,6 +29,8 @@ in {
           tilesize = 16;
         };
 
+        magicmouse.MouseButtonMode = "TwoButton";
+
         universalaccess = {
           closeViewScrollWheelToggle = true;
           closeViewZoomFollowsFocus = true;
