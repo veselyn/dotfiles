@@ -38,7 +38,8 @@ in {
     nixpkgs.source = cfg.nixpkgs;
     nixpkgs.flake.source = cfg.nixpkgs.outPath;
 
-    # This is a transition mechanism as nix-darwin reorganizes its options and will eventually be unnecessary and removed.
+    # This is a transition mechanism as nix-darwin reorganizes its options and
+    # will eventually be unnecessary and removed.
     system.primaryUser = cfg.username;
 
     system.stateVersion = 5;
