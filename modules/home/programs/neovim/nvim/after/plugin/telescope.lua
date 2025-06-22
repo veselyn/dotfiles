@@ -13,7 +13,7 @@ telescope.setup({
 telescope.load_extension("fzf")
 
 local function man_pages(opts)
-	builtin.man_pages(vim.tbl_extend("force", opts or {}, { sections = { "ALL" } }))
+	return builtin.man_pages(vim.tbl_extend("force", opts or {}, { sections = { "ALL" } }))
 end
 
 vim.keymap.set("n", "<Leader>f#", builtin.grep_string)
@@ -36,11 +36,11 @@ vim.keymap.set("n", "<Leader>fs", builtin.git_status)
 vim.keymap.set("x", "<Leader>fc", builtin.git_bcommits_range)
 
 local function document_diagnostics(opts)
-	builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = 0 }))
+	return builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = 0 }))
 end
 
 local function workspace_diagnostics(opts)
-	builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = nil }))
+	return builtin.diagnostics(vim.tbl_extend("force", opts or {}, { bufnr = nil }))
 end
 
 vim.keymap.set("n", "<Leader>gO", builtin.lsp_document_symbols)
