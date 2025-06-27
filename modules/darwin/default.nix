@@ -8,6 +8,7 @@
 in {
   imports = [
     ./homebrew.nix
+    ./networking.nix
     ./programs
     ./services
     ./system.nix

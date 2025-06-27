@@ -21,8 +21,6 @@ in {
           _HIHideMenuBar = true;
         };
 
-        alf.globalstate = 1;
-
         dock = {
           autohide = true;
           mru-spaces = false;
