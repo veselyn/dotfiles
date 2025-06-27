@@ -1,7 +1,11 @@
 local lspconfig = require("lspconfig")
 
-return setmetatable({}, {
-	__index = function(_, key)
-		return vim.deepcopy(lspconfig[key].document_config.default_config)
-	end,
-})
+local M = { mt = {} }
+
+function M.mt.__index(_, server)
+	return vim.deepcopy(lspconfig[server].document_config.default_config)
+end
+
+setmetatable(M, M.mt)
+
+return M

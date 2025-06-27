@@ -1,5 +1,3 @@
-return function()
-	return {
-		cmd = { "elixir-ls" },
-	}
-end
+return {
+	cmd = { "elixir-ls" },
+}
