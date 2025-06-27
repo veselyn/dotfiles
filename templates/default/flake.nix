@@ -39,7 +39,7 @@
                 self'.formatter
               ];
 
-              pre-commit.hooks = {
+              git-hooks.hooks = {
                 deadnix.enable = true;
                 statix.enable = true;
                 treefmt.enable = true;
