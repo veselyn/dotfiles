@@ -23,8 +23,15 @@ function main() {
 	local root
 	root=$(git rev-parse --show-toplevel)
 
+	cd "${root}" || return
+
 	for file in ${files}; do
-		git show "${rev}:${file}" >"${root}/${file}"
+		local dir
+		dir=$(dirname "${file}")
+
+		mkdir -p "${dir}"
+
+		git show "${rev}:${file}" >"${file}"
 	done
 }
 
