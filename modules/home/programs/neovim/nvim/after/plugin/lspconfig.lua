@@ -1,6 +1,4 @@
-local lspconfig = require("lspconfig")
 local cmplsp = require("cmp_nvim_lsp")
-local servers = require("aul.lsp.servers")
 
 local capabilities = cmplsp.default_capabilities()
 
@@ -8,11 +6,29 @@ local function on_attach(_, bufnr)
 	vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
 end
 
-for server, config in servers:iter() do
-	lspconfig[server].setup(config({
-		capabilities = capabilities,
-		on_attach = on_attach,
-	}))
+vim.lsp.config("*", {
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+for _, server in ipairs({
+	"bashls",
+	"clangd",
+	"cssls",
+	"elixirls",
+	"gopls",
+	"html",
+	"jsonls",
+	"lua_ls",
+	"nil_ls",
+	"pyright",
+	"rust_analyzer",
+	"sourcekit",
+	"texlab",
+	"ts_ls",
+	"yamlls",
+}) do
+	vim.lsp.enable(server)
 end
 
 vim.keymap.set("n", "gP", vim.lsp.buf.workspace_symbol)
