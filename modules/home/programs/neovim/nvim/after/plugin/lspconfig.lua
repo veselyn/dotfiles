@@ -1,15 +1,29 @@
 local cmplsp = require("cmp_nvim_lsp")
 
-local capabilities = cmplsp.default_capabilities()
+local augroup = vim.api.nvim_create_augroup("LspFormat" .. vim.fn.expand("<sfile>:t:r"), { clear = false })
 
-local function on_attach(_, bufnr)
-	vim.api.nvim_exec_autocmds("User", { pattern = "LspOnAttach", data = { bufnr = bufnr } })
-end
-
-vim.lsp.config("*", {
-	capabilities = capabilities,
-	on_attach = on_attach,
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("LspAttach" .. vim.fn.expand("<sfile>:t:r"), {}),
+	callback = function(args)
+		vim.api.nvim_clear_autocmds({ event = "BufWritePre", group = augroup, buffer = args.buf })
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = args.buf,
+			callback = function()
+				vim.lsp.buf.format()
+			end,
+		})
+	end,
 })
+
+vim.api.nvim_create_autocmd("LspDetach", {
+	group = vim.api.nvim_create_augroup("LspDetach" .. vim.fn.expand("<sfile>:t:r"), {}),
+	callback = function(args)
+		vim.api.nvim_clear_autocmds({ event = "BufWritePre", group = augroup, buffer = args.buf })
+	end,
+})
+
+vim.lsp.config("*", { capabilities = cmplsp.default_capabilities() })
 
 for _, server in ipairs({
 	"bashls",
