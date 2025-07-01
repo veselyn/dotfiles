@@ -22,6 +22,14 @@
 
           git-hooks.hooks = {
             deadnix.enable = true;
+            lua-ls = {
+              enable = true;
+              settings = {
+                checklevel = "Hint";
+                configuration.runtime.version = "LuaJIT";
+                configuration.workspace.library = ["${pkgs.neovim}/share/nvim/runtime"];
+              };
+            };
             statix.enable = true;
             treefmt.enable = true;
             treefmt.package = self'.formatter;
