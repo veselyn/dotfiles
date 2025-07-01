@@ -37,6 +37,6 @@ in {
     };
 
     programs.home-manager.enable = true;
-    home.stateVersion = "24.11";
+    home.stateVersion = "25.11";
   };
 }

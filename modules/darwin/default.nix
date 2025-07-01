@@ -43,6 +43,6 @@ in {
     # will eventually be unnecessary and removed.
     system.primaryUser = cfg.username;
 
-    system.stateVersion = 5;
+    system.stateVersion = 6;
   };
 }
