@@ -9,9 +9,5 @@
       stable = self.lib.mkPkgs inputs.nixpkgs-stable {inherit (final) system;};
       master = self.lib.mkPkgs inputs.nixpkgs-master {inherit (final) system;};
     };
-
-    devenv = final: _prev: {
-      inherit (final.master) devenv;
-    };
   };
 }
