@@ -12,6 +12,7 @@ in {
 
   config = lib.mkIf cfg.enable {
     services = {
+      automatic-timezoned.enable = true;
     };
   };
 }
