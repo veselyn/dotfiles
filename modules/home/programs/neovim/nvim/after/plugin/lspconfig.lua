@@ -1,9 +1,9 @@
 local cmplsp = require("cmp_nvim_lsp")
 
-local augroup = vim.api.nvim_create_augroup("LspFormat" .. vim.fn.expand("<sfile>:t:r"), { clear = false })
+local augroup = vim.api.nvim_create_augroup("aul.lsp_format", { clear = false })
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("LspAttach" .. vim.fn.expand("<sfile>:t:r"), {}),
+	group = vim.api.nvim_create_augroup("aul.lsp_attach", {}),
 	callback = function(args)
 		vim.api.nvim_clear_autocmds({ event = "BufWritePre", group = augroup, buffer = args.buf })
 		vim.api.nvim_create_autocmd("BufWritePre", {
@@ -17,7 +17,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("LspDetach", {
-	group = vim.api.nvim_create_augroup("LspDetach" .. vim.fn.expand("<sfile>:t:r"), {}),
+	group = vim.api.nvim_create_augroup("aul.lsp_detach", {}),
 	callback = function(args)
 		vim.api.nvim_clear_autocmds({ event = "BufWritePre", group = augroup, buffer = args.buf })
 	end,
