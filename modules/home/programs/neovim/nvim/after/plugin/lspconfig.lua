@@ -52,3 +52,7 @@ vim.keymap.set("n", "grd", vim.lsp.buf.definition)
 vim.keymap.set("n", "grl", vim.diagnostic.setloclist)
 vim.keymap.set("n", "grq", vim.diagnostic.setqflist)
 vim.keymap.set("n", "grt", vim.lsp.buf.type_definition)
+
+vim.keymap.set("n", "gL", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
