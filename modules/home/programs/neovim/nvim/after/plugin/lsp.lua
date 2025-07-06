@@ -49,8 +49,6 @@ vim.keymap.set("n", "gP", vim.lsp.buf.workspace_symbol)
 vim.keymap.set("n", "gQ", vim.lsp.buf.format)
 vim.keymap.set("n", "grD", vim.lsp.buf.declaration)
 vim.keymap.set("n", "grd", vim.lsp.buf.definition)
-vim.keymap.set("n", "grl", vim.diagnostic.setloclist)
-vim.keymap.set("n", "grq", vim.diagnostic.setqflist)
 vim.keymap.set("n", "grt", vim.lsp.buf.type_definition)
 
 vim.keymap.set("n", "gK", function()
