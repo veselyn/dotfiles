@@ -8,7 +8,11 @@ vim.keymap.set("n", "gL", function()
 end)
 
 vim.keymap.set("n", "gl", function()
-	vim.diagnostic.config({ virtual_lines = not vim.diagnostic.config().virtual_lines })
+	local virtual_lines = not vim.diagnostic.config().virtual_lines
+	vim.diagnostic.config({
+		virtual_text = not virtual_lines,
+		virtual_lines = virtual_lines,
+	})
 end)
 
 vim.keymap.set("n", "grl", vim.diagnostic.setloclist)
