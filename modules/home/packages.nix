@@ -32,6 +32,7 @@
       just
       kubectl
       kubectx
+      kubernetes-helm
       lnav
       nix-init
       parallel
