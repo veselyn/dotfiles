@@ -22,6 +22,7 @@
 
           git-hooks.hooks = {
             deadnix.enable = true;
+            end-of-file-fixer.enable = true;
             lua-ls = {
               enable = true;
               settings = {
@@ -33,6 +34,7 @@
             statix.enable = true;
             treefmt.enable = true;
             treefmt.package = self'.formatter;
+            trim-trailing-whitespace.enable = true;
           };
         }
       ];

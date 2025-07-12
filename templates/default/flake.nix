@@ -41,9 +41,11 @@
 
               git-hooks.hooks = {
                 deadnix.enable = true;
+                end-of-file-fixer.enable = true;
                 statix.enable = true;
                 treefmt.enable = true;
                 treefmt.package = self'.formatter;
+                trim-trailing-whitespace.enable = true;
               };
             }
           ];
