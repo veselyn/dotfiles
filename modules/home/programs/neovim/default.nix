@@ -19,6 +19,7 @@ in {
       plugins = builtins.attrValues {
         inherit
           (pkgs.vimPlugins)
+          orgmode
           ReplaceWithRegister
           SchemaStore-nvim
           bufjump-nvim
