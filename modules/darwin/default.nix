@@ -10,6 +10,7 @@ in {
     ./homebrew.nix
     ./networking.nix
     ./programs
+    ./security.nix
     ./services
     ./system.nix
   ];
