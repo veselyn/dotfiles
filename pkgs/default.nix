@@ -6,7 +6,7 @@
   imports = [
     ./gitpick
     ./smux
-    ./yabaictl
+    ./wmctl
   ];
 
   perSystem = {system, ...}: {

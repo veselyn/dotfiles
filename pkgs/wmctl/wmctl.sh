@@ -52,10 +52,4 @@ function restart() {
 	done
 }
 
-# @cmd Load scripting additions
-# @meta require-tools yabai
-function load-sa() {
-	sudo yabai --load-sa
-}
-
 eval "$(argc --argc-eval "$0" "$@")"

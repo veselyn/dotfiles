@@ -1,15 +1,14 @@
 {self, ...}: {
   flake.packages = self.lib.mkPerDarwinSystem ({pkgs, ...}: {
-    yabaictl = pkgs.writeShellApplication {
-      name = "yabaictl";
+    wmctl = pkgs.writeShellApplication {
+      name = "wmctl";
       runtimeInputs = builtins.attrValues {
         inherit
           (pkgs)
           argc
-          yabai
           ;
       };
-      text = builtins.readFile ./yabaictl.sh;
+      text = builtins.readFile ./wmctl.sh;
     };
   });
 }

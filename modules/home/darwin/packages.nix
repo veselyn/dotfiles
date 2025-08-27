@@ -9,7 +9,7 @@
   self = builtins.attrValues {
     inherit
       (perSystem.self'.packages)
-      yabaictl
+      wmctl
       ;
   };
 in {
