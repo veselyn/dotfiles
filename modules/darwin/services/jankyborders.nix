@@ -5,14 +5,11 @@
 }: let
   cfg = config.self.modules.darwin;
 in {
-  imports = [
-    ./jankyborders.nix
-    ./skhd.nix
-    ./yabai.nix
-  ];
-
   config = lib.mkIf cfg.enable {
-    services = {
+    services.jankyborders = {
+      enable = true;
+      inactive_color = "0xFF000000";
+      width = 1.0;
     };
   };
 }

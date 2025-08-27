@@ -1,12 +1,12 @@
 # @cmd Start services
 # @meta require-tools launchctl
-# @arg service[=all|yabai|skhd]
+# @arg service[=all|yabai|skhd|jankyborders]
 function start() {
 	local service=${argc_service?}
 
 	local -a services
 	if [[ ${service} == 'all' ]]; then
-		services+=('yabai' 'skhd')
+		services+=('yabai' 'skhd' 'jankyborders')
 	else
 		services+=("${service}")
 	fi
@@ -18,13 +18,13 @@ function start() {
 
 # @cmd Stop services
 # @meta require-tools launchctl
-# @arg service[=all|yabai|skhd]
+# @arg service[=all|yabai|skhd|jankyborders]
 function stop() {
 	local service=${argc_service?}
 
 	local -a services
 	if [[ ${service} == 'all' ]]; then
-		services+=('yabai' 'skhd')
+		services+=('yabai' 'skhd' 'jankyborders')
 	else
 		services+=("${service}")
 	fi
@@ -36,13 +36,13 @@ function stop() {
 
 # @cmd Restart services
 # @meta require-tools launchctl
-# @arg service[=all|yabai|skhd]
+# @arg service[=all|yabai|skhd|jankyborders]
 function restart() {
 	local service=${argc_service?}
 
 	local -a services
 	if [[ ${service} == 'all' ]]; then
-		services+=('yabai' 'skhd')
+		services+=('yabai' 'skhd' 'jankyborders')
 	else
 		services+=("${service}")
 	fi
