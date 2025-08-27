@@ -8,7 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     system = {
       defaults = {
-        ".GlobalPreferences"."com.apple.mouse.scaling" = 3.0;
+        ".GlobalPreferences"."com.apple.mouse.scaling" = 2.0;
 
         NSGlobalDomain = {
           "com.apple.keyboard.fnState" = true;
