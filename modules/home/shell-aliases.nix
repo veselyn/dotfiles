@@ -12,6 +12,7 @@ in {
       da = "delta";
       das = "delta --side-by-side";
       gai = "git add --interactive";
+      j = "jobs";
       k = "kubectl";
       ldr = "lazydocker";
       lg = "lazygit";
