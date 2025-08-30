@@ -1,5 +1,5 @@
 {self, ...}: {
-  flake.darwinConfigurations."macbook-pro" = self.lib.mkDarwin {
+  flake.darwinConfigurations."macbook" = self.lib.mkDarwin {
     system = "aarch64-darwin";
     username = "veselin";
   };
