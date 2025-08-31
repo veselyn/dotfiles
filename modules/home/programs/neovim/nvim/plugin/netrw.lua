@@ -1,3 +1,5 @@
+vim.g.netrw_altfile = 1
+
 vim.keymap.set("n", "<Leader>ns", function()
 	vim.cmd.Sexplore()
 end)
