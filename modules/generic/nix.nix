@@ -9,7 +9,7 @@ in {
     nix = {
       gc = {
         automatic = true;
-        options = "--delete-older-than 30d";
+        options = "--delete-older-than 10d";
       };
       optimise.automatic = true;
       settings.trusted-users = [cfg.username];
