@@ -34,6 +34,7 @@
       kubectx
       kubernetes-helm
       lnav
+      ncdu
       nix-init
       parallel
       rlwrap
