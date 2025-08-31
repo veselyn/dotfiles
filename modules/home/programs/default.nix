@@ -32,6 +32,7 @@ in {
       lazydocker.enable = true;
       lazygit.enable = true;
       man.generateCaches = true;
+      opencode.enable = true;
       ripgrep.enable = true;
       ssh.enable = true;
       tealdeer.enable = true;
