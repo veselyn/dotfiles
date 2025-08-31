@@ -21,6 +21,9 @@ in {
       };
 
       extraConfig = {
+        commit = {
+          verbose = true;
+        };
         gpg = {
           format = "ssh";
         };
@@ -29,6 +32,9 @@ in {
         };
         merge = {
           tool = "vimdiff";
+        };
+        pull = {
+          ff = "only";
         };
       };
 
