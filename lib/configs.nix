@@ -41,6 +41,7 @@ toplevel @ {
             imports = [self.modules.generic.default];
             self.modules.generic = lib.mkDefault {
               enable = true;
+              inherit username;
             };
           }
 
@@ -83,6 +84,7 @@ toplevel @ {
             imports = [self.modules.generic.default];
             self.modules.generic = lib.mkDefault {
               enable = true;
+              inherit username;
             };
           }
 
@@ -122,6 +124,7 @@ toplevel @ {
             imports = [self.modules.generic.default];
             self.modules.generic = lib.mkDefault {
               enable = true;
+              inherit username;
             };
           }
 

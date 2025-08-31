@@ -12,6 +12,7 @@ in {
         options = "--delete-older-than 30d";
       };
       optimise.automatic = true;
+      settings.trusted-users = [cfg.username];
     };
   };
 }

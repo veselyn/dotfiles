@@ -14,6 +14,10 @@ in {
   options = {
     self.modules.generic = {
       enable = lib.mkEnableOption "generic";
+
+      username = lib.mkOption {
+        type = lib.types.str;
+      };
     };
   };
 
