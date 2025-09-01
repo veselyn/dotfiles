@@ -12,6 +12,7 @@ in {
     ./services
     ./virtualisation
     ./vmware.nix
+    toplevel.inputs.disko.nixosModules.disko
   ];
 
   options = {
