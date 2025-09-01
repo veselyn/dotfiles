@@ -8,7 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     nix = {
       linux-builder = {
-        enable = true;
+        enable = false;
         config = {
           virtualisation = {
             cores = 1;
