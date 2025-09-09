@@ -86,7 +86,6 @@ in {
           nil
           pyright
           rust-analyzer
-          sourcekit-lsp
           texlab
           treefmt
           vscode-langservers-extracted

@@ -37,7 +37,6 @@ for _, server in ipairs({
 	"nil_ls",
 	"pyright",
 	"rust_analyzer",
-	"sourcekit",
 	"texlab",
 	"ts_ls",
 	"yamlls",
