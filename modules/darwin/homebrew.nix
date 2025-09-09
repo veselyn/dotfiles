@@ -28,6 +28,7 @@ in {
 
       masApps = {
         "1Password for Safari" = 1569813296;
+        Audible = 379693831;
         Ghostery = 6504861501;
         Keynote = 409183694;
         Kindle = 302584613;
