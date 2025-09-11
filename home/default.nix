@@ -1,5 +1,5 @@
 _: {
   imports = [
-    "${./.}/veselin@macbook-pro"
+    "${./.}/veselin@macbook"
   ];
 }
