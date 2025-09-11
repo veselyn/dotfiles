@@ -11,7 +11,6 @@ in {
     ./documentation.nix
     ./services
     ./virtualisation
-    ./vmware.nix
     toplevel.inputs.disko.nixosModules.disko
     toplevel.inputs.nixos-generators.nixosModules.all-formats
   ];
