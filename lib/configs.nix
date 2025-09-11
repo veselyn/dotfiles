@@ -7,6 +7,7 @@ toplevel @ {
 }: {
   flake.lib = {
     mkDarwin = {
+      hostname,
       system,
       username,
       modules ? [],
@@ -25,7 +26,7 @@ toplevel @ {
             imports = [self.modules.darwin.default];
             self.modules.darwin = lib.mkDefault {
               enable = true;
-              inherit username nixpkgs;
+              inherit hostname username nixpkgs;
             };
           }
 
@@ -50,6 +51,7 @@ toplevel @ {
       };
 
     mkNixOS = {
+      hostname,
       system,
       username,
       modules ? [],
@@ -68,7 +70,7 @@ toplevel @ {
             imports = [self.modules.nixos.default];
             self.modules.nixos = lib.mkDefault {
               enable = true;
-              inherit username;
+              inherit hostname username;
             };
           }
 

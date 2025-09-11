@@ -20,6 +20,10 @@ in {
     self.modules.darwin = {
       enable = lib.mkEnableOption "darwin";
 
+      hostname = lib.mkOption {
+        type = lib.types.str;
+      };
+
       username = lib.mkOption {
         type = lib.types.str;
       };
@@ -37,6 +41,8 @@ in {
       home = "/Users/${cfg.username}";
       openssh.authorizedKeys.keys = [toplevel.self.keys.ssh.master];
     };
+
+    networking.hostName = cfg.hostname;
 
     nixpkgs.source = cfg.nixpkgs;
     nixpkgs.flake.source = cfg.nixpkgs.outPath;

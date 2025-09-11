@@ -19,6 +19,10 @@ in {
     self.modules.nixos = {
       enable = lib.mkEnableOption "nixos";
 
+      hostname = lib.mkOption {
+        type = lib.types.str;
+      };
+
       username = lib.mkOption {
         type = lib.types.str;
       };
@@ -33,6 +37,8 @@ in {
       openssh.authorizedKeys.keys = [toplevel.self.keys.ssh.master];
       shell = pkgs.zsh;
     };
+
+    networking.hostName = cfg.hostname;
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;

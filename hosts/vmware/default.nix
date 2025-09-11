@@ -4,6 +4,7 @@
   ...
 }: {
   flake.nixosConfigurations."vmware" = self.lib.mkNixOS {
+    hostname = "vmware";
     system = "aarch64-linux";
     username = "veselin";
 
