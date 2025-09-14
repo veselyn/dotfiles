@@ -86,6 +86,7 @@ in {
           nil
           pyright
           rust-analyzer
+          terraform-ls
           texlab
           treefmt
           vscode-langservers-extracted
