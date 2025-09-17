@@ -19,7 +19,6 @@ in {
       plugins = builtins.attrValues {
         inherit
           (pkgs.vimPlugins)
-          orgmode
           ReplaceWithRegister
           SchemaStore-nvim
           bufjump-nvim
@@ -34,6 +33,7 @@ in {
           dash-vim
           diffview-nvim
           friendly-snippets
+          hardtime-nvim
           harpoon2
           indent-blankline-nvim
           lazydev-nvim
@@ -46,6 +46,7 @@ in {
           nvim-treesitter-context
           nvim-treesitter-endwise
           nvim-ts-autotag
+          orgmode
           rainbow-delimiters-nvim
           telescope-fzf-native-nvim
           telescope-nvim
