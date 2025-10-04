@@ -9,7 +9,7 @@ in {
     services.skhd = {
       enable = true;
       skhdConfig = ''
-        alt - return : /Applications/kitty.app/Contents/MacOS/kitty -1 -d ~
+        alt - return : kitty -1 -d ~
 
         alt - h : yabai -m window --focus west
         alt - j : yabai -m window --focus south
