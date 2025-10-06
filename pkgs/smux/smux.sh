@@ -68,7 +68,7 @@ function list() {
 	result=$(jq -r 'to_entries[] | [.key, .value.recursive] | @tsv' "${db}")
 
 	{
-		echo 'path recursive'
+		echo 'PATH RECURSIVE'
 		echo "${result}"
 	} | column -t
 }
