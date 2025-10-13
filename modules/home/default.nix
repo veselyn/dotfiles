@@ -11,6 +11,7 @@ in {
     ./docker.nix
     ./packages.nix
     ./programs
+    ./session-path.nix
     ./shell-aliases.nix
     ./xdg.nix
   ];
