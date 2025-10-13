@@ -2,11 +2,16 @@
   config,
   lib,
   perSystem,
+  pkgs,
   ...
 }: let
   cfg = config.self.modules.home;
 
   self = builtins.attrValues {
+    inherit
+      (pkgs)
+      iproute2mac
+      ;
     inherit
       (perSystem.self'.packages)
       wmctl
