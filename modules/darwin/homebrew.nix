@@ -11,6 +11,7 @@ in {
 
       casks = [
         "1password"
+        "betterdisplay"
         "chatgpt"
         "dash@6"
         "discord"
@@ -19,7 +20,6 @@ in {
         "google-chrome"
         "keyboardcleantool"
         "kitty"
-        "monitorcontrol"
         "skim"
         "tailscale"
         "utm"
