@@ -1,5 +1,5 @@
 function _argc_before() {
-	db=${XDG_STATE_HOME:-${HOME}/.local/state}/smux/db
+	readonly db=${XDG_STATE_HOME:-${HOME}/.local/state}/smux/db
 
 	mkdir -p "$(dirname "${db}")"
 	if [[ ! -e ${db} ]]; then
@@ -15,8 +15,12 @@ function switch() {
 	local path
 	path=${argc_path-$($0 list --recursive | fzf)}
 
+	if [[ -z ${path} ]]; then
+		return 1
+	fi
+
 	local abs_path
-	abs_path=$(realpath "${path}")
+	abs_path=$(realpath --no-symlinks "${path}")
 
 	if [[ ! -d ${abs_path} ]]; then
 		echo >&2 "error: '${path}' is not a directory"
@@ -41,8 +45,10 @@ function switch() {
 # @alias ls
 # @meta require-tools column,fd,jq
 # @flag -r --recursive
+# @flag -n --no-headers
 function list() {
 	local recursive=${argc_recursive-0}
+	local no_headers=${argc_no_headers-0}
 
 	if [[ ${recursive} == 1 ]]; then
 		local -a paths_recursive
@@ -52,9 +58,11 @@ function list() {
 		readarray -t paths_non_recursive < <(jq -r 'to_entries[] | select(.value.recursive | not) | .key' "${db}")
 
 		{
-			if [[ ${#paths_recursive[@]} -gt 0 ]]; then
-				fd . "${paths_recursive[@]}" --type=d --exact-depth=1 --format '{}'
-			fi
+			for path_recursive in "${paths_recursive[@]}"; do
+				local depth
+				depth=$(jq --arg path "${path_recursive}" '.[$path].depth' "${db}")
+				fd . "${path_recursive}" --type=d --exact-depth="${depth}" --format '{}'
+			done
 
 			if [[ ${#paths_non_recursive[@]} -gt 0 ]]; then
 				printf '%s\n' "${paths_non_recursive[@]}"
@@ -64,11 +72,26 @@ function list() {
 		return
 	fi
 
+	if [[ ${no_headers} == 1 ]]; then
+		local result
+		result=$(jq -r 'keys[]' "${db}")
+
+		if [[ -n ${result} ]]; then
+			echo "${result}"
+		fi
+
+		return
+	fi
+
 	local result
-	result=$(jq -r 'to_entries[] | [.key, .value.recursive] | @tsv' "${db}")
+	result=$(jq -r 'to_entries | sort_by(.key)[] | [.key, .value.recursive, .value.depth] | @tsv' "${db}")
+
+	if [[ -z ${result} ]]; then
+		return
+	fi
 
 	{
-		echo 'PATH RECURSIVE'
+		echo 'PATH RECURSIVE DEPTH'
 		echo "${result}"
 	} | column -t
 }
@@ -76,13 +99,15 @@ function list() {
 # @cmd Add a directory to tracked list
 # @meta require-tools jq
 # @flag -r --recursive
+# @option -d --depth=1
 # @arg path
 function add() {
 	local recursive=${argc_recursive-0}
+	local depth=${argc_depth?}
 	local path=${argc_path-${PWD}}
 
 	local abs_path
-	abs_path=$(realpath "${path}")
+	abs_path=$(realpath --no-symlinks "${path}")
 
 	if [[ ! -d ${abs_path} ]]; then
 		echo >&2 "error: '${path}' is not a directory"
@@ -94,20 +119,33 @@ function add() {
 		return 1
 	fi
 
+	local recursive_json
 	if [[ ${recursive} == 1 ]]; then
-		recursive=true
+		recursive_json=true
 	else
-		recursive=false
+		recursive_json=false
 	fi
 
 	local result
+	result=$(cat "${db}")
+
 	result=$(
-		jq \
+		echo "${result}" | jq \
 			--arg path "${abs_path}" \
-			--argjson recursive "${recursive}" \
-			'.[$path] = {recursive: $recursive}' \
-			"${db}"
+			--argjson depth "${depth}" \
+			--argjson recursive "${recursive_json}" \
+			'.[$path] = {recursive: $recursive}'
 	)
+
+	if [[ ${recursive} == 1 ]]; then
+		result=$(
+			echo "${result}" | jq \
+				--arg path "${abs_path}" \
+				--argjson depth "${depth}" \
+				'.[$path] += {depth: $depth}'
+		)
+	fi
+
 	echo "${result}" >"${db}"
 }
 
@@ -115,13 +153,15 @@ function add() {
 # @alias up
 # @meta require-tools jq
 # @option -r --recursive[true|false]
+# @option -d --depth
 # @arg path
 function update() {
 	local recursive=${argc_recursive-}
+	local depth=${argc_depth-}
 	local path=${argc_path-${PWD}}
 
 	local abs_path
-	abs_path=$(realpath "${path}")
+	abs_path=$(realpath --no-symlinks "${path}")
 
 	if [[ $(jq --arg path "${abs_path}" 'has($path)' "${db}") == false ]]; then
 		echo >&2 "error: '${path}' is not tracked"
@@ -133,11 +173,19 @@ function update() {
 
 	if [[ -n ${recursive} ]]; then
 		result=$(
-			jq \
+			echo "${result}" | jq \
 				--arg path "${abs_path}" \
 				--argjson recursive "${recursive}" \
-				'.[$path] += {recursive: $recursive}' \
-				"${db}"
+				'.[$path] += {recursive: $recursive}'
+		)
+	fi
+
+	if [[ -n ${depth} ]]; then
+		result=$(
+			echo "${result}" | jq \
+				--arg path "${abs_path}" \
+				--argjson depth "${depth}" \
+				'.[$path] += {depth: $depth}'
 		)
 	fi
 
@@ -152,7 +200,7 @@ function remove() {
 	local path=${argc_path-${PWD}}
 
 	local abs_path
-	abs_path=$(realpath "${path}")
+	abs_path=$(realpath --no-symlinks "${path}")
 
 	if [[ $(jq --arg path "${abs_path}" 'has($path)' "${db}") == false ]]; then
 		echo >&2 "error: '${path}' is not tracked"
