@@ -1,6 +1,12 @@
-_: {
-  perSystem = {pkgs, ...}: {
-    packages.gitpick = pkgs.writeShellApplication {
+{self, ...}: {
+  perSystem = {
+    pkgs,
+    system,
+    ...
+  }: {
+    packages.gitpick = self.lib.writeArgcApplication {
+      inherit system;
+
       name = "gitpick";
       runtimeInputs = builtins.attrValues {
         inherit

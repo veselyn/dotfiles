@@ -1,6 +1,12 @@
 {self, ...}: {
-  flake.packages = self.lib.mkPerDarwinSystem ({pkgs, ...}: {
-    wmctl = pkgs.writeShellApplication {
+  flake.packages = self.lib.mkPerDarwinSystem ({
+    pkgs,
+    system,
+    ...
+  }: {
+    wmctl = self.lib.writeArgcApplication {
+      inherit system;
+
       name = "wmctl";
       runtimeInputs = builtins.attrValues {
         inherit

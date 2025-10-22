@@ -1,6 +1,12 @@
-_: {
-  perSystem = {pkgs, ...}: {
-    packages.smux = pkgs.writeShellApplication {
+{self, ...}: {
+  perSystem = {
+    pkgs,
+    system,
+    ...
+  }: {
+    packages.smux = self.lib.writeArgcApplication {
+      inherit system;
+
       name = "smux";
       runtimeInputs = builtins.attrValues {
         inherit
