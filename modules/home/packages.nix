@@ -52,6 +52,7 @@
     inherit
       (perSystem.self'.packages)
       gitpick
+      opsh
       smux
       ;
   };
