@@ -46,7 +46,7 @@ in {
           nvim-treesitter-context
           nvim-treesitter-endwise
           nvim-ts-autotag
-          orgmode
+          obsidian-nvim
           rainbow-delimiters-nvim
           telescope-fzf-native-nvim
           telescope-nvim
