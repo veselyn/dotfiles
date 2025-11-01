@@ -7,11 +7,13 @@
 in {
   imports = [
     ./atuin.nix
+    ./delta.nix
     ./fzf.nix
     ./git.nix
     ./kitty.nix
     ./neovim
     ./nnn
+    ./ssh.nix
     ./tmux.nix
     ./zsh.nix
   ];
@@ -35,7 +37,6 @@ in {
       nh.enable = true;
       opencode.enable = true;
       ripgrep.enable = true;
-      ssh.enable = true;
       tealdeer.enable = true;
       zoxide.enable = true;
     };

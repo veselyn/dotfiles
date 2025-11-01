@@ -12,15 +12,7 @@ in {
 
       lfs.enable = true;
 
-      userName = "Veselin Ivanov";
-      userEmail = "me@veselyn.com";
-
-      signing = {
-        key = toplevel.self.keys.ssh.master;
-        signByDefault = true;
-      };
-
-      extraConfig = {
+      settings = {
         commit = {
           verbose = true;
         };
@@ -36,18 +28,20 @@ in {
         pull = {
           ff = "only";
         };
+        user = {
+          email = "me@veselyn.com";
+          name = "Veselin Ivanov";
+        };
+      };
+
+      signing = {
+        key = toplevel.self.keys.ssh.master;
+        signByDefault = true;
       };
 
       ignores = [
         "Session.vim"
       ];
-
-      delta = {
-        enable = true;
-        options = {
-          diff-so-fancy = true;
-        };
-      };
     };
 
     programs.zsh.oh-my-zsh = {
