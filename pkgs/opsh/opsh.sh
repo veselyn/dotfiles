@@ -4,8 +4,13 @@
 # @arg cmd
 function main() {
 	local mask=${argc_mask-0}
-	local envs=("${argc_env[@]}")
 	local cmd=${argc_cmd-${SHELL}}
+
+	local -a envs
+
+	if [[ -v argc_env ]]; then
+		envs=("${argc_env[@]?}")
+	fi
 
 	local -a args
 
