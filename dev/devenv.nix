@@ -31,6 +31,7 @@
                 configuration.workspace.library = ["${pkgs.neovim}/share/nvim/runtime"];
               };
             };
+            shellcheck.enable = true;
             statix.enable = true;
             treefmt.enable = true;
             treefmt.package = self'.formatter;

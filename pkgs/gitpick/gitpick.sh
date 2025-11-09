@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # @meta require-tools git
 # @flag -r --recursive
 # @arg rev!

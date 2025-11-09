@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # @cmd Start services
 # @meta require-tools launchctl
 # @arg service[=all|yabai|skhd|jankyborders]

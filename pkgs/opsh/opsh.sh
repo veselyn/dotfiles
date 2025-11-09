@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 # @meta require-tools op
 # @flag -m --mask
 # @option -e --env*

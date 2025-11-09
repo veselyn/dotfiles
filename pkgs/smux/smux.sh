@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+
 function _argc_before() {
 	readonly db=${XDG_STATE_HOME:-${HOME}/.local/state}/smux/db
 
