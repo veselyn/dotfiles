@@ -53,6 +53,7 @@ in {
           tinykeymap
           trim-nvim
           undotree
+          vifm-vim
           vim-abolish
           vim-capslock
           vim-dim

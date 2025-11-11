@@ -38,6 +38,7 @@ in {
       opencode.enable = true;
       ripgrep.enable = true;
       tealdeer.enable = true;
+      vifm.enable = true;
       zoxide.enable = true;
     };
   };
