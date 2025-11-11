@@ -47,6 +47,7 @@ in {
           nvim-treesitter-endwise
           nvim-ts-autotag
           obsidian-nvim
+          oil-nvim
           rainbow-delimiters-nvim
           telescope-fzf-native-nvim
           telescope-nvim
