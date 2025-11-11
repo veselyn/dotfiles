@@ -104,7 +104,7 @@ in {
     };
 
     xdg.configFile.nvim.source = let
-      symlink = false;
+      symlink = true;
     in
       if symlink
       then
