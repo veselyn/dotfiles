@@ -19,7 +19,6 @@ in {
         "firefox"
         "google-chrome"
         "keyboardcleantool"
-        "kitty"
         "skim"
         "tailscale"
         "utm"
