@@ -11,6 +11,7 @@ in {
       c = "pbcopy";
       da = "delta";
       das = "delta --side-by-side";
+      f = "vifm";
       gai = "git add --interactive";
       j = "jobs";
       k = "kubectl";
