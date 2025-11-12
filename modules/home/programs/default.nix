@@ -12,7 +12,6 @@ in {
     ./git.nix
     ./kitty.nix
     ./neovim
-    ./nnn
     ./ssh.nix
     ./tmux.nix
     ./vifm.nix
