@@ -73,7 +73,6 @@ in {
           vim-surround
           vim-tmux-navigator
           vim-unimpaired
-          vim-vinegar
           vimtex
           zen-mode-nvim
           ;
