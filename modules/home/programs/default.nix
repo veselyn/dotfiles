@@ -15,6 +15,7 @@ in {
     ./nnn
     ./ssh.nix
     ./tmux.nix
+    ./vifm.nix
     ./zsh.nix
   ];
 
@@ -38,7 +39,6 @@ in {
       opencode.enable = true;
       ripgrep.enable = true;
       tealdeer.enable = true;
-      vifm.enable = true;
       zoxide.enable = true;
     };
   };
