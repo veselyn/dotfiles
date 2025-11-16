@@ -6,7 +6,6 @@
   imports = [
     ./gitpick
     ./opsh
-    ./smux
     ./wmctl
   ];
 

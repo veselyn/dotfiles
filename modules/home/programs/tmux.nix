@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  perSystem,
   pkgs,
   ...
 }: let
@@ -67,8 +66,6 @@ in {
         bind -n C-_ select-window -l
         bind C-/ send C-/
         bind C-_ send C-_
-
-        bind C-f new-window ${perSystem.self'.packages.smux}/bin/smux
       '';
     };
 

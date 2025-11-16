@@ -19,7 +19,7 @@ in {
       lg = "lazygit";
       ls = "ls --color=auto";
       p = "pbpaste";
-      s = "echo $SHLVL";
+      sl = "echo $SHLVL";
       v = "vim";
       vd = "vimdiff";
       vs = "vim -S Session.vim";

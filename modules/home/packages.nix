@@ -53,7 +53,6 @@
       (perSystem.self'.packages)
       gitpick
       opsh
-      smux
       ;
   };
 in {

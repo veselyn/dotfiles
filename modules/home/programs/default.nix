@@ -37,6 +37,7 @@ in {
       nh.enable = true;
       opencode.enable = true;
       ripgrep.enable = true;
+      sesh.enable = true;
       tealdeer.enable = true;
       zoxide.enable = true;
     };

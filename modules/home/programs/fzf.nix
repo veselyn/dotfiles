@@ -14,6 +14,7 @@ in {
       changeDirWidgetCommand = "${fd}/bin/fd --type d";
       defaultCommand = "${fd}/bin/fd --type f";
       fileWidgetCommand = "${fd}/bin/fd --type f";
+      tmux.enableShellIntegration = true;
     };
   };
 }
