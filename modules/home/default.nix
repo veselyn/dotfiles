@@ -13,6 +13,7 @@ in {
     ./programs
     ./session-path.nix
     ./shell-aliases.nix
+    ./shell.nix
     ./xdg.nix
   ];
 
