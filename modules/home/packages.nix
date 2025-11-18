@@ -41,6 +41,7 @@
       sd
       silver-searcher
       spacer
+      sshpass
       tree
       treefmt
       watch
