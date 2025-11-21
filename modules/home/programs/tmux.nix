@@ -33,6 +33,7 @@ in {
         builtins.attrValues {
           inherit
             (pkgs.tmuxPlugins)
+            sessionist
             tmux-thumbs
             vim-tmux-navigator
             ;
@@ -58,14 +59,13 @@ in {
         bind _ split-window -f -c '#{pane_current_path}'
         bind | split-window -f -h -c '#{pane_current_path}'
 
-        bind * switch-client -l
-        bind ( switch-client -p
-        bind ) switch-client -n
-
         bind -n C-/ select-window -l
         bind -n C-_ select-window -l
         bind C-/ send C-/
         bind C-_ send C-_
+
+        bind -n C-s switch-client -l
+        bind C-s send C-s
       '';
     };
 
