@@ -8,6 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.delta = {
       enable = true;
+      enableGitIntegration = true;
       options = {
         diff-so-fancy = true;
       };
