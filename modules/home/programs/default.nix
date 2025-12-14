@@ -26,6 +26,7 @@ in {
       direnv.enable = true;
       direnv.nix-direnv.enable = true;
       fd.enable = true;
+      gh-dash.enable = true;
       gh.enable = true;
       gpg.enable = true;
       htop.enable = true;
