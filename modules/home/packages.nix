@@ -30,6 +30,7 @@
       devenv
       httpie
       just
+      krew
       kubectl
       kubectx
       kubernetes-helm
