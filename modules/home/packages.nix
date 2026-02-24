@@ -32,6 +32,7 @@
       just
       krew
       kubectl
+      kubectl-explore
       kubectx
       kubernetes-helm
       lnav
