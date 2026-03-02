@@ -41,11 +41,11 @@ in {
     };
 
     environment.extraInit = ''
-      source <(${config.homebrew.brewPrefix}/brew shellenv)
+      source <(${config.homebrew.prefix}/bin/brew shellenv)
     '';
 
     programs.zsh.interactiveShellInit = ''
-      fpath+=${builtins.dirOf config.homebrew.brewPrefix}/share/zsh/site-functions
+      fpath+=${builtins.dirOf config.homebrew.prefix}/share/zsh/site-functions
     '';
   };
 }

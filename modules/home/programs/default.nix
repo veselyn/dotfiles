@@ -34,7 +34,6 @@ in {
       k9s.enable = true;
       lazydocker.enable = true;
       lazygit.enable = true;
-      man.generateCaches = true;
       nh.enable = true;
       opencode.enable = true;
       ripgrep.enable = true;

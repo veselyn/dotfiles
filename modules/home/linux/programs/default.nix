@@ -8,6 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs = {
       firefox.enable = true;
+      man.generateCaches = true;
     };
   };
 }
