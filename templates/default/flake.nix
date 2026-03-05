@@ -9,22 +9,10 @@
   };
 
   outputs = inputs @ {flake-parts, ...}:
-    flake-parts.lib.mkFlake {inherit inputs;} ({self, ...}: {
+    flake-parts.lib.mkFlake {inherit inputs;} {
       systems = ["aarch64-darwin" "aarch64-linux" "x86_64-darwin" "x86_64-linux"];
 
-      perSystem = {
-        pkgs,
-        self',
-        ...
-      }: let
-        treefmtEval = inputs.treefmt-nix.lib.evalModule pkgs {
-          projectRootFile = "flake.nix";
-
-          programs = {
-            alejandra.enable = true;
-          };
-        };
-      in {
+      perSystem = {pkgs, ...}: {
         devShells.default = inputs.devenv.lib.mkShell {
           inherit inputs pkgs;
 
@@ -34,29 +22,32 @@
                 nix.enable = true;
               };
 
-              packages = [
-                self'.formatter
-              ];
+              packages = builtins.attrValues {
+                inherit
+                  (pkgs)
+                  pre-commit
+                  ;
+              };
+
+              treefmt = {
+                enable = true;
+                config = {
+                  programs = {
+                    alejandra.enable = true;
+                  };
+                };
+              };
 
               git-hooks.hooks = {
                 deadnix.enable = true;
                 end-of-file-fixer.enable = true;
                 statix.enable = true;
                 treefmt.enable = true;
-                treefmt.package = self'.formatter;
                 trim-trailing-whitespace.enable = true;
               };
             }
           ];
         };
-
-        packages = {
-          devenv-test = self'.devShells.default.config.test;
-          devenv-up = self'.devShells.default.config.procfileScript;
-        };
-
-        formatter = treefmtEval.config.build.wrapper;
-        checks.formatting = treefmtEval.config.build.check self;
       };
-    });
+    };
 }

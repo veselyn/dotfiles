@@ -19,8 +19,9 @@
     nixos-generators.inputs.nixpkgs.follows = "nixpkgs";
 
     flake-parts.url = "github:hercules-ci/flake-parts/main";
-    treefmt-nix.url = "github:numtide/treefmt-nix/main";
     devenv.url = "github:cachix/devenv/main";
+    treefmt-nix.url = "github:numtide/treefmt-nix/main";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {flake-parts, ...}:

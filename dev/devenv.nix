@@ -1,9 +1,5 @@
 {inputs, ...}: {
-  perSystem = {
-    pkgs,
-    self',
-    ...
-  }: {
+  perSystem = {pkgs, ...}: {
     devShells.default = inputs.devenv.lib.mkShell {
       inherit inputs pkgs;
 
@@ -16,9 +12,25 @@
             shell.enable = true;
           };
 
-          packages = [
-            self'.formatter
-          ];
+          packages = builtins.attrValues {
+            inherit
+              (pkgs)
+              pre-commit
+              ;
+          };
+
+          treefmt = {
+            enable = true;
+            config = {
+              programs = {
+                alejandra.enable = true;
+                prettier.enable = true;
+                shfmt.enable = true;
+                shfmt.indent_size = null;
+                stylua.enable = true;
+              };
+            };
+          };
 
           git-hooks.hooks = {
             deadnix.enable = true;
@@ -34,16 +46,10 @@
             shellcheck.enable = true;
             statix.enable = true;
             treefmt.enable = true;
-            treefmt.package = self'.formatter;
             trim-trailing-whitespace.enable = true;
           };
         }
       ];
-    };
-
-    packages = {
-      devenv-test = self'.devShells.default.config.test;
-      devenv-up = self'.devShells.default.config.procfileScript;
     };
   };
 }
