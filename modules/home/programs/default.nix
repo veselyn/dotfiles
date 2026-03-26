@@ -12,6 +12,7 @@ in {
     ./git.nix
     ./kitty.nix
     ./neovim
+    ./opencode.nix
     ./ssh.nix
     ./tmux.nix
     ./vifm.nix
@@ -35,7 +36,6 @@ in {
       lazydocker.enable = true;
       lazygit.enable = true;
       nh.enable = true;
-      opencode.enable = true;
       ripgrep.enable = true;
       sesh.enable = true;
       tealdeer.enable = true;
