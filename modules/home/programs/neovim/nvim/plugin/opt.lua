@@ -26,5 +26,6 @@ vim.opt.tabstop = 4
 vim.opt.termguicolors = false
 vim.opt.undofile = true
 vim.opt.updatetime = 100
+vim.opt.winborder = "rounded"
 vim.opt.wrap = false
 vim.opt.wrapscan = false
