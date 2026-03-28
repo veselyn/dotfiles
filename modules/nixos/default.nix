@@ -12,7 +12,6 @@ in {
     ./services
     ./virtualisation
     toplevel.inputs.disko.nixosModules.disko
-    toplevel.inputs.nixos-generators.nixosModules.all-formats
   ];
 
   options = {
