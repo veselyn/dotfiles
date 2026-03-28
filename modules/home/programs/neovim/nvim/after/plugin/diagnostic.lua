@@ -9,6 +9,10 @@ vim.keymap.set("n", "gL", function()
 end)
 
 vim.keymap.set("n", "gl", function()
+	if not vim.diagnostic.is_enabled() then
+		vim.diagnostic.enable()
+		return
+	end
 	local virtual_lines = not vim.diagnostic.config().virtual_lines
 	vim.diagnostic.config({
 		virtual_text = not virtual_lines,
