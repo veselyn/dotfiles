@@ -1,4 +1,5 @@
 vim.diagnostic.config({
+	jump = { float = true, wrap = false },
 	signs = { priority = 100 },
 	virtual_text = true,
 })
