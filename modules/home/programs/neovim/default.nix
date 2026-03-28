@@ -106,9 +106,7 @@ in {
       symlink = true;
     in
       if symlink
-      then
-        config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/dotfiles/modules/home/programs/neovim/nvim"
+      then config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/modules/home/programs/neovim/nvim"
       else ./nvim;
   };
 }
