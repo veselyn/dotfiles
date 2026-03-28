@@ -48,6 +48,7 @@ in {
           nvim-ts-autotag
           obsidian-nvim
           oil-nvim
+          opencode-nvim
           rainbow-delimiters-nvim
           telescope-fzf-native-nvim
           telescope-nvim
