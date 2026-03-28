@@ -12,7 +12,7 @@ in {
     ./git.nix
     ./kitty.nix
     ./neovim
-    ./opencode.nix
+    ./opencode
     ./ssh.nix
     ./tmux.nix
     ./vifm.nix
