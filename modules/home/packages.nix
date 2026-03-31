@@ -38,6 +38,7 @@
       lnav
       ncdu
       nix-init
+      nmap
       parallel
       rlwrap
       sd
