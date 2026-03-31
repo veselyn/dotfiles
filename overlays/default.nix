@@ -9,5 +9,9 @@
       stable = self.lib.mkPkgs inputs.nixpkgs-stable {inherit (final) system;};
       master = self.lib.mkPkgs inputs.nixpkgs-master {inherit (final) system;};
     };
+
+    atuin = final: _prev: {
+      inherit (final.master) atuin;
+    };
   };
 }
