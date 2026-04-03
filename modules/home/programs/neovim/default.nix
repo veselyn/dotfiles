@@ -83,6 +83,7 @@ in {
       extraPackages = builtins.attrValues {
         inherit
           (pkgs)
+          bash-language-server
           elixir-ls
           gopls
           lua-language-server
@@ -92,12 +93,8 @@ in {
           terraform-ls
           texlab
           treefmt
-          vscode-langservers-extracted
-          ;
-        inherit
-          (pkgs.nodePackages)
-          bash-language-server
           typescript-language-server
+          vscode-langservers-extracted
           yaml-language-server
           ;
       };
