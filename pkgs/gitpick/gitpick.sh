@@ -9,13 +9,13 @@ function main() {
 	local rev=${argc_rev?}
 	local path=${argc_path?}
 
-	if [[ ! -e ${path} ]]; then
-		echo >&2 "error: '${path}' does not exist"
+	if ! git cat-file -e "${rev}:${path}" 2>/dev/null; then
+		echo >&2 "error: path '${path}' does not exist in '${rev}'"
 		return 1
 	fi
 
-	if [[ -d ${path} && ${recursive} == 0 ]]; then
-		echo >&2 "error: '${path}' is a directory"
+	if [[ $(git cat-file -t "${rev}:${path}" 2>/dev/null) == 'tree' && ${recursive} == 0 ]]; then
+		echo >&2 "error: -r not specified; omitting directory '${path}'"
 		return 1
 	fi
 
