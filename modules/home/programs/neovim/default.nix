@@ -100,6 +100,7 @@ in {
       };
     };
 
+    xdg.configFile."nvim/init.lua".enable = false;
     xdg.configFile.nvim.source = let
       symlink = true;
     in
