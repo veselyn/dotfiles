@@ -8,7 +8,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.opencode = {
       enable = true;
-      settings = {
+      tui = {
         theme = "system";
       };
     };
