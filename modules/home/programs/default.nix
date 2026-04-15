@@ -35,6 +35,7 @@ in {
       k9s.enable = true;
       lazydocker.enable = true;
       lazygit.enable = true;
+      mise.enable = true;
       nh.enable = true;
       ripgrep.enable = true;
       sesh.enable = true;
