@@ -8,6 +8,7 @@ in {
   imports = [
     ./atuin.nix
     ./delta.nix
+    ./direnv.nix
     ./fzf.nix
     ./git.nix
     ./kitty.nix
@@ -24,8 +25,6 @@ in {
       bat.enable = true;
       btop.enable = true;
       command-not-found.enable = true;
-      direnv.enable = true;
-      direnv.nix-direnv.enable = true;
       fd.enable = true;
       gh-dash.enable = true;
       gh.enable = true;
