@@ -33,6 +33,7 @@ in {
         Kindle = 302584613;
         Numbers = 409203825;
         Pages = 409201541;
+        TimeOut = 402592703;
         Translator = 1518955356;
         Vimari = 1480933944;
         Xcode = 497799835;
