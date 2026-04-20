@@ -30,10 +30,10 @@ in {
         "1Password for Safari" = 1569813296;
         Flow = 1423210932;
         Ghostery = 6504861501;
-        Keynote = 409183694;
+        Keynote = 361285480;
         Kindle = 302584613;
-        Numbers = 409203825;
-        Pages = 409201541;
+        Numbers = 361304891;
+        Pages = 361309726;
         TimeOut = 402592703;
         Translator = 1518955356;
         Vimari = 1480933944;
