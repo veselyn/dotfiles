@@ -1,7 +1,7 @@
 local obsidian = require("obsidian")
 
 obsidian.setup({
-	daily_notes = { folder = "0 INBOX" },
+	daily_notes = { folder = "JOURNAL" },
 	frontmatter = { enabled = false },
 	legacy_commands = false,
 	ui = { enable = false },
