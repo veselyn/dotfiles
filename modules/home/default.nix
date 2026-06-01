@@ -39,6 +39,8 @@ in {
     };
 
     programs.home-manager.enable = true;
+    home.enableNixpkgsReleaseCheck = false;
+
     home.stateVersion = "26.05";
   };
 }
