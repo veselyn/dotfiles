@@ -10,15 +10,17 @@ in {
       enable = true;
       enableDefaultConfig = false;
 
-      matchBlocks =
-        lib.genAttrs ["pve01" "pve02" "pve03"] (node: {
-          hostname = "${node}.homelab.veselabs.com";
-          user = "root";
-        })
-        // lib.genAttrs ["master01" "master02" "master03"] (node: {
-          hostname = "${node}.kubernetes.homelab.veselabs.com";
-          user = "debian";
-        });
+      settings =
+        lib.genAttrs' ["pve01" "pve02" "pve03"] (node:
+          lib.nameValuePair "Host ${node}" {
+            hostname = "${node}.homelab.veselabs.com";
+            user = "root";
+          })
+        // lib.genAttrs' ["master01" "master02" "master03"] (node:
+          lib.nameValuePair "Host ${node}" {
+            hostname = "${node}.kubernetes.homelab.veselabs.com";
+            user = "debian";
+          });
     };
   };
 }
