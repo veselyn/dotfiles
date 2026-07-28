@@ -42,7 +42,7 @@
       parallel
       rlwrap
       sd
-      silver-searcher
+      silver-searcher-ng
       spacer
       sshpass
       tree
