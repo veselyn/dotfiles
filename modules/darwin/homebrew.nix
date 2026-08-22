@@ -24,6 +24,7 @@ in {
         "tailscale-app"
         "utm"
         "vmware-fusion"
+        "obsidian"
       ];
 
       masApps = {
@@ -34,6 +35,7 @@ in {
         Kindle = 302584613;
         Numbers = 361304891;
         Pages = 361309726;
+        Things = 904280696;
         TimeOut = 402592703;
         Translator = 1518955356;
         Vimari = 1480933944;
