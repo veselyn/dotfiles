@@ -11,13 +11,13 @@ in {
   config = lib.mkIf cfg.enable {
     home.sessionVariables = {
       SSH_AUTH_SOCK =
-        if pkgs.stdenv.isDarwin
+        if pkgs.stdenv.hostPlatform.isDarwin
         then socketPath
         else "\${SSH_AUTH_SOCK:-${socketPath}}";
     };
 
     home.file.${socketPath} = {
-      enable = pkgs.stdenv.isDarwin;
+      enable = pkgs.stdenv.hostPlatform.isDarwin;
       source = let
         socketPath = "${config.home.homeDirectory}/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock";
       in

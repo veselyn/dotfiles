@@ -33,7 +33,7 @@ in {
       inherit (cfg) username;
       homeDirectory = let
         directory =
-          if pkgs.stdenv.isDarwin
+          if pkgs.stdenv.hostPlatform.isDarwin
           then "/Users"
           else "/home";
       in "${directory}/${cfg.username}";

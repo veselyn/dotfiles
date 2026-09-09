@@ -24,7 +24,7 @@ in {
             "jump"
             "web-search"
           ]
-          ++ lib.optional pkgs.stdenv.isDarwin "macos";
+          ++ lib.optional pkgs.stdenv.hostPlatform.isDarwin "macos";
       };
 
       initContent = ''

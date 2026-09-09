@@ -113,7 +113,7 @@ toplevel @ {
         modules = [
           {
             imports =
-              if pkgs.stdenv.isDarwin
+              if pkgs.stdenv.hostPlatform.isDarwin
               then [self.modules.home.darwin]
               else [self.modules.home.linux];
             self.modules.home = lib.mkDefault {
