@@ -8,9 +8,8 @@ in {
   config = lib.mkIf cfg.enable {
     programs.opencode = {
       enable = true;
-      tui = {
-        theme = "system";
-      };
+      tui.theme = "system";
+      web.enable = true;
     };
 
     xdg.configFile = let
