@@ -45,6 +45,7 @@ in {
 
         set -g status off
         set -g renumber-windows on
+        set -g theme terminal
 
         bind C-a send C-a
         bind C-h send C-h
