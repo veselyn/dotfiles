@@ -13,18 +13,18 @@ in {
         "1password"
         "bambu-studio"
         "betterdisplay"
-        "chatgpt"
         "dash@6"
         "discord"
         "docker-desktop"
         "firefox"
         "google-chrome"
         "keyboardcleantool"
+        "obsidian"
+        "opencode-desktop"
         "skim"
         "tailscale-app"
         "utm"
         "vmware-fusion"
-        "obsidian"
       ];
 
       masApps = {
