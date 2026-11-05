@@ -8,8 +8,15 @@ in {
   config = lib.mkIf cfg.enable {
     programs.opencode = {
       enable = true;
-      cli.theme.name = "system";
       web.enable = true;
+      cli.theme.name = "system";
+      settings.permissions = [
+        {
+          action = "*";
+          resource = "*";
+          effect = "ask";
+        }
+      ];
     };
 
     xdg.configFile = let
