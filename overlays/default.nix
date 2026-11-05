@@ -20,5 +20,9 @@
         };
       });
     };
+
+    atuin = final: _prev: {
+      atuin = final.master.atuin;
+    };
   };
 }
