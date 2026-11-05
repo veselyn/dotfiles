@@ -18,6 +18,8 @@ in {
       ldr = "lazydocker";
       lg = "lazygit";
       ls = "ls --color=auto";
+      oc = "opencode";
+      ocm = "opencode mini";
       p = "pbpaste";
       sl = "echo $SHLVL";
       v = "vim";
