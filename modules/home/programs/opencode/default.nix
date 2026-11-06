@@ -10,6 +10,7 @@ in {
       enable = true;
       web.enable = true;
       cli.theme.name = "system";
+      cli.session.sidebar = "hide";
       settings.permissions = [
         {
           action = "*";
